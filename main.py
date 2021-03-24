@@ -1,5 +1,6 @@
 import re 
 
+<<<<<<< HEAD
 def exA():
 	f = open("exemplo-utf8.bib", "r", encoding='utf-8')
 
@@ -58,5 +59,25 @@ def exB():
 if __name__ == '__main__':
 	#print("Main")
 	exB()
+=======
+f = open("exemplo-utf8.bib", "r", encoding='utf-8')
+
+categoria=[]
+
+#for linha in f:
+
+  #campos = re.findall(r'\@\w+',linha)
+  #if campos:
+  #  categoria.append(campos)  
+
+#print(categoria)
+
+
+#HOW TO SPLI 
+#l = f.read()
+#categoria = re.split('\@',l,)
+#print(categoria[1], categoria[2])
+
+>>>>>>> 7f1c19524a1146907e87d4d4c784608520cf2e5d
 
 

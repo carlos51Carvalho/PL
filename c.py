@@ -13,7 +13,7 @@ l = f.read()
 categoria = re.split('@',l)
 first=True
 
-json.write("{\n\t\"referencias\":[")
+json.write("{\n\t\"referencias\":[\n")
 for i in categoria:
 	print(i)
 	tipo = re.match(r'(\w+)\{([A-Z1-9]+)',i)
@@ -21,14 +21,15 @@ for i in categoria:
 	if tipo:
 		g=re.split('{',tipo.group())
 		print("tipo: ",g[0])
+		json.write("{\n\"tipo\":\""+g[0]+"\",")
+		
 		print("codigo: ",g[1])
 
-
-
-	info = re.findall(r'\b(\w+)[ ]*=[ ]*\{?\"?([\w ]*)',i)
-	for (c,v) in info:
-		print(c,": ",v)
+		info = re.findall(r'\b(\w+)[ ]*=[ ]*\{?\"?([\w ]*)',i)
+		for (c,v) in info:
+			print(c,": ",v)
 	
+	print()
+	print()
 
-	print()
-	print()
+json.write("\n\t]\n}")

@@ -23,17 +23,24 @@ for i in categoria:
         a.append(autores2.group(2))
 
         for n in a:
-            autores =re.split(r'((\s+(?i:and)\s+)+|,)', n)
+            autores =re.split(r'((\s+(?i:and)\s+)+)', n)
             if autores:
                 #print(autores)
                 
                 for c in autores:
-                    if c.strip() in autoresOcorr:
-                        autoresOcorr[c.strip()]+=1
-                    else:
-                        autoresOcorr[c.strip()]=1
+                    
+                    cs = c.strip()
+                    if re.search(r'(w+), (\w+)',c):
+                        #not working don't know why 
+                        cs = (c.group(2) + c.group(1)).strip()
+                        print(cs)
 
-print(autoresOcorr)
+                    if cs in autoresOcorr:
+                        autoresOcorr[cs]+=1
+                    else:
+                        autoresOcorr[cs]=1
+
+#print(autoresOcorr)
 
 #print(categoria[1], categoria.__len__(), '\n', categoria[165])
 

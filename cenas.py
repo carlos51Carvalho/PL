@@ -17,17 +17,16 @@ for i in categoria:
     #if campo:
     #    print(campo[2])
 
-    autores2 = re.search(r'(\s*(?i:author)\s*=\s*[{"]+(.*)[}"]+,)',i.strip())
+    autores2 = re.search(r'(\s*(?i:author)\s*=\s*[{"]+(.*)[}"]+)',i.strip())
     if autores2:
         a.append(autores2.group(2))
 
         for n in a:
             autores =re.split(r'\s+(?i:and)\s+', n)
             if autores:
-                #print(autores,'\n')
-       
-#print(a)
-print(a[a.__len__()])
+                print(autores)
 
 
+
+#print(categoria)
     #inserir os autores no dicionario e a sua determinada lista 

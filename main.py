@@ -1,6 +1,6 @@
 import re 
 
-<<<<<<< HEAD
+
 def exA():
 	f = open("exemplo-utf8.bib", "r", encoding='utf-8')
 
@@ -16,8 +16,7 @@ def exA():
 	  			categoria[caux]+=1
 	  		else:
 	  			categoria[caux]=1
-	  #if campos:
-	  #  categoria.append(campos.group(1))  
+
 
 
 	for i in sorted(categoria):

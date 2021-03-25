@@ -2,33 +2,32 @@ import re
 f = open("exemplo-utf8.bib", "r", encoding='utf-8')
 
 categoria=[]
-autores = []
+
 
 
 
 #HOW TO SPLI 
 l = f.read()
 categoria = re.split('@',l)
+a=[]
 
-
+#separa dentro de cada categoria a chave única e coloca em campo e os autores separa tmb
 for i in categoria:
     campo = re.match(r'(\w+\{([\w\d]+))', i)
     #if campo:
     #    print(campo[2])
-    
-    #autores = re.match(r'[ \t]*(?i:author) *= *(\{|\")([\w\. ]+[^\}]|\n)+(\}|"),', i.strip())
-    autores2 = re.findall(r'(\s*(?i:author)\s*=\s*[{"](.*)["}],)',i.strip())
-    a = autores2[0][1]
+
+    autores2 = re.search(r'(\s*(?i:author)\s*=\s*[{"]+(.*)[}"]+,)',i.strip())
     if autores2:
-       autores = re.split(r'(?i:and)', a)
+        a.append(autores2.group(2))
 
-
-print(autores)
-
-
-#for i in autores2[0][1]:
-#    autores = re.split(r'(?i:and)', i)
-#   print(autores)    
+        for n in a:
+            autores =re.split(r'\s+(?i:and)\s+', n)
+            if autores:
+                #print(autores,'\n')
+       
+#print(a)
+print(a[a.__len__()])
 
 
     #inserir os autores no dicionario e a sua determinada lista 

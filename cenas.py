@@ -2,6 +2,7 @@ import re
 f = open("exemplo-utf8.bib", "r", encoding='utf-8')
 
 categoria=[]
+autoresOcorr={}
 
 
 
@@ -22,10 +23,19 @@ for i in categoria:
         a.append(autores2.group(2))
 
         for n in a:
-            autores =re.split(r'\s+(?i:and)\s+', n)
+            autores =re.split(r'((\s+(?i:and)\s+)+|,)', n)
             if autores:
-                print(autores)
+                #print(autores)
+                
+                for c in autores:
+                    if c.strip() in autoresOcorr:
+                        autoresOcorr[c.strip()]+=1
+                    else:
+                        autoresOcorr[c.strip()]=1
 
+print(autoresOcorr)
+
+#print(categoria[1], categoria.__len__(), '\n', categoria[165])
 
 
 #print(categoria)

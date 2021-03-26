@@ -1,120 +1,1318 @@
 {
 	"referencias":[
-{
-"tipo":"techreport",{
-"tipo":"techreport",{
-"tipo":"inproceedings",{
-"tipo":"inproceedings",{
-"tipo":"inproceedings",{
-"tipo":"techreport",{
-"tipo":"techreport",{
-"tipo":"techreport",{
-"tipo":"techreport",{
-"tipo":"inproceedings",{
-"tipo":"inproceedings",{
-"tipo":"inproceedings",{
-"tipo":"inproceedings",{
-"tipo":"techreport",{
-"tipo":"inproceedings",{
-"tipo":"InProceedings",{
-"tipo":"inproceedings",{
-"tipo":"inproceedings",{
-"tipo":"inproceedings",{
-"tipo":"inproceedings",{
-"tipo":"inproceedings",{
-"tipo":"inproceedings",{
-"tipo":"article",{
-"tipo":"inproceedings",{
-"tipo":"inproceedings",{
-"tipo":"inproceedings",{
-"tipo":"article",{
-"tipo":"inproceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"Book",{
-"tipo":"Incollection",{
-"tipo":"Incollection",{
-"tipo":"Article",{
-"tipo":"Article",{
-"tipo":"Article",{
-"tipo":"Article",{
-"tipo":"Article",{
-"tipo":"Article",{
-"tipo":"Article",{
-"tipo":"Article",{
-"tipo":"Article",{
-"tipo":"Article",{
-"tipo":"Article",{
-"tipo":"Article",{
-"tipo":"Article",{
-"tipo":"Article",{
-"tipo":"Article",{
-"tipo":"Article",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"inproceedings",{
-"tipo":"InProceedings",{
-"tipo":"inproceedings",{
-"tipo":"inproceedings",{
-"tipo":"inproceedings",{
-"tipo":"inproceedings",{
-"tipo":"InProceedings",{
-"tipo":"Article",{
-"tipo":"Article",{
-"tipo":"Article",{
-"tipo":"Article",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"InProceedings",{
-"tipo":"inproceedings",{
-"tipo":"inproceedings",{
-"tipo":"inproceedings",{
-"tipo":"Article",{
-"tipo":"inproceedings",{
-"tipo":"inproceedings",{
-"tipo":"inproceedings",{
-"tipo":"inproceedings",{
-"tipo":"inproceedings",{
-"tipo":"InProceedings",{
-"tipo":"article",{
-"tipo":"inproceedings",{
-"tipo":"INPROCEEDINGS",{
-"tipo":"Article",{
-"tipo":"Article",
+	{
+		"tipo":"techreport",
+		"codigo":"C",
+		"author":"",
+		"editor":"L",
+		"title":"",
+		"url":"http",
+		"type":"",
+		"institution":"umdi",
+		"year":"1998",
+		"keyword":"FS",
+	}
+	{
+		"tipo":"techreport",
+		"codigo":"N",
+		"author":"J",
+		"title":"",
+		"url":"http",
+		"type":"",
+		"note":"",
+		"institution":"umdi",
+		"keyword":"PLN",
+		"year":"1997",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"A",
+		"author":"J",
+		"title":"",
+		"booktitle":"Actas del X Congreso de Lenguajes Naturales e Leanguajes Formales",
+		"year":"1994",
+		"url":"http",
+		"editor":"Carlos Martin Vide",
+		"keyword":"DCG",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"A",
+		"author":"J",
+		"title":"",
+		"booktitle":"Actas del XI Congreso de Lenguajes Naturales e Leanguajes Formales",
+		"year":"1995",
+		"pages":"621",
+		"editor":"Carlos Martin Vide",
+		"url":"http",
+		"keyword":"jspell",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"A",
+		"author":"J",
+		"title":"Jspell ",
+		"booktitle":"Actas do X Encontro da Associação Portuguesa de Linguística",
+		"address":"Évora 1994",
+		"pages":"1",
+		"year":"1995",
+		"url":"http",
+		"keyword":"jspell",
+	}
+	{
+		"tipo":"techreport",
+		"codigo":"B",
+		"author":"L",
+		"title":"System Prototyping in ",
+		"year":"1995",
+		"number":"DI",
+		"institution":"University of Minho",
+		"note":"Lecture notes for the System Design Course",
+		"url":"http",
+		"keyword":"Camila",
+	}
+	{
+		"tipo":"techreport",
+		"codigo":"B",
+		"author":"L",
+		"title":"",
+		"year":"1995",
+		"number":"DI",
+		"institution":"University of Minho",
+		"url":"http",
+		"keyword":"Camila",
+	}
+	{
+		"tipo":"techreport",
+		"codigo":"BA97",
+		"keyword":"Formal Methods",
+		"author":"L",
+		"title":"Systems Prototyping in ",
+		"type":"",
+		"year":"1998",
+		"institution":"DI ",
+		"number":"DI",
+	}
+	{
+		"tipo":"techreport",
+		"codigo":"B",
+		"author":"L",
+		"title":"Growing Up With ",
+		"institution":"umdi",
+		"year":"1995",
+		"number":"DI",
+		"url":"http",
+		"keyword":"Camila",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"R",
+		"author":"J",
+		"title":"Algebraic Specification of Documents",
+		"booktitle":"TWLT10 ",
+		"year":"1995",
+		"month":"6",
+		"editor":"A",
+		"address":"Twente University",
+		"note":"AMiLP",
+		"series":"Twente Workshop on Language Technology",
+		"url":"http",
+		"docpage":"http",
+		"pages":"55",
+		"keyword":"PDavid",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"A",
+		"author":"J",
+		"title":"Especificação e tratamento de Dicionários",
+		"booktitle":"Actas do XI Encontro da Associação Portuguesa de Linguística",
+		"address":"Lisboa 1995",
+		"year":"1996",
+		"volume":"2",
+		"url":"http",
+		"keyword":"perl",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"U",
+		"author":"Ulisses Pinto and J",
+		"title":"Tratamento automático de termos compostos",
+		"booktitle":"Actas do XI Encontro da Associação Portuguesa de Linguística",
+		"address":"Lisboa 1995",
+		"volume":"2",
+		"year":"1996",
+		"url":"http",
+		"keyword":"jspell",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"A",
+		"author":"J",
+		"title":"",
+		"booktitle":" II International Conference on Mathematical Linguistics",
+		"year":"1996",
+		"url":"http",
+		"keyword":"yalg",
+	}
+	{
+		"tipo":"techreport",
+		"codigo":"A",
+		"author":"J",
+		"title":"From ",
+		"institution":"umdi",
+		"year":"1996",
+		"number":"DI",
+		"docpage":"http",
+		"keyword":"PDavid",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"R",
+		"author":"J",
+		"title":"Document Semantics",
+		"booktitle":"Celebrating a Decade of SGML",
+		"year":"1996",
+		"month":"Nov",
+		"address":"Boston",
+		"note":"SGML",
+		"editor":"Graphic Communications Association",
+		"publisher":"ArborText",
+		"pages":"473",
+		"docpage":"http",
+		"keyword":"PDavid",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"SGML97",
+		"author":"J",
+		"title":"SGML Documents",
+		"booktitle":"SGML",
+		"year":"1997",
+		"address":"Washington D",
+		"month":"Dec",
+		"keyword":"PDavid",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"A",
+		"author":"J",
+		"title":"Programação de dicionários",
+		"booktitle":"Actas do XIII Encontro da Associação Portuguesa de Linguística",
+		"year":"1998",
+		"pages":"21",
+		"volume":"1",
+		"address":"Lisboa 1997",
+		"keyword":"perl",
+		"url":"http",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"R",
+		"author":"Ricardo Reis and J",
+		"title":"Etiquetador morfo",
+		"booktitle":"Actas do XIII Encontro da Associação Portuguesa de Linguística",
+		"address":"Lisboa 1997",
+		"year":"1998",
+		"keyword":"tagger",
+		"url":"http",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"ABNO97",
+		"title":"",
+		"author":"J",
+		"booktitle":"Proc",
+		"editor":"De Giusti",
+		"year":"1997",
+		"month":"October",
+		"address":"La Plata",
+		"pages":"1343",
+		"keyword":"Camila",
+		"url":"http",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"ABNO97",
+		"title":"",
+		"author":"J",
+		"booktitle":"6th International Conference on Algebraic Methods and Software Technology ",
+		"editor":"Johnson",
+		"year":"1997",
+		"month":"December",
+		"address":"Sydney",
+		"publisher":"Springer Lect",
+		"pages":"554",
+		"keyword":"Camila",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"AH97",
+		"title":"Dynamic Dictionary ",
+		"author":"J",
+		"year":"1998",
+		"address":"Australia",
+		"url":"http",
+		"keyword":"dictionary",
+		"booktitle":"Proc",
+		"month":"April",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"ABBN98",
+		"author":"Almeida",
+		"title":"On The Development of ",
+		"booktitle":"Workshop on Research Themes on Functional Programming",
+		"year":"1998",
+		"month":"18 Sep",
+		"editor":"L",
+		"publisher":"Proc",
+	}
+	{
+		"tipo":"article",
+		"codigo":"R",
+		"author":"J",
+		"title":"Algebraic specification of documents",
+		"year":"1998",
+		"number":"199",
+		"pages":"231",
+		"journal":"Theoretical Computer Science",
+		"url":"http",
+		"docpage":"http",
+		"keyword":"PDavid",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"G",
+		"author":"Jorge Rocha and Ana Silva and Ricardo Henriques and J",
+		"title":"Formal Methods for ",
+		"booktitle":"Conferência da Association of Geographic Information",
+		"address":"Roma",
+		"year":"1999",
+		"keyword":"GIS",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"RPA99",
+		"author":"Jorge Rocha and Tiago Pedroso and J",
+		"title":"",
+		"booktitle":"Conferência da Association of Geographic Information",
+		"address":"Roma",
+		"year":"1999",
+		"keyword":"GIS",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"RS",
+		"author":"Jorge Gustavo Rocha and Ana Silva and J",
+		"title":"Sobre a Utilização de Metodologias Formais no Desenvolvimento de",
+		"booktitle":"GISBRASIL",
+		"year":"1999",
+		"keyword":"GIS",
+	}
+	{
+		"tipo":"article",
+		"codigo":"RRAH99",
+		"author":"J",
+		"title":"SGML documents",
+		"journal":"Markup Languages",
+		"Volume":"1",
+		"pages":"75",
+		"publisher":"MIT Press",
+		"year":"1999",
+		"keyword":"SGML",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"B",
+		"author":"L",
+		"title":"Polytypic Recursion Patterns",
+		"year":"2000",
+		"month":"May",
+		"booktitle":"",
+		"address":"",
+		"keyword":"FS",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"APL2",
+		"author":"J",
+		"title":"Extracção de corpora paralelo a partir da web",
+		"booktitle":"Actas do XVIII Encontro da Associação Portuguesa de Linguística",
+		"address":"Porto 2002",
+		"year":"2003",
+		"lang":"PT",
+		"url":"http",
+		"abstract":"",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"APL2",
+		"author":"J",
+		"title":"Geração de voz com sotaque",
+		"booktitle":"Actas do XVIII Encontro da Associação Portuguesa de Linguística",
+		"address":"Porto 2002",
+		"year":"2003",
+		"url":"http",
+		"lang":"PT",
+		"abstract":"",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"MP",
+		"author":"Alberto Simões and Rúben Fonseca and José João Almeida",
+		"title":"",
+		"booktitle":"Euro",
+		"year":"2007",
+		"address":"Rennes",
+		"month":"August",
+		"pages":"",
+		"editor":"",
+		"volume":"",
+		"series":"",
+		"publisher":"",
+		"abstract":"  Some processes are not easy to be programmed from scratch",
+	}
+	{
+		"tipo":"Book",
+		"codigo":"RH",
+		"author":"José Carlos Ramalho and Pedro Rangel  Henriques",
+		"title":"XML ",
+		"publisher":"Editora FCA",
+		"series":"Série Tecnologias de Informação ISBN",
+		"edition":"1st Ed",
+		"month":"Oct",
+		"year":"2002",
+	}
+	{
+		"tipo":"Incollection",
+		"codigo":"RRH",
+		"author":"F",
+		"title":"Data Reduction to Improve Knowledge Extraction",
+		"booktitle":"Enterprise Information Systems III",
+		"editor":"J",
+		"publisher":"Kluwer Academic Publishers",
+		"pages":"137",
+		"year":"2002",
+	}
+	{
+		"tipo":"Incollection",
+		"codigo":"ORH",
+		"author":"Paulo Oliveira and F",
+		"title":"Data Cleaning by Reusing Domain Knowledge",
+		"booktitle":"Knowledge and Decision Technologies",
+		"editor":"",
+		"publisher":"ISBN",
+		"pages":"67",
+		"year":"2006",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"KMHVZ",
+		"author":"Tomaz Kosar and Marjan Mernik and Pedro Henriques and Maria João Varanda and Viljem Zumer",
+		"title":"Grammatical Approach to Problem Solving",
+		"journal":"Informatica Journal",
+		"volume":"28",
+		"pages":"393",
+		"year":"2004",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"HVMLGW",
+		"author":"Pedro Henriques and Maria João Varanda and Marjan Mernik and Mitja Lenic and Jeff Gray and Hui Wu",
+		"title":"Automatic Generation of Language",
+		"journal":"IEE Software Journal",
+		"year":"2005",
+		"month":"April",
+		"volume":"152",
+		"number":"2",
+		"pages":"54",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"RMHV",
+		"author":"Damijan Rebernak and Marjan Mernik and Pedro Rangel Henriques and Maria João Varanda",
+		"title":"AspectLISA",
+		"journal":"Electronic Notes in Theoretical Computer Science ",
+		"editor":"J",
+		"publisher":"Elsevier",
+		"year":"2006",
+		"month":"Oct",
+		"volume":"164",
+		"number":"2",
+		"pages":"37",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"RMHCV",
+		"author":"Damijan Rebernak and Marjan Mernik and Pedro Rangel Henriques and Daniela da Cruz and Maria João Varanda",
+		"title":"Specifying Languages using aspect",
+		"journal":"CIT ",
+		"editor":"",
+		"publisher":"",
+		"year":"2006",
+		"month":"Dec",
+		"volume":"14",
+		"number":"4",
+		"pages":"343",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"GDH",
+		"author":"Gancarski",
+		"title":"",
+		"journal":"",
+		"year":"2006",
+		"month":"Apr",
+		"volume":"153",
+		"pages":"51",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"BH98",
+		"author":"Leonor Barroca and Pedro Rangel Henriques",
+		"title":"A Framework and Patterns for the   Specification of Reactive Systems",
+		"journal":"IST",
+		"editor":"",
+		"publisher":"Elsevier",
+		"year":"1998",
+		"month":"",
+		"volume":"",
+		"number":"40",
+		"pages":"135",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"RAH98",
+		"author":"José Carlos Ramalho and José João Almeida and Pedro Rangel Henriques",
+		"title":"Algebraic Specification of Documents",
+		"journal":"TSC",
+		"editor":"",
+		"publisher":"Elsevier",
+		"year":"1998",
+		"month":"Jun",
+		"volume":"199",
+		"number":"",
+		"pages":"",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"RARH98",
+		"author":"José Carlos Ramalho and José João Almeida and Jorge Gustavo Rocha and Pedro Rangel Henriques",
+		"title":"SGML Documents",
+		"journal":"Mark",
+		"editor":"",
+		"publisher":"MIT Press",
+		"year":"1998",
+		"month":"Nov",
+		"volume":"1",
+		"number":"1",
+		"pages":"",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"GRH",
+		"author":"Giovani Librelotto and José Carlos Ramalho  and Pedro Rangel Henriques",
+		"title":"Metamorphosis ",
+		"journal":"Lecture Notes in Computer Science ",
+		"editor":"",
+		"publisher":"Springer",
+		"year":"2006",
+		"month":"",
+		"volume":"3873",
+		"number":"",
+		"pages":"14",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"JGRH",
+		"author":"Marta Jacinto and Giovani Librelotto and José Carlos Ramalho  and Pedro Rangel Henriques",
+		"title":"XCSL Tutorial",
+		"journal":"Acm Crossroads",
+		"editor":"",
+		"publisher":"ACM Press",
+		"year":"2004",
+		"month":"",
+		"volume":"8",
+		"number":"5",
+		"pages":"5",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"JGRH",
+		"author":"Marta Jacinto and Giovani Librelotto and José Carlos Ramalho  and Pedro Rangel Henriques",
+		"title":"XCSL",
+		"journal":"CLEI Eletronic Journal",
+		"editor":"",
+		"publisher":"ACM Press",
+		"year":"2003",
+		"month":"",
+		"volume":"6",
+		"number":"",
+		"pages":"3",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"GRH",
+		"author":"Giovani Librelotto and José Carlos Ramalho  and Pedro Rangel Henriques",
+		"title":"TM",
+		"journal":"CLEI Eletronic Journal",
+		"editor":"",
+		"publisher":"ACM Press",
+		"year":"2004",
+		"month":"",
+		"volume":"7",
+		"number":"2",
+		"pages":"4",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"GRH",
+		"author":"Giovani Librelotto and José Carlos Ramalho  and Pedro Rangel Henriques",
+		"title":"Geração automática de interfaces Web para Sistemas de Informação",
+		"journal":"Sistemas de Informação",
+		"editor":"",
+		"publisher":"APSI",
+		"year":"2005",
+		"month":"",
+		"volume":"17",
+		"number":"",
+		"pages":"53",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"RH98",
+		"author":"José Carlos Ramalho  and Pedro Rangel Henriques",
+		"title":"Qualidade na Publicação Electrónica",
+		"journal":"Sistemas de Informação",
+		"editor":"",
+		"publisher":"APSI",
+		"year":"1998",
+		"month":"",
+		"volume":"9",
+		"number":"",
+		"pages":"69",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"MSH",
+		"author":"Giovana Mendes and Nuno Alberto Silva  and Pedro Rangel Henriques",
+		"title":"Utilizando uma Base de Dados XML Nativa aplicada ao tratamento de erros num sistema de logs",
+		"journal":"Sistemas de Informação",
+		"editor":"",
+		"publisher":"APSI",
+		"year":"2005",
+		"month":"",
+		"volume":"17",
+		"number":"",
+		"pages":"91",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"ALHF",
+		"author":"Gustavo Arnold and Giovani Librelotto  and Pedro Rangel Henriques and Jaime Fonseca",
+		"title":"O Uso da Linguagem RS em Robótica",
+		"journal":"Revista Electrónica e Telecomunicações",
+		"editor":"",
+		"publisher":"Departamento de Electrónica e Telecomunicações da Universidade de Aveiro",
+		"year":"2002",
+		"month":"Apr",
+		"volume":"",
+		"number":"",
+		"pages":"501",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"HKMVZ",
+		"author":"Pedro Henriques and Tomaz Kosar and Marjan Mernik and Maria João Varanda and Viljem Zumer",
+		"title":"Grammatical Approach to Problem Solving",
+		"booktitle":"ITI",
+		"publisher":"IEEE",
+		"year":"2003",
+		"month":"June",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"VH",
+		"author":"M",
+		"title":"Visualization ",
+		"booktitle":"HCC",
+		"publisher":"IEEE",
+		"year":"2001",
+		"month":"September",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"VH",
+		"author":"P",
+		"title":"Automatic Generation of Language",
+		"booktitle":"LDTA ",
+		"year":"2002",
+		"month":"April",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"VH",
+		"author":"M",
+		"title":"Visualization ",
+		"booktitle":"VMSE2003 ",
+		"publisher":"IEEE",
+		"year":"2003",
+		"editor":"",
+		"month":"October",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"RMHVC",
+		"author":"Damijan Rebernak and Marjan Mernik and Pedro Rangel Henriques and Maria João Varanda Pereira and Daniela Cruz",
+		"title":" Specifying Languages using Aspect",
+		"booktitle":"ITI",
+		"publisher":"IEEE",
+		"pages":"",
+		"year":"2006",
+		"month":"June",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"BHVU",
+		"author":"Mario Ber",
+		"title":"PICS una Herramienta para la Comprensión e Inspección de Programas",
+		"booktitle":"CACIC",
+		"publisher":"Corrientes",
+		"year":"2007",
+		"editor":"",
+		"month":"Aug",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"BHVU",
+		"author":"Mario Ber",
+		"title":"Program Inspection to Incerconnect Behavioral and Operational View for Program Comprehension",
+		"booktitle":"York Doctoral Symposium",
+		"publisher":"University of York",
+		"year":"2007",
+		"editor":"",
+		"month":"Oct",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"BHVU",
+		"author":"Mario Ber",
+		"title":"Comprensi",
+		"booktitle":"IX Workshop de Investigadores en Ciencias de la Computación ",
+		"year":"2007",
+		"editor":"",
+		"month":"",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"BHVU",
+		"author":"Mario Ber",
+		"title":"Static and Dynamic Strategies to Understand C Programs by Code Annotation",
+		"booktitle":"OpenCert",
+		"year":"2007",
+		"editor":"",
+		"month":"Apr",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"CHLB",
+		"author":"Elisabete Cunha and Pedro Rangel Henriques  and Sandra Lopes and Mario Béron",
+		"title":"O Sitio de Pico",
+		"booktitle":"IX Workshop de Investigadores en Ciencias de la Computación ",
+		"year":"2007",
+		"editor":"",
+		"month":"",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"BHVU",
+		"author":"Mario Béron and Pedro Rangel Henriques  and Maria João Varanda and Roberto Uzal",
+		"title":"Herramientas para la compresión de programas",
+		"booktitle":"VIII Workshop de Investigadores en Ciencias de la Computación ",
+		"year":"2006",
+		"editor":"",
+		"month":"",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"BHVU",
+		"author":"Mario Béron and Pedro Rangel Henriques  and Maria João Varanda and Roberto Uzal",
+		"title":"Comprensión de Algoritmos de Ruteo",
+		"booktitle":"XXXII Conferencia Latinoamericana de Informática ",
+		"year":"2006",
+		"editor":"",
+		"month":"",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"BHVUM",
+		"author":"Mario Béron and Pedro Rangel Henriques  and Maria João Varanda and Roberto Uzal and G",
+		"title":"A Language Processing Tool for Program Comprehension",
+		"booktitle":"CACIC",
+		"publisher":"Universidad Nacional de San Luis",
+		"year":"2006",
+		"month":"Oct",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"BHVU",
+		"author":"Mario Béron and Pedro Rangel Henriques  and Maria João Varanda and Roberto Uzal",
+		"title":"Simplificando la Comprensión de Programas a través de la Interconnexión de Dominios",
+		"booktitle":"CACIC",
+		"publisher":"Universidad Nacional de Chilecito",
+		"year":"2008",
+		"month":"Oct",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"BHV",
+		"author":"Mario Béron and Pedro Rangel Henriques  and Maria João Varanda",
+		"title":"A System for Evaluate and Understand Routing Algorithms",
+		"booktitle":"Interacção",
+		"year":"2006",
+		"editor":"",
+		"month":"",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"BCVHU",
+		"author":"Mario Béron and Daniela da Cruz and Maria João Varanda and Pedro Rangel Henriques and Roberto Uzal",
+		"title":"Evaluation Criteria of Software Visualization Systems used for Program Comprehension",
+		"booktitle":"Interacção",
+		"editor":"Universidade de Évora",
+		"year":"2008",
+		"month":"Oct",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"BUHV",
+		"author":"Mario Berón and Roberto Uzal and Pedro Rangel Henriques and Maria João Varanda Pereira",
+		"title":"Inspección de Código para relacionar los Dominios del Problema y Programa para la Comprensión de Programas",
+		"booktitle":"X Workshop de Investigadores en Ciencias de la Computación ",
+		"publisher":"Facultad de Engeniería de la Universidad Nacional de la Pampa",
+		"year":"2008",
+		"editor":"UNLPam",
+		"month":"May",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"OVH",
+		"author":"Eva Oliveira and Maria João Varanda and Pedro Rangel Henriques",
+		"title":"Compreensão de Aplicações Web",
+		"booktitle":"CAPSI05 ",
+		"year":"2005",
+		"month":"October",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"OHV",
+		"author":"Eva Oliveira and Pedro Rangel Henriques and Maria João Varanda ",
+		"title":"Proposta de um Sistema para Compreensão de Aplicações Web",
+		"booktitle":"CAPSI06 ",
+		"year":"2007",
+		"month":"January",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"GH",
+		"author":"Alda Gancarski and Pedro Rangel Henriques",
+		"title":"Analyzing the structure of scientific articles to improve information retrieval",
+		"booktitle":"Proceedings of the Int",
+		"year":"2007",
+		"editor":"Pedro Isaias and Nuno Mamede",
+		"month":"Feb",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"GH",
+		"author":"Alda Gancarski and Pedro Rangel Henriques",
+		"title":"Using data together with metadata to improve XML information access",
+		"booktitle":"Proceedings of the Int",
+		"year":"2007",
+		"editor":"",
+		"month":"Mar",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"GFH",
+		"author":"Alda Gancarski and Flávio Xavier Ferreira and Pedro Rangel Henriques",
+		"title":"Using data together with metadata to improve XML information access",
+		"booktitle":"Proceedings of the 10th Int",
+		"address":"Barcelona",
+		"year":"2008",
+		"month":"Jun",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"FGH",
+		"author":"Flávio Xavier Ferreira and Alda Lopes Gancarski and Pedro Rangel Henriques",
+		"title":"Information access from XML using semantics and context",
+		"booktitle":"CAPSI",
+		"address":"Setubal",
+		"year":"2008",
+		"month":"Oct",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"FH",
+		"author":"Flávio Xavier Ferreira and Pedro Rangel Henriques",
+		"title":"Using OWL to specify and build different views over the Emigration Museum resources",
+		"booktitle":"XATA08 ",
+		"year":"2008",
+		"month":"February",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"LPRH",
+		"author":"Giovani Rubert Librelotto",
+		"title":"Navegando na Rede Semântica dos Topic Maps com o Ulisses",
+		"booktitle":"XATA 2007 ",
+		"year":"2007",
+		"address":"Lisboa ",
+		"month":"Feb",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"LPRH",
+		"author":"Giovani Rubert Librelotto",
+		"title":"Topic Maps Constraint Specification Languages",
+		"booktitle":"Topic Maps 2007 ",
+		"year":"2007",
+		"address":"Oslo ",
+		"month":"Mar",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"LRHGT",
+		"author":"Giovani Rubert Librelotto",
+		"title":"A Framework to specify",
+		"booktitle":"SIGDPC",
+		"address":"Lisboa",
+		"year":"2008",
+		"month":"Sep",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"LGFSSAH",
+		"author":"Giovani Rubert Librelotto",
+		"title":"Uma Ontologia aplicada a um Ambiente Pervasivo Hospitalar",
+		"booktitle":"CAPSI",
+		"address":"Setubal",
+		"year":"2008",
+		"month":"Oct",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"LMMVRH",
+		"author":"Giovani Rubert Librelotto",
+		"title":"Generating a Semantic Network for PubMed",
+		"booktitle":"XATA08 ",
+		"year":"2008",
+		"month":"February",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"CHV",
+		"author":"Daniela da Cruz and Pedro Rangel Henriques and Maria João Varanda",
+		"title":"Alma versus DDD",
+		"journal":"ComSIS ",
+		"editor":"Ivan Lukovic and Simao Melo de Sousa ",
+		"publisher":"Faculty of Technical Sciences",
+		"year":"2008",
+		"month":"Dec",
+		"volume":"5",
+		"number":"2",
+		"pages":"119",
+		"note":"ISSN",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"FPCH",
+		"author":"Elisabete Ferreira and Rogério Paulo and Daniela da Cruz and Pedro Rangel Henriques",
+		"title":"Integration of the ",
+		"journal":"ComSIS ",
+		"editor":"Ivan Lukovic and Simao Melo de Sousa ",
+		"publisher":"Faculty of Technical Sciences",
+		"year":"2008",
+		"month":"Dec",
+		"volume":"5",
+		"number":"2",
+		"pages":"87",
+		"note":"ISSN",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"PMCH",
+		"author":"Maria João Varanda Pereira and Marjan Mernik and Daniela da Cruz and Pedro Rangel Henriques",
+		"title":"Program Comprehension for Domain",
+		"journal":"ComSIS ",
+		"editor":"Ivan Lukovic and Simao Melo de Sousa ",
+		"publisher":"Faculty of Technical Sciences",
+		"year":"2008",
+		"month":"Dec",
+		"volume":"5",
+		"number":"2",
+		"pages":"1",
+		"note":"ISSN",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"CHV",
+		"author":"Daniela da Cruz and Pedro Rangel Henriques and Maria João Varanda",
+		"title":"Constructing program animations using a pattern",
+		"journal":"ComSIS ",
+		"editor":"Ivan Lukovic and Marjan Mernik ",
+		"publisher":"Faculty of Technical Sciences",
+		"year":"2007",
+		"month":"Dec",
+		"volume":"4",
+		"number":"2",
+		"pages":"97",
+		"note":"ISSN",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"CPH",
+		"author":"Daniela da Cruz and Maria João Varanda Pereira and Pedro Rangel Henriques",
+		"title":"Pattern",
+		"booktitle":"1st Workshop on Advances in Programming Languages",
+		"year":"2007",
+		"editor":"",
+		"month":"Oct",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"CH",
+		"author":"Daniela da Cruz and Pedro Rangel Henriques",
+		"title":"Slicing wxHaskell modules to derive the User Interface Abstract Model ",
+		"booktitle":"WAPL",
+		"year":"2007",
+		"month":"October",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"CH",
+		"author":"Daniela da Cruz and Pedro Rangel Henriques",
+		"title":"",
+		"booktitle":"Extreme Markup Languages",
+		"year":"2007",
+		"month":"August",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"FCHV",
+		"author":"Ruben Fonseca and Daniela da Cruz and Pedro Henriques and Maria João Varanda Pereira",
+		"title":"How to interconnect operational and behavioral views of web applications",
+		"booktitle":"ICPC",
+		"publisher":"Amsterdam",
+		"year":"2008",
+		"editor":"IEEE",
+		"month":"June",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"CHP",
+		"author":"Daniela da Cruz and Pedro Rangel Henriques and Maria João Varanda Pereira",
+		"title":"Strategies for Program Inspection and Visualization",
+		"booktitle":"CSE ",
+		"year":"2008",
+		"month":"September",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"CH",
+		"author":"Daniela da Cruz and Pedro Rangel Henriques",
+		"title":"",
+		"booktitle":"XML",
+		"year":"2007",
+		"month":"February",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"CLH",
+		"author":"Daniela da Cruz and Sandra Cristina Lopes and Pedro Rangel Henriques",
+		"title":"Como ensinar com Mapas de Conceitos",
+		"booktitle":"Challenges",
+		"year":"2007",
+		"editor":"",
+		"month":"Mai",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"CH",
+		"author":"Daniela da Cruz and Pedro Rangel Henriques",
+		"title":"LISS ",
+		"booktitle":"Proceedings of the 1",
+		"year":"2007",
+		"editor":"",
+		"month":"Jul",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"CFPBH",
+		"author":"Daniela da Cruz and Rúben Fonseca and Maria João Varanda Pereira and Mário Béron and Pedro Rangel Henriques",
+		"title":"Comparing Generators for Language",
+		"booktitle":"CoRTA",
+		"year":"2007",
+		"month":"July",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"CHP",
+		"author":"Daniela da Cruz and Pedro Rangel Henriques and Maria João Varanda Pereira",
+		"title":"Exploring and Visualizing the ",
+		"booktitle":"XATA08 ",
+		"year":"2008",
+		"month":"February",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"CHP",
+		"author":"Daniela da Cruz and Pedro Rangel Henriques and Maria João Varanda Pereira",
+		"title":"Alma vs ",
+		"booktitle":"CoRTA08 ",
+		"year":"2008",
+		"month":"July",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"CPH",
+		"author":"Daniela da Cruz and Jorge Sousa Pinto and Pedro Rangel Henriques",
+		"title":"Properties Preservation during Transformation ",
+		"booktitle":"CoRTA08 ",
+		"year":"2008",
+		"month":"July",
+		"annote":"Repositorium",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"FPCH",
+		"author":"Elisabete Ferreira and Rogério Paulo and Daniela da Cruz and Pedro Rangel Henriques",
+		"title":"Integration of the ",
+		"booktitle":"CoRTA08 ",
+		"year":"2008",
+		"month":"July",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"PMCH",
+		"author":"Maria João Varanda Pereira and Marjan Mernik and Daniela da Cruz and Pedro Rangel Henriques",
+		"title":"Visual",
+		"booktitle":"CoRTA08 ",
+		"year":"2008",
+		"month":"July",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"PMCH",
+		"author":"Maria João Varanda Pereira and Marjan Mernik and Daniela da Cruz and Pedro Rangel Henriques",
+		"title":"Program Comprehension for Domain",
+		"booktitle":"CoRTA08 ",
+		"year":"2008",
+		"month":"July",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"CHP",
+		"author":"Daniela da Cruz and Pedro Henriques and Jorge Sousa Pinto",
+		"title":"Code Analysis",
+		"booktitle":"Proceedings of the Third Int",
+		"editor":"Luis Barbosa and Antonio Cerone and Siraj Shaikh ",
+		"publisher":"Electronic Communications of the EASST",
+		"Volume":"X ",
+		"year":"2009",
+		"month":"March",
+		"note":"ISSN",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"OPCH",
+		"author":"Nuno Oliveira and Maria João Varanda Pereira and Daniela da Cruz and Pedro Rangel Henriques",
+		"title":"Visualization of Domain",
+		"booktitle":"Proceedings of VISSOFT",
+		"pages":"37 ",
+		"publisher":"IEEE Computer Society",
+		"year":"2009",
+		"month":"Sept",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"FCHGD",
+		"author":"Flávio Xavier Ferreira and Daniela da Cruz and Pedro Rangel Henriques and Alda Lopes Gancarski and Bruno Defude",
+		"title":"A Query",
+		"booktitle":"CISTI",
+		"editor":"Álvaro Rocha and Francisco Restivo and Luís Paulo Reis and Sofia Torrão",
+		"pages":"611",
+		"address":"Póvoa do Varzim",
+		"year":"2009",
+		"month":"Jun",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"ORH",
+		"author":"Paulo Jorge Oliveria and Maria de Fátima Rodrigues and Pedro Rangel Henriques",
+		"title":"SMARTCLEAN",
+		"booktitle":"CISTI",
+		"editor":"Álvaro Rocha and Francisco Restivo and Luís Paulo Reis and Sofia Torrão",
+		"pages":"621",
+		"address":"Póvoa do Varzim",
+		"year":"2009",
+		"month":"Jun",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"LPH",
+		"author":"Giovani Rubert Librelotto and Rafael Teodósio Pereira and Pedro Rangel Henriques",
+		"title":"Uma metodologia para Consultas aos Bancos de Dados do NCBI",
+		"booktitle":"CISTI",
+		"editor":"Álvaro Rocha and Francisco Restivo and Luís Paulo Reis and Sofia Torrão",
+		"pages":"103",
+		"address":"Póvoa do Varzim",
+		"year":"2009",
+		"month":"Jun",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"LARH",
+		"author":"Giovani Rubert Librelotto",
+		"title":"Topic Maps Constraint Languages",
+		"journal":"Int",
+		"publisher":"Inderscience Entreprises",
+		"year":"2009",
+		"month":"Jun",
+		"volume":"1",
+		"number":"3",
+		"pages":"173",
+		"note":"ISSN",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"OPHC",
+		"author":"Nuno Oliveira and Maria João Varanda Pereira and",
+		"title":"Domain Specific Languages",
+		"booktitle":"INForum",
+		"publisher":"Faculdade de Ciências da Universidade de Lisboa",
+		"address":"Lisboa",
+		"pages":"35 ",
+		"year":"2009",
+		"month":"September",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"OPHCC",
+		"author":"Nuno Oliveira and Maria João Varanda Pereira and",
+		"title":"",
+		"booktitle":"INForum",
+		"publisher":"Faculdade de Ciências da Universidade de Lisboa",
+		"address":"Lisboa",
+		"pages":"155 ",
+		"year":"2009",
+		"month":"September",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"MKCHCPO",
+		"author":"Marjan Mernik and Tomaz Kosar",
+		"title":"Comparison of XAML and C",
+		"booktitle":"INForum",
+		"publisher":"Faculdade de Ciências da Universidade de Lisboa",
+		"address":"Lisboa",
+		"pages":"180 ",
+		"year":"2009",
+		"month":"September",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"OHCP",
+		"author":"Nuno Oliveira and Pedro Rangel Henriques and Daniela da Cruz and Maria João Varanda Pereira",
+		"title":"XAGra ",
+		"publisher":"Faculdade de Ciências da Universidade de Lisboa",
+		"booktitle":"INForum",
+		"address":"Lisboa",
+		"pages":"409 ",
+		"year":"2009",
+		"month":"September",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"FCHGD",
+		"author":"Daniela da Cruz and Flávio Xavier Ferreira and Pedro Rangel Henriques and Alda Lopes Gancarski and Bruno Defude",
+		"title":"GuessXQ",
+		"publisher":"Faculdade de Ciências da Universidade de Lisboa",
+		"booktitle":"INForum",
+		"address":"Lisboa",
+		"pages":"322 ",
+		"year":"2009",
+		"month":"September",
+	}
+	{
+		"tipo":"InProceedings",
+		"codigo":"BHVU",
+		"author":"Mario Béron and Pedro Rangel Henriques and Maria João Varanda Pereira and Roberto Uzal",
+		"title":"Instrumentaciones de Programas Escritos en C para Interrelacionar las Vistas Comportamental y Operacional de los Sistemas de Software",
+		"booktitle":"CACIC",
+		"publisher":"Universidad Nacional de Jujuy",
+		"year":"2009",
+		"month":"Oct",
+	}
+	{
+		"tipo":"article",
+		"codigo":"CBHP",
+		"author":"Daniela da Cruz and Mario Béron and Pedro Rangel Henriques and Maria João Varanda Pereira",
+		"title":"Code Inspection Approaches for Program Visualization",
+		"journal":"Acta Electrotechnica et Informatica",
+		"editor":"Linus Michaeli",
+		"publisher":"Faculty of Electrical Engineering and Informatics",
+		"year":"2009",
+		"month":"Jul",
+		"volume":"9",
+		"number":"3",
+		"pages":"32",
+		"note":"ISSN",
+	}
+	{
+		"tipo":"inproceedings",
+		"codigo":"CH",
+		"address":"Milan",
+		"author":"Daniela da Cruz and Pedro Henriques ",
+		"booktitle":"ICEIS ",
+		"title":"Assessing Databases in ",
+		"year":"2009",
+		"month":"May",
+	}
+	{
+		"tipo":"INPROCEEDINGS",
+		"codigo":"CH2",
+		"AUTHOR":"Daniela da Cruz and Pedro Rangel Henriques",
+		"TITLE":"Exploring",
+		"BOOKTITLE":"Proceedings of 25th Symposium On Applied Computing ",
+		"YEAR":"2010",
+		"note":"to be published",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"OPHCC2",
+		"author":"Nuno Oliveira and Maria João Varanda Pereira and Pedro Rangel Henriques and Daniela da Cruz and Bastian Cramer",
+		"title":"VisualLISA",
+		"journal":"ComSIS ",
+		"editor":"Ivan Lukovic and António Leitão ",
+		"publisher":"Faculty of Technical Sciences",
+		"year":"2010",
+		"month":"January",
+		"note":"to be published",
+	}
+	{
+		"tipo":"Article",
+		"codigo":"KOMPCCH2",
+		"author":"Tomaz Kosar and Nuno Oliveira and Marjan Mernik and Maria João Varanda Pereira and Matej Crepinsek and Daniela",
+		"title":"Comparing General",
+		"journal":"ComSIS ",
+		"editor":"Ivan Lukovic and António Leitão ",
+		"publisher":"Faculty of Technical Sciences",
+		"year":"2010",
+		"month":"January",
+		"note":"to be published",
+	}
 	]
 }

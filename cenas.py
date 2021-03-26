@@ -11,6 +11,7 @@ a=[]
 
 #separa dentro de cada categoria a chave única e coloca em campo e os autores separa tmb
 for i in categoria:
+    
     campo = re.match(r'(\w+\{([\w\d]+))', i)
     #if campo:
     #    print(campo[2])

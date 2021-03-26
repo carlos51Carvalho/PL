@@ -60,7 +60,7 @@ for i in categoria:
     if campo:
         print(campo[2])
 
-        if autor := re.search(r'\b(?i:author) *= *\{?\"?([^"},]*)',i):
+        if autor := re.search(r'\b(?i:author) *= *\{?\"?([^"}]*)',i):
             lsa=autor.group(1)
             #print(lsa)
 

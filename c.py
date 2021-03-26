@@ -26,7 +26,7 @@ for i in categoria:
 		#print("codigo: ",g[1])
 		json.write("\n\t\t\"codigo\":\""+g[1]+"\",")
 
-		info = re.findall(r'\b(\w+)[ ]*=[ ]*\{?\"?([^"},]*)',i)
+		info = re.findall(r'\b(\w+) *= *\{?\"?([^"},]*)',i)
 		for (c,v) in info:
 			#print(c,": ",v)
 			if re.search(r'^\d*$',v):

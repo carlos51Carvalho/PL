@@ -1,0 +1,7 @@
+graph {
+	A [label="King Arthur"]
+	B [label="Sir Bedevere the Wise"]
+	L [label="Sir Lancelot the Brave"]
+	A -- B [constraint=true]
+	A -- L [constraint=true]
+}

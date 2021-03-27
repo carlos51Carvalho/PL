@@ -30,7 +30,7 @@ for i in categoria:
             for c in autores:
                 
                 cs = c.strip()
-                #if re.search(r'(w+), (\w+)',c):
+                #if c:=re.search(r'(w+), (\w+)',c):
                     #not working don't know why 
                  #   cs = (c.group(2) + c.group(1)).strip()
                  #   print(cs)
@@ -50,24 +50,38 @@ autoresOcorr={}
 #HOW TO SPLI 
 l = f.read()
 categoria = re.split('@',l)
-a=[]
+
 
 #separa dentro de cada categoria a chave única e coloca em campo e os autores separa tmb
 for i in categoria:
-    campo = re.match(r'(\w+\{([\w\d]+))', i)
-    #print(campo)
+    campo = re.match(r'(\w+\{([^,]+))', i)
     
     if campo:
         print(campo[2])
 
         if autor := re.search(r'\b(?i:author) *= *\{?\"?([^"}]*)',i):
             lsa=autor.group(1)
-            #print(lsa)
+           
 
             lsa=re.sub(r'( |\n)+', r' ', lsa)
-            aut = re.split(r' +and +',lsa)
-            print(aut)
+            autores = re.split(r' +and +',lsa)
+           
+            
+            for aut in autores:
+                if aux:=re.search(r'([\w\. ]+), ([\w\. ]+)',aut): 
+                    aut = aux.group(2) +' ' +aux.group(1)
+                    
 
-            #perguntar ao stor o que é para fazer agr
+                if aut in autoresOcorr:
+                    autoresOcorr[aut].append(campo[2])
+                else:
+                    autoresOcorr[aut]=[campo[2]]
+                    
+
 
         print()
+
+print("\n\n\n\n\n")
+for i in sorted(autoresOcorr):
+    print(i + ": ",autoresOcorr[i])
+    print()

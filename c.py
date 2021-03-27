@@ -16,7 +16,7 @@ first=True
 json.write("{\n\t\"referencias\":[")
 for i in categoria:
 	#print(i)
-	tipo = re.match(r'(\w+)\{(\w+)',i)
+	tipo = re.match(r'(\w+)\{([^,]+)',i)
 	
 	if tipo:
 		g=re.split('{',tipo.group())
@@ -26,15 +26,19 @@ for i in categoria:
 		#print("codigo: ",g[1])
 		json.write("\n\t\t\"codigo\":\""+g[1]+"\",")
 
-		info = re.findall(r'\b(\w+) *= *\{?\"?([^"},]*)',i)
-		for (c,v) in info:
-			#print(c,": ",v)
-			if re.search(r'^\d*$',v):
-				json.write("\n\t\t\"" + c +"\":"+v+",")
-				print("ola" +v)
-			else:
+		info = re.findall(r'\b(\w+) *= *\{?\"?(\d*),|\b(\w+) *= *\{?\"?([^"}]*)',i)
+		for (c,v,c1,v1) in info:
+			print(c,": ",v, " | ",c1,": ",v1)
+			print()
+			if c:
 				json.write("\n\t\t\"" + c +"\":\""+v+"\",")
-	
+			else:
+				if re.search(r'^\d*$',v1):
+					json.write("\n\t\t\"" + c1 +"\":"+v1+",")
+				else:
+					json.write("\n\t\t\"" + c1 +"\":\""+v1+"\",")
+		print()
+		print()
 		json.write("\n\t}")
 
 	

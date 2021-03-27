@@ -18,43 +18,26 @@ def exA():
 	  			categoria[caux]=1
 
 
+	html = open("a.html","w")
+	html.write('''<!DOCTYPE html>
+<html>
+    <head>
+        <title>Relatório</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+    	<h1>Categorias</h1>
+    	<ol>
+''')
 
 	for i in sorted(categoria):
+		html.write("    		<li>" +i + ": "+ str(categoria[i]) + "</li>\n")		
 		print(i,categoria[i])
 
-def exB():
-	f = open("exemplo-utf8.bib", "r", encoding='utf-8')
-	
-	categorias=[]
-	
-
-	
-	for linha in f:
-		if res := re.search(r'\@.+',linha):
-			print(res.group())
-		elif res := re.search(r'((\w+)(.|\n)*?,?)',linha):
-			print(res)
-		elif res := re.search(r'(\n)',linha):
-			pass
-		else: print(linha)
-
-		print()
-		
-	'''
-	#r'\@(\w+)\{((.|\n)+)?('
-	autores={}
-	conteudo = f.read()
-	#print(conteudo)
-	#talvez nao seja preciso ser um findall
-	campos = re.findall(r'(\@\w*\{\w*,)|([aA][uU][tT][hH][oO][rR]\b)',conteudo)
-	for c in campos:
-		print(c)
-	  #if campos:
-	  #  categoria.append(campos.group(1))  
-	'''
-
-
+	html.write('''    	</ol>
+	</body>
+</html>\n''')
 
 if __name__ == '__main__':
 	#print("Main")
-	exB()
+	exA()

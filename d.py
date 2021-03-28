@@ -1,4 +1,6 @@
 import re
+from graphviz import Graph
+
 f = open("exemplo-utf8.bib", "r", encoding='utf-8')
 
 ex_aut= "J.J. Almeida"
@@ -31,9 +33,18 @@ for i in categoria:
                 if not aut.__eq__(ex_aut) and aut not in autoresRelat:
                     autoresRelat.append(aut)
                          
-            
-                
+   
+g = Graph(format='png')
+g.node(0, ex_aut)
+k=1
+
+for i in autoresRelat:
+    g.node(k, i)
+    g.edge(0, k, constraint='true')
+    k+=1
+
+g.render('test-output/doutput', view=True)
 print(autoresRelat)
 
 
-#falta transformar isto num gráfico com os autores. Raciciocino muito parecido com o da pergunta b.
+#nao consigo visualizar o grafico 

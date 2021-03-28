@@ -35,12 +35,12 @@ for i in categoria:
                          
    
 g = Graph(format='png')
-g.node(0, ex_aut)
+g.node(str(0), ex_aut)
 k=1
 
 for i in autoresRelat:
-    g.node(k, i)
-    g.edge(0, k, constraint='true')
+    g.node(str(k), i)
+    g.edge(str(0), str(k), constraint='true')
     k+=1
 
 g.render('test-output/doutput', view=True)

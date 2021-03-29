@@ -3,11 +3,11 @@
 	{
 		"tipo":"inproceedings",
 		"codigo":"graminteractivas1990",
-		"author":"F. M√°rio Martins and J.J. Almeida and P.R. Henriques",
-		"title":"Mecanismos para Especifica√ß√£o e Prototipagem de Interfaces
+		"author":"F. M·rio Martins and J.J. Almeida and P.R. Henriques",
+		"title":"Mecanismos para EspecificaÁ„o e Prototipagem de Interfaces
     Utilizador-Sistema",
-		"note":"(Gram√°ticas Interactivas guardadas)",
-		"booktitle":"3$¬∫$ Encontro Portugu√™s de Computa√ß√£o Gr√°fica",
+		"note":"(Gram·ticas Interactivas guardadas)",
+		"booktitle":"3$∫$ Encontro PortuguÍs de ComputaÁ„o Gr·fica",
 		"address":"Coimbra",
 		"year":"1990",
 	}
@@ -17,7 +17,7 @@
 		"author":"J.J. Almeida and J.B. Barros",
 		"title":"Teoria das Linguagens ",
 		"institution":"umdi",
-		"type":"Texto did√°ctico",
+		"type":"Texto did·ctico",
 		"year":"1988",
 		"keyword":"compiladores",
 	}
@@ -27,7 +27,7 @@
 		"author":"J.B. Barros and J.J. Almeida",
 		"title":"Estruturas de Dados",
 		"institution":"umdi",
-		"type":"Texto did√°ctico",
+		"type":"Texto did·ctico",
 		"year":"1990",
 		"keyword":"algoritmos",
 	}
@@ -35,10 +35,10 @@
 		"tipo":"techreport",
 		"codigo":"Camila",
 		"author":"{projecto Camila",
-		"editor":"L.S. Barbosa and J.J. Almeida and J.N. Oliveira and Lu√≠s Neves",
+		"editor":"L.S. Barbosa and J.J. Almeida and J.N. Oliveira and LuÌs Neves",
 		"title":"\textsc{Camila",
 		"url":"http://camila.di.uminho.pt",
-		"type":"(P√°ginas do projecto)",
+		"type":"(P·ginas do projecto)",
 		"institution":"umdi",
 		"year":"1998",
 		"keyword":"FS",
@@ -49,7 +49,7 @@
 		"author":"J.J. Almeida",
 		"title":"{Natura",
 		"url":"http://natura.di.uminho.pt/",
-		"type":"(P√°ginas do projecto)",
+		"type":"(P·ginas do projecto)",
 		"note":"\url{http://natura.di.uminho.pt/",
 		"institution":"umdi",
 		"keyword":"PLN",
@@ -95,9 +95,9 @@
 		"tipo":"inproceedings",
 		"codigo":"Almeida94c",
 		"author":"J.J. Almeida and Ulisses Pinto",
-		"title":"Jspell -- um m√≥dulo para an√°lise l√©xica gen√©rica de linguagem natural",
-		"booktitle":"Actas do X Encontro da Associa√ß√£o Portuguesa de Lingu√≠stica",
-		"address":"√âvora 1994",
+		"title":"Jspell -- um mÛdulo para an·lise lÈxica genÈrica de linguagem natural",
+		"booktitle":"Actas do X Encontro da AssociaÁ„o Portuguesa de LinguÌstica",
+		"address":"…vora 1994",
 		"pages":"1--15",
 		"year":"1995",
 		"url":"http://natura.di.uminho.pt/~jj/pln/jspell1.ps.gz",
@@ -181,8 +181,8 @@
 		"tipo":"inproceedings",
 		"codigo":"Almeida96a",
 		"author":"J.J. Almeida",
-		"title":"Especifica√ß√£o e tratamento de Dicion√°rios",
-		"booktitle":"Actas do XI Encontro da Associa√ß√£o Portuguesa de Lingu√≠stica",
+		"title":"EspecificaÁ„o e tratamento de Dicion·rios",
+		"booktitle":"Actas do XI Encontro da AssociaÁ„o Portuguesa de LinguÌstica",
 		"address":"Lisboa 1995",
 		"year":"1996",
 		"volume":"2",
@@ -193,8 +193,8 @@
 		"tipo":"inproceedings",
 		"codigo":"Ulisses96",
 		"author":"Ulisses Pinto and J.J. Almeida",
-		"title":"Tratamento autom√°tico de termos compostos",
-		"booktitle":"Actas do XI Encontro da Associa√ß√£o Portuguesa de Lingu√≠stica",
+		"title":"Tratamento autom·tico de termos compostos",
+		"booktitle":"Actas do XI Encontro da AssociaÁ„o Portuguesa de LinguÌstica",
 		"address":"Lisboa 1995",
 		"volume":"2",
 		"year":"1996",
@@ -221,7 +221,7 @@
 		"volume":19,
 		"pages":"81--90",
 		"journal":"Procesamiento del Lenguaje Natural",
-		"publisher":"Sociedade Espa√±ola para el Procesamiento del Lenguaje Natural",
+		"publisher":"Sociedade EspaÒola para el Procesamiento del Lenguaje Natural",
 		"keyword":"jspell,morphology,lex,PLN,nllex",
 		"url":"http://natura.di.uminho.pt/~jj/pln/nllex2.ps.gz",
 	}
@@ -267,8 +267,8 @@
 		"tipo":"inproceedings",
 		"codigo":"Almeida98",
 		"author":"J.J. Almeida",
-		"title":"Programa√ß√£o de dicion√°rios",
-		"booktitle":"Actas do XIII Encontro da Associa√ß√£o Portuguesa de Lingu√≠stica",
+		"title":"ProgramaÁ„o de dicion·rios",
+		"booktitle":"Actas do XIII Encontro da AssociaÁ„o Portuguesa de LinguÌstica",
 		"year":"1998",
 		"pages":"21--28",
 		"volume":1,
@@ -280,8 +280,8 @@
 		"tipo":"inproceedings",
 		"codigo":"Reis98",
 		"author":"Ricardo Reis and J.J. Almeida",
-		"title":"Etiquetador morfo-sint√°ctico para o Portugu√™s",
-		"booktitle":"Actas do XIII Encontro da Associa√ß√£o Portuguesa de Lingu√≠stica",
+		"title":"Etiquetador morfo-sint·ctico para o PortuguÍs",
+		"booktitle":"Actas do XIII Encontro da AssociaÁ„o Portuguesa de LinguÌstica",
 		"address":"Lisboa 1997",
 		"year":"1998",
 		"keyword":"tagger, PLN",
@@ -334,7 +334,7 @@
     and J.L.  Faria and P.R. Henriques",
 		"title":"Adapting Museum Structures for the Web: No Changes Needed!",
 		"booktitle":"Museums and the Web 1998",
-		"note":"Toronto - Canad√°",
+		"note":"Toronto - Canad·",
 		"year":"1998",
 	}
 	{
@@ -367,7 +367,7 @@
 		"codigo":"Gis99",
 		"author":"Jorge Rocha and Ana Silva and Ricardo Henriques and J.J. Almeida and Pedro Henriques",
 		"title":"Formal Methods for {GI",
-		"booktitle":"Confer√™ncia da Association of Geographic Information
+		"booktitle":"ConferÍncia da Association of Geographic Information
 Laboratories for Europe (AGILE)",
 		"address":"Roma",
 		"year":"1999",
@@ -378,7 +378,7 @@ Laboratories for Europe (AGILE)",
 		"codigo":"RPA99",
 		"author":"Jorge Rocha and Tiago Pedroso and J.J. Almeida",
 		"title":"{MAPit",
-		"booktitle":"Confer√™ncia da Association of Geographic Information
+		"booktitle":"ConferÍncia da Association of Geographic Information
 Laboratories for Europe (AGILE)",
 		"address":"Roma",
 		"year":"1999",
@@ -388,7 +388,7 @@ Laboratories for Europe (AGILE)",
 		"tipo":"inproceedings",
 		"codigo":"RSea99",
 		"author":"Jorge Gustavo Rocha and Ana Silva and J.J. Almeida and Mario Ricardo Henriques and Pedro Rangel Henriques",
-		"title":"Sobre a Utiliza√ß√£o de Metodologias Formais no Desenvolvimento de
+		"title":"Sobre a UtilizaÁ„o de Metodologias Formais no Desenvolvimento de
 {SIG",
 		"booktitle":"GISBRASIL'99, Salvador",
 		"year":"1999",
@@ -397,7 +397,7 @@ Laboratories for Europe (AGILE)",
 	{
 		"tipo":"inproceedings",
 		"codigo":"xmldt99",
-		"author":" J.J. Almeida and Jos√© Carlos Ramalho",
+		"author":" J.J. Almeida and JosÈ Carlos Ramalho",
 		"title":"{XML::DT",
 		"booktitle":"XML-Europe'99, Granada - Espanha",
 		"month":"May",
@@ -431,35 +431,35 @@ Laboratories for Europe (AGILE)",
 		"tipo":"inproceedings",
 		"codigo":"jj2001x",
 		"author":"J.J. Almeida",
-		"title":"Smallbook -- comando para produ√ß√£o de livros em pequena escala",
+		"title":"Smallbook -- comando para produÁ„o de livros em pequena escala",
 		"year":"2000",
 		"pages":"445--450",
-		"booktitle":"Actas da II Confer√™ncia Internacional de Tecnologias de
-Informa√ß√£o e Comunica√ß√£o na Educa√ß√£o",
+		"booktitle":"Actas da II ConferÍncia Internacional de Tecnologias de
+InformaÁ„o e ComunicaÁ„o na EducaÁ„o",
 		"address":"Braga",
 		"keyword":"publishing, latex, smallbook",
 	}
 	{
 		"tipo":"article",
 		"codigo":"speaker:sepln2001",
-		"author":"J.J. Almeida and A. M. Sim√µes",
+		"author":"J.J. Almeida and A. M. Simıes",
 		"title":"Text to speech -- a rewriting system approach",
 		"journal":"Procesamiento del Lenguaje Natural",
 		"address":"Sevilha",
 		"volume":27,
 		"pages":"247--255",
-		"publisher":"Sociedade Espa√±ola para el Procesamiento del Lenguaje Natural",
+		"publisher":"Sociedade EspaÒola para el Procesamiento del Lenguaje Natural",
 		"month":"Sep.",
 		"year":"2001",
-		"keyword":"TTS,RS,fon√©tica",
+		"keyword":"TTS,RS,fonÈtica",
 	}
 	{
 		"tipo":"inproceedings",
 		"codigo":"mp2001",
 		"author":"J.J. Almeida and  J. Gustavo Rocha and  P. Rangel Henriques and
-    S√≥nia Moreira and Alberto Sim√µes",
+    SÛnia Moreira and Alberto Simıes",
 		"title":"{Museu da Pessoa",
-		"booktitle":"Congresso Nacional de Bibliotec√°rios, Arquivistas e
+		"booktitle":"Congresso Nacional de Bibliotec·rios, Arquivistas e
     Documentalistas",
 		"address":"Porto",
 		"url":"http://natura.di.uminho.pt/~jj/bib/museuDaPessoa2001.ps.gz",
@@ -470,9 +470,9 @@ Informa√ß√£o e Comunica√ß√£o na Educa√ß√£o",
 		"tipo":"inproceedings",
 		"codigo":"alfarrabio2001",
 		"author":"J.J. Almeida and P. Rangel Henriques and J. Gustavo Rocha and
-    Alberto Sim√µes",
-		"title":"Alfarr√°bio: Adding value to an Heterogeneous Site Collection",
-		"booktitle":"Congresso Nacional de Bibliotec√°rios, Arquivistas e
+    Alberto Simıes",
+		"title":"Alfarr·bio: Adding value to an Heterogeneous Site Collection",
+		"booktitle":"Congresso Nacional de Bibliotec·rios, Arquivistas e
     Documentalistas",
 		"address":"Porto",
 		"url":"http://natura.di.uminho.pt/~jj/bib/alfarrabio2001.ps.gz",
@@ -482,50 +482,50 @@ Informa√ß√£o e Comunica√ß√£o na Educa√ß√£o",
 	{
 		"tipo":"inproceedings",
 		"codigo":"freq2002",
-		"author":"Paulo A. Rocha and Alberto M. Sim√µes and J.J. Almeida",
-		"title":" C√°lculo de frequ√™ncias de
-palavras para entradas de dicion√°rios atrav√©s do uso conjunto de analisadores
-morfol√≥gicos, taggers e corpora",
-		"booktitle":"Actas do XVII Encontro da Associa√ß√£o Portuguesa de Lingu√≠stica",
+		"author":"Paulo A. Rocha and Alberto M. Simıes and J.J. Almeida",
+		"title":" C·lculo de frequÍncias de
+palavras para entradas de dicion·rios atravÈs do uso conjunto de analisadores
+morfolÛgicos, taggers e corpora",
+		"booktitle":"Actas do XVII Encontro da AssociaÁ„o Portuguesa de LinguÌstica",
 		"address":"Lisboa 2001",
 		"pages":"407--418",
 		"year":"2002",
 		"url":"http://natura.di.uminho.pt/~jj/bib/apl:freqnormpt.ps.gz",
-		"abstract":"Apresentamos neste documento uma poss√≠vel abordagem √†
-                extrac√ß√£o de frequ√™ncias de palavras a partir de
-                corpora, baseada numa utiliza√ß√£o cooperativa de v√°rias
+		"abstract":"Apresentamos neste documento uma possÌvel abordagem ‡
+                extracÁ„o de frequÍncias de palavras a partir de
+                corpora, baseada numa utilizaÁ„o cooperativa de v·rias
                 ferramentas de Processamento de Linguagem Natural.",
 	}
 	{
 		"tipo":"inproceedings",
 		"codigo":"jspell2002",
-		"author":"Alberto M. Sim√µes and J.J. Almeida",
-		"title":" Jspell.pm -- um m√≥dulo de an√°lise morfol√≥gica
+		"author":"Alberto M. Simıes and J.J. Almeida",
+		"title":" Jspell.pm -- um mÛdulo de an·lise morfolÛgica
 para uso em processamento de linguagem natural",
-		"booktitle":"Actas do XVII Encontro da Associa√ß√£o Portuguesa de Lingu√≠stica",
+		"booktitle":"Actas do XVII Encontro da AssociaÁ„o Portuguesa de LinguÌstica",
 		"address":"Lisboa 2001",
 		"pages":"485--495",
-		"abstract":"Neste documento √© nosso prop√≥sito apresentar as
-                caracter√≠sticas presentes no analisador morfol√≥gico
-                jspell e quais as suas consequ√™ncias ao n√≠vel de
-                aplica√ß√µes de processamento de linguagem natural. Como
-                ferramenta que √© frequentemente integrada em software
-                mais espec√≠fico, apresentamos um m√≥dulo Perl
-                desenvolvido com o objectivo de facilitar a interliga√ß√£o
-                do analisador morfol√≥gico com pequenas aplica√ß√µes
-                desenvolvidas em linguagens de scripting. Devido √†
-                constante necessidade de melhoramento de dicion√°rios, e
-                em particular dos analisadores morfol√≥gicos, discutimos
+		"abstract":"Neste documento È nosso propÛsito apresentar as
+                caracterÌsticas presentes no analisador morfolÛgico
+                jspell e quais as suas consequÍncias ao nÌvel de
+                aplicaÁıes de processamento de linguagem natural. Como
+                ferramenta que È frequentemente integrada em software
+                mais especÌfico, apresentamos um mÛdulo Perl
+                desenvolvido com o objectivo de facilitar a interligaÁ„o
+                do analisador morfolÛgico com pequenas aplicaÁıes
+                desenvolvidas em linguagens de scripting. Devido ‡
+                constante necessidade de melhoramento de dicion·rios, e
+                em particular dos analisadores morfolÛgicos, discutimos
                 as propriedades que estes devem conter para facilitar o
-                seu processamento e enriquecimento autom√°tico.",
+                seu processamento e enriquecimento autom·tico.",
 		"year":"2002",
 	}
 	{
 		"tipo":"inproceedings",
 		"codigo":"dag2002",
-		"author":"Alberto M. Sim√µes and J.J. Almeida and Pedro R. Henriques",
+		"author":"Alberto M. Simıes and J.J. Almeida and Pedro R. Henriques",
 		"title":"Directory Attribute Grammars",
-		"booktitle":"VI Simp√≥sio Brasileiro de Linguagens de Programa√ß√£o",
+		"booktitle":"VI SimpÛsio Brasileiro de Linguagens de ProgramaÁ„o",
 		"pages":"297--308",
 		"address":"Rio de Janeiro, Brasil",
 		"year":"2002",
@@ -533,10 +533,10 @@ para uso em processamento de linguagem natural",
 	{
 		"tipo":"inproceedings",
 		"codigo":"elpub2002",
-		"author":"Alberto M. Sim√µes and J.J. Almeida",
+		"author":"Alberto M. Simıes and J.J. Almeida",
 		"title":"Library::* -- a toolkit for digital libraries",
 		"booktitle":"Elpub 2002 -- International Conference on Electronic Publishing",
-		"address":"Karlov Vary, Rep√∫blica Checa",
+		"address":"Karlov Vary, Rep˙blica Checa",
 		"month":"Nov.",
 		"pages":"203--211",
 		"year":"2002",
@@ -560,9 +560,9 @@ para uso em processamento de linguagem natural",
 	{
 		"tipo":"article",
 		"codigo":"parguess2002",
-		"author":"J.J. Almeida and Alberto M. Sim√µes and J. Alves de Castro",
+		"author":"J.J. Almeida and Alberto M. Simıes and J. Alves de Castro",
 		"title":"Grabbing parallel corpora from the web",
-		"publisher":"Sociedade Espa√±ola para el Procesamiento del Lenguaje Natural",
+		"publisher":"Sociedade EspaÒola para el Procesamiento del Lenguaje Natural",
 		"journal":"Procesamiento del Lenguaje Natural",
 		"volume":29,
 		"pages":"13--20",
@@ -581,53 +581,53 @@ cooperatively (in pipeline)  and also in a independent way.  ",
 	{
 		"tipo":"InProceedings",
 		"codigo":"APL2k2.Parguess",
-		"author":"J.J. Almeida and Alberto Manuel Sim√µes and Jos√© Alves Castro",
-		"title":"Extrac√ß√£o de corpora paralelo a partir da web: constru√ß√£o e
-disponibiliza√ß√£o",
-		"booktitle":"Actas do XVIII Encontro da Associa√ß√£o Portuguesa de Lingu√≠stica",
+		"author":"J.J. Almeida and Alberto Manuel Simıes and JosÈ Alves Castro",
+		"title":"ExtracÁ„o de corpora paralelo a partir da web: construÁ„o e
+disponibilizaÁ„o",
+		"booktitle":"Actas do XVIII Encontro da AssociaÁ„o Portuguesa de LinguÌstica",
 		"address":"Porto 2002",
 		"year":2003,
 		"lang":"PT",
 		"url":"http://alfarrabio.di.uminho.pt/~albie/publications/APL2k2.Parguess.pdf",
 		"abstract":"
-   Ao longo deste documento descrever-se-√° um conjunto de ferramentas
-   constru√≠das para extrac√ß√£o autom√°tica de recursos bilingues a partir
+   Ao longo deste documento descrever-se-· um conjunto de ferramentas
+   construÌdas para extracÁ„o autom·tica de recursos bilingues a partir
    da Web, a partir de um \emph{site",
 	}
 	{
 		"tipo":"InProceedings",
 		"codigo":"APL2k2.Synthesis",
-		"author":"J.J. Almeida and Alberto Manuel Sim√µes",
-		"title":"Gera√ß√£o de voz com sotaque",
-		"booktitle":"Actas do XVIII Encontro da Associa√ß√£o Portuguesa de Lingu√≠stica",
+		"author":"J.J. Almeida and Alberto Manuel Simıes",
+		"title":"GeraÁ„o de voz com sotaque",
+		"booktitle":"Actas do XVIII Encontro da AssociaÁ„o Portuguesa de LinguÌstica",
 		"address":"Porto 2002",
 		"year":2003,
 		"url":"http://alfarrabio.di.uminho.pt/~albie/publications/APL2k2.Synthesis.pdf",
 		"lang":"PT",
 		"abstract":"
-   Como √© sabido os sotaques podem estar ligados a uma zona geogr√°fica,
-   a um grupo social, podem at√© ser uma caracter√≠stica pessoal.  O seu
-   estudo e descri√ß√£o tem interessado muitos investigadores embora
+   Como È sabido os sotaques podem estar ligados a uma zona geogr·fica,
+   a um grupo social, podem atÈ ser uma caracterÌstica pessoal.  O seu
+   estudo e descriÁ„o tem interessado muitos investigadores embora
    normalmente esse estudo tem sido feito de modo pouco formal.
 
    No trabalho que aqui se relata, tentou-se descrever formalmente
-   sotaques e disfun√ß√µes atrav√©s de cria√ß√£o de regras a integrar como
+   sotaques e disfunÁıes atravÈs de criaÁ„o de regras a integrar como
    variantes num gerador de voz.  Deste modo, pretendeu-se criar um
-   ambiente de experimenta√ß√£o dos modelos constru√≠dos para descrever
-   algumas caracter√≠sticas de certos sotaques ou certas disfun√ß√µes, de
-   modo a permitir a sua valida√ß√£o.
+   ambiente de experimentaÁ„o dos modelos construÌdos para descrever
+   algumas caracterÌsticas de certos sotaques ou certas disfunÁıes, de
+   modo a permitir a sua validaÁ„o.
 
-   Constatou-se que se consegue obter certas disfun√ß√µes e certos
+   Constatou-se que se consegue obter certas disfunÁıes e certos
    sotaques com facilidade por simples acrescento de regras opcionais
-   em certas fases da gera√ß√£o da voz. Outros, aparentam ser de maior
-   dificuldade, ou por n√£o conhecermos suficiente bem os fen√≥menos
-   neles envolvidos ou envolverem maior complexidade pros√≥dica.
+   em certas fases da geraÁ„o da voz. Outros, aparentam ser de maior
+   dificuldade, ou por n„o conhecermos suficiente bem os fenÛmenos
+   neles envolvidos ou envolverem maior complexidade prosÛdica.
   ",
 	}
 	{
 		"tipo":"InProceedings",
 		"codigo":"xata:xmldt",
-		"author":"J.J. Almeida and Alberto Manuel Sim√µes",
+		"author":"J.J. Almeida and Alberto Manuel Simıes",
 		"title":"Engenharia reversa de {HTML",
 		"booktitle":"{XATA --- XML",
 		"year":2003,
@@ -637,22 +637,22 @@ disponibiliza√ß√£o",
 		"abstract":" O proliferar de ferramentas criadores de HTML e o uso
                   de HTML guiado pelo aspecto, tem vindo a arruinar o
                   seu lado conceptual. Este problema foi reconhecido e
-                  deu origem a v√°rios formatos ou tecnologias com o
+                  deu origem a v·rios formatos ou tecnologias com o
                   objectivo de separar o aspecto do conceito.  No
                   entanto a realidade actual mostra uma enorme
-                  quantidade de p√°ginas HTML com p√©ssima leitura
-                  conceptual e estrutural, invalidando uma s√©rie de
-                  usos poss√≠veis da informa√ß√£o nelas contida.  Nesta
-                  comunica√ß√£o apresenta-se um trabalho (em fase
+                  quantidade de p·ginas HTML com pÈssima leitura
+                  conceptual e estrutural, invalidando uma sÈrie de
+                  usos possÌveis da informaÁ„o nelas contida.  Nesta
+                  comunicaÁ„o apresenta-se um trabalho (em fase
                   inicial) que pretende fazer engenharia reversa de
                   HTML para permitir aumentar a sua acessibilidade, a
                   fim de ser usada num \emph{browser",
-		"editor":"Jos√© Carlos Ramalho",
+		"editor":"JosÈ Carlos Ramalho",
 	}
 	{
 		"tipo":"InProceedings",
 		"codigo":"xata:museudapessoa",
-		"author":"Alberto Manuel Sim√µes and J.J. Almeida",
+		"author":"Alberto Manuel Simıes and J.J. Almeida",
 		"title":"{H",
 		"strutural":"M",
 		"booktitle":"{XATA --- XML",
@@ -660,21 +660,21 @@ disponibiliza√ß√£o",
 		"lang":"PT",
 		"abstract":"
    Este artigo apresenta a arquitectura actual do Museu da Pessoa,
-   contemplando a forma como os documentos est√£o a ser editador,
-   catalogados, arquivados, e processados para a cria√ß√£o das estruturas
-   necess√°rias ao Museu.
+   contemplando a forma como os documentos est„o a ser editador,
+   catalogados, arquivados, e processados para a criaÁ„o das estruturas
+   necess·rias ao Museu.
 ",
 		"url":"http://alfarrabio.di.uminho.pt/~albie/publications/xata2003mp.pdf",
-		"editor":"Jos√© Carlos Ramalho",
+		"editor":"JosÈ Carlos Ramalho",
 	}
 	{
 		"tipo":"InProceedings",
 		"codigo":"elpub2003",
-		"author":"Alberto Manuel Sim√µes and J.J. Almeida",
+		"author":"Alberto Manuel Simıes and J.J. Almeida",
 		"year":"2003",
 		"title":"Music publishing",
 		"isbn":"972-98921-2-1",
-		"note":"Guimar√£es, Jun. 2003",
+		"note":"Guimar„es, Jun. 2003",
 		"publisher":"Universidade do Minho",
 		"url":"http://alfarrabio.di.uminho.pt/~albie/publications/elpub2003.pdf",
 		"editor":"Sely Costa et al.",
@@ -695,17 +695,17 @@ disponibiliza√ß√£o",
   a text-based format which includes sound references, music scores,
   chords and lyrics and their meta-information.
   ",
-		"keyword":"m√∫sica, bibliotecas digitais",
+		"keyword":"m˙sica, bibliotecas digitais",
 	}
 	{
 		"tipo":"InProceedings",
 		"codigo":"cp3a:terminum2003",
-		"author":"J.J. Almeida and Alberto Sim√µes and Jos√© Castro and Bruno
+		"author":"J.J. Almeida and Alberto Simıes and JosÈ Castro and Bruno
      Martins and Paulo Silva",
 		"year":"2003",
 		"title":"Projecto {TerminUM",
 		"publisher":"Universidade do Minho",
-		"booktitle":"CP3A 2003 -- Workshop em Corpora Paralelos: aplica√ß√µes e
+		"booktitle":"CP3A 2003 -- Workshop em Corpora Paralelos: aplicaÁıes e
     algoritmos associados",
 		"note":"Braga",
 		"month":"Jun.",
@@ -713,27 +713,27 @@ disponibiliza√ß√£o",
 		"keyword":"terminum, parallel corpora",
 		"url":"http://alfarrabio.di.uminho.pt/~albie/publications/cp3a2003-terminum.pdf",
 		"abstract":" O projecto TerminUM tem como objectivos principais o
-                  estudo, experimenta√ß√£o e a cria√ß√£o de recursos na
-                  √°rea dos corpora paralelos, terminologia
+                  estudo, experimentaÁ„o e a criaÁ„o de recursos na
+                  ·rea dos corpora paralelos, terminologia
                   (descritiva) e recursos multilingues ligados a
-                  corpora: fazer extrac√ß√£o t√£o autom√°tica quanto
-                  poss√≠vel de corpora a partir da web; fazer extrac√ß√£o
-                  de dicion√°rios, de terminologia e de outros recursos
-                  ligados √† tradu√ß√£o; criar e interligar as
+                  corpora: fazer extracÁ„o t„o autom·tica quanto
+                  possÌvel de corpora a partir da web; fazer extracÁ„o
+                  de dicion·rios, de terminologia e de outros recursos
+                  ligados ‡ traduÁ„o; criar e interligar as
                   ferramentas desenvolvidas; criar e disponibilizar:
                   (1) listas de Bitextos, corpora e corpora paralelos,
-                  (2) ferramentas de cria√ß√£o e transforma√ß√£o de
+                  (2) ferramentas de criaÁ„o e transformaÁ„o de
                   corpora, (3) recursos multilingues derivados/ligados
-                  a corpora.  Nesta apresenta√ß√£o ser√£o abordadas
-                  algumas tarefas presentemente a decorrer no √¢mbito
+                  a corpora.  Nesta apresentaÁ„o ser„o abordadas
+                  algumas tarefas presentemente a decorrer no ‚mbito
                   do projecto, nomeadamente: ciclo de vida da
-                  constru√ß√£o e transforma√ß√£o de corpora; resumo das
+                  construÁ„o e transformaÁ„o de corpora; resumo das
                   ferramentas desenvolvidas (e em desenvolvimento);
-                  constru√ß√£o de corpora paralelos tomando como base
+                  construÁ„o de corpora paralelos tomando como base
                   legendas de filmes (subtitles), ficheiro de
-                  internacionaliza√ß√£o (mensagens de software .po) e
-                  ficheiros de mem√≥rias de tradu√ß√£o (TMX); anima√ß√£o de
-                  corpora paralelos via web (cria√ß√£o de motores de
+                  internacionalizaÁ„o (mensagens de software .po) e
+                  ficheiros de memÛrias de traduÁ„o (TMX); animaÁ„o de
+                  corpora paralelos via web (criaÁ„o de motores de
                   consulta usando diversas ferramentas).  ",
 	}
 	{
@@ -743,7 +743,7 @@ disponibiliza√ß√£o",
 		"year":"2003",
 		"title":"{Lingua-Biterm",
 		"publisher":"Universidade do Minho",
-		"booktitle":"CP3A 2003 -- Workshop em Corpora Paralelos: aplica√ß√µes e
+		"booktitle":"CP3A 2003 -- Workshop em Corpora Paralelos: aplicaÁıes e
     algoritmos associados",
 		"note":"Braga",
 		"month":"Jun.",
@@ -753,11 +753,11 @@ disponibiliza√ß√£o",
 	{
 		"tipo":"InProceedings",
 		"codigo":"cp3a:natools2003",
-		"author":"Alberto Sim√µes",
+		"author":"Alberto Simıes",
 		"year":"2003",
 		"title":"Alinhamento de corpora paralelos",
 		"publisher":"Universidade do Minho",
-		"booktitle":"CP3A 2003 -- Workshop em Corpora Paralelos: aplica√ß√µes e
+		"booktitle":"CP3A 2003 -- Workshop em Corpora Paralelos: aplicaÁıes e
     algoritmos associados",
 		"note":"Braga",
 		"month":"Jun.",
@@ -767,9 +767,9 @@ disponibiliza√ß√£o",
 	{
 		"tipo":"article",
 		"codigo":"sepln2003",
-		"author":"Alberto M. Sim√µes and J.J. Almeida",
+		"author":"Alberto M. Simıes and J.J. Almeida",
 		"title":"{NATools",
-		"publisher":"Sociedade Espa√±ola para el Procesamiento del Lenguaje Natural",
+		"publisher":"Sociedade EspaÒola para el Procesamiento del Lenguaje Natural",
 		"journal":"Procesamiento del Lenguaje Natural",
 		"volume":31,
 		"pages":"217--224",
@@ -787,8 +787,8 @@ disponibiliza√ß√£o",
 	{
 		"tipo":"phdthesis",
 		"codigo":"tesejj",
-		"author":"Jos√© Jo√£o Dias de Almeida",
-		"title":"Dicion√°rios din√¢micos multi-fonte",
+		"author":"JosÈ Jo„o Dias de Almeida",
+		"title":"Dicion·rios din‚micos multi-fonte",
 		"school":"Universidade do Minho",
 		"type":"Tese de Doutoramento",
 		"superviser":"Pedro Rangel Henriques",
@@ -800,19 +800,19 @@ disponibiliza√ß√£o",
 	{
 		"tipo":"MastersThesis",
 		"codigo":"teseambs",
-		"author":"Alberto Manuel Brand√£o Sim√µes",
+		"author":"Alberto Manuel Brand„o Simıes",
 		"title":"Parallel Corpora word alignment and applications",
 		"school":"Escola de Engenharia - Universidade do Minho",
 		"url":"http://alfarrabio.di.uminho.pt/~albie/publications/msc.pdf",
 		"type":"Tese de Mestrado",
-		"superviser":"Jos√© Jo√£o Almeida and Pedro Rangel Henriques",
+		"superviser":"JosÈ Jo„o Almeida and Pedro Rangel Henriques",
 		"year":2004,
 		"lang":"EN",
 	}
 	{
 		"tipo":"InProceedings",
 		"codigo":"xata04:tx",
-		"author":"Jos√© Jo√£o Almeida and Alberto Sim√µes",
+		"author":"JosÈ Jo„o Almeida and Alberto Simıes",
 		"title":"{TX",
 		"booktitle":"{XATA 2004",
 		"pages":"217--224",
@@ -821,56 +821,56 @@ disponibiliza√ß√£o",
 {http://alfarrabio.di.uminho.pt/~albie/publications/xata04-tx.pdf",
 		"lang":"PT",
 		"isbn":"972-99166-0-8",
-		"editor":"Jos√© Carlos Ramalho and Alberto Sim√µes",
+		"editor":"JosÈ Carlos Ramalho and Alberto Simıes",
 		"month":"February",
 		"abstract":"
-  Desde o advento do SGML e posteriormente do XML, que a valida√ß√£o de
+  Desde o advento do SGML e posteriormente do XML, que a validaÁ„o de
   documentos tem sido focada.
 
-  Esta valida√ß√£o surgiu para analisar a estrutura dos documentos SGML
-  e XML usando DTDs.  Al√©m dessa, e devido √†s restri√ß√µes do XML em
-  rela√ß√£o ao SGML, a valida√ß√£o de XML bem formado tamb√©m tem sido
+  Esta validaÁ„o surgiu para analisar a estrutura dos documentos SGML
+  e XML usando DTDs.  AlÈm dessa, e devido ‡s restriÁıes do XML em
+  relaÁ„o ao SGML, a validaÁ„o de XML bem formado tambÈm tem sido
   usada.  Mais recentemente, os Schema e Schematron vieram permitir a
-  valida√ß√£o a um n√≠vel superior: n√£o s√≥ a estrutura do documento mas
-  tamb√©m alguma valida√ß√£o de conte√∫do.
+  validaÁ„o a um nÌvel superior: n„o sÛ a estrutura do documento mas
+  tambÈm alguma validaÁ„o de conte˙do.
 
-  Neste artigo apresentamos a ferramenta TX que visa outro n√≠vel de
-  valida√ß√£o, em que os tipos possam ser mais ricos e/ou calculados
-  dinamicamente, e onde se possa definir fun√ß√µes de anota√ß√£o e/ou
-  correc√ß√£o das por√ß√µes do documento que n√£o sigam as especifica√ß√µes.
+  Neste artigo apresentamos a ferramenta TX que visa outro nÌvel de
+  validaÁ„o, em que os tipos possam ser mais ricos e/ou calculados
+  dinamicamente, e onde se possa definir funÁıes de anotaÁ„o e/ou
+  correcÁ„o das porÁıes do documento que n„o sigam as especificaÁıes.
   ",
 	}
 	{
 		"tipo":"InProceedings",
 		"codigo":"xata04:mtd",
-		"author":"Alberto Sim√µes and Jos√© Jo√£o Almeida and Xavier Gomez
+		"author":"Alberto Simıes and JosÈ Jo„o Almeida and Xavier Gomez
 Guinovart",
-		"title":"Mem√≥rias de Tradu√ß√£o Distribu√≠das",
+		"title":"MemÛrias de TraduÁ„o DistribuÌdas",
 		"booktitle":"{XATA 2004",
 		"pages":"59--68",
 		"year":2004,
 		"lang":"PT",
 		"url":"http://alfarrabio.di.uminho.pt/~albie/publications/xata04-mtd.pdf",
 		"isbn":"972-99166-0-8",
-		"editor":"Jos√© Carlos Ramalho and Alberto Sim√µes",
+		"editor":"JosÈ Carlos Ramalho and Alberto Simıes",
 		"month":"February",
 		"abstract":"
-  Neste documento apresenta-se o conceito de mem√≥rias de tradu√ß√£o
-  distribu√≠das, discutindo-se o seu interesse na √°rea da tradu√ß√£o, bem
-  como as vantagens que uma ferramenta de tradu√ß√£o pode tirar do seu
+  Neste documento apresenta-se o conceito de memÛrias de traduÁ„o
+  distribuÌdas, discutindo-se o seu interesse na ·rea da traduÁ„o, bem
+  como as vantagens que uma ferramenta de traduÁ„o pode tirar do seu
   uso.
 
-  √â apresentada uma poss√≠vel implementa√ß√£o de mem√≥rias de tradu√ß√£o
-  distribu√≠das usando WebServices numa arquitectura de cooperativismo.
-  S√£o definidos as mensagens (API) que um servi√ßo deste g√©nero deve
-  implementar para que uma ferramenta de tradu√ß√£o possa tirar partido
-  da colabora√ß√£o entre tradutores.
+  … apresentada uma possÌvel implementaÁ„o de memÛrias de traduÁ„o
+  distribuÌdas usando WebServices numa arquitectura de cooperativismo.
+  S„o definidos as mensagens (API) que um serviÁo deste gÈnero deve
+  implementar para que uma ferramenta de traduÁ„o possa tirar partido
+  da colaboraÁ„o entre tradutores.
   ",
 	}
 	{
 		"tipo":"article",
 		"codigo":"xmldt2",
-		"author":"Alberto Sim√µes",
+		"author":"Alberto Simıes",
 		"title":"{XML::DT",
 		"journal":"The Perl Review",
 		"number":"1",
@@ -880,9 +880,9 @@ Guinovart",
 	{
 		"tipo":"article",
 		"codigo":"sepln2004",
-		"author":"Alberto Sim√µes and Xavier G√≥mez Guinovart and J.J. Almeida",
+		"author":"Alberto Simıes and Xavier GÛmez Guinovart and J.J. Almeida",
 		"title":"Distributed Translation Memories implementation using WebServices",
-		"publisher":"Sociedade Espa√±ola para el Procesamiento del Lenguaje Natural",
+		"publisher":"Sociedade EspaÒola para el Procesamiento del Lenguaje Natural",
 		"journal":"Procesamiento del Lenguaje Natural",
 		"pages":"89--94",
 		"volume":33,
@@ -901,65 +901,65 @@ Guinovart",
 	{
 		"tipo":"inproceedings",
 		"codigo":"linguateca",
-		"author":"Diana Santos and Alberto Sim√µes and Ana Frankenberg-Garcia and
-   Ana Pinto and Anabela Barreiro and Belinda Maia and Cristina Mota and D√©bora
+		"author":"Diana Santos and Alberto Simıes and Ana Frankenberg-Garcia and
+   Ana Pinto and Anabela Barreiro and Belinda Maia and Cristina Mota and DÈbora
    Oliveira and Eckhard Bick and Elisabete Ranchhod and J.J. Almeida
-   and Lu√≠s Cabral and Lu√≠s Costa and Lu√≠s Sarmento and Marcirio Chaves and Nuno
-   Cardoso and Paulo Rocha and Rachel Aires and Ros√°rio Silva and Rui Vilela and
+   and LuÌs Cabral and LuÌs Costa and LuÌs Sarmento and Marcirio Chaves and Nuno
+   Cardoso and Paulo Rocha and Rachel Aires and Ros·rio Silva and Rui Vilela and
    Susana Afonso",
-		"title":"Linguateca: um centro de recursos distribu√≠do para o processamento
-   computacional da l√≠ngua portuguesa",
+		"title":"Linguateca: um centro de recursos distribuÌdo para o processamento
+   computacional da lÌngua portuguesa",
 		"year":"2004",
 		"booktitle":"Workshop on Linguistic Tools and Resources for Spanish and
    Portuguese",
 		"editor":"IBERAMIA 2004",
 		"lang":"EN",
 		"pages":"147--154",
-		"address":"Puebla, M√©xico",
+		"address":"Puebla, MÈxico",
 		"url":"http://alfarrabio.di.uminho.pt/~albie/publications/linguateca.pdf",
 		"abstract":"
-   Neste artigo apresentamos uma panor√¢mica da actividade da Linguateca na cria√ß√£o
-   e disponibiliza√ß√£o de recursos e ferramentas para a l√≠ngua portuguesa.  Come√ßamos
-   por uma descri√ß√£o dos objectivos e pressupostos da Linguateca e uma breve hist√≥ria
-   da sua interven√ß√£o, e finalizamos com algumas considera√ß√µes sobre a melhor forma
-   de prosseguir na organiza√ß√£o da √°rea.
+   Neste artigo apresentamos uma panor‚mica da actividade da Linguateca na criaÁ„o
+   e disponibilizaÁ„o de recursos e ferramentas para a lÌngua portuguesa.  ComeÁamos
+   por uma descriÁ„o dos objectivos e pressupostos da Linguateca e uma breve histÛria
+   da sua intervenÁ„o, e finalizamos com algumas consideraÁıes sobre a melhor forma
+   de prosseguir na organizaÁ„o da ·rea.
  ",
 	}
 	{
 		"tipo":"inproceedings",
 		"codigo":"xata05:fs",
-		"author":"Rui Vilela and Alberto Sim√µes and Eckhard Bick and J.J. Almeida",
-		"title":"Representa√ß√£o em {XML",
+		"author":"Rui Vilela and Alberto Simıes and Eckhard Bick and J.J. Almeida",
+		"title":"RepresentaÁ„o em {XML",
 		"month":"Fev.",
 		"year":"2005",
-		"editor":"Jos√© Carlos Ramalho and Alberto Sim√µes and Jo√£o Correia Lopes",
-		"booktitle":"XATA 2005, Aplica√ß√µes e Tecnologias Associadas",
-		"publisher":"Departamento de Inform√°tica, Universidade do Minho",
+		"editor":"JosÈ Carlos Ramalho and Alberto Simıes and Jo„o Correia Lopes",
+		"booktitle":"XATA 2005, AplicaÁıes e Tecnologias Associadas",
+		"publisher":"Departamento de Inform·tica, Universidade do Minho",
 		"location":"Braga",
-		"keyword":"XML, Floresta Sint√°ctica, tigerXML, Lingua::PT::Dirty",
+		"keyword":"XML, Floresta Sint·ctica, tigerXML, Lingua::PT::Dirty",
 	}
 	{
 		"tipo":"inproceedings",
 		"codigo":"xata05:tdt",
-		"author":"J.J. Almeida and Alberto Sim√µes",
-		"title":"Infer√™ncia de tipos em documentos {XML",
+		"author":"J.J. Almeida and Alberto Simıes",
+		"title":"InferÍncia de tipos em documentos {XML",
 		"month":"Fev.",
 		"year":"2005",
-		"editor":"Jos√© Carlos Ramalho and Alberto Sim√µes and Jo√£o Correia Lopes",
-		"booktitle":"XATA 2005, Aplica√ß√µes e Tecnologias Associadas",
-		"publisher":"Departamento de Inform√°tica, Universidade do Minho",
+		"editor":"JosÈ Carlos Ramalho and Alberto Simıes and Jo„o Correia Lopes",
+		"booktitle":"XATA 2005, AplicaÁıes e Tecnologias Associadas",
+		"publisher":"Departamento de Inform·tica, Universidade do Minho",
 		"location":"Braga",
 		"keyword":"XML, XML::DT",
 	}
 	{
 		"tipo":"inproceedings",
 		"codigo":"xata06:navegante",
-		"author":"J.J. Almeida and Alberto Sim√µes",
-		"title":"Navegante: um proxy de ordem superior para navega√ß√£o intusiva",
+		"author":"J.J. Almeida and Alberto Simıes",
+		"title":"Navegante: um proxy de ordem superior para navegaÁ„o intusiva",
 		"month":"Fev.",
 		"year":"2006",
-		"editor":"Jos√© Carlos Ramalho and Alberto Sim√µes and Jo√£o Correia Lopes",
-		"booktitle":"XATA 2006, Aplica√ß√µes e Tecnologias Associadas",
+		"editor":"JosÈ Carlos Ramalho and Alberto Simıes and Jo„o Correia Lopes",
+		"booktitle":"XATA 2006, AplicaÁıes e Tecnologias Associadas",
 		"publisher":"ESTGP",
 		"address":"Portalegre",
 		"Note":"poster",
@@ -969,11 +969,11 @@ Guinovart",
 	{
 		"tipo":"inproceedings",
 		"codigo":"xata06:xmlauto",
-		"author":"J.J. Almeida and Alberto Sim√µes",
-		"title":"Gera√ß√£o din√¢mica de {API",
+		"author":"J.J. Almeida and Alberto Simıes",
+		"title":"GeraÁ„o din‚mica de {API",
 		"month":"Fev.",
 		"year":"2006",
-		"editor":"Jos√© Carlos Ramalho and Alberto Sim√µes and Jo√£o Correia Lopes",
+		"editor":"JosÈ Carlos Ramalho and Alberto Simıes and Jo„o Correia Lopes",
 		"booktitle":"{XATA 2006",
 		"publisher":"ESTGP",
 		"url":"http://alfarrabio.di.uminho.pt/~albie/publications/xata2006-xmlwritersimple.pdf",
@@ -983,22 +983,22 @@ Guinovart",
 		"isbn":"972-99166-2-4",
 		"lang":"PT",
 		"abstract":"
-  √â consensual que o XML como linguagem para a estrutura√ß√£o de documentos
-  tem vindo a tomar um lugar relevante. √â tamb√©m evidente a vantagem
-  obtida no uso de XML como linguagem de interc√¢mbio.
-  No entanto, a sua sintaxe √©
-  demasiado descritiva pelo que a gera√ß√£o de documentos de forma
-  manual √© dolorosa sendo √∫til dispor de m√≥dulos
+  … consensual que o XML como linguagem para a estruturaÁ„o de documentos
+  tem vindo a tomar um lugar relevante. … tambÈm evidente a vantagem
+  obtida no uso de XML como linguagem de interc‚mbio.
+  No entanto, a sua sintaxe È
+  demasiado descritiva pelo que a geraÁ„o de documentos de forma
+  manual È dolorosa sendo ˙til dispor de mÛdulos
   que simplifiquem essa tarefa.
 
-  Neste artigo propomos um m√≥dulo Perl (XML::Writer::Simple) configur√°vel via
+  Neste artigo propomos um mÛdulo Perl (XML::Writer::Simple) configur·vel via
   DTD que simplifica a tarefa de gerar XML.
   ",
 	}
 	{
 		"tipo":"article",
 		"codigo":"sepln06",
-		"author":"Alberto Sim√µes and J. Jo√£o Almeida",
+		"author":"Alberto Simıes and J. Jo„o Almeida",
 		"title":"{NatServer:",
 		"year":2006,
 		"journal":"Procesamiento del Lenguaje Natural",
@@ -1022,7 +1022,7 @@ Guinovart",
 	{
 		"tipo":"inProceedings",
 		"codigo":"eamt06",
-		"author":"Alberto Sim√µes and J. Jo√£o Almeida",
+		"author":"Alberto Simıes and J. Jo„o Almeida",
 		"title":"Combinatory Examples Extraction for Machine Translation",
 		"shortin":"{EAMT",
 		"year":2006,
@@ -1053,7 +1053,7 @@ Guinovart",
 	{
 		"tipo":"InProceedings",
 		"codigo":"lrec06",
-		"author":"Jos√© Jo√£o Almeida and Alberto Sim√µes",
+		"author":"JosÈ Jo„o Almeida and Alberto Simıes",
 		"title":"{$T_2O$",
 		"shortin":"{LREC",
 		"booktitle":"Fifth international conference on Language Resources and Evaluation, LREC 2006",
@@ -1072,7 +1072,7 @@ Guinovart",
 	{
 		"tipo":"inProceedings",
 		"codigo":"elpub06-t2o",
-		"author":"J. Jo√£o Almeida and  Alberto Sim√µes ",
+		"author":"J. Jo„o Almeida and  Alberto Simıes ",
 		"title":"Publishing multilingual ontologies: a quick way of obtaining feedback",
 		"year":2006,
 		"booktitle":"{ElPub 2006",
@@ -1096,7 +1096,7 @@ Guinovart",
 	{
 		"tipo":"InProceedings",
 		"codigo":"elpub06-blind",
-		"author":"Ant√≥nio R. Fernandes and Alexandre Carvalho and J. Jo√£o Almeida and  Alberto Sim√µes ",
+		"author":"AntÛnio R. Fernandes and Alexandre Carvalho and J. Jo„o Almeida and  Alberto Simıes ",
 		"title":"Transcoding for Web Accessibility for the Blind: Semantics
 from Structure",
 		"shortin":"{ElPub",
@@ -1131,10 +1131,10 @@ from Structure",
 	{
 		"tipo":"InCollection",
 		"codigo":"avalon:jspell",
-		"author":"Jos√© Jo√£o Almeida and Alberto Sim√µes",
-		"title":"Jspellando nas morfolimp√≠adas: Sobre a participa√ß√£o do {Jspell",
-		"booktitle":"Avalia√ß√£o conjunta: um novo paradigma no processamento computacional da l√≠ngua portuguesa",
-		"shortin":"Avalia√ß√£o conjunta, cap. 8",
+		"author":"JosÈ Jo„o Almeida and Alberto Simıes",
+		"title":"Jspellando nas morfolimpÌadas: Sobre a participaÁ„o do {Jspell",
+		"booktitle":"AvaliaÁ„o conjunta: um novo paradigma no processamento computacional da lÌngua portuguesa",
+		"shortin":"AvaliaÁ„o conjunta, cap. 8",
 		"year":2007,
 		"editor":"Diana Santos",
 		"pages":"83--90",
@@ -1143,10 +1143,10 @@ from Structure",
 	{
 		"tipo":"InCollection",
 		"codigo":"avalon:avalinha",
-		"author":"Alberto Sim√µes and Jos√© Jo√£o Almeida",
-		"title":"Avalia√ß√£o de alinhadores",
-		"shortin":"Avalia√ß√£o conjunta, cap. 18",
-		"booktitle":"Avalia√ß√£o conjunta: um novo paradigma no processamento computacional da l√≠ngua portuguesa",
+		"author":"Alberto Simıes and JosÈ Jo„o Almeida",
+		"title":"AvaliaÁ„o de alinhadores",
+		"shortin":"AvaliaÁ„o conjunta, cap. 18",
+		"booktitle":"AvaliaÁ„o conjunta: um novo paradigma no processamento computacional da lÌngua portuguesa",
 		"publisher":"{IST Press",
 		"year":2007,
 		"pages":"219--230",
@@ -1155,7 +1155,7 @@ from Structure",
 	{
 		"tipo":"InProceedings",
 		"codigo":"xata07:xmltmx",
-		"author":"Jos√© Jo√£o Almeida and Alberto Sim√µes",
+		"author":"JosÈ Jo„o Almeida and Alberto Simıes",
 		"title":"{XML::TMX",
 		"shortin":"{XATA",
 		"booktitle":"{XATA 2007",
@@ -1164,34 +1164,34 @@ from Structure",
 		"url":"http://alfarrabio.di.uminho.pt/~albie/publications/xmltmx07.pdf",
 		"pages":"83--93",
 		"isbn":"978-972-99166-4-9",
-		"editor":"Jos√© Carlos Ramalho and Jo√£o Correia Lopes and Lu√≠s Carr√≠√ßo",
-		"abstract":" As ferramentas de tradu√ß√£o assistida por computador
-                  tentam reutilizar as tradu√ß√µes realizadas pelo
+		"editor":"JosÈ Carlos Ramalho and Jo„o Correia Lopes and LuÌs CarrÌÁo",
+		"abstract":" As ferramentas de traduÁ„o assistida por computador
+                  tentam reutilizar as traduÁıes realizadas pelo
                   tradutor sempre que uma frase semelhante tenha sido
-                  j√° traduzida. Para o interc√¢mbio destes documentos
+                  j· traduzida. Para o interc‚mbio destes documentos
                   foi definido um formato denominado TMX (Translation
                   Memory Exchange) baseado em XML.  Este tipo de
-                  documento ganha facilmente tamanhos incomport√°veis
-                  para o seu processamento com m√©todos tradicionais.
+                  documento ganha facilmente tamanhos incomport·veis
+                  para o seu processamento com mÈtodos tradicionais.
                   Neste artigo propomos uma metodologia de ordem
                   superior para o processamento de documentos de
-                  estrutura repetitiva (em que se inserem as mem√≥rias
-                  de tradu√ß√£o) com uma abordagem baseada na conjun√ß√£o
-                  de SAX e DOM.  S√£o apresentados v√°rios exemplos de
-                  filtros sobre mem√≥rias de tradu√ß√£o bem como um
-                  conjunto de medidas da sua efici√™ncia.  ",
+                  estrutura repetitiva (em que se inserem as memÛrias
+                  de traduÁ„o) com uma abordagem baseada na conjunÁ„o
+                  de SAX e DOM.  S„o apresentados v·rios exemplos de
+                  filtros sobre memÛrias de traduÁ„o bem como um
+                  conjunto de medidas da sua eficiÍncia.  ",
 	}
 	{
 		"tipo":"InProceedings",
 		"codigo":"MP07",
-		"author":"Alberto Sim√µes and R√∫ben Fonseca and Jos√© Jo√£o Almeida",
+		"author":"Alberto Simıes and R˙ben Fonseca and JosÈ Jo„o Almeida",
 		"title":"{Makefile::Parallel",
 		"booktitle":"Euro-Par 2007",
 		"year":2007,
 		"address":"Rennes, France",
 		"month":"August",
 		"pages":"	 {33--41",
-		"editor":"	 {Anne-Marie Kermarrec and Luc Boug√© and Thierry Priol",
+		"editor":"	 {Anne-Marie Kermarrec and Luc BougÈ and Thierry Priol",
 		"volume":"	 {4641",
 		"series":"	 {LNCS",
 		"publisher":"	 {Springer-Verlag",
@@ -1220,11 +1220,11 @@ used
 		"tipo":"InProceedings",
 		"codigo":"epia-bio-2007",
 		"booktitle":"New Trends in Artificial Intelligence",
-		"editor":"Jos√© Neves and Manuel Filipe Santos and Jos√© Manuel Machado",
+		"editor":"JosÈ Neves and Manuel Filipe Santos and JosÈ Manuel Machado",
 		"pages":"541--552",
 		"isbn13":"978-989-95618-0-9",
-		"author":" An√°lia  Louren√ßo and Alberto  Sim√µes and Jos√© Almeida  and
-Miguel  Rocha and  Isabel  Rocha and Eug√©nio  Ferreira",
+		"author":" An·lia  LourenÁo and Alberto  Simıes and JosÈ Almeida  and
+Miguel  Rocha and  Isabel  Rocha and EugÈnio  Ferreira",
 		"title":"An Ontology-Based Approach To Systems Biology Literature
 Retrieval and Processing",
 		"shortin":"Epia, CMBSB",
@@ -1236,10 +1236,10 @@ Retrieval and Processing",
 		"tipo":"InProceedings",
 		"codigo":"epia-music-2007",
 		"booktitle":"New Trends in Artificial Intelligence",
-		"editor":"Jos√© Neves and Manuel Filipe Santos and Jos√© Manuel Machado",
+		"editor":"JosÈ Neves and Manuel Filipe Santos and JosÈ Manuel Machado",
 		"shortin":"Epia, TEMA",
 		"pages":"791--799",
-		"author":"Alberto Sim√µes and An√°lia Louren√ßo and Jos√© Jo√£o Almeida",
+		"author":"Alberto Simıes and An·lia LourenÁo and JosÈ Jo„o Almeida",
 		"title":"Using Text Mining Techniques for Classical Music Scores
 Analysis",
 		"year":2007,
@@ -1270,12 +1270,12 @@ Analysis",
 	{
 		"tipo":"InCollection",
 		"codigo":"harem:rena",
-		"author":"J.Jo√£o Almeida",
+		"author":"J.Jo„o Almeida",
 		"title":"{RENA",
-		"booktitle":"Reconhecimento de entidades mencionadas em portugu√™s",
+		"booktitle":"Reconhecimento de entidades mencionadas em portuguÍs",
 		"year":2007,
-		"note":"Documenta√ß√£o e actas do HAREM, a primeira avalia√ß√£o conjunta na
-√°rea",
+		"note":"DocumentaÁ„o e actas do HAREM, a primeira avaliaÁ„o conjunta na
+·rea",
 		"pages":"157-172",
 		"url":"http://acdc.linguateca.pt/aval_conjunta/LivroHAREM/Cap13-SantosCardoso2007-Almeida.pdf",
 		"ISBN":"978-989-20-0731-1",
@@ -1285,10 +1285,10 @@ Analysis",
 	{
 		"tipo":"Book",
 		"codigo":"RH02",
-		"author":"Jos√© Carlos Ramalho and Pedro Rangel  Henriques",
-		"title":"XML \& XSL: da teoria √† pr√°tica",
+		"author":"JosÈ Carlos Ramalho and Pedro Rangel  Henriques",
+		"title":"XML \& XSL: da teoria ‡ pr·tica",
 		"publisher":"Editora FCA",
-		"series":"S√©rie Tecnologias de Informa√ß√£o ISBN-972-722-347-8",
+		"series":"SÈrie Tecnologias de InformaÁ„o ISBN-972-722-347-8",
 		"edition":"1st Ed.",
 		"month":"Oct",
 		"year":2002,
@@ -1320,7 +1320,7 @@ Analysis",
 	{
 		"tipo":"Article",
 		"codigo":"KMHVZ04",
-		"author":"Tomaz Kosar and Marjan Mernik and Pedro Henriques and Maria Jo√£o Varanda and Viljem Zumer",
+		"author":"Tomaz Kosar and Marjan Mernik and Pedro Henriques and Maria Jo„o Varanda and Viljem Zumer",
 		"title":"Grammatical Approach to Problem Solving",
 		"journal":"Informatica Journal",
 		"volume":28,
@@ -1330,7 +1330,7 @@ Analysis",
 	{
 		"tipo":"Article",
 		"codigo":"HVMLGW05",
-		"author":"Pedro Henriques and Maria Jo√£o Varanda and Marjan Mernik and Mitja Lenic and Jeff Gray and Hui Wu",
+		"author":"Pedro Henriques and Maria Jo„o Varanda and Marjan Mernik and Mitja Lenic and Jeff Gray and Hui Wu",
 		"title":"Automatic Generation of Language-based Tools using LISA System",
 		"journal":"IEE Software Journal",
 		"year":2005,
@@ -1342,7 +1342,7 @@ Analysis",
 	{
 		"tipo":"Article",
 		"codigo":"RMHV06",
-		"author":"Damijan Rebernak and Marjan Mernik and Pedro Rangel Henriques and Maria Jo√£o Varanda",
+		"author":"Damijan Rebernak and Marjan Mernik and Pedro Rangel Henriques and Maria Jo„o Varanda",
 		"title":"AspectLISA: an aspect-oriented compiler construction system based on attribute grammars",
 		"journal":"Electronic Notes in Theoretical Computer Science (ENTCS)",
 		"editor":"J. Boyland and A. Sloane",
@@ -1356,7 +1356,7 @@ Analysis",
 	{
 		"tipo":"Article",
 		"codigo":"RMHCV06",
-		"author":"Damijan Rebernak and Marjan Mernik and Pedro Rangel Henriques and Daniela da Cruz and Maria Jo√£o Varanda",
+		"author":"Damijan Rebernak and Marjan Mernik and Pedro Rangel Henriques and Daniela da Cruz and Maria Jo„o Varanda",
 		"title":"Specifying Languages using aspect-oriented approach: AspectLISA",
 		"journal":"CIT -- Journal of Computing and Information Technology",
 		"editor":,
@@ -1395,7 +1395,7 @@ Analysis",
 	{
 		"tipo":"Article",
 		"codigo":"RAH98",
-		"author":"Jos√© Carlos Ramalho and Jos√© Jo√£o Almeida and Pedro Rangel Henriques",
+		"author":"JosÈ Carlos Ramalho and JosÈ Jo„o Almeida and Pedro Rangel Henriques",
 		"title":"Algebraic Specification of Documents",
 		"journal":"TSC: Theoretical Computer Science",
 		"editor":,
@@ -1409,7 +1409,7 @@ Analysis",
 	{
 		"tipo":"Article",
 		"codigo":"RARH98",
-		"author":"Jos√© Carlos Ramalho and Jos√© Jo√£o Almeida and Jorge Gustavo Rocha and Pedro Rangel Henriques",
+		"author":"JosÈ Carlos Ramalho and JosÈ Jo„o Almeida and Jorge Gustavo Rocha and Pedro Rangel Henriques",
 		"title":"SGML Documents: Where does quality go?",
 		"journal":"Mark-up Languages: theory and practice",
 		"editor":,
@@ -1423,7 +1423,7 @@ Analysis",
 	{
 		"tipo":"Article",
 		"codigo":"GRH06",
-		"author":"Giovani Librelotto and Jos√© Carlos Ramalho  and Pedro Rangel Henriques",
+		"author":"Giovani Librelotto and JosÈ Carlos Ramalho  and Pedro Rangel Henriques",
 		"title":"Metamorphosis - A Topic Maps Based Environment to Handle Heterogeneous Information Resources",
 		"journal":"Lecture Notes in Computer Science (LNCS)",
 		"editor":,
@@ -1437,7 +1437,7 @@ Analysis",
 	{
 		"tipo":"Article",
 		"codigo":"JGRH04",
-		"author":"Marta Jacinto and Giovani Librelotto and Jos√© Carlos Ramalho  and Pedro Rangel Henriques",
+		"author":"Marta Jacinto and Giovani Librelotto and JosÈ Carlos Ramalho  and Pedro Rangel Henriques",
 		"title":"XCSL Tutorial",
 		"journal":"Acm Crossroads",
 		"editor":,
@@ -1451,7 +1451,7 @@ Analysis",
 	{
 		"tipo":"Article",
 		"codigo":"JGRH03",
-		"author":"Marta Jacinto and Giovani Librelotto and Jos√© Carlos Ramalho  and Pedro Rangel Henriques",
+		"author":"Marta Jacinto and Giovani Librelotto and JosÈ Carlos Ramalho  and Pedro Rangel Henriques",
 		"title":"XCSL: XML Constraint Specification Language",
 		"journal":"CLEI Eletronic Journal",
 		"editor":,
@@ -1465,7 +1465,7 @@ Analysis",
 	{
 		"tipo":"Article",
 		"codigo":"GRH04",
-		"author":"Giovani Librelotto and Jos√© Carlos Ramalho  and Pedro Rangel Henriques",
+		"author":"Giovani Librelotto and JosÈ Carlos Ramalho  and Pedro Rangel Henriques",
 		"title":"TM-Builder: An Ontology Builder based on XML Topic Maps",
 		"journal":"CLEI Eletronic Journal",
 		"editor":,
@@ -1479,11 +1479,11 @@ Analysis",
 	{
 		"tipo":"Article",
 		"codigo":"GRH05a",
-		"author":"Giovani Librelotto and Jos√© Carlos Ramalho  and Pedro Rangel Henriques",
-		"title":"Gera√ß√£o autom√°tica de interfaces Web para Sistemas de Informa√ß√£o: Metamorphosis",
-		"journal":"Sistemas de Informa√ß√£o",
+		"author":"Giovani Librelotto and JosÈ Carlos Ramalho  and Pedro Rangel Henriques",
+		"title":"GeraÁ„o autom·tica de interfaces Web para Sistemas de InformaÁ„o: Metamorphosis",
+		"journal":"Sistemas de InformaÁ„o",
 		"editor":,
-		"publisher":"APSI: Associa√ß√£o Portuguesa de Sistemas de Informa√ß√£o",
+		"publisher":"APSI: AssociaÁ„o Portuguesa de Sistemas de InformaÁ„o",
 		"year":2005,
 		"month":,
 		"volume":17,
@@ -1493,11 +1493,11 @@ Analysis",
 	{
 		"tipo":"Article",
 		"codigo":"RH98a",
-		"author":"Jos√© Carlos Ramalho  and Pedro Rangel Henriques",
-		"title":"Qualidade na Publica√ß√£o Electr√≥nica: como control√°-la?",
-		"journal":"Sistemas de Informa√ß√£o",
+		"author":"JosÈ Carlos Ramalho  and Pedro Rangel Henriques",
+		"title":"Qualidade na PublicaÁ„o ElectrÛnica: como control·-la?",
+		"journal":"Sistemas de InformaÁ„o",
 		"editor":,
-		"publisher":"APSI: Associa√ß√£o Portuguesa de Sistemas de Informa√ß√£o",
+		"publisher":"APSI: AssociaÁ„o Portuguesa de Sistemas de InformaÁ„o",
 		"year":1998,
 		"month":,
 		"volume":9,
@@ -1509,9 +1509,9 @@ Analysis",
 		"codigo":"MSH05",
 		"author":"Giovana Mendes and Nuno Alberto Silva  and Pedro Rangel Henriques",
 		"title":"Utilizando uma Base de Dados XML Nativa aplicada ao tratamento de erros num sistema de logs",
-		"journal":"Sistemas de Informa√ß√£o",
+		"journal":"Sistemas de InformaÁ„o",
 		"editor":,
-		"publisher":"APSI: Associa√ß√£o Portuguesa de Sistemas de Informa√ß√£o",
+		"publisher":"APSI: AssociaÁ„o Portuguesa de Sistemas de InformaÁ„o",
 		"year":2005,
 		"month":,
 		"volume":17,
@@ -1522,10 +1522,10 @@ Analysis",
 		"tipo":"Article",
 		"codigo":"ALHF02",
 		"author":"Gustavo Arnold and Giovani Librelotto  and Pedro Rangel Henriques and Jaime Fonseca",
-		"title":"O Uso da Linguagem RS em Rob√≥tica",
-		"journal":"Revista Electr√≥nica e Telecomunica√ß√µes",
+		"title":"O Uso da Linguagem RS em RobÛtica",
+		"journal":"Revista ElectrÛnica e TelecomunicaÁıes",
 		"editor":,
-		"publisher":"Departamento de Electr√≥nica e Telecomunica√ß√µes da Universidade de Aveiro",
+		"publisher":"Departamento de ElectrÛnica e TelecomunicaÁıes da Universidade de Aveiro",
 		"year":2002,
 		"month":"Apr",
 		"volume":,
@@ -1535,7 +1535,7 @@ Analysis",
 	{
 		"tipo":"InProceedings",
 		"codigo":"HKMVZ03",
-		"author":"Pedro Henriques and Tomaz Kosar and Marjan Mernik and Maria Jo√£o Varanda and Viljem Zumer",
+		"author":"Pedro Henriques and Tomaz Kosar and Marjan Mernik and Maria Jo„o Varanda and Viljem Zumer",
 		"title":"Grammatical Approach to Problem Solving",
 		"booktitle":"ITI'03 - 25th International Conference on Information Technology Interfaces, Croacia",
 		"publisher":"IEEE",
@@ -1575,7 +1575,7 @@ Analysis",
 	{
 		"tipo":"InProceedings",
 		"codigo":"RMHVC06",
-		"author":"Damijan Rebernak and Marjan Mernik and Pedro Rangel Henriques and Maria Jo√£o Varanda Pereira and Daniela Cruz",
+		"author":"Damijan Rebernak and Marjan Mernik and Pedro Rangel Henriques and Maria Jo„o Varanda Pereira and Daniela Cruz",
 		"title":" Specifying Languages using Aspect-oriented Approach: AspectLISA",
 		"booktitle":"ITI'06 - 28th International Conference on Information Technology Interfaces, Croacia",
 		"publisher":"IEEE",
@@ -1587,7 +1587,7 @@ Analysis",
 		"tipo":"InProceedings",
 		"codigo":"BHVU07d",
 		"author":"Mario Ber\'on and Pedro Rangel Henriques and M. Jo\~ao Varanda  and Roberto Uzal",
-		"title":"PICS una Herramienta para la Comprensi√≥n e Inspecci√≥n de Programas",
+		"title":"PICS una Herramienta para la ComprensiÛn e InspecciÛn de Programas",
 		"booktitle":"CACIC'07 - XIII Argentine Congress on Computer Science",
 		"publisher":"Corrientes, Argentina",
 		"year":2007,
@@ -1610,7 +1610,7 @@ Analysis",
 		"codigo":"BHVU07b",
 		"author":"Mario Ber\'on and Pedro Rangel Henriques and M. Jo\~ao Varanda  and Roberto Uzal",
 		"title":"Comprensi\'on de Programas por Inspecci\'on Visual y Animaci\'on",
-		"booktitle":"IX Workshop de Investigadores en Ciencias de la Computaci√≥n (WICC 2007), Argentina",
+		"booktitle":"IX Workshop de Investigadores en Ciencias de la ComputaciÛn (WICC 2007), Argentina",
 		"year":2007,
 		"editor":,
 		"month":,
@@ -1628,9 +1628,9 @@ Analysis",
 	{
 		"tipo":"InProceedings",
 		"codigo":"CHLB07a",
-		"author":"Elisabete Cunha and Pedro Rangel Henriques  and Sandra Lopes and Mario B√©ron",
-		"title":"O Sitio de Pico, Software Educativo para Crian√ßas con Paralisia Cerebral",
-		"booktitle":"IX Workshop de Investigadores en Ciencias de la Computaci√≥n (WICC 2007), Argentina",
+		"author":"Elisabete Cunha and Pedro Rangel Henriques  and Sandra Lopes and Mario BÈron",
+		"title":"O Sitio de Pico, Software Educativo para CrianÁas con Paralisia Cerebral",
+		"booktitle":"IX Workshop de Investigadores en Ciencias de la ComputaciÛn (WICC 2007), Argentina",
 		"year":2007,
 		"editor":,
 		"month":,
@@ -1638,9 +1638,9 @@ Analysis",
 	{
 		"tipo":"InProceedings",
 		"codigo":"BHVU06a",
-		"author":"Mario B√©ron and Pedro Rangel Henriques  and Maria Jo√£o Varanda and Roberto Uzal",
-		"title":"Herramientas para la compresi√≥n de programas",
-		"booktitle":"VIII Workshop de Investigadores en Ciencias de la Computaci√≥n (WICC 2006), Universidade de Mor√≥n, Bs. As., Argentina",
+		"author":"Mario BÈron and Pedro Rangel Henriques  and Maria Jo„o Varanda and Roberto Uzal",
+		"title":"Herramientas para la compresiÛn de programas",
+		"booktitle":"VIII Workshop de Investigadores en Ciencias de la ComputaciÛn (WICC 2006), Universidade de MorÛn, Bs. As., Argentina",
 		"year":2006,
 		"editor":,
 		"month":,
@@ -1648,9 +1648,9 @@ Analysis",
 	{
 		"tipo":"InProceedings",
 		"codigo":"BHVU06b",
-		"author":"Mario B√©ron and Pedro Rangel Henriques  and Maria Jo√£o Varanda and Roberto Uzal",
-		"title":"Comprensi√≥n de Algoritmos de Ruteo",
-		"booktitle":"XXXII Conferencia Latinoamericana de Inform√°tica (CLEI 2006), Santiago de Chile",
+		"author":"Mario BÈron and Pedro Rangel Henriques  and Maria Jo„o Varanda and Roberto Uzal",
+		"title":"ComprensiÛn de Algoritmos de Ruteo",
+		"booktitle":"XXXII Conferencia Latinoamericana de Inform·tica (CLEI 2006), Santiago de Chile",
 		"year":2006,
 		"editor":,
 		"month":,
@@ -1658,7 +1658,7 @@ Analysis",
 	{
 		"tipo":"InProceedings",
 		"codigo":"BHVUM06",
-		"author":"Mario B√©ron and Pedro Rangel Henriques  and Maria Jo√£o Varanda and Roberto Uzal and G. Montejano",
+		"author":"Mario BÈron and Pedro Rangel Henriques  and Maria Jo„o Varanda and Roberto Uzal and G. Montejano",
 		"title":"A Language Processing Tool for Program Comprehension",
 		"booktitle":"CACIC'06 - XII Argentine Congress on Computer Science",
 		"publisher":"Universidad Nacional de San Luis, Argentina",
@@ -1668,8 +1668,8 @@ Analysis",
 	{
 		"tipo":"InProceedings",
 		"codigo":"BHVU08",
-		"author":"Mario B√©ron and Pedro Rangel Henriques  and Maria Jo√£o Varanda and Roberto Uzal",
-		"title":"Simplificando la Comprensi√≥n de Programas a trav√©s de la Interconnexi√≥n de Dominios",
+		"author":"Mario BÈron and Pedro Rangel Henriques  and Maria Jo„o Varanda and Roberto Uzal",
+		"title":"Simplificando la ComprensiÛn de Programas a travÈs de la InterconnexiÛn de Dominios",
 		"booktitle":"CACIC'08 - XIV Argentine Congress on Computer Science, Universidad Nacional de San Luis, Argentina",
 		"publisher":"Universidad Nacional de Chilecito, La Rioja, Argentina",
 		"year":2008,
@@ -1678,9 +1678,9 @@ Analysis",
 	{
 		"tipo":"InProceedings",
 		"codigo":"BHV06",
-		"author":"Mario B√©ron and Pedro Rangel Henriques  and Maria Jo√£o Varanda",
+		"author":"Mario BÈron and Pedro Rangel Henriques  and Maria Jo„o Varanda",
 		"title":"A System for Evaluate and Understand Routing Algorithms",
-		"booktitle":"Interac√ß√£o'06, Universidade do Minho",
+		"booktitle":"InteracÁ„o'06, Universidade do Minho",
 		"year":2006,
 		"editor":,
 		"month":,
@@ -1688,20 +1688,20 @@ Analysis",
 	{
 		"tipo":"InProceedings",
 		"codigo":"BCVHU08",
-		"author":"Mario B√©ron and Daniela da Cruz and Maria Jo√£o Varanda and Pedro Rangel Henriques and Roberto Uzal",
+		"author":"Mario BÈron and Daniela da Cruz and Maria Jo„o Varanda and Pedro Rangel Henriques and Roberto Uzal",
 		"title":"Evaluation Criteria of Software Visualization Systems used for Program Comprehension",
-		"booktitle":"Interac√ß√£o'08 -- 3¬™ Confer√™ncia Interac√ß√£o Pessoa-M√°quina",
-		"editor":"Universidade de √âvora",
+		"booktitle":"InteracÁ„o'08 -- 3™ ConferÍncia InteracÁ„o Pessoa-M·quina",
+		"editor":"Universidade de …vora",
 		"year":2008,
 		"month":"Oct",
 	}
 	{
 		"tipo":"InProceedings",
 		"codigo":"BUHV08",
-		"author":"Mario Ber√≥n and Roberto Uzal and Pedro Rangel Henriques and Maria Jo√£o Varanda Pereira",
-		"title":"Inspecci√≥n de C√≥digo para relacionar los Dominios del Problema y Programa para la Comprensi√≥n de Programas",
-		"booktitle":"X Workshop de Investigadores en Ciencias de la Computaci√≥n (WICC 2008), La Pampa, Argentina",
-		"publisher":"Facultad de Engenier√≠a de la Universidad Nacional de la Pampa",
+		"author":"Mario BerÛn and Roberto Uzal and Pedro Rangel Henriques and Maria Jo„o Varanda Pereira",
+		"title":"InspecciÛn de CÛdigo para relacionar los Dominios del Problema y Programa para la ComprensiÛn de Programas",
+		"booktitle":"X Workshop de Investigadores en Ciencias de la ComputaciÛn (WICC 2008), La Pampa, Argentina",
+		"publisher":"Facultad de EngenierÌa de la Universidad Nacional de la Pampa",
 		"year":2008,
 		"editor":"UNLPam,RedUNCI",
 		"month":"May",
@@ -1709,18 +1709,18 @@ Analysis",
 	{
 		"tipo":"InProceedings",
 		"codigo":"OVH05",
-		"author":"Eva Oliveira and Maria Jo√£o Varanda and Pedro Rangel Henriques",
-		"title":"Compreens√£o de Aplica√ß√µes Web: O Processo e as Ferramentas",
-		"booktitle":"CAPSI05 - Confer√™ncia da Associa√ß√£o Portuguesa de Sistemas de Informa√ß√£o, ESTiG Bragan√ßa",
+		"author":"Eva Oliveira and Maria Jo„o Varanda and Pedro Rangel Henriques",
+		"title":"Compreens„o de AplicaÁıes Web: O Processo e as Ferramentas",
+		"booktitle":"CAPSI05 - ConferÍncia da AssociaÁ„o Portuguesa de Sistemas de InformaÁ„o, ESTiG BraganÁa",
 		"year":2005,
 		"month":"October",
 	}
 	{
 		"tipo":"InProceedings",
 		"codigo":"OHV06",
-		"author":"Eva Oliveira and Pedro Rangel Henriques and Maria Jo√£o Varanda ",
-		"title":"Proposta de um Sistema para Compreens√£o de Aplica√ß√µes Web",
-		"booktitle":"CAPSI06 - Confer√™ncia da Associa√ß√£o Portuguesa de Sistemas de Informa√ß√£o, Univ. Aveiro",
+		"author":"Eva Oliveira and Pedro Rangel Henriques and Maria Jo„o Varanda ",
+		"title":"Proposta de um Sistema para Compreens„o de AplicaÁıes Web",
+		"booktitle":"CAPSI06 - ConferÍncia da AssociaÁ„o Portuguesa de Sistemas de InformaÁ„o, Univ. Aveiro",
 		"year":2007,
 		"month":"January",
 	}
@@ -1747,7 +1747,7 @@ Analysis",
 	{
 		"tipo":"InProceedings",
 		"codigo":"GFH08",
-		"author":"Alda Gancarski and Fl√°vio Xavier Ferreira and Pedro Rangel Henriques",
+		"author":"Alda Gancarski and Fl·vio Xavier Ferreira and Pedro Rangel Henriques",
 		"title":"Using data together with metadata to improve XML information access",
 		"booktitle":"Proceedings of the 10th Int. Conference on Enterprise Information Systems (ICEIS'08)",
 		"address":"Barcelona, Spain",
@@ -1757,9 +1757,9 @@ Analysis",
 	{
 		"tipo":"inproceedings",
 		"codigo":"FGH08",
-		"author":"Fl√°vio Xavier Ferreira and Alda Lopes Gancarski and Pedro Rangel Henriques",
+		"author":"Fl·vio Xavier Ferreira and Alda Lopes Gancarski and Pedro Rangel Henriques",
 		"title":"Information access from XML using semantics and context: application to the Portuguese Emigration Museum",
-		"booktitle":"CAPSI'08 -- 8¬™ Confer√™ncia da Associa√ß√£o Portuguesa de Sistemas de Informa√ß√£o",
+		"booktitle":"CAPSI'08 -- 8™ ConferÍncia da AssociaÁ„o Portuguesa de Sistemas de InformaÁ„o",
 		"address":"Setubal, Portugal",
 		"year":2008,
 		"month":"Oct",
@@ -1767,7 +1767,7 @@ Analysis",
 	{
 		"tipo":"InProceedings",
 		"codigo":"FH08",
-		"author":"Fl√°vio Xavier Ferreira and Pedro Rangel Henriques",
+		"author":"Fl·vio Xavier Ferreira and Pedro Rangel Henriques",
 		"title":"Using OWL to specify and build different views over the Emigration Museum resources",
 		"booktitle":"XATA08 --- {XML",
 		"year":2008,
@@ -1778,10 +1778,10 @@ Analysis",
 		"codigo":"LPRH07",
 		"author":"Giovani Rubert Librelotto
        and Renato Preigschadt de Azevedo
-       and Jos√© Carlos Ramalho
+       and JosÈ Carlos Ramalho
        and Pedro Rangel Henriques",
-		"title":"Navegando na Rede Sem√¢ntica dos Topic Maps com o Ulisses",
-		"booktitle":"XATA 2007 -  XML: Aplica√ß√µes e Tecnologias Associadas (5¬™ Confer√™ncia Nacional)",
+		"title":"Navegando na Rede Sem‚ntica dos Topic Maps com o Ulisses",
+		"booktitle":"XATA 2007 -  XML: AplicaÁıes e Tecnologias Associadas (5™ ConferÍncia Nacional)",
 		"year":2007,
 		"address":"Lisboa - Portugal",
 		"month":"Feb",
@@ -1791,7 +1791,7 @@ Analysis",
 		"codigo":"LPRH07-TM",
 		"author":"Giovani Rubert Librelotto
        and Renato Preigschadt de Azevedo
-       and Jos√© Carlos Ramalho
+       and JosÈ Carlos Ramalho
        and Pedro Rangel Henriques",
 		"title":"Topic Maps Constraint Specification Languages: comparing AsTMa!, OSL, and XTche",
 		"booktitle":"Topic Maps 2007 -  The First International Topic Maps User Conference",
@@ -1803,10 +1803,10 @@ Analysis",
 		"tipo":"inproceedings",
 		"codigo":"LRHGT08",
 		"author":"Giovani Rubert Librelotto
-       and Jos√© Carlos Ramalho
+       and JosÈ Carlos Ramalho
        and Pedro Rangel Henriques
        and Jonas Bulegon Gassen
-       and Rog√©rio Corr√™a Turchetti",
+       and RogÈrio CorrÍa Turchetti",
 		"title":"A Framework to specify, extract and manage Topic Maps driven by ontologie",
 		"booktitle":"SIGDPC'08 -- 26th ACM International Conference on Design of Communication",
 		"address":"Lisboa, Portugal",
@@ -1820,11 +1820,11 @@ Analysis",
        and Jonas Bulegon Gassen
        and Leandro O. Freitas
        and Matheus C. Silveira
-       and F√°bio L. Silva
+       and F·bio L. Silva
        and Iara Augustin
        and Pedro Rangel Henriques",
 		"title":"Uma Ontologia aplicada a um Ambiente Pervasivo Hospitalar",
-		"booktitle":"CAPSI'08 -- 8¬™ Confer√™ncia da Associa√ß√£o Portuguesa de Sistemas de Informa√ß√£o",
+		"booktitle":"CAPSI'08 -- 8™ ConferÍncia da AssociaÁ„o Portuguesa de Sistemas de InformaÁ„o",
 		"address":"Setubal, Portugal",
 		"year":2008,
 		"month":"Oct",
@@ -1836,7 +1836,7 @@ Analysis",
        and Mirkos Martins
        and Henrique Machado
        and Juliana Vizzotto
-       and Jos√© Carlos Ramalho
+       and JosÈ Carlos Ramalho
        and Pedro Rangel Henriques",
 		"title":"Generating a Semantic Network for PubMed",
 		"booktitle":"XATA08 --- {XML",
@@ -1846,7 +1846,7 @@ Analysis",
 	{
 		"tipo":"Article",
 		"codigo":"CHV08ja",
-		"author":"Daniela da Cruz and Pedro Rangel Henriques and Maria Jo√£o Varanda",
+		"author":"Daniela da Cruz and Pedro Rangel Henriques and Maria Jo„o Varanda",
 		"title":"Alma versus DDD",
 		"journal":"ComSIS -- Computer Science an Information Systems Journal, Special Issue on Compilers, Related Technologies and Applications",
 		"editor":"Ivan Lukovic and Simao Melo de Sousa ",
@@ -1861,7 +1861,7 @@ Analysis",
 	{
 		"tipo":"Article",
 		"codigo":"FPCH08jb",
-		"author":"Elisabete Ferreira and Rog√©rio Paulo and Daniela da Cruz and Pedro Rangel Henriques",
+		"author":"Elisabete Ferreira and RogÈrio Paulo and Daniela da Cruz and Pedro Rangel Henriques",
 		"title":"Integration of the {ST",
 		"journal":"ComSIS -- Computer Science an Information Systems Journal, Special Issue on Compilers, Related Technologies and Applications",
 		"editor":"Ivan Lukovic and Simao Melo de Sousa ",
@@ -1876,7 +1876,7 @@ Analysis",
 	{
 		"tipo":"Article",
 		"codigo":"PMCH08j",
-		"author":"Maria Jo√£o Varanda Pereira and Marjan Mernik and Daniela da Cruz and Pedro Rangel Henriques",
+		"author":"Maria Jo„o Varanda Pereira and Marjan Mernik and Daniela da Cruz and Pedro Rangel Henriques",
 		"title":"Program Comprehension for Domain-Specific Languages (invited paper)",
 		"journal":"ComSIS -- Computer Science an Information Systems Journal, Special Issue on Compilers, Related Technologies and Applications",
 		"editor":"Ivan Lukovic and Simao Melo de Sousa ",
@@ -1891,7 +1891,7 @@ Analysis",
 	{
 		"tipo":"Article",
 		"codigo":"CHV07",
-		"author":"Daniela da Cruz and Pedro Rangel Henriques and Maria Jo√£o Varanda",
+		"author":"Daniela da Cruz and Pedro Rangel Henriques and Maria Jo„o Varanda",
 		"title":"Constructing program animations using a pattern-based approach",
 		"journal":"ComSIS -- Computer Science an Information Systems Journal, Special Issue on Advances in Programming Languages",
 		"editor":"Ivan Lukovic and Marjan Mernik ",
@@ -1906,9 +1906,9 @@ Analysis",
 	{
 		"tipo":"InProceedings",
 		"codigo":"CPH07f",
-		"author":"Daniela da Cruz and Maria Jo√£o Varanda Pereira and Pedro Rangel Henriques",
+		"author":"Daniela da Cruz and Maria Jo„o Varanda Pereira and Pedro Rangel Henriques",
 		"title":"Pattern-based Program Visualization",
-		"booktitle":"1st Workshop on Advances in Programming Languages, WAPL'07 --- evento sat√©lite da
+		"booktitle":"1st Workshop on Advances in Programming Languages, WAPL'07 --- evento satÈlite da
              \textsf{International Multiconference on Computer Science and Information Technology, IMCSIT'07",
 		"year":2007,
 		"editor":,
@@ -1936,7 +1936,7 @@ Analysis",
 	{
 		"tipo":"InProceedings",
 		"codigo":"FCHV08",
-		"author":"Ruben Fonseca and Daniela da Cruz and Pedro Henriques and Maria Jo√£o Varanda Pereira",
+		"author":"Ruben Fonseca and Daniela da Cruz and Pedro Henriques and Maria Jo„o Varanda Pereira",
 		"title":"How to interconnect operational and behavioral views of web applications",
 		"booktitle":"ICPC'08 - 16th International Conference on Program Comprehension",
 		"publisher":"Amsterdam, Holanda",
@@ -1947,9 +1947,9 @@ Analysis",
 	{
 		"tipo":"InProceedings",
 		"codigo":"CHP08i",
-		"author":"Daniela da Cruz and Pedro Rangel Henriques and Maria Jo√£o Varanda Pereira",
+		"author":"Daniela da Cruz and Pedro Rangel Henriques and Maria Jo„o Varanda Pereira",
 		"title":"Strategies for Program Inspection and Visualization",
-		"booktitle":"CSE --- International Scientific Conference on Computer Science and Engineering, High Tatras - Star√° Lesn√°, Slovakia",
+		"booktitle":"CSE --- International Scientific Conference on Computer Science and Engineering, High Tatras - Star· Lesn·, Slovakia",
 		"year":2008,
 		"month":"September",
 	}
@@ -1958,7 +1958,7 @@ Analysis",
 		"codigo":"CH07a",
 		"author":"Daniela da Cruz and Pedro Rangel Henriques",
 		"title":"{XTDL",
-		"booktitle":"XML: Aplica√ß√µes e Tecnologias Associadas, XATA'07, Lisboa, Portugal",
+		"booktitle":"XML: AplicaÁıes e Tecnologias Associadas, XATA'07, Lisboa, Portugal",
 		"year":2007,
 		"month":"February",
 	}
@@ -1986,16 +1986,16 @@ Analysis",
 	{
 		"tipo":"InProceedings",
 		"codigo":"CFPBH07d",
-		"author":"Daniela da Cruz and R√∫ben Fonseca and Maria Jo√£o Varanda Pereira and M√°rio B√©ron and Pedro Rangel Henriques",
+		"author":"Daniela da Cruz and R˙ben Fonseca and Maria Jo„o Varanda Pereira and M·rio BÈron and Pedro Rangel Henriques",
 		"title":"Comparing Generators for Language-based Tools",
-		"booktitle":"CoRTA-07 - Compiler Related Techonlogies and Applications, Covilh√£, Portugual",
+		"booktitle":"CoRTA-07 - Compiler Related Techonlogies and Applications, Covilh„, Portugual",
 		"year":2007,
 		"month":"July",
 	}
 	{
 		"tipo":"InProceedings",
 		"codigo":"CHP08a",
-		"author":"Daniela da Cruz and Pedro Rangel Henriques and Maria Jo√£o Varanda Pereira",
+		"author":"Daniela da Cruz and Pedro Rangel Henriques and Maria Jo„o Varanda Pereira",
 		"title":"Exploring and Visualizing the ",
 		"booktitle":"XATA08 --- {XML",
 		"year":2008,
@@ -2004,9 +2004,9 @@ Analysis",
 	{
 		"tipo":"InProceedings",
 		"codigo":"CHP08b",
-		"author":"Daniela da Cruz and Pedro Rangel Henriques and Maria Jo√£o Varanda Pereira",
+		"author":"Daniela da Cruz and Pedro Rangel Henriques and Maria Jo„o Varanda Pereira",
 		"title":"Alma vs {DDD",
-		"booktitle":"CoRTA08 --- Compilers, Related Technologies and Applications, Bragan√ßa, Portugal",
+		"booktitle":"CoRTA08 --- Compilers, Related Technologies and Applications, BraganÁa, Portugal",
 		"year":2008,
 		"month":"July",
 	}
@@ -2015,7 +2015,7 @@ Analysis",
 		"codigo":"CPH08c",
 		"author":"Daniela da Cruz and Jorge Sousa Pinto and Pedro Rangel Henriques",
 		"title":"Properties Preservation during Transformation (short paper)",
-		"booktitle":"CoRTA08 --- Compilers, Related Technologies and Applications, Bragan√ßa, Portugal",
+		"booktitle":"CoRTA08 --- Compilers, Related Technologies and Applications, BraganÁa, Portugal",
 		"year":2008,
 		"month":"July",
 		"annote":"Repositorium,  ID: http://hdl.handle.net/1822/8106",
@@ -2023,27 +2023,27 @@ Analysis",
 	{
 		"tipo":"InProceedings",
 		"codigo":"FPCH08d",
-		"author":"Elisabete Ferreira and Rog√©rio Paulo and Daniela da Cruz and Pedro Rangel Henriques",
+		"author":"Elisabete Ferreira and RogÈrio Paulo and Daniela da Cruz and Pedro Rangel Henriques",
 		"title":"Integration of the {ST",
-		"booktitle":"CoRTA08 --- Compilers, Related Technologies and Applications, Bragan√ßa, Portugal",
+		"booktitle":"CoRTA08 --- Compilers, Related Technologies and Applications, BraganÁa, Portugal",
 		"year":2008,
 		"month":"July",
 	}
 	{
 		"tipo":"InProceedings",
 		"codigo":"PMCH08e",
-		"author":"Maria Jo√£o Varanda Pereira and Marjan Mernik and Daniela da Cruz and Pedro Rangel Henriques",
+		"author":"Maria Jo„o Varanda Pereira and Marjan Mernik and Daniela da Cruz and Pedro Rangel Henriques",
 		"title":"Visual{LISA",
-		"booktitle":"CoRTA08 --- Compilers, Related Technologies and Applications, Bragan√ßa, Portugal",
+		"booktitle":"CoRTA08 --- Compilers, Related Technologies and Applications, BraganÁa, Portugal",
 		"year":2008,
 		"month":"July",
 	}
 	{
 		"tipo":"InProceedings",
 		"codigo":"PMCH08f",
-		"author":"Maria Jo√£o Varanda Pereira and Marjan Mernik and Daniela da Cruz and Pedro Rangel Henriques",
+		"author":"Maria Jo„o Varanda Pereira and Marjan Mernik and Daniela da Cruz and Pedro Rangel Henriques",
 		"title":"Program Comprehension for Domain-Specific Languages",
-		"booktitle":"CoRTA08 --- Compilers, Related Technologies and Applications, Bragan√ßa, Portugal",
+		"booktitle":"CoRTA08 --- Compilers, Related Technologies and Applications, BraganÁa, Portugal",
 		"year":2008,
 		"month":"July",
 	}
@@ -2063,7 +2063,7 @@ Analysis",
 	{
 		"tipo":"InProceedings",
 		"codigo":"OPCH09a",
-		"author":"Nuno Oliveira and Maria Jo√£o Varanda Pereira and Daniela da Cruz and Pedro Rangel Henriques",
+		"author":"Nuno Oliveira and Maria Jo„o Varanda Pereira and Daniela da Cruz and Pedro Rangel Henriques",
 		"title":"Visualization of Domain-Specific Programs' Behavior",
 		"booktitle":"Proceedings of VISSOFT'09 --- 5th IEEE International Workshop on Visualizing Software for Understanding and Analysis,
                Edmonton, Canada",
@@ -2077,7 +2077,7 @@ Analysis",
 		"codigo":"oliveira09b",
 		"title":"Applying Program Comprehension Techniques to Karel Robot Programs",
 		"author":"Oliveira, Nuno and Henriques, Pedro Rangel and
-            da Cruz, Daniela and Pereira, Maria and Jo√£o Varanda and
+            da Cruz, Daniela and Pereira, Maria and Jo„o Varanda and
             Mernik, Marjan and Kosar, Tomaz and Crepinsek, Matej",
 		"booktitle":"Proceedings of the International Multiconference on Computer Science and Information Technology -- 2nd Workshop on Advances in Programming Languages (WAPL'2009)",
 		"pages":"697 --- 704",
@@ -2090,7 +2090,7 @@ Analysis",
 		"tipo":"inproceedings",
 		"codigo":"oliveira09c",
 		"title":"VisualLISA: Visual Programming Environment for Attribute Grammars Specification",
-		"author":"Oliveira, Nuno and Henriques, Pedro Rangel and da Cruz, Daniela and Pereira, Maria Jo√£o Varanda",
+		"author":"Oliveira, Nuno and Henriques, Pedro Rangel and da Cruz, Daniela and Pereira, Maria Jo„o Varanda",
 		"booktitle":"Proceedings of the International Multiconference on Computer Science and Information Technology -- 2nd Workshop on Advances in Programming Languages (WAPL'2009)",
 		"pages":"689 -- 696",
 		"publisher":"IEEE Computer Society Press",
@@ -2104,7 +2104,7 @@ Analysis",
 		"title":"Influence of domain-specific notation to program understanding",
 		"author":"Kosar, Tomaz and Mernik, Marjan
                and Henriques, Pedro Rangel and da Cruz, Daniela and
-               Pereira, Maria Jo√£o Varanda and Oliveira, Nuno",
+               Pereira, Maria Jo„o Varanda and Oliveira, Nuno",
 		"booktitle":"Proceedings of the International Multiconference on Computer Science and Information Technology -- 2nd Workshop on Advances in Programming Languages (WAPL'2009)",
 		"pages":"673 --- 680",
 		"publisher":"IEEE Computer Society Press",
@@ -2115,38 +2115,38 @@ Analysis",
 	{
 		"tipo":"inproceedings",
 		"codigo":"FCHGD09a",
-		"author":"Fl√°vio Xavier Ferreira and Daniela da Cruz and Pedro Rangel Henriques and Alda Lopes Gancarski and Bruno Defude",
+		"author":"Fl·vio Xavier Ferreira and Daniela da Cruz and Pedro Rangel Henriques and Alda Lopes Gancarski and Bruno Defude",
 		"title":"A Query-by-Example Approach for XML Querying",
-		"booktitle":"CISTI'09 --- 4¬™Confer√™ncia Ib√©rica em Sistemas e Tecnologias da Informa√ß√£o
-  (WSIAI'09 -- Workshop em Sistemas Inteligentes e Aplica√ß√µes)",
-		"editor":"√Ålvaro Rocha and Francisco Restivo and Lu√≠s Paulo Reis and Sofia Torr√£o",
+		"booktitle":"CISTI'09 --- 4™ConferÍncia IbÈrica em Sistemas e Tecnologias da InformaÁ„o
+  (WSIAI'09 -- Workshop em Sistemas Inteligentes e AplicaÁıes)",
+		"editor":"¡lvaro Rocha and Francisco Restivo and LuÌs Paulo Reis and Sofia Torr„o",
 		"pages":"611-614",
-		"address":"P√≥voa do Varzim, Portugal",
+		"address":"PÛvoa do Varzim, Portugal",
 		"year":2009,
 		"month":"Jun",
 	}
 	{
 		"tipo":"inproceedings",
 		"codigo":"ORH09a",
-		"author":"Paulo Jorge Oliveria and Maria de F√°tima Rodrigues and Pedro Rangel Henriques",
+		"author":"Paulo Jorge Oliveria and Maria de F·tima Rodrigues and Pedro Rangel Henriques",
 		"title":"SMARTCLEAN: uma ferramenta para a limpeza incremental de dados",
-		"booktitle":"CISTI'09 --- 4¬™Confer√™ncia Ib√©rica em Sistemas e Tecnologias da Informa√ß√£o
-  (WSIAI'09 -- Workshop em Sistemas Inteligentes e Aplica√ß√µes)",
-		"editor":"√Ålvaro Rocha and Francisco Restivo and Lu√≠s Paulo Reis and Sofia Torr√£o",
+		"booktitle":"CISTI'09 --- 4™ConferÍncia IbÈrica em Sistemas e Tecnologias da InformaÁ„o
+  (WSIAI'09 -- Workshop em Sistemas Inteligentes e AplicaÁıes)",
+		"editor":"¡lvaro Rocha and Francisco Restivo and LuÌs Paulo Reis and Sofia Torr„o",
 		"pages":"621-626",
-		"address":"P√≥voa do Varzim, Portugal",
+		"address":"PÛvoa do Varzim, Portugal",
 		"year":2009,
 		"month":"Jun",
 	}
 	{
 		"tipo":"inproceedings",
 		"codigo":"LPH09a",
-		"author":"Giovani Rubert Librelotto and Rafael Teod√≥sio Pereira and Pedro Rangel Henriques",
+		"author":"Giovani Rubert Librelotto and Rafael TeodÛsio Pereira and Pedro Rangel Henriques",
 		"title":"Uma metodologia para Consultas aos Bancos de Dados do NCBI",
-		"booktitle":"CISTI'09 --- 4¬™Confer√™ncia Ib√©rica em Sistemas e Tecnologias da Informa√ß√£o",
-		"editor":"√Ålvaro Rocha and Francisco Restivo and Lu√≠s Paulo Reis and Sofia Torr√£o",
+		"booktitle":"CISTI'09 --- 4™ConferÍncia IbÈrica em Sistemas e Tecnologias da InformaÁ„o",
+		"editor":"¡lvaro Rocha and Francisco Restivo and LuÌs Paulo Reis and Sofia Torr„o",
 		"pages":"103-108",
-		"address":"P√≥voa do Varzim, Portugal",
+		"address":"PÛvoa do Varzim, Portugal",
 		"year":2009,
 		"month":"Jun",
 	}
@@ -2155,7 +2155,7 @@ Analysis",
 		"codigo":"LARH09",
 		"author":"Giovani Rubert Librelotto
        and Renato Preigschadt de Azevedo
-       and Jos√© Carlos Ramalho
+       and JosÈ Carlos Ramalho
        and Pedro Rangel Henriques",
 		"title":"Topic Maps Constraint Languages: understanding and comparing",
 		"journal":"Int. Journal Reasoning-based Intelligent Systems",
@@ -2170,11 +2170,11 @@ Analysis",
 	{
 		"tipo":"inproceedings",
 		"codigo":"OPHC09a",
-		"author":"Nuno Oliveira and Maria Jo√£o Varanda Pereira and
+		"author":"Nuno Oliveira and Maria Jo„o Varanda Pereira and
                 Pedro Rangel Henriques and Daniela da Cruz",
 		"title":"Domain Specific Languages: A Theoretical Survey",
-		"booktitle":"INForum'09 --- Simp√≥sio de Inform√°tica",
-		"publisher":"Faculdade de Ci√™ncias da Universidade de Lisboa",
+		"booktitle":"INForum'09 --- SimpÛsio de Inform·tica",
+		"publisher":"Faculdade de CiÍncias da Universidade de Lisboa",
 		"address":"Lisboa, Portugal",
 		"pages":"35 --- 46",
 		"year":2009,
@@ -2183,11 +2183,11 @@ Analysis",
 	{
 		"tipo":"inproceedings",
 		"codigo":"OPHCC09",
-		"author":"Nuno Oliveira and Maria Jo√£o Varanda Pereira and
+		"author":"Nuno Oliveira and Maria Jo„o Varanda Pereira and
                Pedro Rangel Henriques and Daniela da Cruz and Bastian Cramer",
 		"title":"{VisualLISA",
-		"booktitle":"INForum'09 --- Simp√≥sio de Inform√°tica",
-		"publisher":"Faculdade de Ci√™ncias da Universidade de Lisboa",
+		"booktitle":"INForum'09 --- SimpÛsio de Inform·tica",
+		"publisher":"Faculdade de CiÍncias da Universidade de Lisboa",
 		"address":"Lisboa, Portugal",
 		"pages":"155 --- 167",
 		"year":2009,
@@ -2198,10 +2198,10 @@ Analysis",
 		"codigo":"MKCHCPO09",
 		"author":"Marjan Mernik and Tomaz Kosar
                and Pedro Rangel Henriques and Daniela da Cruz and
-               Maria Jo√£o Varanda Pereira and Nuno Oliveira ",
+               Maria Jo„o Varanda Pereira and Nuno Oliveira ",
 		"title":"Comparison of XAML and C\# Forms using Cognitive Dimensions Framework",
-		"booktitle":"INForum'09 --- Simp√≥sio de Inform√°tica",
-		"publisher":"Faculdade de Ci√™ncias da Universidade de Lisboa",
+		"booktitle":"INForum'09 --- SimpÛsio de Inform·tica",
+		"publisher":"Faculdade de CiÍncias da Universidade de Lisboa",
 		"address":"Lisboa, Portugal",
 		"pages":"180 --- 191",
 		"year":2009,
@@ -2210,10 +2210,10 @@ Analysis",
 	{
 		"tipo":"inproceedings",
 		"codigo":"OHCP09",
-		"author":"Nuno Oliveira and Pedro Rangel Henriques and Daniela da Cruz and Maria Jo√£o Varanda Pereira",
+		"author":"Nuno Oliveira and Pedro Rangel Henriques and Daniela da Cruz and Maria Jo„o Varanda Pereira",
 		"title":"XAGra - An XML Dialect for Attribute Grammars",
-		"publisher":"Faculdade de Ci√™ncias da Universidade de Lisboa",
-		"booktitle":"INForum'09 --- Simp√≥sio de Inform√°tica",
+		"publisher":"Faculdade de CiÍncias da Universidade de Lisboa",
+		"booktitle":"INForum'09 --- SimpÛsio de Inform·tica",
 		"address":"Lisboa, Portugal",
 		"pages":"409 --- 420",
 		"year":2009,
@@ -2222,10 +2222,10 @@ Analysis",
 	{
 		"tipo":"inproceedings",
 		"codigo":"FCHGD09b",
-		"author":"Daniela da Cruz and Fl√°vio Xavier Ferreira and Pedro Rangel Henriques and Alda Lopes Gancarski and Bruno Defude",
+		"author":"Daniela da Cruz and Fl·vio Xavier Ferreira and Pedro Rangel Henriques and Alda Lopes Gancarski and Bruno Defude",
 		"title":"GuessXQ, an inference Web-engine for querying XML Documents",
-		"publisher":"Faculdade de Ci√™ncias da Universidade de Lisboa",
-		"booktitle":"INForum'09 --- Simp√≥sio de Inform√°tica",
+		"publisher":"Faculdade de CiÍncias da Universidade de Lisboa",
+		"booktitle":"INForum'09 --- SimpÛsio de Inform·tica",
 		"address":"Lisboa, Portugal",
 		"pages":"322 -- 325",
 		"year":2009,
@@ -2234,7 +2234,7 @@ Analysis",
 	{
 		"tipo":"InProceedings",
 		"codigo":"BHVU09",
-		"author":"Mario B√©ron and Pedro Rangel Henriques and Maria Jo√£o Varanda Pereira and Roberto Uzal",
+		"author":"Mario BÈron and Pedro Rangel Henriques and Maria Jo„o Varanda Pereira and Roberto Uzal",
 		"title":"Instrumentaciones de Programas Escritos en C para Interrelacionar las Vistas Comportamental y Operacional de los Sistemas de Software",
 		"booktitle":"CACIC'09 - XV Argentine Congress on Computer Science",
 		"publisher":"Universidad Nacional de Jujuy, Argentina",
@@ -2244,7 +2244,7 @@ Analysis",
 	{
 		"tipo":"article",
 		"codigo":"CBHP09",
-		"author":"Daniela da Cruz and Mario B√©ron and Pedro Rangel Henriques and Maria Jo√£o Varanda Pereira",
+		"author":"Daniela da Cruz and Mario BÈron and Pedro Rangel Henriques and Maria Jo„o Varanda Pereira",
 		"title":"Code Inspection Approaches for Program Visualization",
 		"journal":"Acta Electrotechnica et Informatica",
 		"editor":"Linus Michaeli",
@@ -2261,7 +2261,7 @@ Analysis",
 		"codigo":"cruz09",
 		"author":"Daniela da Cruz and Nuno Oliveira and Pedro Rangel Henriques",
 		"title":"GraAL - A Grammar Analyzer",
-		"publisher":"Faculdade de Ci√™ncias da Universidade de Lisboa",
+		"publisher":"Faculdade de CiÍncias da Universidade de Lisboa",
 		"year":2009,
 		"month":"September",
 		"address":"Lisbon, Portugal",
@@ -2289,10 +2289,10 @@ Analysis",
 	{
 		"tipo":"Article",
 		"codigo":"OPHCC2010",
-		"author":"Nuno Oliveira and Maria Jo√£o Varanda Pereira and Pedro Rangel Henriques and Daniela da Cruz and Bastian Cramer",
+		"author":"Nuno Oliveira and Maria Jo„o Varanda Pereira and Pedro Rangel Henriques and Daniela da Cruz and Bastian Cramer",
 		"title":"VisualLISA: A Visual Environment to Develop Attribute Grammars",
 		"journal":"ComSIS -- Computer Science an Information Systems Journal, Special Issue on Compilers, Related Technologies and Applications",
-		"editor":"Ivan Lukovic and Ant√≥nio Leit√£o ",
+		"editor":"Ivan Lukovic and AntÛnio Leit„o ",
 		"publisher":"Faculty of Technical Sciences, Trg Dositeja Obradovica 6, 21000 Novi Sad, Serbia",
 		"year":2010,
 		"month":"January",
@@ -2301,11 +2301,11 @@ Analysis",
 	{
 		"tipo":"Article",
 		"codigo":"KOMPCCH2010",
-		"author":"Tomaz Kosar and Nuno Oliveira and Marjan Mernik and Maria Jo√£o Varanda Pereira and Matej Crepinsek and Daniela
+		"author":"Tomaz Kosar and Nuno Oliveira and Marjan Mernik and Maria Jo„o Varanda Pereira and Matej Crepinsek and Daniela
 da Cruz and Pedro Rangel Henriques",
 		"title":"Comparing General-Purpose and Domain-Specific Languages: An Empirical Study",
 		"journal":"ComSIS -- Computer Science an Information Systems Journal, Special Issue on Compilers, Related Technologies and Applications",
-		"editor":"Ivan Lukovic and Ant√≥nio Leit√£o ",
+		"editor":"Ivan Lukovic and AntÛnio Leit„o ",
 		"publisher":"Faculty of Technical Sciences, Trg Dositeja Obradovica 6, 21000 Novi Sad, Serbia",
 		"year":2010,
 		"month":"January",

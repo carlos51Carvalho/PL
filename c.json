@@ -2,34 +2,23 @@
 	"referencias":[
 	{
 		"tipo":"Article",
-		"codigo":"OPHCC2010",
-		"author":"Nuno Oliveira and Maria João Varanda Pereira and Pedro Rangel Henriques and Daniela da Cruz and Bastian Cramer",
-		"title":"{VisualLISA}: A Visual Environment to Develop Attribute Grammars",
-		"journal":"ComSIS -- Computer Science an Information Systems Journal, Special Issue on Compilers, Related Technologies and Applications",
-		"editor":"Ivan Lukovic and António Leitão ",
-		"publisher":"Faculty of Technical Sciences, Trg Dositeja Obradovica 6, 21000 Novi Sad, Serbia",
-		"year":"2010fk",
-		"yearr":2010,
-		"yearrr":"2010fk",
-		"yearrr":2010,
-		"month":"January",
-		"note":"to be published",
-	}
-	{
-		"tipo":"Article",
-		"codigo":"KOMPCCH2010",
-		"author":"Tomaz Kosar and Nuno Oliveira and Marjan Mernik and Maria João Varanda Pereira and Matej Crepinsek and Daniela
-da Cruz and Pedro Rangel Henriques",
+		"codigo":"AllExceptions",
 		"authorr":"{projecto Camila}",
 		"title":"Comparing General-Purpose and Domain-Specific Languages: An Empirical Study",
 		"titlee":"\textsc{Camila} - A Platform for Software Mathematical Development",
 		"titleee":"On The Development of \textsc{Camila}",
 		"journal":"ComSIS -- Computer Science an Information Systems Journal, Special Issue on Compilers, Related Technologies and Applications",
 		"editor":"Ivan Lukovic and António Leitão ",
-		"year":"2010",
+		"yeaR":"2010",
+		"year":"2010fk",
+		"yearr":2010,
+		"yearrr":"2010fk",
+		"yearrr":2010,
 		"month":"January",
 		"note":"to be published",
 		"publisher":"{Faculty}, of Technical Sciences, Trg Dositeja Obradovica 6, 21000 Novi Sad, Serbia",
+		"author":"{Tomaz Kosar} and Nuno Oliveira and Marjan Mernik and Maria João Varanda Pereira and Matej Crepinsek and Daniela
+da Cruz and Pedro Rangel Henriques",
 	}
 	]
 }

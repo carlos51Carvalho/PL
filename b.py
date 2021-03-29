@@ -1,5 +1,5 @@
 import re
-f = open("exemplo-utf8.bib", "r", encoding='utf-8')
+f = open("ex109.bib", "r", encoding='utf-8')
 
 categoria=[]
 autoresOcorr={}
@@ -14,10 +14,13 @@ for i in categoria:
     campo = re.match(r'(\w+\{([^,]+))', i)
     
     if campo:
-       
-        if autor := re.search(r'\b(?i:author) *= *\{?\"?([^"}]*)',i):
+        if autor := re.search(r'\b(?i:author) *= *\"([^"]*)\",?|\b(?i:author) *= *\{(.*)\},?',i):
+            #print(autor)
+
             lsa=autor.group(1)
-           
+            if not(lsa):
+                lsa=autor.group(2)
+
 
             lsa=re.sub(r'( |\n)+', r' ', lsa)
             autores = re.split(r' +and +',lsa)

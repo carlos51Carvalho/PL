@@ -47,4 +47,3 @@ g.render('test-output/doutput', view=True)
 print(autoresRelat)
 
 
-#nao consigo visualizar o grafico 

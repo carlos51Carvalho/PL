@@ -43,7 +43,7 @@ for i in autoresRelat:
     g.edge(str(0), str(k), constraint='true')
     k+=1
 
-g.render('test-output/doutput', view=True)
+g.render('graphviz/doutput', view=True)
 print(autoresRelat)
 
 

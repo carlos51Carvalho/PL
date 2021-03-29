@@ -35,7 +35,6 @@ for i in categoria:
                     
 
 
-print("\n\n\n\n\n")
 for i in sorted(autoresOcorr):
     print(i + ": ",autoresOcorr[i])
     print()

@@ -3,7 +3,7 @@ from graphviz import Graph
 
 f = open("exemplo-utf8.bib", "r", encoding='utf-8')
 
-ex_aut= "J.J. Almeida"
+ex_aut = input("Insira o nome do autor a gerar o gráfio\n")
 
 categoria=[]
 autoresRelat=[]
@@ -33,7 +33,7 @@ for i in categoria:
                 if not aut.__eq__(ex_aut) and aut not in autoresRelat:
                     autoresRelat.append(aut)
                          
-   
+  
 g = Graph(format='png')
 g.node(str(0), ex_aut)
 k=1
@@ -44,6 +44,7 @@ for i in autoresRelat:
     k+=1
 
 g.render('graphviz/doutput', view=True)
+
 print(autoresRelat)
 
 

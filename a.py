@@ -1,8 +1,9 @@
 import re 
 
-
-def exA():
-	f = open("exemplo-utf8.bib", "r", encoding='utf-8')
+filepath = input("Insira o filepath\n")
+#print(filepath)
+try:
+	f = open(filepath, "r", encoding='utf-8')
 
 	categoria={}
 
@@ -38,6 +39,5 @@ def exA():
 	</body>
 </html>\n''')
 
-if __name__ == '__main__':
-	#print("Main")
-	exA()
+except Exception as e:
+    print(e)

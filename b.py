@@ -14,8 +14,7 @@ for i in categoria:
     campo = re.match(r'(\w+\{([^,]+))', i)
     
     if campo:
-        print(campo[2])
-
+       
         if autor := re.search(r'\b(?i:author) *= *\{?\"?([^"}]*)',i):
             lsa=autor.group(1)
            
@@ -30,13 +29,11 @@ for i in categoria:
                     
 
                 if aut in autoresOcorr:
-                    autoresOcorr[aut].append(campo[2])
+                    autoresOcorr[aut.strip()].append(campo[2])
                 else:
-                    autoresOcorr[aut]=[campo[2]]
+                    autoresOcorr[aut.strip()]=[campo[2]]
                     
 
-
-        print()
 
 print("\n\n\n\n\n")
 for i in sorted(autoresOcorr):

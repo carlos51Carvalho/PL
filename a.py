@@ -11,7 +11,6 @@ try:
 		#talvez nao seja preciso ser um findall
 	  campos = re.findall(r'\@(\w+)',linha)
 	  for c in campos:
-	  		#print(c)
 	  		caux=c.lower()
 	  		if caux in categoria:
 	  			categoria[caux]+=1
@@ -33,7 +32,6 @@ try:
 
 	for i in sorted(categoria):
 		html.write("    		<li>" +i + ": "+ str(categoria[i]) + "</li>\n")		
-		print(i,categoria[i])
 
 	html.write('''    	</ol>
 	</body>

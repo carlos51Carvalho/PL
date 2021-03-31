@@ -12,7 +12,6 @@ try:
     l = f.read()
     categoria = re.split('@',l)
 
-
     #separa dentro de cada categoria a chave única e coloca em campo e os autores separa tmb
     for i in categoria:
         campo = re.match(r'(\w+\{([^,]+))', i)
@@ -24,7 +23,6 @@ try:
                 lsa=autor.group(1)
                 if not(lsa):
                     lsa=autor.group(2)
-
 
                 lsa=re.sub(r'( |\n)+', r' ', lsa)
                 autores = re.split(r' +and +',lsa)

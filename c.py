@@ -16,6 +16,8 @@ try:
 	l = f.read()
 	categoria = re.split('@',l)
 
+	allc=".\n"
+
 	json.write("{\n\t\"referencias\":[")
 	for i in categoria:
 		#print(i)
@@ -29,10 +31,14 @@ try:
 			#print("codigo: ",g[1])
 			json.write("\n\t\t\"codigo\":\""+g[1]+"\",")
 
-			info = re.findall(r'\b(\w+) *= *(\d*),|\b(\w+) *= *\"([^"]*)\",?|\b(\w+) *= *\{([^,]*)',i)
-			for (c,v,c1,v1,c2,v2) in info:
-				#print(c,": ",v, " || ",c1,": ",v1," || ",c2,": ",v2)
-				#print()
+			#atrib=re.compile(rf'\b(\w+) *= *(\d*),|\b(\w+) *= *\"([^"]*)\",?|\b(\w+) *= *\{({allc}*)\},?')
+			#info = atrib.findall(i)
+			
+			info = re.findall(r'\b(\w+) *= *(\d*),|\b(\w+) *= *\"([^"]*)\",?|\b(\w+) *= *\{([^\}]*(?:\{[^\}]*\})+[^\}]*)\},?|\b(\w+) *= *\{([^\}]*[^\}]*)\},?',i)
+
+			for (c,v,c1,v1,c2,v2,c3,v3) in info:
+				print(c,": ",v, " || ",c1,": ",v1," || ",c2,": ",v2," || ",c3,": ",v3)
+				print()
 				if c:
 					json.write("\n\t\t\"" + c +"\":\""+v+"\",")
 				elif c1:
@@ -41,10 +47,12 @@ try:
 					else:
 						json.write("\n\t\t\"" + c1 +"\":\""+v1+"\",")
 				elif c2:
-						if re.search(r'^\d*$',v2):
-							json.write("\n\t\t\"" + c2 +"\":"+v2+",")
-						else:
-							json.write("\n\t\t\"" + c2 +"\":\""+v2+"\",")
+					if re.search(r'^\d*$',v2):
+						json.write("\n\t\t\"" + c2 +"\":"+v2+",")
+					else:
+						json.write("\n\t\t\"" + c2 +"\":\""+v2+"\",")
+				elif c3:
+					json.write("\n\t\t\"" + c3 +"\":\""+v3+"\",")
 				else:
 					pass
 

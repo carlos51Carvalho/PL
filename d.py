@@ -19,12 +19,14 @@ try:
     #separa dentro de cada categoria a chave única e coloca em campo e os autores separa tmb
     for i in categoria:
 
-        if autor := re.search(r'\b(?i:author) *= *\"([^"]*)\",?|\b(?i:author) *= *\{(.*)\},?',i):
+        if autor := re.search(r'\b(?i:author) *= *\"([^"]*)\",?|\b(?i:author) *= *\{([^\}]*(?:\{[^\}]*\})+[^\}]*)\},?|\b(?i:author) *= *\{([^\}]*[^\}]*)\},?',i):
             #print(autor)
 
             lsa=autor.group(1)
             if not(lsa):
                 lsa=autor.group(2)
+                if not(lsa):
+                    lsa=autor.group(3)
      
 
             lsa=re.sub(r'( |\n)+', r' ', lsa)

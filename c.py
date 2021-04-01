@@ -15,8 +15,7 @@ try:
 	#HOW TO SPLI 
 	l = f.read()
 	categoria = re.split('@',l)
-
-	allc=".\n"
+	
 
 	json.write("{\n\t\"referencias\":[")
 	for i in categoria:
@@ -37,8 +36,8 @@ try:
 			info = re.findall(r'\b(\w+) *= *(\d*),|\b(\w+) *= *\"([^"]*)\",?|\b(\w+) *= *\{([^\}]*(?:\{[^\}]*\})+[^\}]*)\},?|\b(\w+) *= *\{([^\}]*[^\}]*)\},?',i)
 
 			for (c,v,c1,v1,c2,v2,c3,v3) in info:
-				print(c,": ",v, " || ",c1,": ",v1," || ",c2,": ",v2," || ",c3,": ",v3)
-				print()
+				#print(c,": ",v, " || ",c1,": ",v1," || ",c2,": ",v2," || ",c3,": ",v3)
+				#print()
 				if c:
 					json.write("\n\t\t\"" + c +"\":\""+v+"\",")
 				elif c1:

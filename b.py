@@ -17,12 +17,18 @@ try:
         campo = re.match(r'(\w+\{([^,]+))', i)
         
         if campo:
-            if autor := re.search(r'\b(?i:author) *= *\"([^"]*)\",?|\b(?i:author) *= *\{(.*)\},?',i):
-                #print(autor)
+        	#|\b(\w+) *= *\{([^\}]*(?:\{[^\}]*\})+[^\}]*)\},?|\b(\w+) *= *\{([^\}]*[^\}]*)\},?
+            if autor := re.search(r'\b(?i:author) *= *\"([^"]*)\",?|\b(?i:author) *= *\{([^\}]*(?:\{[^\}]*\})+[^\}]*)\},?|\b(?i:author) *= *\{([^\}]*[^\}]*)\},?',i):
+                print(autor)
 
                 lsa=autor.group(1)
+                print("a")
                 if not(lsa):
                     lsa=autor.group(2)
+                    ("a")
+                    if not(lsa):
+                        lsa=autor.group(3)
+                        print("a")
 
                 lsa=re.sub(r'( |\n)+', r' ', lsa)
                 autores = re.split(r' +and +',lsa)

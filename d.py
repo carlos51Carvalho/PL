@@ -3,7 +3,7 @@ from graphviz import Graph
 
 
 filepath = input("Insira o filepath\n")
-#print(filepath)
+
 try:
     f = open(filepath, "r", encoding='utf-8')
     ex_aut = input("Insira o nome do autor a gerar o gráfio\n")
@@ -20,7 +20,6 @@ try:
     for i in categoria:
 
         if autor := re.search(r'\b(?i:author) *= *\"([^"]*)\",?|\b(?i:author) *= *\{(.*)\},?',i):
-            #print(autor)
 
             lsa=autor.group(1)
             if not(lsa):

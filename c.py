@@ -20,19 +20,16 @@ try:
 
 	json.write("{\n\t\"referencias\":[")
 	for i in categoria:
-		#print(i)
+		
 		tipo = re.match(r'(\w+)\{([^,]+)',i)
 		
 		if tipo:
 			g=re.split('{',tipo.group())
-			#print("tipo: ",g[0])
+			
 			json.write("\n\t{\n\t\t\"tipo\":\""+g[0]+"\",")
 			
-			#print("codigo: ",g[1])
+			
 			json.write("\n\t\t\"codigo\":\""+g[1]+"\",")
-
-			#atrib=re.compile(rf'\b(\w+) *= *(\d*),|\b(\w+) *= *\"([^"]*)\",?|\b(\w+) *= *\{({allc}*)\},?')
-			#info = atrib.findall(i)
 			
 			info = re.findall(r'\b(\w+) *= *(\d*),|\b(\w+) *= *\"([^"]*)\",?|\b(\w+) *= *\{([^\}]*(?:\{[^\}]*\})+[^\}]*)\},?|\b(\w+) *= *\{([^\}]*[^\}]*)\},?',i)
 
@@ -58,9 +55,6 @@ try:
 
 			json.write("\n\t}")
 
-		
-		#print()
-		#print()
 
 	json.write("\n\t]\n}\n")
 

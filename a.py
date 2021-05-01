@@ -1,14 +1,14 @@
 import re 
 
 filepath = input("Insira o filepath\n")
-#print(filepath)
+
 try:
 	f = open(filepath, "r", encoding='utf-8')
 
 	categoria={}
 
 	for linha in f:
-		#talvez nao seja preciso ser um findall
+		
 	  campos = re.findall(r'\@(\w+)',linha)
 	  for c in campos:
 	  		caux=c.lower()

@@ -1,0 +1,8 @@
+start
+	read
+	pushs "String introduzida:\n"
+	writes
+	writes
+	pushs "\n"
+	writes
+stop

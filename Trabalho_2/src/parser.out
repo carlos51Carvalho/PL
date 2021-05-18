@@ -1,0 +1,207 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    else
+    if
+    read
+
+Grammar
+
+Rule 0     S' -> Progama
+Rule 1     Progama -> Declaracoes Corpo
+Rule 2     Declaracoes -> VARS Decls ENDVARS
+Rule 3     Declaracoes -> <empty>
+Rule 4     Decls -> Decl Decls
+Rule 5     Decls -> <empty>
+Rule 6     Decl -> int id
+Rule 7     Corpo -> BEGIN Instrucoes END
+Rule 8     Instrucoes -> Instrucao Instrucoes
+Rule 9     Instrucoes -> <empty>
+Rule 10    Instrucao -> print num
+
+Terminals, with rules where they appear
+
+BEGIN                : 7
+END                  : 7
+ENDVARS              : 2
+VARS                 : 2
+else                 : 
+error                : 
+id                   : 6
+if                   : 
+int                  : 6
+num                  : 10
+print                : 10
+read                 : 
+
+Nonterminals, with rules where they appear
+
+Corpo                : 1
+Decl                 : 4
+Declaracoes          : 1
+Decls                : 2 4
+Instrucao            : 8
+Instrucoes           : 7 8
+Progama              : 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . Progama
+    (1) Progama -> . Declaracoes Corpo
+    (2) Declaracoes -> . VARS Decls ENDVARS
+    (3) Declaracoes -> .
+
+    VARS            shift and go to state 3
+    BEGIN           reduce using rule 3 (Declaracoes -> .)
+
+    Progama                        shift and go to state 1
+    Declaracoes                    shift and go to state 2
+
+state 1
+
+    (0) S' -> Progama .
+
+
+
+state 2
+
+    (1) Progama -> Declaracoes . Corpo
+    (7) Corpo -> . BEGIN Instrucoes END
+
+    BEGIN           shift and go to state 5
+
+    Corpo                          shift and go to state 4
+
+state 3
+
+    (2) Declaracoes -> VARS . Decls ENDVARS
+    (4) Decls -> . Decl Decls
+    (5) Decls -> .
+    (6) Decl -> . int id
+
+    ENDVARS         reduce using rule 5 (Decls -> .)
+    int             shift and go to state 8
+
+    Decls                          shift and go to state 6
+    Decl                           shift and go to state 7
+
+state 4
+
+    (1) Progama -> Declaracoes Corpo .
+
+    $end            reduce using rule 1 (Progama -> Declaracoes Corpo .)
+
+
+state 5
+
+    (7) Corpo -> BEGIN . Instrucoes END
+    (8) Instrucoes -> . Instrucao Instrucoes
+    (9) Instrucoes -> .
+    (10) Instrucao -> . print num
+
+    END             reduce using rule 9 (Instrucoes -> .)
+    print           shift and go to state 11
+
+    Instrucoes                     shift and go to state 9
+    Instrucao                      shift and go to state 10
+
+state 6
+
+    (2) Declaracoes -> VARS Decls . ENDVARS
+
+    ENDVARS         shift and go to state 12
+
+
+state 7
+
+    (4) Decls -> Decl . Decls
+    (4) Decls -> . Decl Decls
+    (5) Decls -> .
+    (6) Decl -> . int id
+
+    ENDVARS         reduce using rule 5 (Decls -> .)
+    int             shift and go to state 8
+
+    Decl                           shift and go to state 7
+    Decls                          shift and go to state 13
+
+state 8
+
+    (6) Decl -> int . id
+
+    id              shift and go to state 14
+
+
+state 9
+
+    (7) Corpo -> BEGIN Instrucoes . END
+
+    END             shift and go to state 15
+
+
+state 10
+
+    (8) Instrucoes -> Instrucao . Instrucoes
+    (8) Instrucoes -> . Instrucao Instrucoes
+    (9) Instrucoes -> .
+    (10) Instrucao -> . print num
+
+    END             reduce using rule 9 (Instrucoes -> .)
+    print           shift and go to state 11
+
+    Instrucao                      shift and go to state 10
+    Instrucoes                     shift and go to state 16
+
+state 11
+
+    (10) Instrucao -> print . num
+
+    num             shift and go to state 17
+
+
+state 12
+
+    (2) Declaracoes -> VARS Decls ENDVARS .
+
+    BEGIN           reduce using rule 2 (Declaracoes -> VARS Decls ENDVARS .)
+
+
+state 13
+
+    (4) Decls -> Decl Decls .
+
+    ENDVARS         reduce using rule 4 (Decls -> Decl Decls .)
+
+
+state 14
+
+    (6) Decl -> int id .
+
+    int             reduce using rule 6 (Decl -> int id .)
+    ENDVARS         reduce using rule 6 (Decl -> int id .)
+
+
+state 15
+
+    (7) Corpo -> BEGIN Instrucoes END .
+
+    $end            reduce using rule 7 (Corpo -> BEGIN Instrucoes END .)
+
+
+state 16
+
+    (8) Instrucoes -> Instrucao Instrucoes .
+
+    END             reduce using rule 8 (Instrucoes -> Instrucao Instrucoes .)
+
+
+state 17
+
+    (10) Instrucao -> print num .
+
+    print           reduce using rule 10 (Instrucao -> print num .)
+    END             reduce using rule 10 (Instrucao -> print num .)
+

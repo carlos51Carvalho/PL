@@ -1,0 +1,330 @@
+print 5
+
+start
+	pushi 5
+	writei
+stop
+
+---------------------------------------------------------------
+
+//
+
+print 7-2*3+9
+
+start
+	pushi 7
+	pushi 2
+	pushi 3
+	mul
+	sub
+	pushi 9
+	add
+	writei
+stop
+
+---------------------------------------------------------------
+
+int contador
+int i = 2
+contador = 5*i
+print contador
+
+
+Tabela de identificadores -> 
+	Nome da variavel 	|	tipo	|	offset	
+	--------------------+-----------+-----------
+		contador		|	int 	|		0
+			i 			|	int 	|		1
+
+pushi 0	
+pushi 2	
+start
+	pushi 5
+	pushg 1
+	mul
+	storeg 0
+	pushg 0
+	writei
+stop
+
+---------------------------------------------------------------
+
+int dummy[3]
+int lista[10]
+lista[2]=7
+print lista[2]
+print dummy[1]
+
+Tabela de identificadores -> 
+	Nome da variavel 	|	tipo	|	offset	|	tamanho	
+	--------------------+-----------+-----------+-----------
+		dummy			| arrayInt 	|		0	|	3
+		lista 			| arrayint 	|		3	|	10
+			a 			| 	int 	|		13	|
+pushn 3
+pushn 10
+pushi 0
+start
+	pushgp 			<-push globapointer (inicio da stack)
+	pushi 3			<- offset da variavel
+	padd			<-soma endereço + valor
+	pushi 2			<- offset da lista
+	pushi 7			<- valor a colocar na lista
+	storen
+	
+	pushgp 			<-push globapointer
+	pushi 3			<- offset da variavel
+	padd			<-soma endereço + valor
+	pushi 2			<- offset da lista
+	loadn
+	writei
+
+	pushgp 			<-push globapointer
+	pushi 0			<- offset da variavel
+	padd			<-soma endereço + valor
+	pushi 1			<- offset da lista
+	loadn
+	writei
+stop
+
+
+	stack para o storen:
+7 		valor a guardar
+2		offset na lista
+lista	endereço da lista (gp + ofsset da variavel)
+
+--------------------------------------------------------------
+repeat(cond){}		<- while
+repeat{}(cond)
+
+i=0
+int lista[10]
+repeat(10){
+	read(lista[i])
+	i=i+1
+}
+printArray lista		<- while(i<10){print lista[i]; i+=1}
+
+Tabela de identificadores -> 
+	Nome da variavel 	|	tipo	|	offset	|	tamanho	
+	--------------------+-----------+-----------+-----------
+		i 				|  int  	|		0	|	
+		lista 			| arrayint 	|		1	|	10
+		r1				|  int  	|		11	|	
+
+pushi 0
+pushn 10
+
+//ou reservar um bloco para variaveis extra (repeats e assim) ou varrer duas vezes o codigo, sendo a primeira para guardar espaço para variaveis
+
+pushi 10
+start
+ciclo1:
+	pushgp 			<- push globapointer
+	pushi 1			<- offset da variavel
+	padd			<- soma endereço + valor
+	
+	pushg 0			
+	
+	read
+	atoi
+
+	storen
+
+	pushg 0
+	pushi 1
+	add
+	storeg 0
+
+	pushg 11
+	pushi 1
+	sub
+	storeg 11
+
+	pushg 11
+	pushi 0
+	equal
+
+	jz ciclo1
+
+ciclo2:				<- printArrayList
+	pushi 0			<- i = 0
+	storeg 0
+
+	pushgp 			
+	pushi 1		
+	padd			
+	
+	pushg 0			
+	
+	loadn
+	writei
+
+	pushg 0
+	pushi 1
+	add
+	storeg 0
+
+	pushg 0
+	pushi 10
+	supeq			<- avalia se é inferior (pode se usar 						inf)
+	jz ciclo2
+stop 
+
+
+
+read		<- le string para a stack de strings
+atoi		<- pega no engereço e guarda o inteiro na stack normal
+
+---------------------------------------------------------
+
+ler dois numeros e escrever o maior deles
+int a, b
+read(a)
+read(b)
+if(a>b)
+	print(a)
+else print(b)
+
+
+pushi 0
+pushi 0
+start
+	read
+	atoi
+	storeg 0
+	read
+	atoi
+	storeg 1
+
+
+	pushg 0
+	pushg 1
+	sup
+
+	jz else_1
+	pushg 0
+	writei
+	jump fim_if_1
+
+else_1:
+	pushg 1
+	write i
+
+fim_if_1:
+
+stop
+
+// É preciso politica de nomes para as labels
+
+--------------------------------------------------------------
+
+ler numeros inteiros até ao 0 e retornar a soma
+
+int soma=0, n
+repeat{
+	read(n)
+	soma+=n
+}until(n==0)
+print soma
+
+pushi 0
+pushi 0
+ciclo1:
+	read
+	atoi
+	storeg 1
+
+	pushg 0
+	pushg 1
+	add
+	storeg 0
+
+	pushg 1
+	pushi 0
+	equal
+
+	jz ciclo1
+
+	pushg 0
+	writei
+stop
+
+
+//Exemplos de gramaticas
+
+((int soma 0)
+ (int n 0)
+ (repeatuntil
+ 	(
+	 	(read n)
+	 	(atrib soma (add soma n))
+ 	)
+ 	(eq n 0)
+ )
+ (print soma)
+)
+
+
+<prog>
+	<decls>
+		<dec name="soma" type="Int" value="0"/>
+		<dec .../>
+	</decls>
+
+</prog>
+
+--------------------------------------------------------------
+
+Ler n, somar de 1..n, excrever o resultado
+
+int soma=0, n, i
+read(n)
+for(i=1; i <= n; i++)
+	soma= soma + i
+print soma
+
+
+pushi 0
+pushi 0
+pushi 0
+start
+	read
+	atoi
+	storeg 1
+
+	pushi 1
+	storeg 2
+for_1:
+	//cond
+	pushg 2
+	pushg 1
+	infeq
+	jz fim_for_1
+
+	pushg 0
+	pushg 2
+	add
+	storeg 0
+
+	pushg 2
+	pushg 1
+	add
+	storeg 2
+
+	jump for_1
+
+fim_for_1:
+	pushg 0
+	writei
+stop
+
+
+--------------------------------------------------------------
+
+start
+	read
+	pushs "String introduzida:\n"
+	writes
+	writes
+stop

@@ -1,0 +1,61 @@
+// exemplos de codigo na linguagem a traduzir e os tokens/literals que vamos usar
+
+VARS
+	int i
+	int a, b
+	int l[10]
+	int l[10], d[10]
+ENDVARS
+
+
+BEGIN
+	print (a)
+	read (a)
+	repeat(10){
+		read(lista[i])
+		i=i+1
+	}
+
+	read(a)
+	read(b)
+	if(a>b){
+		print(a)
+	}
+	else{
+		print(b)
+	}
+END
+
+
+tokens=["VARS", "ENDVARS", 
+		"BEGIN", "END", 
+		"num", "id"
+		"int", "print", "read", 
+		"if", "else"]
+
+literals=["(", ")", 
+			"{", "}", 
+			"+", "-", "*", "/",
+			">", "<", "="]		<- ?
+
+
+P={
+	Program => Declaracoes Corpo
+	
+
+	Declaracoes => VARS Decls ENDVARS
+				 | 
+	Decls => Decl Decls
+		   | 
+	Decl => int id
+
+
+	Corpo => BEGIN Instrucoes END
+	Instrucoes => Intrucao Intrucoes
+				|
+	Intrucao => print num
+}
+
+
+
+

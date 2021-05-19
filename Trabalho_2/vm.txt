@@ -182,6 +182,7 @@ ler dois numeros e escrever o maior deles
 int a, b
 read(a)
 read(b)
+
 if(a>b)
 	print(a)
 else print(b)
@@ -321,6 +322,9 @@ stop
 
 
 --------------------------------------------------------------
+read a
+print "String introduzida:\n"
+print a
 
 start
 	read

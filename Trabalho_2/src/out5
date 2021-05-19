@@ -1,0 +1,12 @@
+pushi 1
+pushi 2
+pushi 3
+start 
+pushg 0
+pushg 1
+add
+pushg 2
+add
+writei
+stop
+

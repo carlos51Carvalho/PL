@@ -1,0 +1,18 @@
+pushi 1
+pushi 2
+pushi 3
+start 
+pushg 0
+pushg 1
+mul
+writei
+pushg 0
+pushg 1
+div
+writei
+pushg 0
+pushg 1
+mod
+writei
+stop
+

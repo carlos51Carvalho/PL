@@ -6,9 +6,9 @@ _tabversion = '3.10'
 
 _lr_method = 'LALR'
 
-_lr_signature = 'BEGIN END ENDVARS VARS else id if int num print readProgama : Declaracoes CorpoDeclaracoes : VARS Decls ENDVARSDeclaracoes : Decls : Decl DeclsDecls : Decl : int idCorpo : BEGIN Instrucoes ENDInstrucoes : Instrucao InstrucoesInstrucoes : Instrucao : print num'
+_lr_signature = "BEGIN END ENDVARS VARS else id if int num print read strProgama : Declaracoes CorpoDeclaracoes : VARS Decls ENDVARSDeclaracoes : Decls : Decl DeclsDecls : Decl : int idDecl : int id '=' numDecl : int id '[' num ']'Corpo : BEGIN Instrucoes ENDInstrucoes : Instrucao InstrucoesInstrucoes : Instrucao : print strInstrucao : print ExpInstrucao : id '=' ExpInstrucao : id '[' Exp ']' '=' ExpInstrucao : readInstrucao : read idInstrucao : read id '[' Exp ']'Instrucao : if '(' Cond ')' '{' Instrucoes '}' ElseElse : Cond : Exp Oper ExpOper : '=' '=' Exp : Exp '+' TermoExp : Exp '-' TermoExp : TermoTermo : Termo '*' FatorTermo : Termo '/' FatorTermo : Termo '%' FatorTermo : FatorFator : '(' Exp ')'Fator : numFator : idFator : id '[' Exp ']'"
     
-_lr_action_items = {'VARS':([0,],[3,]),'BEGIN':([0,2,12,],[-3,5,-2,]),'$end':([1,4,15,],[0,-1,-7,]),'ENDVARS':([3,6,7,13,14,],[-5,12,-5,-4,-6,]),'int':([3,7,14,],[8,8,-6,]),'END':([5,9,10,16,17,],[-9,15,-9,-8,-10,]),'print':([5,10,17,],[11,11,-10,]),'id':([8,],[14,]),'num':([11,],[17,]),}
+_lr_action_items = {'VARS':([0,],[3,]),'BEGIN':([0,2,15,],[-3,5,-2,]),'$end':([1,4,18,],[0,-1,-9,]),'ENDVARS':([3,6,7,16,17,45,59,],[-5,15,-5,-4,-6,-7,-8,]),'int':([3,7,17,45,59,],[8,8,-6,-7,-8,]),'END':([5,9,10,13,19,20,21,22,23,25,26,29,40,47,48,49,50,51,52,60,62,66,68,69,],[-11,18,-11,-16,-10,-12,-13,-25,-29,-31,-32,-17,-14,-23,-24,-26,-27,-28,-30,-33,-18,-15,-20,-19,]),'print':([5,10,13,20,21,22,23,25,26,29,40,47,48,49,50,51,52,60,62,63,66,68,69,],[11,11,-16,-12,-13,-25,-29,-31,-32,-17,-14,-23,-24,-26,-27,-28,-30,-33,-18,11,-15,-20,-19,]),'id':([5,8,10,11,13,20,21,22,23,24,25,26,27,28,29,30,33,34,35,36,37,39,40,42,47,48,49,50,51,52,57,60,61,62,63,65,66,68,69,],[12,17,12,26,29,-12,-13,-25,-29,26,-31,-32,26,26,-17,26,26,26,26,26,26,26,-14,26,-23,-24,-26,-27,-28,-30,26,-33,26,-18,12,-22,-15,-20,-19,]),'read':([5,10,13,20,21,22,23,25,26,29,40,47,48,49,50,51,52,60,62,63,66,68,69,],[13,13,-16,-12,-13,-25,-29,-31,-32,-17,-14,-23,-24,-26,-27,-28,-30,-33,-18,13,-15,-20,-19,]),'if':([5,10,13,20,21,22,23,25,26,29,40,47,48,49,50,51,52,60,62,63,66,68,69,],[14,14,-16,-12,-13,-25,-29,-31,-32,-17,-14,-23,-24,-26,-27,-28,-30,-33,-18,14,-15,-20,-19,]),'}':([10,13,19,20,21,22,23,25,26,29,40,47,48,49,50,51,52,60,62,63,66,67,68,69,],[-11,-16,-10,-12,-13,-25,-29,-31,-32,-17,-14,-23,-24,-26,-27,-28,-30,-33,-18,-11,-15,68,-20,-19,]),'str':([11,],[20,]),'(':([11,14,24,27,28,30,33,34,35,36,37,39,42,57,61,65,],[24,30,24,24,24,24,24,24,24,24,24,24,24,24,24,-22,]),'num':([11,24,27,28,30,31,32,33,34,35,36,37,39,42,57,61,65,],[25,25,25,25,25,45,46,25,25,25,25,25,25,25,25,25,-22,]),'=':([12,17,22,23,25,26,44,47,48,49,50,51,52,54,58,60,],[27,31,-25,-29,-31,-32,58,-23,-24,-26,-27,-28,-30,61,65,-33,]),'[':([12,17,26,29,],[28,32,39,42,]),'+':([21,22,23,25,26,38,40,41,44,47,48,49,50,51,52,53,55,60,64,66,],[33,-25,-29,-31,-32,33,33,33,33,-23,-24,-26,-27,-28,-30,33,33,-33,33,33,]),'-':([21,22,23,25,26,38,40,41,44,47,48,49,50,51,52,53,55,60,64,66,],[34,-25,-29,-31,-32,34,34,34,34,-23,-24,-26,-27,-28,-30,34,34,-33,34,34,]),')':([22,23,25,26,38,43,47,48,49,50,51,52,60,64,],[-25,-29,-31,-32,52,56,-23,-24,-26,-27,-28,-30,-33,-21,]),']':([22,23,25,26,41,46,47,48,49,50,51,52,53,55,60,],[-25,-29,-31,-32,54,59,-23,-24,-26,-27,-28,-30,60,62,-33,]),'*':([22,23,25,26,47,48,49,50,51,52,60,],[35,-29,-31,-32,35,35,-26,-27,-28,-30,-33,]),'/':([22,23,25,26,47,48,49,50,51,52,60,],[36,-29,-31,-32,36,36,-26,-27,-28,-30,-33,]),'%':([22,23,25,26,47,48,49,50,51,52,60,],[37,-29,-31,-32,37,37,-26,-27,-28,-30,-33,]),'{':([56,],[63,]),}
 
 _lr_action = {}
 for _k, _v in _lr_action_items.items():
@@ -17,7 +17,7 @@ for _k, _v in _lr_action_items.items():
       _lr_action[_x][_k] = _y
 del _lr_action_items
 
-_lr_goto_items = {'Progama':([0,],[1,]),'Declaracoes':([0,],[2,]),'Corpo':([2,],[4,]),'Decls':([3,7,],[6,13,]),'Decl':([3,7,],[7,7,]),'Instrucoes':([5,10,],[9,16,]),'Instrucao':([5,10,],[10,10,]),}
+_lr_goto_items = {'Progama':([0,],[1,]),'Declaracoes':([0,],[2,]),'Corpo':([2,],[4,]),'Decls':([3,7,],[6,16,]),'Decl':([3,7,],[7,7,]),'Instrucoes':([5,10,63,],[9,19,67,]),'Instrucao':([5,10,63,],[10,10,10,]),'Exp':([11,24,27,28,30,39,42,57,61,],[21,38,40,41,44,53,55,64,66,]),'Termo':([11,24,27,28,30,33,34,39,42,57,61,],[22,22,22,22,22,47,48,22,22,22,22,]),'Fator':([11,24,27,28,30,33,34,35,36,37,39,42,57,61,],[23,23,23,23,23,23,23,49,50,51,23,23,23,23,]),'Cond':([30,],[43,]),'Oper':([44,],[57,]),'Else':([68,],[69,]),}
 
 _lr_goto = {}
 for _k, _v in _lr_goto_items.items():
@@ -27,14 +27,37 @@ for _k, _v in _lr_goto_items.items():
 del _lr_goto_items
 _lr_productions = [
   ("S' -> Progama","S'",1,None,None,None),
-  ('Progama -> Declaracoes Corpo','Progama',2,'p_Programa','comp_yacc.py',25),
-  ('Declaracoes -> VARS Decls ENDVARS','Declaracoes',3,'p_Declaracoes','comp_yacc.py',32),
-  ('Declaracoes -> <empty>','Declaracoes',0,'p_Declaracoes_vazio','comp_yacc.py',36),
-  ('Decls -> Decl Decls','Decls',2,'p_Decls','comp_yacc.py',40),
-  ('Decls -> <empty>','Decls',0,'p_Decls_vazio','comp_yacc.py',44),
-  ('Decl -> int id','Decl',2,'p_Decl','comp_yacc.py',49),
-  ('Corpo -> BEGIN Instrucoes END','Corpo',3,'p_Corpo','comp_yacc.py',56),
-  ('Instrucoes -> Instrucao Instrucoes','Instrucoes',2,'p_Instrucoes','comp_yacc.py',60),
-  ('Instrucoes -> <empty>','Instrucoes',0,'p_Instrucoes_vazio','comp_yacc.py',64),
-  ('Instrucao -> print num','Instrucao',2,'p_Instrucao_print','comp_yacc.py',69),
+  ('Progama -> Declaracoes Corpo','Progama',2,'p_Programa','comp_yacc.py',27),
+  ('Declaracoes -> VARS Decls ENDVARS','Declaracoes',3,'p_Declaracoes','comp_yacc.py',35),
+  ('Declaracoes -> <empty>','Declaracoes',0,'p_Declaracoes_vazio','comp_yacc.py',39),
+  ('Decls -> Decl Decls','Decls',2,'p_Decls','comp_yacc.py',43),
+  ('Decls -> <empty>','Decls',0,'p_Decls_vazio','comp_yacc.py',47),
+  ('Decl -> int id','Decl',2,'p_Decl_int','comp_yacc.py',51),
+  ('Decl -> int id = num','Decl',4,'p_Decl_int_attr','comp_yacc.py',58),
+  ('Decl -> int id [ num ]','Decl',5,'p_Decl_arrayInt','comp_yacc.py',65),
+  ('Corpo -> BEGIN Instrucoes END','Corpo',3,'p_Corpo','comp_yacc.py',75),
+  ('Instrucoes -> Instrucao Instrucoes','Instrucoes',2,'p_Instrucoes','comp_yacc.py',79),
+  ('Instrucoes -> <empty>','Instrucoes',0,'p_Instrucoes_vazio','comp_yacc.py',83),
+  ('Instrucao -> print str','Instrucao',2,'p_Instrucao_print_str','comp_yacc.py',90),
+  ('Instrucao -> print Exp','Instrucao',2,'p_Instrucao_print_exp','comp_yacc.py',94),
+  ('Instrucao -> id = Exp','Instrucao',3,'p_Instrucao_attr_int_exp','comp_yacc.py',101),
+  ('Instrucao -> id [ Exp ] = Exp','Instrucao',6,'p_Instrucao_attr_arrayint_exp','comp_yacc.py',106),
+  ('Instrucao -> read','Instrucao',1,'p_Instrucao_read','comp_yacc.py',114),
+  ('Instrucao -> read id','Instrucao',2,'p_Instrucao_read_int','comp_yacc.py',118),
+  ('Instrucao -> read id [ Exp ]','Instrucao',5,'p_Instrucao_read_arrayInt','comp_yacc.py',123),
+  ('Instrucao -> if ( Cond ) { Instrucoes } Else','Instrucao',8,'p_Instrucao_if','comp_yacc.py',131),
+  ('Else -> <empty>','Else',0,'p_Else','comp_yacc.py',135),
+  ('Cond -> Exp Oper Exp','Cond',3,'p_Cond','comp_yacc.py',139),
+  ('Oper -> = =','Oper',2,'p_Oper','comp_yacc.py',144),
+  ('Exp -> Exp + Termo','Exp',3,'p_Exp_add','comp_yacc.py',151),
+  ('Exp -> Exp - Termo','Exp',3,'p_Exp_sub','comp_yacc.py',155),
+  ('Exp -> Termo','Exp',1,'p_Exp_termo','comp_yacc.py',159),
+  ('Termo -> Termo * Fator','Termo',3,'p_Termo_mul','comp_yacc.py',165),
+  ('Termo -> Termo / Fator','Termo',3,'p_Termo_div','comp_yacc.py',169),
+  ('Termo -> Termo % Fator','Termo',3,'p_Termo_mod','comp_yacc.py',173),
+  ('Termo -> Fator','Termo',1,'p_Termo_fator','comp_yacc.py',177),
+  ('Fator -> ( Exp )','Fator',3,'p_Fator_exp','comp_yacc.py',183),
+  ('Fator -> num','Fator',1,'p_Fator_num','comp_yacc.py',187),
+  ('Fator -> id','Fator',1,'p_Fator_id','comp_yacc.py',191),
+  ('Fator -> id [ Exp ]','Fator',4,'p_Fator_id_arr','comp_yacc.py',196),
 ]

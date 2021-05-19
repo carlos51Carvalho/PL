@@ -4,13 +4,15 @@ import ply.lex as lex
 tokens=["VARS", "ENDVARS", 
 		"BEGIN", "END", 
 		"num", "id",
+        "str",
 		"int", "print", "read", 
 		"if", "else"]
 
-literals=["(", ")", 
-			"{", "}", 
-			"+", "-", "*", "/",
-			">", "<", "="]
+literals=['(', ')', 
+            '[', ']', 
+            '{', '}', 
+			'+', '-', '*', '/', '%',
+			'>', '<', '=']
 
 def t_VARS(t):
     r'VARS'
@@ -53,7 +55,11 @@ def t_num(t):                   #t <- (t_type (neste caso é NUM), t_VALUE, t_li
     r'\d+'
     return t  
 
-def t_id(t):                   #t <- (t_type (neste caso é NUM), t_VALUE, t_lineo, t_column)
+def t_str(t):                   
+    r'\"[^"]*\"'
+    return t
+
+def t_id(t):                   
     r'[a-z][a-zA-Z0-9]*'
     return t
 

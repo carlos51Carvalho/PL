@@ -1,0 +1,1 @@
+VARS int dummy[9] int l[10] int i ENDVARS BEGIN l[1] = 9 read i print i print l[1] read l[2] print l[2] END

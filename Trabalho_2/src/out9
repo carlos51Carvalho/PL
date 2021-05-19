@@ -1,0 +1,36 @@
+pushn 9
+pushn 10
+pushi 0
+start 
+pushgp
+pushi 9
+padd
+pushi 1
+pushi 9
+storen
+read
+atoi
+storeg 19
+pushg 19
+writei
+pushgp
+pushi 9
+padd
+pushi 1
+loadn
+writei
+pushgp
+pushi 9
+padd
+pushi 2
+read
+atoi
+storen
+pushgp
+pushi 9
+padd
+pushi 2
+loadn
+writei
+stop
+

@@ -1,0 +1,24 @@
+pushi 1
+pushi 2
+pushi 3
+start 
+pushg 0
+pushg 1
+add
+pushg 2
+add
+pushi 1
+add
+writei
+pushg 0
+pushg 1
+add
+pushg 2
+sub
+pushi 1
+add
+storeg 0
+pushg 0
+writei
+stop
+

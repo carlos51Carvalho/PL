@@ -1,0 +1,1 @@
+VARS int i ENDVARS BEGIN i=1 print i  END

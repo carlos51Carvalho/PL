@@ -1,0 +1,1 @@
+VARS int i int j ENDVARS BEGIN read i read j if(i==j){print i} print "The end\n" END

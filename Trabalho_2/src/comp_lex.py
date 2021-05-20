@@ -47,7 +47,7 @@ def t_if(t):
     return t
 
 def t_else(t):
-    r'if'
+    r'else'
     return t
 
 

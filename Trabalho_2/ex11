@@ -8,12 +8,10 @@ BEGIN
 	read j 
 	if(i==j){
 		print "Sao iguais\n"
-		print "AAAA\n"
 	}
-
-	if(i==0)
-		print "E sao iguais\n"
-		print "BBBB\n"
-
+	else
+		print "Nao sao iguais\n"
+	print "Estou fora?\n"
+	
 	print "The end\n"
 END

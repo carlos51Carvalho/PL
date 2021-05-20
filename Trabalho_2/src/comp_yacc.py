@@ -128,12 +128,30 @@ def p_Instrucao_read_arrayInt(p):
 
 #---------------------- Ifs ----------------------
 def p_Instrucao_if(p):
-    "Instrucao : if '(' Cond ')' '{' Instrucoes '}' Else"
-    p[0] = p[3] + "jz else1\n" + p[6]+ "jump fimif1\n" + "pusha else1\n" + p[8] + "pusha fimif1\n"
+    "Instrucao : if '(' Cond ')' Then Else"
+    lid=p.parser.labelid
+    p.parser.labelid+=1
+
+    p[0] = p[3] + "jz else"+str(lid) + "\n" + p[5]+ "jump fimif"+str(lid) + "\n" + "else"+str(lid) + ":\n" + p[6] + "fimif"+str(lid) + ":\n"
+
+def p_Instrucao_if_sem_else(p):
+    "Instrucao : if '(' Cond ')' Then"
+    p[0] = p[3] + "jz fimif1\n" + p[5] + "fimif1:\n"
+
+def p_Then(p):
+    "Then : '{' Instrucoes '}'"
+    p[0] = p[2]
+def p_Then_single(p):
+    "Then : Instrucao"
+    p[0] = p[1]
 
 def p_Else(p):
-    "Else : "
-    p[0] = ""
+    "Else : else '{' Instrucoes '}'"
+    p[0] = p[3]
+def p_Else_single(p):
+    "Else : else Instrucao"
+    p[0] = p[2]
+
 
 def p_Cond(p):
     "Cond : Exp Oper Exp"
@@ -144,6 +162,10 @@ def p_Oper(p):
     "Oper : '=' '=' "
     p[0] = "equal\n"
 
+
+
+
+#---------------------- Repeat ----------------------
 
 
 #------------- expressões/termos/fatores---------------
@@ -211,21 +233,26 @@ parser = yacc.yacc()
 # Creating the model
 parser.registers={}     # Registers-> {Nome da variavel: (tipo, offset, tamanho)}
 parser.varsoffset=0
-parser.ints={}
+parser.labelid=1
 
 
-# read input an parse line by line
+# read input by line and append
 import sys
+Total=""
 for Linha in sys.stdin:
-    parser.success= True
+    Total+=Linha
 
-    P=parser.parse(Linha)
 
-    if parser.success:
-        print()
+# ToDo: read 
+parser.success= True
 
-    else:
-        print("Frase inválida. Corrija e tente de novo...")
+P=parser.parse(Total)
+
+if parser.success:
+    print()
+
+else:
+    print("Frase inválida. Corrija e tente de novo...")
 
 
 

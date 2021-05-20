@@ -1,0 +1,27 @@
+pushn 2
+
+start
+jump INICIO
+
+A:
+
+pushi 10
+storeg 0
+
+pushi 3
+pushg 0
+mul
+storeg 1
+
+pushg 1
+writei
+
+return
+
+
+INICIO:
+pusha A
+
+call
+
+stop

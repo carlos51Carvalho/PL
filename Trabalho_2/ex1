@@ -1,1 +1,3 @@
-BEGIN print 5 END
+BEGIN 
+print 5 
+END

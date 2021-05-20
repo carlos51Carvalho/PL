@@ -1,0 +1,27 @@
+VARS 
+int i 
+int j 
+ENDVARS 
+BEGIN 
+	read i 
+	read j 
+	if(i==j){
+		print "Sao iguais\n"
+		if(i==0){
+			print "E iguais a 0\n"
+		}
+		else{
+			print "Mas nao sao zero\n"
+		}
+	} 
+	else{
+		print "Nao sao iguais\n"
+		if(i==0){
+			print "E i e 0\n"
+		}
+		else{
+			print "E i nao e 0\n"
+		}
+	}
+	print "The end\n"
+END

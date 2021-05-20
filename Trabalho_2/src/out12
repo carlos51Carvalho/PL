@@ -1,0 +1,46 @@
+pushi 0
+pushi 0
+start 
+read
+atoi
+storeg 0
+read
+atoi
+storeg 1
+pushg 0
+pushg 1
+equal
+jz else3
+pushs "Sao iguais\n"
+writes
+pushg 0
+pushi 0
+equal
+jz else1
+pushs "E iguais a 0\n"
+writes
+jump fimif1
+else1:
+pushs "Mas nao sao zero\n"
+writes
+fimif1:
+jump fimif3
+else3:
+pushs "Nao sao iguais\n"
+writes
+pushg 0
+pushi 0
+equal
+jz else2
+pushs "E i e 0\n"
+writes
+jump fimif2
+else2:
+pushs "E i nao e 0\n"
+writes
+fimif2:
+fimif3:
+pushs "The end\n"
+writes
+stop
+

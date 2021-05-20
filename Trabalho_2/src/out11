@@ -10,20 +10,15 @@ storeg 1
 pushg 0
 pushg 1
 equal
-jz fimif1
+jz else1
 pushs "Sao iguais\n"
 writes
-pushs "AAAA\n"
+jump fimif1
+else1:
+pushs "Nao sao iguais\n"
 writes
 fimif1:
-pushg 0
-pushi 0
-equal
-jz fimif1
-pushs "E sao iguais\n"
-writes
-fimif1:
-pushs "BBBB\n"
+pushs "Estou fora?\n"
 writes
 pushs "The end\n"
 writes

@@ -27,15 +27,22 @@ BEGIN
 
 	read(a)
 	read(b)
-	if(a>b){
+	if(a>b)
 		print a
-	}
+	
 
 	if(a>b){
 		print(a)
 	}
 	else{
 		print(b)
+	}
+
+
+
+
+	repeat(10){
+
 	}
 
 END

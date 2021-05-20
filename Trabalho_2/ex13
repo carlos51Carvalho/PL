@@ -1,0 +1,13 @@
+VARS 
+	int i=1 
+	int j,k
+	int l=4, z=5
+
+	int nl[10], nll[20]
+ENDVARS 
+BEGIN 
+	print i+j+k+l+z
+	nl[2]=3
+	nll[19]=nl[2]+1
+	print nl[2] + nll[19]
+END

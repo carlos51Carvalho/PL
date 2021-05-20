@@ -1,0 +1,50 @@
+pushi 1
+pushi 0
+pushi 0
+pushi 4
+pushi 5
+pushn 10
+pushn 20
+start 
+pushg 0
+pushg 1
+add
+pushg 2
+add
+pushg 3
+add
+pushg 4
+add
+writei
+pushgp
+pushi 5
+padd
+pushi 2
+pushi 3
+storen
+pushgp
+pushi 15
+padd
+pushi 19
+pushgp
+pushi 5
+padd
+pushi 2
+loadn
+pushi 1
+add
+storen
+pushgp
+pushi 5
+padd
+pushi 2
+loadn
+pushgp
+pushi 15
+padd
+pushi 19
+loadn
+add
+writei
+stop
+

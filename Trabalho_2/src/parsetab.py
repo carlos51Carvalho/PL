@@ -6,9 +6,9 @@ _tabversion = '3.10'
 
 _lr_method = 'LALR'
 
-_lr_signature = "BEGIN END ENDVARS VARS else id if int num print read strProgama : Declaracoes CorpoDeclaracoes : VARS Decls ENDVARSDeclaracoes : Decls : Decl DeclsDecls : Decl : int idDecl : int id '=' numDecl : int id '[' num ']'Corpo : BEGIN Instrucoes ENDInstrucoes : Instrucao InstrucoesInstrucoes : Instrucao : print strInstrucao : print ExpInstrucao : id '=' ExpInstrucao : id '[' Exp ']' '=' ExpInstrucao : readInstrucao : read idInstrucao : read id '[' Exp ']'Instrucao : if '(' Cond ')' Then ElseInstrucao : if '(' Cond ')' ThenThen : '{' Instrucoes '}'Then : InstrucaoElse : else '{' Instrucoes '}'Else : else InstrucaoCond : Exp Oper ExpOper : '=' '=' Exp : Exp '+' TermoExp : Exp '-' TermoExp : TermoTermo : Termo '*' FatorTermo : Termo '/' FatorTermo : Termo '%' FatorTermo : FatorFator : '(' Exp ')'Fator : numFator : idFator : id '[' Exp ']'"
+_lr_signature = "BEGIN END ENDVARS VARS else id if int num print read strProgama : Declaracoes CorpoDeclaracoes : VARS Decls ENDVARSDeclaracoes : Decls : Decl DeclsDecls : Decl : int DecIntListDecIntList : DeclInt RestoDeclIntRestoDeclInt : ',' DecIntListRestoDeclInt : DeclInt : idDeclInt : id '=' numDeclInt : id '[' num ']'Corpo : BEGIN Instrucoes ENDInstrucoes : Instrucao InstrucoesInstrucoes : Instrucao : print strInstrucao : print ExpInstrucao : id '=' ExpInstrucao : id '[' Exp ']' '=' ExpInstrucao : readInstrucao : read idInstrucao : read id '[' Exp ']'Instrucao : if '(' Cond ')' Then ElseInstrucao : if '(' Cond ')' ThenThen : '{' Instrucoes '}'Then : InstrucaoElse : else '{' Instrucoes '}'Else : else InstrucaoCond : Exp Oper ExpOper : '=' '=' Exp : Exp '+' TermoExp : Exp '-' TermoExp : TermoTermo : Termo '*' FatorTermo : Termo '/' FatorTermo : Termo '%' FatorTermo : FatorFator : '(' Exp ')'Fator : numFator : idFator : id '[' Exp ']'"
     
-_lr_action_items = {'VARS':([0,],[3,]),'BEGIN':([0,2,15,],[-3,5,-2,]),'$end':([1,4,18,],[0,-1,-9,]),'ENDVARS':([3,6,7,16,17,45,59,],[-5,15,-5,-4,-6,-7,-8,]),'int':([3,7,17,45,59,],[8,8,-6,-7,-8,]),'END':([5,9,10,13,19,20,21,22,23,25,26,29,40,47,48,49,50,51,52,60,62,63,65,68,69,73,74,76,],[-11,18,-11,-16,-10,-12,-13,-29,-33,-35,-36,-17,-14,-27,-28,-30,-31,-32,-34,-37,-18,-20,-22,-15,-19,-24,-21,-23,]),'print':([5,10,13,20,21,22,23,25,26,29,40,47,48,49,50,51,52,56,60,62,63,64,65,68,69,70,72,73,74,76,],[11,11,-16,-12,-13,-29,-33,-35,-36,-17,-14,-27,-28,-30,-31,-32,-34,11,-37,-18,-20,11,-22,-15,-19,11,11,-24,-21,-23,]),'id':([5,8,10,11,13,20,21,22,23,24,25,26,27,28,29,30,33,34,35,36,37,39,40,42,47,48,49,50,51,52,56,57,60,61,62,63,64,65,67,68,69,70,72,73,74,76,],[12,17,12,26,29,-12,-13,-29,-33,26,-35,-36,26,26,-17,26,26,26,26,26,26,26,-14,26,-27,-28,-30,-31,-32,-34,12,26,-37,26,-18,-20,12,-22,-26,-15,-19,12,12,-24,-21,-23,]),'read':([5,10,13,20,21,22,23,25,26,29,40,47,48,49,50,51,52,56,60,62,63,64,65,68,69,70,72,73,74,76,],[13,13,-16,-12,-13,-29,-33,-35,-36,-17,-14,-27,-28,-30,-31,-32,-34,13,-37,-18,-20,13,-22,-15,-19,13,13,-24,-21,-23,]),'if':([5,10,13,20,21,22,23,25,26,29,40,47,48,49,50,51,52,56,60,62,63,64,65,68,69,70,72,73,74,76,],[14,14,-16,-12,-13,-29,-33,-35,-36,-17,-14,-27,-28,-30,-31,-32,-34,14,-37,-18,-20,14,-22,-15,-19,14,14,-24,-21,-23,]),'}':([10,13,19,20,21,22,23,25,26,29,40,47,48,49,50,51,52,60,62,63,64,65,68,69,71,72,73,74,75,76,],[-11,-16,-10,-12,-13,-29,-33,-35,-36,-17,-14,-27,-28,-30,-31,-32,-34,-37,-18,-20,-11,-22,-15,-19,74,-11,-24,-21,76,-23,]),'str':([11,],[20,]),'(':([11,14,24,27,28,30,33,34,35,36,37,39,42,57,61,67,],[24,30,24,24,24,24,24,24,24,24,24,24,24,24,24,-26,]),'num':([11,24,27,28,30,31,32,33,34,35,36,37,39,42,57,61,67,],[25,25,25,25,25,45,46,25,25,25,25,25,25,25,25,25,-26,]),'=':([12,17,22,23,25,26,44,47,48,49,50,51,52,54,58,60,],[27,31,-29,-33,-35,-36,58,-27,-28,-30,-31,-32,-34,61,67,-37,]),'[':([12,17,26,29,],[28,32,39,42,]),'else':([13,20,21,22,23,25,26,29,40,47,48,49,50,51,52,60,62,63,65,68,69,73,74,76,],[-16,-12,-13,-29,-33,-35,-36,-17,-14,-27,-28,-30,-31,-32,-34,-37,-18,70,-22,-15,-19,-24,-21,-23,]),'+':([21,22,23,25,26,38,40,41,44,47,48,49,50,51,52,53,55,60,66,68,],[33,-29,-33,-35,-36,33,33,33,33,-27,-28,-30,-31,-32,-34,33,33,-37,33,33,]),'-':([21,22,23,25,26,38,40,41,44,47,48,49,50,51,52,53,55,60,66,68,],[34,-29,-33,-35,-36,34,34,34,34,-27,-28,-30,-31,-32,-34,34,34,-37,34,34,]),')':([22,23,25,26,38,43,47,48,49,50,51,52,60,66,],[-29,-33,-35,-36,52,56,-27,-28,-30,-31,-32,-34,-37,-25,]),']':([22,23,25,26,41,46,47,48,49,50,51,52,53,55,60,],[-29,-33,-35,-36,54,59,-27,-28,-30,-31,-32,-34,60,62,-37,]),'*':([22,23,25,26,47,48,49,50,51,52,60,],[35,-33,-35,-36,35,35,-30,-31,-32,-34,-37,]),'/':([22,23,25,26,47,48,49,50,51,52,60,],[36,-33,-35,-36,36,36,-30,-31,-32,-34,-37,]),'%':([22,23,25,26,47,48,49,50,51,52,60,],[37,-33,-35,-36,37,37,-30,-31,-32,-34,-37,]),'{':([56,70,],[64,72,]),}
+_lr_action_items = {'VARS':([0,],[3,]),'BEGIN':([0,2,15,],[-3,5,-2,]),'$end':([1,4,20,],[0,-1,-13,]),'ENDVARS':([3,6,7,16,17,18,19,33,49,50,64,],[-5,15,-5,-4,-6,-9,-10,-7,-8,-11,-12,]),'int':([3,7,17,18,19,33,49,50,64,],[8,8,-6,-9,-10,-7,-8,-11,-12,]),'END':([5,9,10,13,21,22,23,24,25,27,28,31,44,52,53,54,55,56,57,65,67,68,70,73,74,78,79,81,],[-15,20,-15,-20,-14,-16,-17,-33,-37,-39,-40,-21,-18,-31,-32,-34,-35,-36,-38,-41,-22,-24,-26,-19,-23,-28,-25,-27,]),'print':([5,10,13,22,23,24,25,27,28,31,44,52,53,54,55,56,57,61,65,67,68,69,70,73,74,75,77,78,79,81,],[11,11,-20,-16,-17,-33,-37,-39,-40,-21,-18,-31,-32,-34,-35,-36,-38,11,-41,-22,-24,11,-26,-19,-23,11,11,-28,-25,-27,]),'id':([5,8,10,11,13,22,23,24,25,26,27,28,29,30,31,32,34,37,38,39,40,41,43,44,46,52,53,54,55,56,57,61,62,65,66,67,68,69,70,72,73,74,75,77,78,79,81,],[12,19,12,28,31,-16,-17,-33,-37,28,-39,-40,28,28,-21,28,19,28,28,28,28,28,28,-18,28,-31,-32,-34,-35,-36,-38,12,28,-41,28,-22,-24,12,-26,-30,-19,-23,12,12,-28,-25,-27,]),'read':([5,10,13,22,23,24,25,27,28,31,44,52,53,54,55,56,57,61,65,67,68,69,70,73,74,75,77,78,79,81,],[13,13,-20,-16,-17,-33,-37,-39,-40,-21,-18,-31,-32,-34,-35,-36,-38,13,-41,-22,-24,13,-26,-19,-23,13,13,-28,-25,-27,]),'if':([5,10,13,22,23,24,25,27,28,31,44,52,53,54,55,56,57,61,65,67,68,69,70,73,74,75,77,78,79,81,],[14,14,-20,-16,-17,-33,-37,-39,-40,-21,-18,-31,-32,-34,-35,-36,-38,14,-41,-22,-24,14,-26,-19,-23,14,14,-28,-25,-27,]),'}':([10,13,21,22,23,24,25,27,28,31,44,52,53,54,55,56,57,65,67,68,69,70,73,74,76,77,78,79,80,81,],[-15,-20,-14,-16,-17,-33,-37,-39,-40,-21,-18,-31,-32,-34,-35,-36,-38,-41,-22,-24,-15,-26,-19,-23,79,-15,-28,-25,81,-27,]),'str':([11,],[22,]),'(':([11,14,26,29,30,32,37,38,39,40,41,43,46,62,66,72,],[26,32,26,26,26,26,26,26,26,26,26,26,26,26,26,-30,]),'num':([11,26,29,30,32,35,36,37,38,39,40,41,43,46,62,66,72,],[27,27,27,27,27,50,51,27,27,27,27,27,27,27,27,27,-30,]),'=':([12,19,24,25,27,28,48,52,53,54,55,56,57,59,63,65,],[29,35,-33,-37,-39,-40,63,-31,-32,-34,-35,-36,-38,66,72,-41,]),'[':([12,19,28,31,],[30,36,43,46,]),'else':([13,22,23,24,25,27,28,31,44,52,53,54,55,56,57,65,67,68,70,73,74,78,79,81,],[-20,-16,-17,-33,-37,-39,-40,-21,-18,-31,-32,-34,-35,-36,-38,-41,-22,75,-26,-19,-23,-28,-25,-27,]),',':([18,19,50,64,],[34,-10,-11,-12,]),'+':([23,24,25,27,28,42,44,45,48,52,53,54,55,56,57,58,60,65,71,73,],[37,-33,-37,-39,-40,37,37,37,37,-31,-32,-34,-35,-36,-38,37,37,-41,37,37,]),'-':([23,24,25,27,28,42,44,45,48,52,53,54,55,56,57,58,60,65,71,73,],[38,-33,-37,-39,-40,38,38,38,38,-31,-32,-34,-35,-36,-38,38,38,-41,38,38,]),')':([24,25,27,28,42,47,52,53,54,55,56,57,65,71,],[-33,-37,-39,-40,57,61,-31,-32,-34,-35,-36,-38,-41,-29,]),']':([24,25,27,28,45,51,52,53,54,55,56,57,58,60,65,],[-33,-37,-39,-40,59,64,-31,-32,-34,-35,-36,-38,65,67,-41,]),'*':([24,25,27,28,52,53,54,55,56,57,65,],[39,-37,-39,-40,39,39,-34,-35,-36,-38,-41,]),'/':([24,25,27,28,52,53,54,55,56,57,65,],[40,-37,-39,-40,40,40,-34,-35,-36,-38,-41,]),'%':([24,25,27,28,52,53,54,55,56,57,65,],[41,-37,-39,-40,41,41,-34,-35,-36,-38,-41,]),'{':([61,75,],[69,77,]),}
 
 _lr_action = {}
 for _k, _v in _lr_action_items.items():
@@ -17,7 +17,7 @@ for _k, _v in _lr_action_items.items():
       _lr_action[_x][_k] = _y
 del _lr_action_items
 
-_lr_goto_items = {'Progama':([0,],[1,]),'Declaracoes':([0,],[2,]),'Corpo':([2,],[4,]),'Decls':([3,7,],[6,16,]),'Decl':([3,7,],[7,7,]),'Instrucoes':([5,10,64,72,],[9,19,71,75,]),'Instrucao':([5,10,56,64,70,72,],[10,10,65,10,73,10,]),'Exp':([11,24,27,28,30,39,42,57,61,],[21,38,40,41,44,53,55,66,68,]),'Termo':([11,24,27,28,30,33,34,39,42,57,61,],[22,22,22,22,22,47,48,22,22,22,22,]),'Fator':([11,24,27,28,30,33,34,35,36,37,39,42,57,61,],[23,23,23,23,23,23,23,49,50,51,23,23,23,23,]),'Cond':([30,],[43,]),'Oper':([44,],[57,]),'Then':([56,],[63,]),'Else':([63,],[69,]),}
+_lr_goto_items = {'Progama':([0,],[1,]),'Declaracoes':([0,],[2,]),'Corpo':([2,],[4,]),'Decls':([3,7,],[6,16,]),'Decl':([3,7,],[7,7,]),'Instrucoes':([5,10,69,77,],[9,21,76,80,]),'Instrucao':([5,10,61,69,75,77,],[10,10,70,10,78,10,]),'DecIntList':([8,34,],[17,49,]),'DeclInt':([8,34,],[18,18,]),'Exp':([11,26,29,30,32,43,46,62,66,],[23,42,44,45,48,58,60,71,73,]),'Termo':([11,26,29,30,32,37,38,43,46,62,66,],[24,24,24,24,24,52,53,24,24,24,24,]),'Fator':([11,26,29,30,32,37,38,39,40,41,43,46,62,66,],[25,25,25,25,25,25,25,54,55,56,25,25,25,25,]),'RestoDeclInt':([18,],[33,]),'Cond':([32,],[47,]),'Oper':([48,],[62,]),'Then':([61,],[68,]),'Else':([68,],[74,]),}
 
 _lr_goto = {}
 for _k, _v in _lr_goto_items.items():
@@ -32,36 +32,40 @@ _lr_productions = [
   ('Declaracoes -> <empty>','Declaracoes',0,'p_Declaracoes_vazio','comp_yacc.py',39),
   ('Decls -> Decl Decls','Decls',2,'p_Decls','comp_yacc.py',43),
   ('Decls -> <empty>','Decls',0,'p_Decls_vazio','comp_yacc.py',47),
-  ('Decl -> int id','Decl',2,'p_Decl_int','comp_yacc.py',51),
-  ('Decl -> int id = num','Decl',4,'p_Decl_int_attr','comp_yacc.py',58),
-  ('Decl -> int id [ num ]','Decl',5,'p_Decl_arrayInt','comp_yacc.py',65),
-  ('Corpo -> BEGIN Instrucoes END','Corpo',3,'p_Corpo','comp_yacc.py',75),
-  ('Instrucoes -> Instrucao Instrucoes','Instrucoes',2,'p_Instrucoes','comp_yacc.py',79),
-  ('Instrucoes -> <empty>','Instrucoes',0,'p_Instrucoes_vazio','comp_yacc.py',83),
-  ('Instrucao -> print str','Instrucao',2,'p_Instrucao_print_str','comp_yacc.py',90),
-  ('Instrucao -> print Exp','Instrucao',2,'p_Instrucao_print_exp','comp_yacc.py',94),
-  ('Instrucao -> id = Exp','Instrucao',3,'p_Instrucao_attr_int_exp','comp_yacc.py',101),
-  ('Instrucao -> id [ Exp ] = Exp','Instrucao',6,'p_Instrucao_attr_arrayint_exp','comp_yacc.py',106),
-  ('Instrucao -> read','Instrucao',1,'p_Instrucao_read','comp_yacc.py',114),
-  ('Instrucao -> read id','Instrucao',2,'p_Instrucao_read_int','comp_yacc.py',118),
-  ('Instrucao -> read id [ Exp ]','Instrucao',5,'p_Instrucao_read_arrayInt','comp_yacc.py',123),
-  ('Instrucao -> if ( Cond ) Then Else','Instrucao',6,'p_Instrucao_if','comp_yacc.py',131),
-  ('Instrucao -> if ( Cond ) Then','Instrucao',5,'p_Instrucao_if_sem_else','comp_yacc.py',135),
-  ('Then -> { Instrucoes }','Then',3,'p_Then','comp_yacc.py',139),
-  ('Then -> Instrucao','Then',1,'p_Then_single','comp_yacc.py',142),
-  ('Else -> else { Instrucoes }','Else',4,'p_Else','comp_yacc.py',146),
-  ('Else -> else Instrucao','Else',2,'p_Else_single','comp_yacc.py',149),
-  ('Cond -> Exp Oper Exp','Cond',3,'p_Cond','comp_yacc.py',154),
-  ('Oper -> = =','Oper',2,'p_Oper','comp_yacc.py',159),
-  ('Exp -> Exp + Termo','Exp',3,'p_Exp_add','comp_yacc.py',166),
-  ('Exp -> Exp - Termo','Exp',3,'p_Exp_sub','comp_yacc.py',170),
-  ('Exp -> Termo','Exp',1,'p_Exp_termo','comp_yacc.py',174),
-  ('Termo -> Termo * Fator','Termo',3,'p_Termo_mul','comp_yacc.py',180),
-  ('Termo -> Termo / Fator','Termo',3,'p_Termo_div','comp_yacc.py',184),
-  ('Termo -> Termo % Fator','Termo',3,'p_Termo_mod','comp_yacc.py',188),
-  ('Termo -> Fator','Termo',1,'p_Termo_fator','comp_yacc.py',192),
-  ('Fator -> ( Exp )','Fator',3,'p_Fator_exp','comp_yacc.py',198),
-  ('Fator -> num','Fator',1,'p_Fator_num','comp_yacc.py',202),
-  ('Fator -> id','Fator',1,'p_Fator_id','comp_yacc.py',206),
-  ('Fator -> id [ Exp ]','Fator',4,'p_Fator_id_arr','comp_yacc.py',211),
+  ('Decl -> int DecIntList','Decl',2,'p_Decl_int','comp_yacc.py',51),
+  ('DecIntList -> DeclInt RestoDeclInt','DecIntList',2,'p_DecIntList','comp_yacc.py',55),
+  ('RestoDeclInt -> , DecIntList','RestoDeclInt',2,'p_RestoDeclInt','comp_yacc.py',58),
+  ('RestoDeclInt -> <empty>','RestoDeclInt',0,'p_RestoDeclInt_vazio','comp_yacc.py',61),
+  ('DeclInt -> id','DeclInt',1,'p_DeclInt','comp_yacc.py',65),
+  ('DeclInt -> id = num','DeclInt',3,'p_DeclInt_attr','comp_yacc.py',72),
+  ('DeclInt -> id [ num ]','DeclInt',4,'p_DeclInt_arrayInt','comp_yacc.py',79),
+  ('Corpo -> BEGIN Instrucoes END','Corpo',3,'p_Corpo','comp_yacc.py',88),
+  ('Instrucoes -> Instrucao Instrucoes','Instrucoes',2,'p_Instrucoes','comp_yacc.py',92),
+  ('Instrucoes -> <empty>','Instrucoes',0,'p_Instrucoes_vazio','comp_yacc.py',96),
+  ('Instrucao -> print str','Instrucao',2,'p_Instrucao_print_str','comp_yacc.py',103),
+  ('Instrucao -> print Exp','Instrucao',2,'p_Instrucao_print_exp','comp_yacc.py',107),
+  ('Instrucao -> id = Exp','Instrucao',3,'p_Instrucao_attr_int_exp','comp_yacc.py',114),
+  ('Instrucao -> id [ Exp ] = Exp','Instrucao',6,'p_Instrucao_attr_arrayint_exp','comp_yacc.py',119),
+  ('Instrucao -> read','Instrucao',1,'p_Instrucao_read','comp_yacc.py',127),
+  ('Instrucao -> read id','Instrucao',2,'p_Instrucao_read_int','comp_yacc.py',131),
+  ('Instrucao -> read id [ Exp ]','Instrucao',5,'p_Instrucao_read_arrayInt','comp_yacc.py',136),
+  ('Instrucao -> if ( Cond ) Then Else','Instrucao',6,'p_Instrucao_if','comp_yacc.py',144),
+  ('Instrucao -> if ( Cond ) Then','Instrucao',5,'p_Instrucao_if_sem_else','comp_yacc.py',151),
+  ('Then -> { Instrucoes }','Then',3,'p_Then','comp_yacc.py',155),
+  ('Then -> Instrucao','Then',1,'p_Then_single','comp_yacc.py',158),
+  ('Else -> else { Instrucoes }','Else',4,'p_Else','comp_yacc.py',162),
+  ('Else -> else Instrucao','Else',2,'p_Else_single','comp_yacc.py',165),
+  ('Cond -> Exp Oper Exp','Cond',3,'p_Cond','comp_yacc.py',170),
+  ('Oper -> = =','Oper',2,'p_Oper','comp_yacc.py',175),
+  ('Exp -> Exp + Termo','Exp',3,'p_Exp_add','comp_yacc.py',186),
+  ('Exp -> Exp - Termo','Exp',3,'p_Exp_sub','comp_yacc.py',190),
+  ('Exp -> Termo','Exp',1,'p_Exp_termo','comp_yacc.py',194),
+  ('Termo -> Termo * Fator','Termo',3,'p_Termo_mul','comp_yacc.py',200),
+  ('Termo -> Termo / Fator','Termo',3,'p_Termo_div','comp_yacc.py',204),
+  ('Termo -> Termo % Fator','Termo',3,'p_Termo_mod','comp_yacc.py',208),
+  ('Termo -> Fator','Termo',1,'p_Termo_fator','comp_yacc.py',212),
+  ('Fator -> ( Exp )','Fator',3,'p_Fator_exp','comp_yacc.py',218),
+  ('Fator -> num','Fator',1,'p_Fator_num','comp_yacc.py',222),
+  ('Fator -> id','Fator',1,'p_Fator_id','comp_yacc.py',226),
+  ('Fator -> id [ Exp ]','Fator',4,'p_Fator_id_arr','comp_yacc.py',231),
 ]

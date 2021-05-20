@@ -48,26 +48,39 @@ def p_Decls_vazio(p):
     p[0] = ""
 
 def p_Decl_int(p):
-    "Decl : int id"
+    "Decl : int DecIntList"
+    p[0] = p[2]
+
+def p_DecIntList(p):
+    "DecIntList : DeclInt RestoDeclInt"
+    p[0] = p[1] + p[2]
+def p_RestoDeclInt(p):
+    "RestoDeclInt : ',' DecIntList"
+    p[0] = p[2]
+def p_RestoDeclInt_vazio(p):
+    "RestoDeclInt : "
+    p[0] = ""
+
+def p_DeclInt(p):
+    "DeclInt : id"
     p[0] = "pushi 0\n"
     offset=p.parser.varsoffset
-    p.parser.registers.update({p[2]: ('int',str(offset),1)})
+    p.parser.registers.update({p[1]: ('int',str(offset),1)})
     p.parser.varsoffset+=1
 
-def p_Decl_int_attr(p):
-    "Decl : int id '=' num"
-    p[0] = "pushi " + p[4] + "\n"
+def p_DeclInt_attr(p):
+    "DeclInt : id '=' num"
+    p[0] = "pushi " + p[3] + "\n"
     offset=p.parser.varsoffset
-    p.parser.registers.update({p[2]: ('int',str(offset),1)})
+    p.parser.registers.update({p[1]: ('int',str(offset),1)})
     p.parser.varsoffset+=1
 
-def p_Decl_arrayInt(p):
-    "Decl : int id '[' num ']'"
-    p[0] = "pushn " + p[4] + "\n"
+def p_DeclInt_arrayInt(p):
+    "DeclInt : id '[' num ']'"
+    p[0] = "pushn " + p[3] + "\n"
     offset=p.parser.varsoffset
-    p.parser.registers.update({p[2]: ('arrayInt',str(offset),p[4])})
-    p.parser.varsoffset+=int(p[4])
-
+    p.parser.registers.update({p[1]: ('arrayInt',str(offset),p[3])})
+    p.parser.varsoffset+=int(p[3])
 
 #----------------------------------------------------
 #---------------------- Corpo -----------------------

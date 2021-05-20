@@ -1,1 +1,11 @@
-VARS int i int j=3 ENDVARS BEGIN read i print i  print j read j print j END
+VARS 
+	int i 
+	int j=3 
+ENDVARS 
+BEGIN 
+	read i 
+	print i  
+	print j 
+	read j 
+	print j 
+END

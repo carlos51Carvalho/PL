@@ -19,11 +19,6 @@ BEGIN
 	i = exp
 	print exp
 
-	i = 0
-	repeat(10){
-		read(lista[i])
-		i=i+1
-	}
 
 	read(a)
 	read(b)
@@ -40,12 +35,62 @@ BEGIN
 
 
 
+	i = 0
 
 	repeat(10){
-
+		read(lista[i])
+		i=i+1
 	}
 
 END
+
+// Repeat
+repeat(num){
+	Instrucoes
+}
+
+pushi num
+storeg (posicao da variavel do ciclo)
+ciclo1:
+	pushg (posicao da variavel do ciclo)
+	pushi 0
+	not
+	equal
+	jz fimciclo1
+
+	
+
+	jump ciclo1
+fimciclo1:
+
+
+
+
+// while
+while(cond){
+	Instrucoes
+}
+
+pushi num
+storeg (posicao da variavel do ciclo)
+ciclo1:
+	pushg (posicao da variavel do ciclo)
+	pushi 0
+	not
+	equal
+	jz fimciclo1
+
+	
+
+	jump ciclo1
+fimciclo1:
+
+
+
+
+
+
+
 
 
 tokens=["VARS", "ENDVARS", 

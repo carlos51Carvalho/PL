@@ -6,7 +6,8 @@ tokens=["VARS", "ENDVARS",
 		"num", "id",
         "str",
 		"int", "print", "read", 
-		"if", "else"]
+		"if", "else",
+        "repeat"]
 
 literals=['(', ')', 
             '[', ']', 
@@ -51,6 +52,9 @@ def t_else(t):
     r'else'
     return t
 
+def t_repeat(t):
+    r'repeat'
+    return t
 
 def t_num(t):                   #t <- (t_type (neste caso é NUM), t_VALUE, t_lineo, t_column)
     r'\d+'

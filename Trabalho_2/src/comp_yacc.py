@@ -171,14 +171,46 @@ def p_Cond(p):
     p[0] = p[1] + p[3] + p[2]
 
 
-def p_Oper(p):
+def p_Oper_equal(p):
     "Oper : '=' '=' "
     p[0] = "equal\n"
+def p_Oper_diff(p):
+    "Oper : '!' '=' "
+    p[0] = "not\nequal\n"
+def p_Oper_sup(p):
+    "Oper : '>' "
+    p[0] = "sup\n"
+def p_Oper_inf(p):
+    "Oper : '<' "
+    p[0] = "inf\n" 
+def p_Oper_supeq(p):
+    "Oper : '>' '=' "
+    p[0] = "supeq\n"
+def p_Oper_infeq(p):
+    "Oper : '<' '=' "
+    p[0] = "infeq\n"
 
 
 
 
 #---------------------- Repeat ----------------------
+
+def p_Instrucao_repeat(p):
+    "Instrucao : repeat '(' num ')' CorpoRepeat"
+    lid=p.parser.labelid
+    p.parser.labelid+=1
+
+
+def p_CorpoRepeat(p):
+    "CorpoRepeat : Instrucao"
+    p[0]=p[1]
+
+def p_CorpoRepeat_single(p):
+    "CorpoRepeat : '{' Instrucoes '}' "
+    p[0]=p[2]
+
+
+
 
 
 #------------- expressões/termos/fatores---------------

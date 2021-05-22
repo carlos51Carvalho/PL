@@ -84,13 +84,13 @@ def t_str(t):
     return t
 
 #def t_comment(t):                   
-#    r'[a-zA-Z0-9]"'
+#    r'[^*]"'
 #    return t
 
 t_ignore = " \t\n"
 
 def t_error(t):
-    print("Caracter Ilegal ",t.value[0], " em \"", t.value[0:10], "\" ")
+    print("Caracter Ilegal ",t.value[0], " em \"", t.value[0:10], "\"")
     t.lexer.skip(1)
 
 

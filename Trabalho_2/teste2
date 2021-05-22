@@ -1,0 +1,14 @@
+VARS 
+	int i, menor=9999 , lido
+ENDVARS
+BEGIN
+	read i
+	while(i>0){
+		read lido
+		if(menor>lido)
+			menor=lido
+
+		i=i-1
+	}
+	print menor
+END

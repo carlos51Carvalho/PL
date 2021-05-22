@@ -1,0 +1,24 @@
+pushi 5
+pushi 6
+pushi 7
+pushi 8
+start 
+pushg 0
+pushg 1
+sup
+pushg 0
+pushg 2
+sup
+pushg 0
+pushg 3
+sup
+add
+pushi 0
+sup
+mul
+jz fimif1
+pushs "ola"
+writes
+fimif1:
+stop
+

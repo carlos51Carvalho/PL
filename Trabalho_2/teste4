@@ -1,0 +1,15 @@
+VARS 
+	int n,count=0
+ENDVARS
+BEGIN
+	repeat{
+		read n
+		if(n%2<>0){
+			count = count + 1
+			print n
+			print "é impar\n"
+		}
+	}until(n==0)
+	print count-1
+	print "impares\n"
+END

@@ -11,6 +11,10 @@ VARS
 //	int l[10], d[10]
 ENDVARS
 
+FUNCTION A
+BEGIN
+	//cenas
+END
 
 BEGIN
 	print a
@@ -37,91 +41,139 @@ BEGIN
 
 	i = 0
 
+
+	while(cond){
+		//fazer cenas
+	}
+
+
+	repeat{
+		//fazer cenas
+	}until(cond)
+
+	//do while? 		<- é tipo o repeat until, por isso nao
+
+
+
+
+
 	repeat(10){
 		read(lista[i])
 		i=i+1
 	}
 
+	for(for_inicializacao,cond,actions_step){
+		//fazer cenas
+	}
+
 END
 
-// Repeat
-repeat(num){
-	Instrucoes
-}
 
-pushi num
-storeg (posicao da variavel do ciclo)
-ciclo1:
-	pushg (posicao da variavel do ciclo)
-	pushi 0
-	not
-	equal
-	jz fimciclo1
+//		Condicoes:
 
-	
+1-> (a>b)					'(' Cond ')' 
+2-> ( a>b || a>d && a>d)	'(' Cond OperLogico Cond ')'
 
-	jump ciclo1
-fimciclo1:
+3-> ((a>b && a>c) || a>d)	'(' '(' Cond OperLogico Cond ')' 										OperLogico Cond ')'
+4-> (a>d || (a>b && a>c))	'(' Cond OperLogico '(' Cond ')' 										OperLogico Cond ')'
 
 
+Condicao => '(' LCond Cond ')'
+
+LCond => Cond OperLogico 
+	   | €
+
+Cond =>	Condicao
+	  | Exp OperRelacional Exp
 
 
-// while
-while(cond){
-	Instrucoes
-}
-
-pushi num
-storeg (posicao da variavel do ciclo)
-ciclo1:
-	pushg (posicao da variavel do ciclo)
-	pushi 0
-	not
-	equal
-	jz fimciclo1
-
-	
-
-	jump ciclo1
-fimciclo1:
+1->
+'(' 'a' '>' 'b' ')'
+'(' Exp Ope Exp ')'
+'(' Cond ')'
+'(' € Cond ')'
+'(' LCond Cond ')'
+Condicao
 
 
+2->
+( a>b || a>d)
+'(' 'a' '>' 'b' '|' '|' 'a' '>' 'c' ')'
+'(' Exp Oper Exp '|' '|' 'a' '>' 'c' ')'
+'(' Cond '|' '|' 'a' '>' 'c' ')'
+'(' Cond OperLog 'a' '>' 'c' ')'
+'(' LCond 'a' '>' 'c' ')'
+'(' LCond Exp Oper Exp ')'
+'(' LCond Cond ')'
+condicao
 
+3->
+Condicao
 
+4->
+(LCond Condicao)
 
-
-
-
-
-tokens=["VARS", "ENDVARS", 
-		"BEGIN", "END", 
-		"num", "id"
-		"int", "print", "read", 
-		"if", "else"]
-
-literals=['(', ')', 
-	    	'{', '}', 
-			'+', '-', '*', '/', '%',
-			'>', '<', '=']				<- ?
-
-
-P={
-	Program => Declaracoes Corpo
-	
-
-	Declaracoes => VARS Decls ENDVARS
-				 | 
-	Decls => Decl Decls
-		   | 
-	Decl => int id
-
-
-	Corpo => BEGIN Instrucoes END
-	Instrucoes => Intrucao Intrucoes
-				|
-	Intrucao => print num
-}
+//?
+(LCond Cond)
+Condicao 
 
 
 
 
+
+Condicao => '(' LCond Condicao ')'
+		  | Exp OperRelacional Exp
+LCond => Condicao OperLogico 
+	   | €
+
+
+((a>b && a>c) || a>d)
+	Condicao
+
+
+
+(a>d || (a>b && a>c))
+	Condicao
+
+
+
+
+C => '(' Condicao ')'
+
+Condicao => '(' LCond OperLogico Condicao ')'//p[2]+p[4]+p[3]
+		  | Exp OperRelacional Exp 			 //p[2]+p[4]+p[3]
+LCond => Condicao 							 //p[1]
+	   | € 									 //""
+
+
+
+
+
+
+
+
+Condicao => '(' Condicao Oper Cond ')'		//p[2]+p[4]+p[3]
+		  | '(' Cond ')'
+
+Cond => Condicao
+	  | Exp OperRelacional Exp
+
+
+
+(  a>b || a>d  && a>d)
+( Cond Oper Cond Oper Cond
+
+( (a>b || a>d) && a>d)
+( ( cond oper)
+
+
+#   Exp=> Exp '+' Termo
+#       | Exp '-' Termo
+#       | Termo
+#
+#   Termo=> Termo * Fator
+#       |   Termo / Fator
+#       |   Fator
+#   
+#   Fator=> '(' Exp ')'
+#        |  num

@@ -1,0 +1,45 @@
+PUSHI 5
+START
+
+pushi 4
+ciclo:
+pushl 0
+jz fimciclo
+
+pushg 0							//ola
+pushi 1
+add
+storeg 0
+
+
+pushi 2
+ciclo2:
+pushl 1
+jz fimciclo2
+
+pushg 0
+pushi 1
+add
+storeg 0
+
+pushl 1
+pushi 1
+sub
+storel 1
+jump ciclo2
+
+fimciclo2:
+
+
+
+pushl 0
+pushi 1
+sub
+storel 0
+jump ciclo
+
+fimciclo:
+pushg  0
+writei
+
+stop

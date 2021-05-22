@@ -1,0 +1,15 @@
+pushi 0
+start 
+ciclo1:
+pushg 0
+writei
+pushg 0
+pushi 1
+add
+storeg 0
+pushg 0
+pushi 1
+sup
+jz ciclo1
+stop
+

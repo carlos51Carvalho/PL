@@ -1,0 +1,22 @@
+VARS 
+	int b,e,aux=1
+ENDVARS
+	FUNCTION A
+	BEGIN
+		read b
+		read e
+		if(e<=0)
+			b=1
+		else{
+			while(e>0){
+				aux = aux*b
+				e = e-1
+			}
+			b=aux
+		}
+		print b
+	END
+
+BEGIN
+	A()
+END

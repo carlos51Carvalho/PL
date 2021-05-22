@@ -18,10 +18,33 @@ writei
 
 return
 
+B:
+
+pushi 10
+storeg 0
+
+pushi 3
+pushg 0
+mul
+storeg 1
+
+pushg 1
+writei
+
+return
+
 
 INICIO:
+pushi 10
+
 pusha A
 
+call
+
+pushs "saiu de A\n"
+writes
+
+pusha B
 call
 
 stop

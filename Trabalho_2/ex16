@@ -1,0 +1,14 @@
+VARS 
+	int i=0
+ENDVARS
+FUNCTION A
+BEGIN
+	read i
+	print i
+END
+
+BEGIN
+	print i
+	A()
+	print i
+END

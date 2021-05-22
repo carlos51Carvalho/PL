@@ -114,7 +114,9 @@ def p_Funcao(p):
 
 def p_FuncaoHeader(p):
     "FuncaoHeader : FUNCTION id"
-    p[0] = p[2] + ":\n"
+    lid=p.parser.labelid
+    p.parser.labelid+=1
+    p[0] = p[2] + str(lid) + ":\n"
 
 def p_FuncaoCorpo(p):
     "FuncaoCorpo : BEGIN Instrucoes END"
@@ -123,7 +125,7 @@ def p_FuncaoCorpo(p):
 #-------------chamada da funcao------------
 def p_Instrucao_call(p):
     "Instrucao : id '(' ')'"             
-    p[0] = "pusha " + p[1] + "\n" + "call\n"
+    p[0] = "call " + p[1] + "\n"
 
 
 
@@ -197,16 +199,16 @@ def p_Instrucao_read_arrayInt(p):
 
 #---------------------- Ifs ----------------------
 def p_Instrucao_if(p):
-    "Instrucao : if Condicao Then Else"
+    "Instrucao : if '(' Cond ')' Then Else"
     lid=p.parser.labelid
     p.parser.labelid+=1
-    p[0] = p[2] + "jz else"+str(lid) + "\n" + p[3]+ "jump fimif"+str(lid) + "\n" + "else"+str(lid) + ":\n" + p[4] + "fimif"+str(lid) + ":\n"
+    p[0] = p[3] + "jz else"+str(lid) + "\n" + p[5]+ "jump fimif"+str(lid) + "\n" + "else"+str(lid) + ":\n" + p[6] + "fimif"+str(lid) + ":\n"
 
 def p_Instrucao_if_sem_else(p):
-    "Instrucao : if Condicao Then"
+    "Instrucao : if '(' Cond ')' Then"
     lid=p.parser.labelid
     p.parser.labelid+=1
-    p[0] = p[2] + "jz fimif" +str(lid) + "\n" + p[3] + "fimif" + str(lid) + ":\n"
+    p[0] = p[3] + "jz fimif" +str(lid) + "\n" + p[5] + "fimif" + str(lid) + ":\n"
 
 def p_Then(p):
     "Then : '{' Instrucoes '}'"
@@ -223,34 +225,35 @@ def p_Else_single(p):
     p[0] = p[2]
 
 
-
-def p_Condicao_init(p):
-    "Condicao : '(' Condicaobase ')'"
-    p[0] = p[2]
+def p_Condicao(p):
+    "Condicao : '(' Condd OperLogico Condd ')'"
+    print("condicao1")
+    p[0] = p[2] + p[4] + p[3]
 
 def p_Condicao_single(p):
-    "Condicaobase : Cond"
-    p[0] = p[1]
-
-def p_Condicao_list(p):
-    "Condicaobase : LCond OperLogico Cond"
-    p[0] = p[1] + p[3]+p[2]
-
-def p_LCondd(p):
-    "LCond : Condicaobase"
-    p[0] = p[1]
-
-def p_Conddd(p):
-    "Cond : '(' Condicaobase ')'"
+    "Condicao : '(' Condd ')'"
+    print("condicaosindle")
     p[0] = p[2]
 
-def p_Conddd_not(p):
-    "Cond : '!' '(' Condicaobase ')'"
-    p[0] = p[3] + "not\n"
+
+def p_Condd(p):
+    "Condd : Condicao"
+    print("condd1")
+    p[0] = p[1]
+
+def p_Condd_ground(p):
+    "Condd : Exp Oper Exp"
+    print("conddground")    
+    p[0] = p[1] + p[3] + p[2]
 
 
-  
+#def p_CondList(p):
+#    "CondList : CondList OperLogico Cond"
+#    p[0] = p[1] + p[3] + p[2]
 
+#def p_CondList_single(p):
+#    "CondList : Cond"
+#    p[0] = p[1]
 
 def p_OperLogico_and(p):
     "OperLogico : '&' '&' "
@@ -262,22 +265,21 @@ def p_OperLogico_or(p):
 
 
 
-
 def p_Cond(p):
     "Cond : Exp Oper Exp"
     p[0] = p[1] + p[3] + p[2]
 def p_Cond_not(p):
     "Cond : '!' Exp"
-    p[0] = p[2] + "not\n"
+    p[0] = p[1] + "pushi 0\n" + "equal\n"
 def p_Cond_sem_oper(p):
     "Cond : Exp"
-    p[0] = p[1]
+    p[0] = p[1] + "pushi 0\n" + "equal\n" +"not\n"
 
 def p_Oper_equal(p):
     "Oper : '=' '=' "
     p[0] = "equal\n"
 def p_Oper_diff(p):
-    "Oper : '<' '>' "
+    "Oper : '!' '=' "
     p[0] = "equal\nnot\n"
 def p_Oper_sup(p):
     "Oper : '>' "
@@ -317,13 +319,13 @@ def p_Oper_infeq(p):
 
 
 #----------------------Repeat-until------------------------
-def p_Instrucao_repeatuntil(p):
-    "Instrucao : repeat CorpoCiclo until Condicao "
+def p_Instrucao_repeatuntl(p):
+    "Instrucao : repeat CorpoCiclo until '(' Cond ')' "
     lid=p.parser.labelid
     p.parser.labelid+=1
     p[0] = "ciclo" + str(lid) +":\n"
     p[0]+= p[2]
-    p[0]+= p[4]
+    p[0]+= p[5]
     p[0]+= "jz ciclo" + str(lid) +"\n"
 
 def p_CorpoCiclo(p):
@@ -337,14 +339,14 @@ def p_CorpoCiclo_single(p):
 
 #----------------------While-do------------------------
 def p_Instrucao_while(p):
-    "Instrucao : while Condicao CorpoCiclo"
+    "Instrucao : while '(' Cond ')' CorpoCiclo"
     lid=p.parser.labelid
     p.parser.labelid+=1
     p[0] = "ciclo" + str(lid) +":\n"
-    p[0]+= p[2]
-#    p[0]+= "not\n"
-    p[0]+= "jz fimciclo" + str(lid) +"\n"
     p[0]+= p[3]
+    p[0]+= "not\n"
+    p[0]+= "jz fimciclo" + str(lid) +"\n"
+    p[0]+= p[5]
     p[0]+= "jump ciclo" + str(lid) +"\n"
     p[0]+= "fimciclo" + str(lid) +":\n"
 

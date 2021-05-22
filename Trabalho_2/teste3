@@ -1,0 +1,12 @@
+VARS 
+	int n=7, produtorio=1,num
+ENDVARS
+BEGIN
+	while(n>0){
+		read num
+		produtorio = produtorio * num
+
+		n=n-1
+	}
+	print produtorio
+END

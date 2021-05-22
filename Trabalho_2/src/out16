@@ -1,0 +1,18 @@
+pushi 0
+start
+jump INICIO
+A1:
+read
+atoi
+storeg 0
+pushg 0
+writei
+return
+INICIO:
+pushg 0
+writei
+call A
+pushg 0
+writei
+stop
+

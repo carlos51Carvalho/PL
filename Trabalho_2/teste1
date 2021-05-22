@@ -1,0 +1,12 @@
+VARS 
+	int i,j,k,l
+ENDVARS
+BEGIN
+	read i
+	read j
+	read k 
+	read l
+	if(i==j && i==k && i==l)
+		print "Pode ser um quadrado\n"
+	else print "Nao pode ser um quadrado\n"
+END

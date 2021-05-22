@@ -1,0 +1,9 @@
+VARS 
+	int i=0
+ENDVARS 
+BEGIN 
+	repeat{
+		print i
+		i=i+1
+	}until(i>1)
+END

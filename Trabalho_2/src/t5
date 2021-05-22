@@ -1,0 +1,46 @@
+pushn 20
+pushi 0
+pushi 0
+start 
+read
+atoi
+storeg 21
+ciclo1:
+pushg 20
+pushg 21
+inf
+jz fimciclo1
+pushgp
+pushi 0
+padd
+pushg 20
+read
+atoi
+storen
+pushg 20
+pushi 1
+add
+storeg 20
+jump ciclo1
+fimciclo1:
+ciclo2:
+pushg 20
+pushi 0
+sup
+jz fimciclo2
+pushgp
+pushi 0
+padd
+pushg 20
+pushi 1
+sub
+loadn
+writei
+pushg 20
+pushi 1
+sub
+storeg 20
+jump ciclo2
+fimciclo2:
+stop
+

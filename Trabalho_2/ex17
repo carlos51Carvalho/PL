@@ -1,0 +1,11 @@
+VARS 
+	int i=5
+	int j=6
+	int k=7
+	int l=8
+ENDVARS
+BEGIN
+	if(i>j && (i>k||i>l)){
+		print "ola"
+	}
+END

@@ -1,0 +1,46 @@
+pushi 0
+pushi 0
+pushi 1
+start
+jump INICIO
+A:
+read
+atoi
+storeg 0
+read
+atoi
+storeg 1
+pushg 1
+pushi 0
+infeq
+jz else2
+pushi 1
+storeg 0
+jump fimif2
+else2:
+ciclo1:
+pushg 1
+pushi 0
+sup
+jz fimciclo1
+pushg 2
+pushg 0
+mul
+storeg 2
+pushg 1
+pushi 1
+sub
+storeg 1
+jump ciclo1
+fimciclo1:
+pushg 2
+storeg 0
+fimif2:
+pushg 0
+writei
+return
+INICIO:
+pusha A
+call
+stop
+

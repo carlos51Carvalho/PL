@@ -1,0 +1,32 @@
+pushi 0
+pushi 9999
+pushi 0
+start 
+read
+atoi
+storeg 0
+ciclo2:
+pushg 0
+pushi 0
+sup
+jz fimciclo2
+read
+atoi
+storeg 2
+pushg 1
+pushg 2
+sup
+jz fimif1
+pushg 2
+storeg 1
+fimif1:
+pushg 0
+pushi 1
+sub
+storeg 0
+jump ciclo2
+fimciclo2:
+pushg 1
+writei
+stop
+

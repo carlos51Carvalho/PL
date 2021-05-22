@@ -1,0 +1,94 @@
+pushi 10
+pushi 0
+pushi 0
+pushn 10
+start 
+pushgp
+pushi 3
+padd
+pushi 0
+pushi 1
+storen
+pushgp
+pushi 3
+padd
+pushi 1
+pushi 6
+storen
+pushgp
+pushi 3
+padd
+pushi 2
+pushi 5
+storen
+pushgp
+pushi 3
+padd
+pushi 3
+pushi 1
+storen
+pushgp
+pushi 3
+padd
+pushi 4
+pushi 22
+storen
+pushgp
+pushi 3
+padd
+pushi 5
+pushi 1
+storen
+pushgp
+pushi 3
+padd
+pushi 6
+pushi 88
+storen
+pushgp
+pushi 3
+padd
+pushi 7
+pushi 14234
+storen
+pushgp
+pushi 3
+padd
+pushi 8
+pushi 123
+storen
+pushgp
+pushi 3
+padd
+pushi 9
+pushi 983
+storen
+ciclo2:
+pushg 1
+pushg 0
+inf
+jz fimciclo2
+pushg 0
+pushi 2
+mod
+pushi 0
+equal
+not
+jz fimif1
+pushg 2
+pushi 1
+add
+storeg 2
+pushg 0
+writei
+pushs "é impar\n"
+writes
+fimif1:
+jump ciclo2
+fimciclo2:
+pushg 2
+writei
+pushs "impares\n"
+writes
+stop
+

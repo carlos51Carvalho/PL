@@ -1,0 +1,35 @@
+pushi 0
+pushi 0
+start 
+ciclo2:
+read
+atoi
+storeg 0
+pushg 0
+pushi 2
+mod
+pushi 0
+equal
+not
+jz fimif1
+pushg 1
+pushi 1
+add
+storeg 1
+pushg 0
+writei
+pushs "é impar\n"
+writes
+fimif1:
+pushg 0
+pushi 0
+equal
+jz ciclo2
+pushg 1
+pushi 1
+sub
+writei
+pushs "impares\n"
+writes
+stop
+

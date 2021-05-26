@@ -8,7 +8,8 @@ tokens=["VARS", "ENDVARS",
 		"int", "print", "read", 
 		"if", "else",
         "repeat", "while", 'until', 
-        'FUNCTION']
+        'FUNCTION',#'return'
+        ]
 
 literals=['(', ')', 
             '[', ']', 
@@ -69,6 +70,10 @@ def t_while(t):
 def t_FUNCTION(t):
     r'FUNCTION'
     return t
+
+#def t_return(t):
+#    r'return'
+#    return t
 
 def t_num(t):                   #t <- (t_type (neste caso é NUM), t_VALUE, t_lineo, t_column)
     r'\d+'

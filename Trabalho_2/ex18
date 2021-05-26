@@ -1,0 +1,23 @@
+VARS 
+	int i=5
+	int k=7
+	int l[12]
+ENDVARS
+FUNCTION A
+BEGIN
+	read i
+	print i
+END
+
+FUNCTION A
+BEGIN
+	read i
+	print i
+END
+BEGIN
+
+
+B()
+l=3
+
+END

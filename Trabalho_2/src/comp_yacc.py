@@ -26,7 +26,6 @@ from comp_lex import literals
 def p_Programa(p):
     "Progama : Declaracoes Corpo"
     p[0] = p[1] + p[2]
-    print(p[0])
 
 
 #----------------------------------------------------
@@ -40,7 +39,7 @@ def p_Declaracoes_vazio(p):
     p[0] = ""
 
 def p_Decls(p):
-    "Decls : Decl Decls"
+    "Decls : Decls Decl"
     p[0] = p[1] + p[2]
 
 def p_Decls_vazio(p):
@@ -65,24 +64,48 @@ def p_DecIntList_single(p):
 
 def p_DeclInt(p):
     "DeclInt : id"
-    p[0] = "pushi 0\n"
-    offset=p.parser.varsoffset
-    p.parser.registers.update({p[1]: ('int',str(offset),1)})
-    p.parser.varsoffset+=1
+    v=p.parser.registers.get(p[1])
+    if v==None:
+        p[0] = "pushi 0\n"
+        offset=p.parser.varsoffset
+        p.parser.registers.update({p[1]: ('int',str(offset),1)})
+        p.parser.varsoffset+=1
+    else:
+        print("A variavel "+ p[1] +" foi declarada mais que uma vez")
+        p[0]=""
+        parser.success = False
+        parser.erros+=1
+
 
 def p_DeclInt_attr(p):
     "DeclInt : id '=' num"
-    p[0] = "pushi " + p[3] + "\n"
-    offset=p.parser.varsoffset
-    p.parser.registers.update({p[1]: ('int',str(offset),1)})
-    p.parser.varsoffset+=1
+    v=p.parser.registers.get(p[1])
+    if v==None:
+        p[0] = "pushi " + p[3] + "\n"
+        offset=p.parser.varsoffset
+        p.parser.registers.update({p[1]: ('int',str(offset),1)})
+        p.parser.varsoffset+=1
+    else:
+        print("A variavel "+ p[1] +" foi declarada mais que uma vez")
+        p[0]=""
+        parser.success = False
+        parser.erros+=1
+
 
 def p_DeclInt_arrayInt(p):
     "DeclInt : id '[' num ']'"
-    p[0] = "pushn " + p[3] + "\n"
-    offset=p.parser.varsoffset
-    p.parser.registers.update({p[1]: ('arrayInt',str(offset),p[3])})
-    p.parser.varsoffset+=int(p[3])
+    v=p.parser.registers.get(p[1])
+    if v==None:
+        p[0] = "pushn " + p[3] + "\n"
+        offset=p.parser.varsoffset
+        p.parser.registers.update({p[1]: ('arrayInt',str(offset),p[3])})
+        p.parser.varsoffset+=int(p[3])
+    else:
+        print("A variavel "+ p[1] +" foi declarada mais que uma vez")
+        p[0]=""
+        parser.success = False
+        parser.erros+=1
+
 
 #----------------------------------------------------
 #---------------------- Corpo -----------------------
@@ -114,30 +137,27 @@ def p_Funcao(p):
 
 def p_FuncaoHeader(p):
     "FuncaoHeader : FUNCTION id"
-    p[0] = p[2] + ":\n"
+    v=p.parser.funcoes.get(p[2])
+    if v==None:
+        p[0] = p[2] + ":\n"
+        p.parser.funcoes[p[2]]='Funcao'
+    else:
+        print("A funcao "+ p[2] +" foi declarada mais que uma vez")
+        p[0]=""
+        parser.success = False
+        parser.erros+=1
+
 
 def p_FuncaoCorpo(p):
     "FuncaoCorpo : BEGIN Instrucoes END"
     p[0] = p[2] + "return\n"
 
-#-------------chamada da funcao------------
-def p_Instrucao_call(p):
-    "Instrucao : id '(' ')'"
-    p[0] = "pusha " + p[1] + "\n" + "call\n"
+#def p_FuncaoCorpoRet(p):
+#    "FuncaoCorpo : BEGIN Instrucoes return id END"
+#    (t,off,size)=p.parser.registers.get(p[4])
+#    p[0] = p[2] + "pushg " +off +"\n" + "return\n"
 
 
-def p_Instrucao_call_retorno(p):
-    "Instrucao : id '=' id '(' ')'"  
-    (t,off,size)=p.parser.registers.get(p[1])
-    p[0] = "pusha " + p[2] + "\n" + "call\n"
-    p[0]+= "storeg " + off + "\n"           
-
-def p_Instrucao_call_retornoarray(p):
-    "Instrucao : id '[' num ']' '=' id '(' ')'"  
-    (t,off,size)=p.parser.registers.get(p[1])
-    p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3] 
-    p[0]+= "pusha " + p[6] + "\n" + "call\n"
-    p[0]+= "storen\n"
 
 
 
@@ -168,6 +188,33 @@ def p_Instrucoes_vazio(p):
 #    p[0] = ""
 
 
+#-------------chamada da funcao------------
+def p_Instrucao_call(p):
+    "Instrucao : id '(' ')'"
+    v=p.parser.funcoes.get(p[1])
+    if v==None:        
+        print("A funcao "+ p[1] +" não foi declarada antes de ser chamada")
+        p[0]=""
+        parser.success = False
+        parser.erros+=1
+
+    else:
+        p[0] = "pusha " + p[1] + "\n" + "call\n"
+
+#def p_Instrucao_call_retorno(p):
+#    "Instrucao : id '=' id '(' ')'"  
+#    (t,off,size)=p.parser.registers.get(p[1])
+#    p[0] = "pusha " + p[3] + "\n" + "call\n"
+#    p[0]+= "storeg " + off + "\n"           
+
+#def p_Instrucao_call_retornoarray(p):
+#    "Instrucao : id '[' num ']' '=' id '(' ')'"  
+#    (t,off,size)=p.parser.registers.get(p[1])
+#    p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3] 
+#    p[0]+= "pusha " + p[6] + "\n" + "call\n"
+#    p[0]+= "storen\n"
+
+
 #----------------------- Prints --------------------------
 def p_Instrucao_print_str(p):
     "Instrucao : print str"             
@@ -182,8 +229,20 @@ def p_Instrucao_print_exp(p):
 #---------------------- Atribs ----------------------
 def p_Instrucao_attr_int_exp(p):
     "Instrucao : id '=' Exp"             #set exp
-    (t,off,size)=p.parser.registers.get(p[1])
-    p[0] = p[3] +"storeg " + off + "\n"
+    v=p.parser.registers.get(p[1])
+    if v==None:
+        print("A variavel "+ p[1] +" não está definida")
+        p[0]=""
+        parser.success = False
+        parser.erros+=1
+    else:
+        (t,off,size)=v
+        if t=='arrayInt':
+            print("A variavel "+ p[1] +" é um inteiro, não um array")
+            p[0]=""
+            parser.success = False
+            parser.erros+=1
+        else: p[0] = p[3] +"storeg " + off + "\n"
 
 
 def p_Instrucao_attr_int_exp_com_oper_antes_do_igual(p):
@@ -191,18 +250,6 @@ def p_Instrucao_attr_int_exp_com_oper_antes_do_igual(p):
     (t,off,size)=p.parser.registers.get(p[1])
     p[0] = "pushg " + off +"\n"
     p[0]+= p[4] + p[2] +"storeg " + off + "\n"
-
-def p_Instrucao_attr_int_sub_sub(p):
-    "Instrucao : id '-' '-'"             
-    (t,off,size)=p.parser.registers.get(p[1])
-    p[0] = "pushg " + off +"\n"
-    p[0]+= "pushi 1\n" + "sub\n" +"storeg " + off + "\n"
-
-def p_Instrucao_attr_int_add_add(p):
-    "Instrucao : id '+' '+'"             
-    (t,off,size)=p.parser.registers.get(p[1])
-    p[0] = "pushg " + off +"\n"
-    p[0]+= "pushi 1\n" + "add\n" +"storeg " + off + "\n"
 
 def p_Op_add(p):
     "Op : '+'"
@@ -220,6 +267,18 @@ def p_Op_mod(p):
     "Op : '%'"
     p[0] = "mod\n"
 
+def p_Instrucao_attr_int_sub_sub(p):
+    "Instrucao : id '-' '-'"             
+    (t,off,size)=p.parser.registers.get(p[1])
+    p[0] = "pushg " + off +"\n"
+    p[0]+= "pushi 1\n" + "sub\n" +"storeg " + off + "\n"
+
+def p_Instrucao_attr_int_add_add(p):
+    "Instrucao : id '+' '+'"             
+    (t,off,size)=p.parser.registers.get(p[1])
+    p[0] = "pushg " + off +"\n"
+    p[0]+= "pushi 1\n" + "add\n" +"storeg " + off + "\n"
+
 
 
 
@@ -231,11 +290,16 @@ def p_Instrucao_attr_arrayint_exp(p):
 
 def p_Instrucao_attr_arrayint_exp_add_add(p):
     "Instrucao : id '[' Exp ']' '+' '+'"           
-    (t,off,size)=p.parser.registers.get(p[1])
-    p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3]                 #1ªparte do store
-    p[0]+= "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3] + "loadn\n"     #load do valor
-    p[0]+= "pushi 1\n"+ "add\n"                                             #adicao de 1
-    p[0]+= p[6] + "storen\n"                                                #fim do store
+    v=p.parser.registers.get(p[1])
+    if v==None:
+        print("A variavel "+ p[1] +" não está definida, em "+p)
+        p[0]=""
+    else:
+        (t,off,size)=v
+        p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3]                 #1ªparte do store
+        p[0]+= "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3] + "loadn\n"     #load do valor
+        p[0]+= "pushi 1\n"+ "add\n"                                             #adicao de 1
+        p[0]+= p[6] + "storen\n"                                                #fim do store
 
 
 def p_Instrucao_attr_arrayint_exp_sub_sub(p):
@@ -250,9 +314,6 @@ def p_Instrucao_attr_arrayint_exp_sub_sub(p):
 
 
 #---------------------- Reads ----------------------
-#def p_Instrucao_read(p):   #não faz sentido existir
-#    "Instrucao : read"
-#    p[0] = "read\n"
 
 def p_Instrucao_read_int(p):
     "Instrucao : read id"             
@@ -479,7 +540,7 @@ def p_Fator_id_arr(p):
 
 
 
-def p_error(p):         #rotina de erros
+def p_error(p):         #rotina de erros para tokens
     print("Erro sintático no input: ",p)
     parser.success = False
 
@@ -491,6 +552,8 @@ parser = yacc.yacc()
 parser.registers={}     # Registers-> {Nome da variavel: (tipo, offset, tamanho)}
 parser.varsoffset=0
 parser.labelid=1
+parser.funcoes={} 
+parser.erros=0
 
 
 # read input by line and append
@@ -506,8 +569,9 @@ parser.success= True
 P=parser.parse(Total)
 
 if parser.success:
-    print()
+    print(P)
 
 else:
-    print("Frase inválida. Corrija e tente de novo...")
+    print()
+    print("O programa tem "+str(parser.erros)+" erro(s). Corrija e tente de novo...")
 

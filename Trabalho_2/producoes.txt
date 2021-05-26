@@ -1,0 +1,120 @@
+
+P = {
+p0: Progama => Declaracoes Corpo
+
+p1: Declaracoes => VARS Decls ENDVARS
+p2:	     		 |
+
+p3: Decls => Decls Decl
+	       |
+
+p4: Decl => int DecIntList
+
+p5: DecIntList => DecIntList ',' DeclInt
+p6: 			| DeclInt
+
+p7: DeclInt => id
+p8: 		 | id '=' num
+p9:			 |id '[' num ']'
+
+p10: Corpo => BEGIN Instrucoes END
+p11: 		| Funcoes BEGIN Instrucoes END
+
+p12: Funcoes => Funcoes Funcao
+p13: 		  | Funcao
+
+p14: Funcao => FuncaoHeader FuncaoCorpo	
+
+p15: FuncaoHeader => FUNCTION id
+
+p16: FuncaoCorpo => BEGIN Instrucoes END
+
+p17: Instrucoes => Instrucoes Instrucao
+p18:			 |
+
+
+p19: Instrucao => id '(' ')'
+
+
+p20: Instrucao => print str
+p21: Instrucao => print Exp
+
+
+p22: Instrucao => id '=' Exp
+
+p23: Instrucao => id Op '=' Exp
+p24: Op => '+'
+p25: Op => '-'
+p26: Op => '*'
+p27: Op => '/'
+p28: Op => '%'
+
+p29: Instrucao => id '-' '-'
+p30: 			| id '+' '+'
+
+p31: Instrucao => id '[' Exp ']' '=' Exp
+p32: 			| id '[' Exp ']' '+' '+'
+p33: 			| id '[' Exp ']' '-' '-'
+
+
+p34: Instrucao => read id
+p35: 			| read id '[' Exp ']'
+
+
+p36: Instrucao => if Condicao Then Else
+p37: 			| if Condicao Then
+
+p38: Then => '{' Instrucoes '}'
+p39: 	   | Instrucao
+
+p40: Else => else '{' Instrucoes '}'
+p41: 	   | else Instrucao
+
+p42: Condicao => '(' Cond ')'
+
+p43: Cond => Cond '|' '|' Cond2
+p44: 	   | Cond2
+
+p45: Cond2 => Cond2 '&' '&' Cond3
+p46: 		| Cond3
+
+p47: Cond3 => '!' Cond
+p48:  		| '(' Cond ')'
+p49: 		| ExpRel
+
+p50: ExpRel => Exp Oper Exp
+p51: 		 | Exp
+
+p52: Oper => '=' '='
+p53:	   | '<' '>'
+p54: 	   | '>'
+p55: 	   | '<'
+p56: 	   | '>' '='
+p57: 	   | '<' '='
+
+
+p58: Instrucao => repeat CorpoCiclo until Condicao
+
+p59: CorpoCiclo => '{' Instrucoes '}'
+p60: 			 | Instrucao
+
+
+p61: Instrucao => while Condicao CorpoCiclo
+
+
+p62: Exp => Exp '+' Termo
+p63: 	  | Exp '-' Termo
+p64:	  | Termo
+
+p65: Termo => Termo '*' Fator
+p66:		| Termo '/' Fator
+p67:		| Termo '%' Fator
+p68:		| Fator
+
+p69: Fator => '(' Exp ')'
+p70: 		| num
+p71:		| id
+p72:		|id '[' Exp ']'
+
+
+}

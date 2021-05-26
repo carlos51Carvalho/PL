@@ -250,9 +250,9 @@ def p_Instrucao_attr_arrayint_exp_sub_sub(p):
 
 
 #---------------------- Reads ----------------------
-def p_Instrucao_read(p):
-    "Instrucao : read"
-    p[0] = "read\n"
+#def p_Instrucao_read(p):   #não faz sentido existir
+#    "Instrucao : read"
+#    p[0] = "read\n"
 
 def p_Instrucao_read_int(p):
     "Instrucao : read id"             

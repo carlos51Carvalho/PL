@@ -177,3 +177,102 @@ Cond => Condicao
 #   
 #   Fator=> '(' Exp ')'
 #        |  num
+
+
+
+
+
+def p_Condicao_init(p):
+    "Condicao : '(' Condicaobase ')'"
+    p[0] = p[2]
+
+def p_Condicao_single(p):
+    "Condicaobase : Cond"
+    p[0] = p[1]
+
+def p_Condicao_list(p):
+    "Condicaobase : LCond OperLogico Cond"
+    p[0] = p[1] + p[3]+p[2]
+
+def p_LCondd(p):
+    "LCond : Condicaobase"
+    p[0] = p[1]
+
+def p_Conddd(p):
+    "Cond : '(' Condicaobase ')'"
+    p[0] = p[2]
+
+def p_Conddd_not(p):
+    "Cond : '!' '(' Condicaobase ')'"
+    p[0] = p[3] + "not\n"
+
+
+
+
+
+
+
+
+
+
+
+
+
+def p_Condicao_init(p):
+    "Condicao : '(' Cond ')'"
+    p[0] = p[2]
+
+def p_Cond(p):
+    "Cond : Cond 'or' Cond2"
+    p[0] = p[1] + p[3] + 'or'
+
+
+def p_Cond_cond2(p):
+    "Cond : Cond2"
+    p[0] = p[1]
+
+
+def p_Cond2(p):
+    "Cond2 : Cond2 'and' cond3" 
+    p[0] = p[1]
+
+def p_Cond2_cond3(p):
+    "Cond2 : cond3" 
+    p[0] = p[1]
+
+
+
+def p_Cond3_notCond(p):
+    "Cond3 : '!' cond" 
+    p[0] = not + p[2]
+
+
+
+def p_Cond3_parcond(p):
+    "Cond3 : '(' cond ')'" 
+    p[0] = p[2]
+
+
+
+def p_Cond3_ExpRel(p):
+    "Cond3 : ExpRel" 
+    p[0] = p[1]
+
+
+
+
+def p_ExpRel(p):
+    "ExpRel : Exp '>' Exp"
+    			...
+    		| Exp 
+
+
+
+detetar erros e dar resposta
+if(pear==5)		<- sintaticos var nao está definida <- (echo erro)
+				<- semantico pera nao é id verificado
+
+é valorizado, mas não é importante
+
+
+

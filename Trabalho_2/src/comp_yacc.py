@@ -122,9 +122,22 @@ def p_FuncaoCorpo(p):
 
 #-------------chamada da funcao------------
 def p_Instrucao_call(p):
-    "Instrucao : id '(' ')'"             
+    "Instrucao : id '(' ')'"
     p[0] = "pusha " + p[1] + "\n" + "call\n"
 
+
+def p_Instrucao_call_retorno(p):
+    "Instrucao : id '=' id '(' ')'"  
+    (t,off,size)=p.parser.registers.get(p[1])
+    p[0] = "pusha " + p[2] + "\n" + "call\n"
+    p[0]+= "storeg " + off + "\n"           
+
+def p_Instrucao_call_retornoarray(p):
+    "Instrucao : id '[' num ']' '=' id '(' ')'"  
+    (t,off,size)=p.parser.registers.get(p[1])
+    p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3] 
+    p[0]+= "pusha " + p[6] + "\n" + "call\n"
+    p[0]+= "storen\n"
 
 
 
@@ -154,6 +167,7 @@ def p_Instrucoes_vazio(p):
 #    "FComment : '*' '/'"             
 #    p[0] = ""
 
+
 #----------------------- Prints --------------------------
 def p_Instrucao_print_str(p):
     "Instrucao : print str"             
@@ -171,10 +185,67 @@ def p_Instrucao_attr_int_exp(p):
     (t,off,size)=p.parser.registers.get(p[1])
     p[0] = p[3] +"storeg " + off + "\n"
 
+
+def p_Instrucao_attr_int_exp_com_oper_antes_do_igual(p):
+    "Instrucao : id Op '=' Exp"             
+    (t,off,size)=p.parser.registers.get(p[1])
+    p[0] = "pushg " + off +"\n"
+    p[0]+= p[4] + p[2] +"storeg " + off + "\n"
+
+def p_Instrucao_attr_int_sub_sub(p):
+    "Instrucao : id '-' '-'"             
+    (t,off,size)=p.parser.registers.get(p[1])
+    p[0] = "pushg " + off +"\n"
+    p[0]+= "pushi 1\n" + "sub\n" +"storeg " + off + "\n"
+
+def p_Instrucao_attr_int_add_add(p):
+    "Instrucao : id '+' '+'"             
+    (t,off,size)=p.parser.registers.get(p[1])
+    p[0] = "pushg " + off +"\n"
+    p[0]+= "pushi 1\n" + "add\n" +"storeg " + off + "\n"
+
+def p_Op_add(p):
+    "Op : '+'"
+    p[0] = "add\n"
+def p_Op_sub(p):
+    "Op : '-'"
+    p[0] = "sub\n"
+def p_Op_mul(p):
+    "Op : '*'"
+    p[0] = "mul\n"
+def p_Op_div(p):
+    "Op : '/'"
+    p[0] = "div\n"
+def p_Op_mod(p):
+    "Op : '%'"
+    p[0] = "mod\n"
+
+
+
+
 def p_Instrucao_attr_arrayint_exp(p):
     "Instrucao : id '[' Exp ']' '=' Exp"             #set exp lo array
     (t,off,size)=p.parser.registers.get(p[1])
     p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3] + p[6] + "storen\n"
+
+
+def p_Instrucao_attr_arrayint_exp_add_add(p):
+    "Instrucao : id '[' Exp ']' '+' '+'"           
+    (t,off,size)=p.parser.registers.get(p[1])
+    p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3]                 #1ªparte do store
+    p[0]+= "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3] + "loadn\n"     #load do valor
+    p[0]+= "pushi 1\n"+ "add\n"                                             #adicao de 1
+    p[0]+= p[6] + "storen\n"                                                #fim do store
+
+
+def p_Instrucao_attr_arrayint_exp_sub_sub(p):
+    "Instrucao : id '[' Exp ']' '-' '-'"           
+    (t,off,size)=p.parser.registers.get(p[1])
+    p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3]                 #1ªparte do store
+    p[0]+= "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3] + "loadn\n"     #load do valor
+    p[0]+= "pushi 1\n"+ "sub\n"                                             #adicao de 1
+    p[0]+= p[6] + "storen\n"                                                #fim do store
+
 
 
 
@@ -224,54 +295,50 @@ def p_Else_single(p):
 
 
 
+
 def p_Condicao_init(p):
-    "Condicao : '(' Condicaobase ')'"
+    "Condicao : '(' Cond ')'"
     p[0] = p[2]
-
-def p_Condicao_single(p):
-    "Condicaobase : Cond"
-    p[0] = p[1]
-
-def p_Condicao_list(p):
-    "Condicaobase : LCond OperLogico Cond"
-    p[0] = p[1] + p[3]+p[2]
-
-def p_LCondd(p):
-    "LCond : Condicaobase"
-    p[0] = p[1]
-
-def p_Conddd(p):
-    "Cond : '(' Condicaobase ')'"
-    p[0] = p[2]
-
-def p_Conddd_not(p):
-    "Cond : '!' '(' Condicaobase ')'"
-    p[0] = p[3] + "not\n"
-
-
-  
-
-
-def p_OperLogico_and(p):
-    "OperLogico : '&' '&' "
-    p[0] = "mul\n"
-
-def p_OperLogico_or(p):
-    "OperLogico : '|' '|' "
-    p[0] = "add\npushi 0\nsup\n"
-
-
-
 
 def p_Cond(p):
-    "Cond : Exp Oper Exp"
-    p[0] = p[1] + p[3] + p[2]
-def p_Cond_not(p):
-    "Cond : '!' Exp"
-    p[0] = p[2] + "not\n"
-def p_Cond_sem_oper(p):
-    "Cond : Exp"
+    "Cond : Cond '|' '|' Cond2"
+    p[0] = p[1] + p[4] + "add\npushi 0\nsup\n"
+
+def p_Cond_cond2(p):
+    "Cond : Cond2"
     p[0] = p[1]
+
+def p_Cond2(p):
+    "Cond2 : Cond2 '&' '&' Cond3" 
+    p[0] = p[1] + p[4] + "mul\n"
+
+def p_Cond2_cond3(p):
+    "Cond2 : Cond3" 
+    p[0] = p[1]
+
+def p_Cond3_notCond(p):
+    "Cond3 : '!' Cond" 
+    p[0] = p[2] + 'not\n'
+
+def p_Cond3_parcond(p):
+    "Cond3 : '(' Cond ')'" 
+    p[0] = p[2]
+
+def p_Cond3_ExpRel(p):
+    "Cond3 : ExpRel" 
+    p[0] = p[1]
+
+
+
+def p_ExpRel(p):
+    "ExpRel : Exp Oper Exp"
+    p[0] = p[1] + p[3] + p[2]
+
+def p_ExpRel_sem_oper(p):
+    "ExpRel : Exp"
+    p[0] = p[1]
+
+
 
 def p_Oper_equal(p):
     "Oper : '=' '=' "
@@ -342,7 +409,6 @@ def p_Instrucao_while(p):
     p.parser.labelid+=1
     p[0] = "ciclo" + str(lid) +":\n"
     p[0]+= p[2]
-#    p[0]+= "not\n"
     p[0]+= "jz fimciclo" + str(lid) +"\n"
     p[0]+= p[3]
     p[0]+= "jump ciclo" + str(lid) +"\n"
@@ -352,6 +418,11 @@ def p_Instrucao_while(p):
 
 
 #----------------------for-do------------------------
+#def p_Instrucao_for(p):
+#    "Instrucao : for Condicao CorpoCiclo"
+
+
+
 
 
 #------------- expressões/termos/fatores---------------
@@ -429,7 +500,7 @@ for Linha in sys.stdin:
     Total+=Linha
 
 
-# ToDo: read 
+
 parser.success= True
 
 P=parser.parse(Total)
@@ -440,7 +511,3 @@ if parser.success:
 else:
     print("Frase inválida. Corrija e tente de novo...")
 
-
-
-
-# maybe criar ID => id ou id[Exp]

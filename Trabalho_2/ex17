@@ -1,11 +1,14 @@
 VARS 
 	int i=5
-	int j=6
+	int j=1
 	int k=7
 	int l=8
 ENDVARS
 BEGIN
-	if(i>j && (i>k||i>l)){
-		print "ola"
+	while(i>0 && j==1){
+		i-=1
+		read k
+		if(k==3)
+			j=0
 	}
 END

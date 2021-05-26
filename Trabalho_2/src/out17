@@ -1,24 +1,32 @@
 pushi 5
-pushi 6
+pushi 1
 pushi 7
 pushi 8
 start 
+ciclo2:
 pushg 0
-pushg 1
-sup
-pushg 0
-pushg 2
-sup
-pushg 0
-pushg 3
-sup
-add
 pushi 0
 sup
+pushg 1
+pushi 1
+equal
 mul
+jz fimciclo2
+pushg 0
+pushi 1
+sub
+storeg 0
+read
+atoi
+storeg 2
+pushg 2
+pushi 3
+equal
 jz fimif1
-pushs "ola"
-writes
+pushi 0
+storeg 1
 fimif1:
+jump ciclo2
+fimciclo2:
 stop
 

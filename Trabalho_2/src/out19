@@ -1,6 +1,4 @@
 pushn 6
-pushn 4
-pushi 0
 start 
 pushgp
 pushi 0
@@ -33,6 +31,46 @@ loadn
 pushi 2
 mul
 pushi 4
+add
+storen
+pushgp
+pushi 0
+padd
+pushi 2
+pushi 2
+mul
+pushi 1
+add
+pushgp
+pushi 0
+padd
+pushi 2
+pushi 2
+mul
+pushi 1
+add
+loadn
+pushi 1
+sub
+storen
+pushgp
+pushi 0
+padd
+pushi 2
+pushi 2
+mul
+pushi 1
+add
+pushgp
+pushi 0
+padd
+pushi 2
+pushi 2
+mul
+pushi 1
+add
+loadn
+pushi 1
 add
 storen
 stop

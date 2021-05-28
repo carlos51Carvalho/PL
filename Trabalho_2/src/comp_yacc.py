@@ -393,7 +393,7 @@ def p_Instrucao_attr_arrayint_exp_add_add(p):
             p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3]                 #1ªparte do store
             p[0]+= "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3] + "loadn\n"     #load do valor
             p[0]+= "pushi 1\n"+ "add\n"                                             #adicao de 1
-            p[0]+= p[6] + "storen\n"                                                #fim do store
+            p[0]+= "storen\n"                                                #fim do store
 
 
 def p_Instrucao_attr_arrayint_exp_sub_sub(p):
@@ -413,7 +413,7 @@ def p_Instrucao_attr_arrayint_exp_sub_sub(p):
             p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3]                 #1ªparte do store
             p[0]+= "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3] + "loadn\n"     #load do valor
             p[0]+= "pushi 1\n"+ "sub\n"                                             #subtracao de 1
-            p[0]+= p[6] + "storen\n"                                                #fim do store
+            p[0]+= "storen\n"                                                #fim do store
 
 
 
@@ -430,7 +430,7 @@ def p_Instrucao_attr_array2int_exp(p):
         parser.erros+=1
     else:
         if v[0]!='array2Int':
-            print("A variavel "+ p[1] +" é do tipo "+v[0]+", não pode ser atribuida como arrayInt")
+            print("A variavel "+ p[1] +" é do tipo "+v[0]+", não pode ser atribuida como array2Int")
             p[0]=""
             parser.success = False
             parser.erros+=1
@@ -439,6 +439,57 @@ def p_Instrucao_attr_array2int_exp(p):
             p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" 
             p[0]+= p[3] + "pushi "+str(size2)+"\n" + "mul\n"+ p[6] + "add\n"
             p[0]+= p[9] + "storen\n"
+
+
+def p_Instrucao_attr_array2int_exp_sub_sub(p):
+    "Instrucao : id '[' Exp ']' '[' Exp ']' '-' '-'"           
+    v=p.parser.registers.get(p[1])
+    if v==None:
+        print("A variavel "+ p[1] +" não está definida, em "+p)
+        p[0]=""
+    else:
+        if v[0]!='array2Int':
+            print("A variavel "+ p[1] +" é do tipo "+v[0]+", não pode ser atribuida como array2Int")
+            p[0]=""
+            parser.success = False
+            parser.erros+=1
+        else:
+            (t,off,size1,size2)=v
+            p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" 
+            p[0]+= p[3] + "pushi "+str(size2)+"\n" + "mul\n"+ p[6] + "add\n"
+            
+            p[0]+= "pushgp\n" + "pushi "+off+"\n" + "padd\n" 
+            p[0]+= p[3] + "pushi "+str(size2)+"\n" + "mul\n"+ p[6] + "add\n"
+            p[0]+= "loadn\n"
+            p[0]+= "pushi 1\n"+ "sub\n"     
+
+            p[0]+= "storen\n"
+
+
+def p_Instrucao_attr_array2int_exp_add_add(p):
+    "Instrucao : id '[' Exp ']' '[' Exp ']' '+' '+'"           
+    v=p.parser.registers.get(p[1])
+    if v==None:
+        print("A variavel "+ p[1] +" não está definida, em "+p)
+        p[0]=""
+    else:
+        if v[0]!='array2Int':
+            print("A variavel "+ p[1] +" é do tipo "+v[0]+", não pode ser atribuida como array2Int")
+            p[0]=""
+            parser.success = False
+            parser.erros+=1
+        else:
+            (t,off,size1,size2)=v
+            p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" 
+            p[0]+= p[3] + "pushi "+str(size2)+"\n" + "mul\n"+ p[6] + "add\n"
+            
+            p[0]+= "pushgp\n" + "pushi "+off+"\n" + "padd\n" 
+            p[0]+= p[3] + "pushi "+str(size2)+"\n" + "mul\n"+ p[6] + "add\n"
+            p[0]+= "loadn\n"
+            p[0]+= "pushi 1\n"+ "add\n"     
+
+            p[0]+= "storen\n"
+
 
 #---------------------- Reads ----------------------
 

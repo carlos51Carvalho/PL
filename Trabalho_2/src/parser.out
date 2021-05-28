@@ -14,136 +14,140 @@ Rule 8     DecIntList -> DeclInt
 Rule 9     DeclInt -> id
 Rule 10    DeclInt -> id = num
 Rule 11    DeclInt -> id [ num ]
-Rule 12    Corpo -> BEGIN Instrucoes END
-Rule 13    Corpo -> Funcoes BEGIN Instrucoes END
-Rule 14    Funcoes -> Funcoes Funcao
-Rule 15    Funcoes -> Funcao
-Rule 16    Funcao -> FuncaoHeader FuncaoCorpo
-Rule 17    FuncaoHeader -> FUNCTION id
-Rule 18    FuncaoCorpo -> BEGIN Instrucoes END
-Rule 19    Instrucao -> id ( )
+Rule 12    DeclInt -> id [ num ] [ num ]
+Rule 13    Corpo -> BEGIN Instrucoes END
+Rule 14    Corpo -> Funcoes BEGIN Instrucoes END
+Rule 15    Funcoes -> Funcoes Funcao
+Rule 16    Funcoes -> Funcao
+Rule 17    Funcao -> FuncaoHeader FuncaoCorpo
+Rule 18    FuncaoHeader -> FUNCTION id
+Rule 19    FuncaoCorpo -> BEGIN Instrucoes END
 Rule 20    Instrucoes -> Instrucoes Instrucao
 Rule 21    Instrucoes -> <empty>
-Rule 22    Instrucao -> print str
-Rule 23    Instrucao -> print Exp
-Rule 24    Instrucao -> id = Exp
-Rule 25    Instrucao -> id Op = Exp
-Rule 26    Instrucao -> id - -
-Rule 27    Instrucao -> id + +
-Rule 28    Op -> +
-Rule 29    Op -> -
-Rule 30    Op -> *
-Rule 31    Op -> /
-Rule 32    Op -> %
-Rule 33    Instrucao -> id [ Exp ] = Exp
-Rule 34    Instrucao -> id [ Exp ] + +
-Rule 35    Instrucao -> id [ Exp ] - -
-Rule 36    Instrucao -> read id
-Rule 37    Instrucao -> read id [ Exp ]
-Rule 38    Instrucao -> if Condicao Then Else
-Rule 39    Instrucao -> if Condicao Then
-Rule 40    Then -> { Instrucoes }
-Rule 41    Then -> Instrucao
-Rule 42    Else -> else { Instrucoes }
-Rule 43    Else -> else Instrucao
-Rule 44    Condicao -> ( Cond )
-Rule 45    Cond -> Cond | | Cond2
-Rule 46    Cond -> Cond2
-Rule 47    Cond2 -> Cond2 & & Cond3
-Rule 48    Cond2 -> Cond3
-Rule 49    Cond3 -> ! Cond
-Rule 50    Cond3 -> ( Cond )
-Rule 51    Cond3 -> ExpRel
-Rule 52    ExpRel -> Exp Oper Exp
-Rule 53    ExpRel -> Exp
-Rule 54    Oper -> = =
-Rule 55    Oper -> < >
-Rule 56    Oper -> >
-Rule 57    Oper -> <
-Rule 58    Oper -> > =
-Rule 59    Oper -> < =
-Rule 60    Instrucao -> repeat CorpoCiclo until Condicao
-Rule 61    CorpoCiclo -> { Instrucoes }
-Rule 62    CorpoCiclo -> Instrucao
-Rule 63    Instrucao -> while Condicao CorpoCiclo
-Rule 64    Exp -> Exp + Termo
-Rule 65    Exp -> Exp - Termo
-Rule 66    Exp -> Termo
-Rule 67    Termo -> Termo * Fator
-Rule 68    Termo -> Termo / Fator
-Rule 69    Termo -> Termo % Fator
-Rule 70    Termo -> Fator
-Rule 71    Fator -> ( Exp )
-Rule 72    Fator -> num
-Rule 73    Fator -> id
-Rule 74    Fator -> id [ Exp ]
+Rule 22    Instrucao -> id ( )
+Rule 23    Instrucao -> print str
+Rule 24    Instrucao -> print Exp
+Rule 25    Instrucao -> id = Exp
+Rule 26    Instrucao -> id Op = Exp
+Rule 27    Op -> +
+Rule 28    Op -> -
+Rule 29    Op -> *
+Rule 30    Op -> /
+Rule 31    Op -> %
+Rule 32    Instrucao -> id - -
+Rule 33    Instrucao -> id + +
+Rule 34    Instrucao -> id [ Exp ] = Exp
+Rule 35    Instrucao -> id [ Exp ] + +
+Rule 36    Instrucao -> id [ Exp ] - -
+Rule 37    Instrucao -> id [ Exp ] [ Exp ] = Exp
+Rule 38    Instrucao -> read id
+Rule 39    Instrucao -> read id [ Exp ]
+Rule 40    Instrucao -> read id [ Exp ] [ Exp ]
+Rule 41    Instrucao -> if Condicao Then Else
+Rule 42    Instrucao -> if Condicao Then
+Rule 43    Then -> { Instrucoes }
+Rule 44    Then -> Instrucao
+Rule 45    Else -> else { Instrucoes }
+Rule 46    Else -> else Instrucao
+Rule 47    Condicao -> ( Cond )
+Rule 48    Cond -> Cond | | Cond2
+Rule 49    Cond -> Cond2
+Rule 50    Cond2 -> Cond2 & & Cond3
+Rule 51    Cond2 -> Cond3
+Rule 52    Cond3 -> ! Cond
+Rule 53    Cond3 -> ( Cond )
+Rule 54    Cond3 -> ExpRel
+Rule 55    ExpRel -> Exp Oper Exp
+Rule 56    ExpRel -> Exp
+Rule 57    Oper -> = =
+Rule 58    Oper -> < >
+Rule 59    Oper -> >
+Rule 60    Oper -> <
+Rule 61    Oper -> > =
+Rule 62    Oper -> < =
+Rule 63    Instrucao -> repeat CorpoCiclo until Condicao
+Rule 64    CorpoCiclo -> { Instrucoes }
+Rule 65    CorpoCiclo -> Instrucao
+Rule 66    Instrucao -> while Condicao CorpoCiclo
+Rule 67    Exp -> Exp + Termo
+Rule 68    Exp -> Exp - Termo
+Rule 69    Exp -> Termo
+Rule 70    Termo -> Termo * Fator
+Rule 71    Termo -> Termo / Fator
+Rule 72    Termo -> Termo % Fator
+Rule 73    Termo -> Fator
+Rule 74    Fator -> ( Exp )
+Rule 75    Fator -> num
+Rule 76    Fator -> id
+Rule 77    Fator -> id [ Exp ]
+Rule 78    Fator -> id [ Exp ] [ Exp ]
 
 Terminals, with rules where they appear
 
-!                    : 49
-%                    : 32 69
-&                    : 47 47
-(                    : 19 44 50 71
-)                    : 19 44 50 71
-*                    : 30 67
-+                    : 27 27 28 34 34 64
+!                    : 52
+%                    : 31 72
+&                    : 50 50
+(                    : 22 47 53 74
+)                    : 22 47 53 74
+*                    : 29 70
++                    : 27 33 33 35 35 67
 ,                    : 7
--                    : 26 26 29 35 35 65
-/                    : 31 68
-<                    : 55 57 59
-=                    : 10 24 25 33 54 54 58 59
->                    : 55 56 58
-BEGIN                : 12 13 18
-END                  : 12 13 18
+-                    : 28 32 32 36 36 68
+/                    : 30 71
+<                    : 58 60 62
+=                    : 10 25 26 34 37 57 57 61 62
+>                    : 58 59 61
+BEGIN                : 13 14 19
+END                  : 13 14 19
 ENDVARS              : 2
-FUNCTION             : 17
+FUNCTION             : 18
 VARS                 : 2
-[                    : 11 33 34 35 37 74
-]                    : 11 33 34 35 37 74
-else                 : 42 43
+[                    : 11 12 12 34 35 36 37 37 39 40 40 77 78 78
+]                    : 11 12 12 34 35 36 37 37 39 40 40 77 78 78
+else                 : 45 46
 error                : 
-id                   : 9 10 11 17 19 24 25 26 27 33 34 35 36 37 73 74
-if                   : 38 39
+id                   : 9 10 11 12 18 22 25 26 32 33 34 35 36 37 38 39 40 76 77 78
+if                   : 41 42
 int                  : 6
-num                  : 10 11 72
-print                : 22 23
-read                 : 36 37
-repeat               : 60
-str                  : 22
-until                : 60
-while                : 63
-{                    : 40 42 61
-|                    : 45 45
-}                    : 40 42 61
+num                  : 10 11 12 12 75
+print                : 23 24
+read                 : 38 39 40
+repeat               : 63
+str                  : 23
+until                : 63
+while                : 66
+{                    : 43 45 64
+|                    : 48 48
+}                    : 43 45 64
 
 Nonterminals, with rules where they appear
 
-Cond                 : 44 45 49 50
-Cond2                : 45 46 47
-Cond3                : 47 48
-Condicao             : 38 39 60 63
+Cond                 : 47 48 52 53
+Cond2                : 48 49 50
+Cond3                : 50 51
+Condicao             : 41 42 63 66
 Corpo                : 1
-CorpoCiclo           : 60 63
+CorpoCiclo           : 63 66
 DecIntList           : 6 7
 Decl                 : 4
 DeclInt              : 7 8
 Declaracoes          : 1
 Decls                : 2 4
-Else                 : 38
-Exp                  : 23 24 25 33 33 34 35 37 52 52 53 64 65 71 74
-ExpRel               : 51
-Fator                : 67 68 69 70
-Funcao               : 14 15
-FuncaoCorpo          : 16
-FuncaoHeader         : 16
-Funcoes              : 13 14
-Instrucao            : 20 41 43 62
-Instrucoes           : 12 13 18 20 40 42 61
-Op                   : 25
-Oper                 : 52
+Else                 : 41
+Exp                  : 24 25 26 34 34 35 36 37 37 37 39 40 40 55 55 56 67 68 74 77 78 78
+ExpRel               : 54
+Fator                : 70 71 72 73
+Funcao               : 15 16
+FuncaoCorpo          : 17
+FuncaoHeader         : 17
+Funcoes              : 14 15
+Instrucao            : 20 44 46 65
+Instrucoes           : 13 14 19 20 43 45 64
+Op                   : 26
+Oper                 : 55
 Progama              : 0
-Termo                : 64 65 66 67 68 69
-Then                 : 38 39
+Termo                : 67 68 69 70 71 72
+Then                 : 41 42
 
 Parsing method: LALR
 
@@ -170,12 +174,12 @@ state 1
 state 2
 
     (1) Progama -> Declaracoes . Corpo
-    (12) Corpo -> . BEGIN Instrucoes END
-    (13) Corpo -> . Funcoes BEGIN Instrucoes END
-    (14) Funcoes -> . Funcoes Funcao
-    (15) Funcoes -> . Funcao
-    (16) Funcao -> . FuncaoHeader FuncaoCorpo
-    (17) FuncaoHeader -> . FUNCTION id
+    (13) Corpo -> . BEGIN Instrucoes END
+    (14) Corpo -> . Funcoes BEGIN Instrucoes END
+    (15) Funcoes -> . Funcoes Funcao
+    (16) Funcoes -> . Funcao
+    (17) Funcao -> . FuncaoHeader FuncaoCorpo
+    (18) FuncaoHeader -> . FUNCTION id
 
     BEGIN           shift and go to state 5
     FUNCTION        shift and go to state 9
@@ -205,7 +209,7 @@ state 4
 
 state 5
 
-    (12) Corpo -> BEGIN . Instrucoes END
+    (13) Corpo -> BEGIN . Instrucoes END
     (20) Instrucoes -> . Instrucoes Instrucao
     (21) Instrucoes -> .
 
@@ -221,10 +225,10 @@ state 5
 
 state 6
 
-    (13) Corpo -> Funcoes . BEGIN Instrucoes END
-    (14) Funcoes -> Funcoes . Funcao
-    (16) Funcao -> . FuncaoHeader FuncaoCorpo
-    (17) FuncaoHeader -> . FUNCTION id
+    (14) Corpo -> Funcoes . BEGIN Instrucoes END
+    (15) Funcoes -> Funcoes . Funcao
+    (17) Funcao -> . FuncaoHeader FuncaoCorpo
+    (18) FuncaoHeader -> . FUNCTION id
 
     BEGIN           shift and go to state 12
     FUNCTION        shift and go to state 9
@@ -234,16 +238,16 @@ state 6
 
 state 7
 
-    (15) Funcoes -> Funcao .
+    (16) Funcoes -> Funcao .
 
-    BEGIN           reduce using rule 15 (Funcoes -> Funcao .)
-    FUNCTION        reduce using rule 15 (Funcoes -> Funcao .)
+    BEGIN           reduce using rule 16 (Funcoes -> Funcao .)
+    FUNCTION        reduce using rule 16 (Funcoes -> Funcao .)
 
 
 state 8
 
-    (16) Funcao -> FuncaoHeader . FuncaoCorpo
-    (18) FuncaoCorpo -> . BEGIN Instrucoes END
+    (17) Funcao -> FuncaoHeader . FuncaoCorpo
+    (19) FuncaoCorpo -> . BEGIN Instrucoes END
 
     BEGIN           shift and go to state 15
 
@@ -251,7 +255,7 @@ state 8
 
 state 9
 
-    (17) FuncaoHeader -> FUNCTION . id
+    (18) FuncaoHeader -> FUNCTION . id
 
     id              shift and go to state 16
 
@@ -269,24 +273,26 @@ state 10
 
 state 11
 
-    (12) Corpo -> BEGIN Instrucoes . END
+    (13) Corpo -> BEGIN Instrucoes . END
     (20) Instrucoes -> Instrucoes . Instrucao
-    (19) Instrucao -> . id ( )
-    (22) Instrucao -> . print str
-    (23) Instrucao -> . print Exp
-    (24) Instrucao -> . id = Exp
-    (25) Instrucao -> . id Op = Exp
-    (26) Instrucao -> . id - -
-    (27) Instrucao -> . id + +
-    (33) Instrucao -> . id [ Exp ] = Exp
-    (34) Instrucao -> . id [ Exp ] + +
-    (35) Instrucao -> . id [ Exp ] - -
-    (36) Instrucao -> . read id
-    (37) Instrucao -> . read id [ Exp ]
-    (38) Instrucao -> . if Condicao Then Else
-    (39) Instrucao -> . if Condicao Then
-    (60) Instrucao -> . repeat CorpoCiclo until Condicao
-    (63) Instrucao -> . while Condicao CorpoCiclo
+    (22) Instrucao -> . id ( )
+    (23) Instrucao -> . print str
+    (24) Instrucao -> . print Exp
+    (25) Instrucao -> . id = Exp
+    (26) Instrucao -> . id Op = Exp
+    (32) Instrucao -> . id - -
+    (33) Instrucao -> . id + +
+    (34) Instrucao -> . id [ Exp ] = Exp
+    (35) Instrucao -> . id [ Exp ] + +
+    (36) Instrucao -> . id [ Exp ] - -
+    (37) Instrucao -> . id [ Exp ] [ Exp ] = Exp
+    (38) Instrucao -> . read id
+    (39) Instrucao -> . read id [ Exp ]
+    (40) Instrucao -> . read id [ Exp ] [ Exp ]
+    (41) Instrucao -> . if Condicao Then Else
+    (42) Instrucao -> . if Condicao Then
+    (63) Instrucao -> . repeat CorpoCiclo until Condicao
+    (66) Instrucao -> . while Condicao CorpoCiclo
 
     END             shift and go to state 20
     id              shift and go to state 22
@@ -300,7 +306,7 @@ state 11
 
 state 12
 
-    (13) Corpo -> Funcoes BEGIN . Instrucoes END
+    (14) Corpo -> Funcoes BEGIN . Instrucoes END
     (20) Instrucoes -> . Instrucoes Instrucao
     (21) Instrucoes -> .
 
@@ -316,23 +322,23 @@ state 12
 
 state 13
 
-    (14) Funcoes -> Funcoes Funcao .
+    (15) Funcoes -> Funcoes Funcao .
 
-    BEGIN           reduce using rule 14 (Funcoes -> Funcoes Funcao .)
-    FUNCTION        reduce using rule 14 (Funcoes -> Funcoes Funcao .)
+    BEGIN           reduce using rule 15 (Funcoes -> Funcoes Funcao .)
+    FUNCTION        reduce using rule 15 (Funcoes -> Funcoes Funcao .)
 
 
 state 14
 
-    (16) Funcao -> FuncaoHeader FuncaoCorpo .
+    (17) Funcao -> FuncaoHeader FuncaoCorpo .
 
-    BEGIN           reduce using rule 16 (Funcao -> FuncaoHeader FuncaoCorpo .)
-    FUNCTION        reduce using rule 16 (Funcao -> FuncaoHeader FuncaoCorpo .)
+    BEGIN           reduce using rule 17 (Funcao -> FuncaoHeader FuncaoCorpo .)
+    FUNCTION        reduce using rule 17 (Funcao -> FuncaoHeader FuncaoCorpo .)
 
 
 state 15
 
-    (18) FuncaoCorpo -> BEGIN . Instrucoes END
+    (19) FuncaoCorpo -> BEGIN . Instrucoes END
     (20) Instrucoes -> . Instrucoes Instrucao
     (21) Instrucoes -> .
 
@@ -348,9 +354,9 @@ state 15
 
 state 16
 
-    (17) FuncaoHeader -> FUNCTION id .
+    (18) FuncaoHeader -> FUNCTION id .
 
-    BEGIN           reduce using rule 17 (FuncaoHeader -> FUNCTION id .)
+    BEGIN           reduce using rule 18 (FuncaoHeader -> FUNCTION id .)
 
 
 state 17
@@ -377,6 +383,7 @@ state 19
     (9) DeclInt -> . id
     (10) DeclInt -> . id = num
     (11) DeclInt -> . id [ num ]
+    (12) DeclInt -> . id [ num ] [ num ]
 
     id              shift and go to state 32
 
@@ -385,9 +392,9 @@ state 19
 
 state 20
 
-    (12) Corpo -> BEGIN Instrucoes END .
+    (13) Corpo -> BEGIN Instrucoes END .
 
-    $end            reduce using rule 12 (Corpo -> BEGIN Instrucoes END .)
+    $end            reduce using rule 13 (Corpo -> BEGIN Instrucoes END .)
 
 
 state 21
@@ -406,19 +413,20 @@ state 21
 
 state 22
 
-    (19) Instrucao -> id . ( )
-    (24) Instrucao -> id . = Exp
-    (25) Instrucao -> id . Op = Exp
-    (26) Instrucao -> id . - -
-    (27) Instrucao -> id . + +
-    (33) Instrucao -> id . [ Exp ] = Exp
-    (34) Instrucao -> id . [ Exp ] + +
-    (35) Instrucao -> id . [ Exp ] - -
-    (28) Op -> . +
-    (29) Op -> . -
-    (30) Op -> . *
-    (31) Op -> . /
-    (32) Op -> . %
+    (22) Instrucao -> id . ( )
+    (25) Instrucao -> id . = Exp
+    (26) Instrucao -> id . Op = Exp
+    (32) Instrucao -> id . - -
+    (33) Instrucao -> id . + +
+    (34) Instrucao -> id . [ Exp ] = Exp
+    (35) Instrucao -> id . [ Exp ] + +
+    (36) Instrucao -> id . [ Exp ] - -
+    (37) Instrucao -> id . [ Exp ] [ Exp ] = Exp
+    (27) Op -> . +
+    (28) Op -> . -
+    (29) Op -> . *
+    (30) Op -> . /
+    (31) Op -> . %
 
     (               shift and go to state 33
     =               shift and go to state 34
@@ -433,19 +441,20 @@ state 22
 
 state 23
 
-    (22) Instrucao -> print . str
-    (23) Instrucao -> print . Exp
-    (64) Exp -> . Exp + Termo
-    (65) Exp -> . Exp - Termo
-    (66) Exp -> . Termo
-    (67) Termo -> . Termo * Fator
-    (68) Termo -> . Termo / Fator
-    (69) Termo -> . Termo % Fator
-    (70) Termo -> . Fator
-    (71) Fator -> . ( Exp )
-    (72) Fator -> . num
-    (73) Fator -> . id
-    (74) Fator -> . id [ Exp ]
+    (23) Instrucao -> print . str
+    (24) Instrucao -> print . Exp
+    (67) Exp -> . Exp + Termo
+    (68) Exp -> . Exp - Termo
+    (69) Exp -> . Termo
+    (70) Termo -> . Termo * Fator
+    (71) Termo -> . Termo / Fator
+    (72) Termo -> . Termo % Fator
+    (73) Termo -> . Fator
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
 
     str             shift and go to state 42
     (               shift and go to state 46
@@ -458,17 +467,18 @@ state 23
 
 state 24
 
-    (36) Instrucao -> read . id
-    (37) Instrucao -> read . id [ Exp ]
+    (38) Instrucao -> read . id
+    (39) Instrucao -> read . id [ Exp ]
+    (40) Instrucao -> read . id [ Exp ] [ Exp ]
 
     id              shift and go to state 49
 
 
 state 25
 
-    (38) Instrucao -> if . Condicao Then Else
-    (39) Instrucao -> if . Condicao Then
-    (44) Condicao -> . ( Cond )
+    (41) Instrucao -> if . Condicao Then Else
+    (42) Instrucao -> if . Condicao Then
+    (47) Condicao -> . ( Cond )
 
     (               shift and go to state 51
 
@@ -476,25 +486,27 @@ state 25
 
 state 26
 
-    (60) Instrucao -> repeat . CorpoCiclo until Condicao
-    (61) CorpoCiclo -> . { Instrucoes }
-    (62) CorpoCiclo -> . Instrucao
-    (19) Instrucao -> . id ( )
-    (22) Instrucao -> . print str
-    (23) Instrucao -> . print Exp
-    (24) Instrucao -> . id = Exp
-    (25) Instrucao -> . id Op = Exp
-    (26) Instrucao -> . id - -
-    (27) Instrucao -> . id + +
-    (33) Instrucao -> . id [ Exp ] = Exp
-    (34) Instrucao -> . id [ Exp ] + +
-    (35) Instrucao -> . id [ Exp ] - -
-    (36) Instrucao -> . read id
-    (37) Instrucao -> . read id [ Exp ]
-    (38) Instrucao -> . if Condicao Then Else
-    (39) Instrucao -> . if Condicao Then
-    (60) Instrucao -> . repeat CorpoCiclo until Condicao
-    (63) Instrucao -> . while Condicao CorpoCiclo
+    (63) Instrucao -> repeat . CorpoCiclo until Condicao
+    (64) CorpoCiclo -> . { Instrucoes }
+    (65) CorpoCiclo -> . Instrucao
+    (22) Instrucao -> . id ( )
+    (23) Instrucao -> . print str
+    (24) Instrucao -> . print Exp
+    (25) Instrucao -> . id = Exp
+    (26) Instrucao -> . id Op = Exp
+    (32) Instrucao -> . id - -
+    (33) Instrucao -> . id + +
+    (34) Instrucao -> . id [ Exp ] = Exp
+    (35) Instrucao -> . id [ Exp ] + +
+    (36) Instrucao -> . id [ Exp ] - -
+    (37) Instrucao -> . id [ Exp ] [ Exp ] = Exp
+    (38) Instrucao -> . read id
+    (39) Instrucao -> . read id [ Exp ]
+    (40) Instrucao -> . read id [ Exp ] [ Exp ]
+    (41) Instrucao -> . if Condicao Then Else
+    (42) Instrucao -> . if Condicao Then
+    (63) Instrucao -> . repeat CorpoCiclo until Condicao
+    (66) Instrucao -> . while Condicao CorpoCiclo
 
     {               shift and go to state 53
     id              shift and go to state 22
@@ -509,8 +521,8 @@ state 26
 
 state 27
 
-    (63) Instrucao -> while . Condicao CorpoCiclo
-    (44) Condicao -> . ( Cond )
+    (66) Instrucao -> while . Condicao CorpoCiclo
+    (47) Condicao -> . ( Cond )
 
     (               shift and go to state 51
 
@@ -518,24 +530,26 @@ state 27
 
 state 28
 
-    (13) Corpo -> Funcoes BEGIN Instrucoes . END
+    (14) Corpo -> Funcoes BEGIN Instrucoes . END
     (20) Instrucoes -> Instrucoes . Instrucao
-    (19) Instrucao -> . id ( )
-    (22) Instrucao -> . print str
-    (23) Instrucao -> . print Exp
-    (24) Instrucao -> . id = Exp
-    (25) Instrucao -> . id Op = Exp
-    (26) Instrucao -> . id - -
-    (27) Instrucao -> . id + +
-    (33) Instrucao -> . id [ Exp ] = Exp
-    (34) Instrucao -> . id [ Exp ] + +
-    (35) Instrucao -> . id [ Exp ] - -
-    (36) Instrucao -> . read id
-    (37) Instrucao -> . read id [ Exp ]
-    (38) Instrucao -> . if Condicao Then Else
-    (39) Instrucao -> . if Condicao Then
-    (60) Instrucao -> . repeat CorpoCiclo until Condicao
-    (63) Instrucao -> . while Condicao CorpoCiclo
+    (22) Instrucao -> . id ( )
+    (23) Instrucao -> . print str
+    (24) Instrucao -> . print Exp
+    (25) Instrucao -> . id = Exp
+    (26) Instrucao -> . id Op = Exp
+    (32) Instrucao -> . id - -
+    (33) Instrucao -> . id + +
+    (34) Instrucao -> . id [ Exp ] = Exp
+    (35) Instrucao -> . id [ Exp ] + +
+    (36) Instrucao -> . id [ Exp ] - -
+    (37) Instrucao -> . id [ Exp ] [ Exp ] = Exp
+    (38) Instrucao -> . read id
+    (39) Instrucao -> . read id [ Exp ]
+    (40) Instrucao -> . read id [ Exp ] [ Exp ]
+    (41) Instrucao -> . if Condicao Then Else
+    (42) Instrucao -> . if Condicao Then
+    (63) Instrucao -> . repeat CorpoCiclo until Condicao
+    (66) Instrucao -> . while Condicao CorpoCiclo
 
     END             shift and go to state 56
     id              shift and go to state 22
@@ -549,24 +563,26 @@ state 28
 
 state 29
 
-    (18) FuncaoCorpo -> BEGIN Instrucoes . END
+    (19) FuncaoCorpo -> BEGIN Instrucoes . END
     (20) Instrucoes -> Instrucoes . Instrucao
-    (19) Instrucao -> . id ( )
-    (22) Instrucao -> . print str
-    (23) Instrucao -> . print Exp
-    (24) Instrucao -> . id = Exp
-    (25) Instrucao -> . id Op = Exp
-    (26) Instrucao -> . id - -
-    (27) Instrucao -> . id + +
-    (33) Instrucao -> . id [ Exp ] = Exp
-    (34) Instrucao -> . id [ Exp ] + +
-    (35) Instrucao -> . id [ Exp ] - -
-    (36) Instrucao -> . read id
-    (37) Instrucao -> . read id [ Exp ]
-    (38) Instrucao -> . if Condicao Then Else
-    (39) Instrucao -> . if Condicao Then
-    (60) Instrucao -> . repeat CorpoCiclo until Condicao
-    (63) Instrucao -> . while Condicao CorpoCiclo
+    (22) Instrucao -> . id ( )
+    (23) Instrucao -> . print str
+    (24) Instrucao -> . print Exp
+    (25) Instrucao -> . id = Exp
+    (26) Instrucao -> . id Op = Exp
+    (32) Instrucao -> . id - -
+    (33) Instrucao -> . id + +
+    (34) Instrucao -> . id [ Exp ] = Exp
+    (35) Instrucao -> . id [ Exp ] + +
+    (36) Instrucao -> . id [ Exp ] - -
+    (37) Instrucao -> . id [ Exp ] [ Exp ] = Exp
+    (38) Instrucao -> . read id
+    (39) Instrucao -> . read id [ Exp ]
+    (40) Instrucao -> . read id [ Exp ] [ Exp ]
+    (41) Instrucao -> . if Condicao Then Else
+    (42) Instrucao -> . if Condicao Then
+    (63) Instrucao -> . repeat CorpoCiclo until Condicao
+    (66) Instrucao -> . while Condicao CorpoCiclo
 
     END             shift and go to state 57
     id              shift and go to state 22
@@ -602,6 +618,7 @@ state 32
     (9) DeclInt -> id .
     (10) DeclInt -> id . = num
     (11) DeclInt -> id . [ num ]
+    (12) DeclInt -> id . [ num ] [ num ]
 
     ,               reduce using rule 9 (DeclInt -> id .)
     ENDVARS         reduce using rule 9 (DeclInt -> id .)
@@ -612,25 +629,26 @@ state 32
 
 state 33
 
-    (19) Instrucao -> id ( . )
+    (22) Instrucao -> id ( . )
 
     )               shift and go to state 61
 
 
 state 34
 
-    (24) Instrucao -> id = . Exp
-    (64) Exp -> . Exp + Termo
-    (65) Exp -> . Exp - Termo
-    (66) Exp -> . Termo
-    (67) Termo -> . Termo * Fator
-    (68) Termo -> . Termo / Fator
-    (69) Termo -> . Termo % Fator
-    (70) Termo -> . Fator
-    (71) Fator -> . ( Exp )
-    (72) Fator -> . num
-    (73) Fator -> . id
-    (74) Fator -> . id [ Exp ]
+    (25) Instrucao -> id = . Exp
+    (67) Exp -> . Exp + Termo
+    (68) Exp -> . Exp - Termo
+    (69) Exp -> . Termo
+    (70) Termo -> . Termo * Fator
+    (71) Termo -> . Termo / Fator
+    (72) Termo -> . Termo % Fator
+    (73) Termo -> . Fator
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
 
     (               shift and go to state 46
     num             shift and go to state 47
@@ -642,45 +660,47 @@ state 34
 
 state 35
 
-    (25) Instrucao -> id Op . = Exp
+    (26) Instrucao -> id Op . = Exp
 
     =               shift and go to state 63
 
 
 state 36
 
-    (26) Instrucao -> id - . -
-    (29) Op -> - .
+    (32) Instrucao -> id - . -
+    (28) Op -> - .
 
     -               shift and go to state 64
-    =               reduce using rule 29 (Op -> - .)
+    =               reduce using rule 28 (Op -> - .)
 
 
 state 37
 
-    (27) Instrucao -> id + . +
-    (28) Op -> + .
+    (33) Instrucao -> id + . +
+    (27) Op -> + .
 
     +               shift and go to state 65
-    =               reduce using rule 28 (Op -> + .)
+    =               reduce using rule 27 (Op -> + .)
 
 
 state 38
 
-    (33) Instrucao -> id [ . Exp ] = Exp
-    (34) Instrucao -> id [ . Exp ] + +
-    (35) Instrucao -> id [ . Exp ] - -
-    (64) Exp -> . Exp + Termo
-    (65) Exp -> . Exp - Termo
-    (66) Exp -> . Termo
-    (67) Termo -> . Termo * Fator
-    (68) Termo -> . Termo / Fator
-    (69) Termo -> . Termo % Fator
-    (70) Termo -> . Fator
-    (71) Fator -> . ( Exp )
-    (72) Fator -> . num
-    (73) Fator -> . id
-    (74) Fator -> . id [ Exp ]
+    (34) Instrucao -> id [ . Exp ] = Exp
+    (35) Instrucao -> id [ . Exp ] + +
+    (36) Instrucao -> id [ . Exp ] - -
+    (37) Instrucao -> id [ . Exp ] [ Exp ] = Exp
+    (67) Exp -> . Exp + Termo
+    (68) Exp -> . Exp - Termo
+    (69) Exp -> . Termo
+    (70) Termo -> . Termo * Fator
+    (71) Termo -> . Termo / Fator
+    (72) Termo -> . Termo % Fator
+    (73) Termo -> . Fator
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
 
     (               shift and go to state 46
     num             shift and go to state 47
@@ -692,87 +712,87 @@ state 38
 
 state 39
 
-    (30) Op -> * .
+    (29) Op -> * .
 
-    =               reduce using rule 30 (Op -> * .)
+    =               reduce using rule 29 (Op -> * .)
 
 
 state 40
 
-    (31) Op -> / .
+    (30) Op -> / .
 
-    =               reduce using rule 31 (Op -> / .)
+    =               reduce using rule 30 (Op -> / .)
 
 
 state 41
 
-    (32) Op -> % .
+    (31) Op -> % .
 
-    =               reduce using rule 32 (Op -> % .)
+    =               reduce using rule 31 (Op -> % .)
 
 
 state 42
 
-    (22) Instrucao -> print str .
+    (23) Instrucao -> print str .
 
-    END             reduce using rule 22 (Instrucao -> print str .)
-    id              reduce using rule 22 (Instrucao -> print str .)
-    print           reduce using rule 22 (Instrucao -> print str .)
-    read            reduce using rule 22 (Instrucao -> print str .)
-    if              reduce using rule 22 (Instrucao -> print str .)
-    repeat          reduce using rule 22 (Instrucao -> print str .)
-    while           reduce using rule 22 (Instrucao -> print str .)
-    until           reduce using rule 22 (Instrucao -> print str .)
-    else            reduce using rule 22 (Instrucao -> print str .)
-    }               reduce using rule 22 (Instrucao -> print str .)
+    END             reduce using rule 23 (Instrucao -> print str .)
+    id              reduce using rule 23 (Instrucao -> print str .)
+    print           reduce using rule 23 (Instrucao -> print str .)
+    read            reduce using rule 23 (Instrucao -> print str .)
+    if              reduce using rule 23 (Instrucao -> print str .)
+    repeat          reduce using rule 23 (Instrucao -> print str .)
+    while           reduce using rule 23 (Instrucao -> print str .)
+    until           reduce using rule 23 (Instrucao -> print str .)
+    else            reduce using rule 23 (Instrucao -> print str .)
+    }               reduce using rule 23 (Instrucao -> print str .)
 
 
 state 43
 
-    (23) Instrucao -> print Exp .
-    (64) Exp -> Exp . + Termo
-    (65) Exp -> Exp . - Termo
+    (24) Instrucao -> print Exp .
+    (67) Exp -> Exp . + Termo
+    (68) Exp -> Exp . - Termo
 
-    END             reduce using rule 23 (Instrucao -> print Exp .)
-    id              reduce using rule 23 (Instrucao -> print Exp .)
-    print           reduce using rule 23 (Instrucao -> print Exp .)
-    read            reduce using rule 23 (Instrucao -> print Exp .)
-    if              reduce using rule 23 (Instrucao -> print Exp .)
-    repeat          reduce using rule 23 (Instrucao -> print Exp .)
-    while           reduce using rule 23 (Instrucao -> print Exp .)
-    until           reduce using rule 23 (Instrucao -> print Exp .)
-    else            reduce using rule 23 (Instrucao -> print Exp .)
-    }               reduce using rule 23 (Instrucao -> print Exp .)
+    END             reduce using rule 24 (Instrucao -> print Exp .)
+    id              reduce using rule 24 (Instrucao -> print Exp .)
+    print           reduce using rule 24 (Instrucao -> print Exp .)
+    read            reduce using rule 24 (Instrucao -> print Exp .)
+    if              reduce using rule 24 (Instrucao -> print Exp .)
+    repeat          reduce using rule 24 (Instrucao -> print Exp .)
+    while           reduce using rule 24 (Instrucao -> print Exp .)
+    until           reduce using rule 24 (Instrucao -> print Exp .)
+    else            reduce using rule 24 (Instrucao -> print Exp .)
+    }               reduce using rule 24 (Instrucao -> print Exp .)
     +               shift and go to state 67
     -               shift and go to state 68
 
 
 state 44
 
-    (66) Exp -> Termo .
-    (67) Termo -> Termo . * Fator
-    (68) Termo -> Termo . / Fator
-    (69) Termo -> Termo . % Fator
+    (69) Exp -> Termo .
+    (70) Termo -> Termo . * Fator
+    (71) Termo -> Termo . / Fator
+    (72) Termo -> Termo . % Fator
 
-    +               reduce using rule 66 (Exp -> Termo .)
-    -               reduce using rule 66 (Exp -> Termo .)
-    END             reduce using rule 66 (Exp -> Termo .)
-    id              reduce using rule 66 (Exp -> Termo .)
-    print           reduce using rule 66 (Exp -> Termo .)
-    read            reduce using rule 66 (Exp -> Termo .)
-    if              reduce using rule 66 (Exp -> Termo .)
-    repeat          reduce using rule 66 (Exp -> Termo .)
-    while           reduce using rule 66 (Exp -> Termo .)
-    until           reduce using rule 66 (Exp -> Termo .)
-    else            reduce using rule 66 (Exp -> Termo .)
-    }               reduce using rule 66 (Exp -> Termo .)
-    ]               reduce using rule 66 (Exp -> Termo .)
-    )               reduce using rule 66 (Exp -> Termo .)
-    =               reduce using rule 66 (Exp -> Termo .)
-    <               reduce using rule 66 (Exp -> Termo .)
-    >               reduce using rule 66 (Exp -> Termo .)
-    &               reduce using rule 66 (Exp -> Termo .)
-    |               reduce using rule 66 (Exp -> Termo .)
+    +               reduce using rule 69 (Exp -> Termo .)
+    -               reduce using rule 69 (Exp -> Termo .)
+    END             reduce using rule 69 (Exp -> Termo .)
+    id              reduce using rule 69 (Exp -> Termo .)
+    print           reduce using rule 69 (Exp -> Termo .)
+    read            reduce using rule 69 (Exp -> Termo .)
+    if              reduce using rule 69 (Exp -> Termo .)
+    repeat          reduce using rule 69 (Exp -> Termo .)
+    while           reduce using rule 69 (Exp -> Termo .)
+    until           reduce using rule 69 (Exp -> Termo .)
+    else            reduce using rule 69 (Exp -> Termo .)
+    }               reduce using rule 69 (Exp -> Termo .)
+    ]               reduce using rule 69 (Exp -> Termo .)
+    )               reduce using rule 69 (Exp -> Termo .)
+    =               reduce using rule 69 (Exp -> Termo .)
+    <               reduce using rule 69 (Exp -> Termo .)
+    >               reduce using rule 69 (Exp -> Termo .)
+    &               reduce using rule 69 (Exp -> Termo .)
+    |               reduce using rule 69 (Exp -> Termo .)
     *               shift and go to state 69
     /               shift and go to state 70
     %               shift and go to state 71
@@ -780,46 +800,47 @@ state 44
 
 state 45
 
-    (70) Termo -> Fator .
+    (73) Termo -> Fator .
 
-    *               reduce using rule 70 (Termo -> Fator .)
-    /               reduce using rule 70 (Termo -> Fator .)
-    %               reduce using rule 70 (Termo -> Fator .)
-    +               reduce using rule 70 (Termo -> Fator .)
-    -               reduce using rule 70 (Termo -> Fator .)
-    END             reduce using rule 70 (Termo -> Fator .)
-    id              reduce using rule 70 (Termo -> Fator .)
-    print           reduce using rule 70 (Termo -> Fator .)
-    read            reduce using rule 70 (Termo -> Fator .)
-    if              reduce using rule 70 (Termo -> Fator .)
-    repeat          reduce using rule 70 (Termo -> Fator .)
-    while           reduce using rule 70 (Termo -> Fator .)
-    until           reduce using rule 70 (Termo -> Fator .)
-    else            reduce using rule 70 (Termo -> Fator .)
-    }               reduce using rule 70 (Termo -> Fator .)
-    ]               reduce using rule 70 (Termo -> Fator .)
-    )               reduce using rule 70 (Termo -> Fator .)
-    =               reduce using rule 70 (Termo -> Fator .)
-    <               reduce using rule 70 (Termo -> Fator .)
-    >               reduce using rule 70 (Termo -> Fator .)
-    &               reduce using rule 70 (Termo -> Fator .)
-    |               reduce using rule 70 (Termo -> Fator .)
+    *               reduce using rule 73 (Termo -> Fator .)
+    /               reduce using rule 73 (Termo -> Fator .)
+    %               reduce using rule 73 (Termo -> Fator .)
+    +               reduce using rule 73 (Termo -> Fator .)
+    -               reduce using rule 73 (Termo -> Fator .)
+    END             reduce using rule 73 (Termo -> Fator .)
+    id              reduce using rule 73 (Termo -> Fator .)
+    print           reduce using rule 73 (Termo -> Fator .)
+    read            reduce using rule 73 (Termo -> Fator .)
+    if              reduce using rule 73 (Termo -> Fator .)
+    repeat          reduce using rule 73 (Termo -> Fator .)
+    while           reduce using rule 73 (Termo -> Fator .)
+    until           reduce using rule 73 (Termo -> Fator .)
+    else            reduce using rule 73 (Termo -> Fator .)
+    }               reduce using rule 73 (Termo -> Fator .)
+    ]               reduce using rule 73 (Termo -> Fator .)
+    )               reduce using rule 73 (Termo -> Fator .)
+    =               reduce using rule 73 (Termo -> Fator .)
+    <               reduce using rule 73 (Termo -> Fator .)
+    >               reduce using rule 73 (Termo -> Fator .)
+    &               reduce using rule 73 (Termo -> Fator .)
+    |               reduce using rule 73 (Termo -> Fator .)
 
 
 state 46
 
-    (71) Fator -> ( . Exp )
-    (64) Exp -> . Exp + Termo
-    (65) Exp -> . Exp - Termo
-    (66) Exp -> . Termo
-    (67) Termo -> . Termo * Fator
-    (68) Termo -> . Termo / Fator
-    (69) Termo -> . Termo % Fator
-    (70) Termo -> . Fator
-    (71) Fator -> . ( Exp )
-    (72) Fator -> . num
-    (73) Fator -> . id
-    (74) Fator -> . id [ Exp ]
+    (74) Fator -> ( . Exp )
+    (67) Exp -> . Exp + Termo
+    (68) Exp -> . Exp - Termo
+    (69) Exp -> . Termo
+    (70) Termo -> . Termo * Fator
+    (71) Termo -> . Termo / Fator
+    (72) Termo -> . Termo % Fator
+    (73) Termo -> . Fator
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
 
     (               shift and go to state 46
     num             shift and go to state 47
@@ -831,102 +852,106 @@ state 46
 
 state 47
 
-    (72) Fator -> num .
+    (75) Fator -> num .
 
-    *               reduce using rule 72 (Fator -> num .)
-    /               reduce using rule 72 (Fator -> num .)
-    %               reduce using rule 72 (Fator -> num .)
-    +               reduce using rule 72 (Fator -> num .)
-    -               reduce using rule 72 (Fator -> num .)
-    END             reduce using rule 72 (Fator -> num .)
-    id              reduce using rule 72 (Fator -> num .)
-    print           reduce using rule 72 (Fator -> num .)
-    read            reduce using rule 72 (Fator -> num .)
-    if              reduce using rule 72 (Fator -> num .)
-    repeat          reduce using rule 72 (Fator -> num .)
-    while           reduce using rule 72 (Fator -> num .)
-    until           reduce using rule 72 (Fator -> num .)
-    else            reduce using rule 72 (Fator -> num .)
-    }               reduce using rule 72 (Fator -> num .)
-    ]               reduce using rule 72 (Fator -> num .)
-    )               reduce using rule 72 (Fator -> num .)
-    =               reduce using rule 72 (Fator -> num .)
-    <               reduce using rule 72 (Fator -> num .)
-    >               reduce using rule 72 (Fator -> num .)
-    &               reduce using rule 72 (Fator -> num .)
-    |               reduce using rule 72 (Fator -> num .)
+    *               reduce using rule 75 (Fator -> num .)
+    /               reduce using rule 75 (Fator -> num .)
+    %               reduce using rule 75 (Fator -> num .)
+    +               reduce using rule 75 (Fator -> num .)
+    -               reduce using rule 75 (Fator -> num .)
+    END             reduce using rule 75 (Fator -> num .)
+    id              reduce using rule 75 (Fator -> num .)
+    print           reduce using rule 75 (Fator -> num .)
+    read            reduce using rule 75 (Fator -> num .)
+    if              reduce using rule 75 (Fator -> num .)
+    repeat          reduce using rule 75 (Fator -> num .)
+    while           reduce using rule 75 (Fator -> num .)
+    until           reduce using rule 75 (Fator -> num .)
+    else            reduce using rule 75 (Fator -> num .)
+    }               reduce using rule 75 (Fator -> num .)
+    ]               reduce using rule 75 (Fator -> num .)
+    )               reduce using rule 75 (Fator -> num .)
+    =               reduce using rule 75 (Fator -> num .)
+    <               reduce using rule 75 (Fator -> num .)
+    >               reduce using rule 75 (Fator -> num .)
+    &               reduce using rule 75 (Fator -> num .)
+    |               reduce using rule 75 (Fator -> num .)
 
 
 state 48
 
-    (73) Fator -> id .
-    (74) Fator -> id . [ Exp ]
+    (76) Fator -> id .
+    (77) Fator -> id . [ Exp ]
+    (78) Fator -> id . [ Exp ] [ Exp ]
 
-    *               reduce using rule 73 (Fator -> id .)
-    /               reduce using rule 73 (Fator -> id .)
-    %               reduce using rule 73 (Fator -> id .)
-    +               reduce using rule 73 (Fator -> id .)
-    -               reduce using rule 73 (Fator -> id .)
-    END             reduce using rule 73 (Fator -> id .)
-    id              reduce using rule 73 (Fator -> id .)
-    print           reduce using rule 73 (Fator -> id .)
-    read            reduce using rule 73 (Fator -> id .)
-    if              reduce using rule 73 (Fator -> id .)
-    repeat          reduce using rule 73 (Fator -> id .)
-    while           reduce using rule 73 (Fator -> id .)
-    until           reduce using rule 73 (Fator -> id .)
-    else            reduce using rule 73 (Fator -> id .)
-    }               reduce using rule 73 (Fator -> id .)
-    ]               reduce using rule 73 (Fator -> id .)
-    )               reduce using rule 73 (Fator -> id .)
-    =               reduce using rule 73 (Fator -> id .)
-    <               reduce using rule 73 (Fator -> id .)
-    >               reduce using rule 73 (Fator -> id .)
-    &               reduce using rule 73 (Fator -> id .)
-    |               reduce using rule 73 (Fator -> id .)
+    *               reduce using rule 76 (Fator -> id .)
+    /               reduce using rule 76 (Fator -> id .)
+    %               reduce using rule 76 (Fator -> id .)
+    +               reduce using rule 76 (Fator -> id .)
+    -               reduce using rule 76 (Fator -> id .)
+    END             reduce using rule 76 (Fator -> id .)
+    id              reduce using rule 76 (Fator -> id .)
+    print           reduce using rule 76 (Fator -> id .)
+    read            reduce using rule 76 (Fator -> id .)
+    if              reduce using rule 76 (Fator -> id .)
+    repeat          reduce using rule 76 (Fator -> id .)
+    while           reduce using rule 76 (Fator -> id .)
+    until           reduce using rule 76 (Fator -> id .)
+    else            reduce using rule 76 (Fator -> id .)
+    }               reduce using rule 76 (Fator -> id .)
+    ]               reduce using rule 76 (Fator -> id .)
+    )               reduce using rule 76 (Fator -> id .)
+    =               reduce using rule 76 (Fator -> id .)
+    <               reduce using rule 76 (Fator -> id .)
+    >               reduce using rule 76 (Fator -> id .)
+    &               reduce using rule 76 (Fator -> id .)
+    |               reduce using rule 76 (Fator -> id .)
     [               shift and go to state 73
 
 
 state 49
 
-    (36) Instrucao -> read id .
-    (37) Instrucao -> read id . [ Exp ]
+    (38) Instrucao -> read id .
+    (39) Instrucao -> read id . [ Exp ]
+    (40) Instrucao -> read id . [ Exp ] [ Exp ]
 
-    END             reduce using rule 36 (Instrucao -> read id .)
-    id              reduce using rule 36 (Instrucao -> read id .)
-    print           reduce using rule 36 (Instrucao -> read id .)
-    read            reduce using rule 36 (Instrucao -> read id .)
-    if              reduce using rule 36 (Instrucao -> read id .)
-    repeat          reduce using rule 36 (Instrucao -> read id .)
-    while           reduce using rule 36 (Instrucao -> read id .)
-    until           reduce using rule 36 (Instrucao -> read id .)
-    else            reduce using rule 36 (Instrucao -> read id .)
-    }               reduce using rule 36 (Instrucao -> read id .)
+    END             reduce using rule 38 (Instrucao -> read id .)
+    id              reduce using rule 38 (Instrucao -> read id .)
+    print           reduce using rule 38 (Instrucao -> read id .)
+    read            reduce using rule 38 (Instrucao -> read id .)
+    if              reduce using rule 38 (Instrucao -> read id .)
+    repeat          reduce using rule 38 (Instrucao -> read id .)
+    while           reduce using rule 38 (Instrucao -> read id .)
+    until           reduce using rule 38 (Instrucao -> read id .)
+    else            reduce using rule 38 (Instrucao -> read id .)
+    }               reduce using rule 38 (Instrucao -> read id .)
     [               shift and go to state 74
 
 
 state 50
 
-    (38) Instrucao -> if Condicao . Then Else
-    (39) Instrucao -> if Condicao . Then
-    (40) Then -> . { Instrucoes }
-    (41) Then -> . Instrucao
-    (19) Instrucao -> . id ( )
-    (22) Instrucao -> . print str
-    (23) Instrucao -> . print Exp
-    (24) Instrucao -> . id = Exp
-    (25) Instrucao -> . id Op = Exp
-    (26) Instrucao -> . id - -
-    (27) Instrucao -> . id + +
-    (33) Instrucao -> . id [ Exp ] = Exp
-    (34) Instrucao -> . id [ Exp ] + +
-    (35) Instrucao -> . id [ Exp ] - -
-    (36) Instrucao -> . read id
-    (37) Instrucao -> . read id [ Exp ]
-    (38) Instrucao -> . if Condicao Then Else
-    (39) Instrucao -> . if Condicao Then
-    (60) Instrucao -> . repeat CorpoCiclo until Condicao
-    (63) Instrucao -> . while Condicao CorpoCiclo
+    (41) Instrucao -> if Condicao . Then Else
+    (42) Instrucao -> if Condicao . Then
+    (43) Then -> . { Instrucoes }
+    (44) Then -> . Instrucao
+    (22) Instrucao -> . id ( )
+    (23) Instrucao -> . print str
+    (24) Instrucao -> . print Exp
+    (25) Instrucao -> . id = Exp
+    (26) Instrucao -> . id Op = Exp
+    (32) Instrucao -> . id - -
+    (33) Instrucao -> . id + +
+    (34) Instrucao -> . id [ Exp ] = Exp
+    (35) Instrucao -> . id [ Exp ] + +
+    (36) Instrucao -> . id [ Exp ] - -
+    (37) Instrucao -> . id [ Exp ] [ Exp ] = Exp
+    (38) Instrucao -> . read id
+    (39) Instrucao -> . read id [ Exp ]
+    (40) Instrucao -> . read id [ Exp ] [ Exp ]
+    (41) Instrucao -> . if Condicao Then Else
+    (42) Instrucao -> . if Condicao Then
+    (63) Instrucao -> . repeat CorpoCiclo until Condicao
+    (66) Instrucao -> . while Condicao CorpoCiclo
 
     {               shift and go to state 76
     id              shift and go to state 22
@@ -941,27 +966,28 @@ state 50
 
 state 51
 
-    (44) Condicao -> ( . Cond )
-    (45) Cond -> . Cond | | Cond2
-    (46) Cond -> . Cond2
-    (47) Cond2 -> . Cond2 & & Cond3
-    (48) Cond2 -> . Cond3
-    (49) Cond3 -> . ! Cond
-    (50) Cond3 -> . ( Cond )
-    (51) Cond3 -> . ExpRel
-    (52) ExpRel -> . Exp Oper Exp
-    (53) ExpRel -> . Exp
-    (64) Exp -> . Exp + Termo
-    (65) Exp -> . Exp - Termo
-    (66) Exp -> . Termo
-    (67) Termo -> . Termo * Fator
-    (68) Termo -> . Termo / Fator
-    (69) Termo -> . Termo % Fator
-    (70) Termo -> . Fator
-    (71) Fator -> . ( Exp )
-    (72) Fator -> . num
-    (73) Fator -> . id
-    (74) Fator -> . id [ Exp ]
+    (47) Condicao -> ( . Cond )
+    (48) Cond -> . Cond | | Cond2
+    (49) Cond -> . Cond2
+    (50) Cond2 -> . Cond2 & & Cond3
+    (51) Cond2 -> . Cond3
+    (52) Cond3 -> . ! Cond
+    (53) Cond3 -> . ( Cond )
+    (54) Cond3 -> . ExpRel
+    (55) ExpRel -> . Exp Oper Exp
+    (56) ExpRel -> . Exp
+    (67) Exp -> . Exp + Termo
+    (68) Exp -> . Exp - Termo
+    (69) Exp -> . Termo
+    (70) Termo -> . Termo * Fator
+    (71) Termo -> . Termo / Fator
+    (72) Termo -> . Termo % Fator
+    (73) Termo -> . Fator
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
 
     !               shift and go to state 82
     (               shift and go to state 78
@@ -978,14 +1004,14 @@ state 51
 
 state 52
 
-    (60) Instrucao -> repeat CorpoCiclo . until Condicao
+    (63) Instrucao -> repeat CorpoCiclo . until Condicao
 
     until           shift and go to state 85
 
 
 state 53
 
-    (61) CorpoCiclo -> { . Instrucoes }
+    (64) CorpoCiclo -> { . Instrucoes }
     (20) Instrucoes -> . Instrucoes Instrucao
     (21) Instrucoes -> .
 
@@ -1001,41 +1027,43 @@ state 53
 
 state 54
 
-    (62) CorpoCiclo -> Instrucao .
+    (65) CorpoCiclo -> Instrucao .
 
-    until           reduce using rule 62 (CorpoCiclo -> Instrucao .)
-    else            reduce using rule 62 (CorpoCiclo -> Instrucao .)
-    END             reduce using rule 62 (CorpoCiclo -> Instrucao .)
-    id              reduce using rule 62 (CorpoCiclo -> Instrucao .)
-    print           reduce using rule 62 (CorpoCiclo -> Instrucao .)
-    read            reduce using rule 62 (CorpoCiclo -> Instrucao .)
-    if              reduce using rule 62 (CorpoCiclo -> Instrucao .)
-    repeat          reduce using rule 62 (CorpoCiclo -> Instrucao .)
-    while           reduce using rule 62 (CorpoCiclo -> Instrucao .)
-    }               reduce using rule 62 (CorpoCiclo -> Instrucao .)
+    until           reduce using rule 65 (CorpoCiclo -> Instrucao .)
+    else            reduce using rule 65 (CorpoCiclo -> Instrucao .)
+    END             reduce using rule 65 (CorpoCiclo -> Instrucao .)
+    id              reduce using rule 65 (CorpoCiclo -> Instrucao .)
+    print           reduce using rule 65 (CorpoCiclo -> Instrucao .)
+    read            reduce using rule 65 (CorpoCiclo -> Instrucao .)
+    if              reduce using rule 65 (CorpoCiclo -> Instrucao .)
+    repeat          reduce using rule 65 (CorpoCiclo -> Instrucao .)
+    while           reduce using rule 65 (CorpoCiclo -> Instrucao .)
+    }               reduce using rule 65 (CorpoCiclo -> Instrucao .)
 
 
 state 55
 
-    (63) Instrucao -> while Condicao . CorpoCiclo
-    (61) CorpoCiclo -> . { Instrucoes }
-    (62) CorpoCiclo -> . Instrucao
-    (19) Instrucao -> . id ( )
-    (22) Instrucao -> . print str
-    (23) Instrucao -> . print Exp
-    (24) Instrucao -> . id = Exp
-    (25) Instrucao -> . id Op = Exp
-    (26) Instrucao -> . id - -
-    (27) Instrucao -> . id + +
-    (33) Instrucao -> . id [ Exp ] = Exp
-    (34) Instrucao -> . id [ Exp ] + +
-    (35) Instrucao -> . id [ Exp ] - -
-    (36) Instrucao -> . read id
-    (37) Instrucao -> . read id [ Exp ]
-    (38) Instrucao -> . if Condicao Then Else
-    (39) Instrucao -> . if Condicao Then
-    (60) Instrucao -> . repeat CorpoCiclo until Condicao
-    (63) Instrucao -> . while Condicao CorpoCiclo
+    (66) Instrucao -> while Condicao . CorpoCiclo
+    (64) CorpoCiclo -> . { Instrucoes }
+    (65) CorpoCiclo -> . Instrucao
+    (22) Instrucao -> . id ( )
+    (23) Instrucao -> . print str
+    (24) Instrucao -> . print Exp
+    (25) Instrucao -> . id = Exp
+    (26) Instrucao -> . id Op = Exp
+    (32) Instrucao -> . id - -
+    (33) Instrucao -> . id + +
+    (34) Instrucao -> . id [ Exp ] = Exp
+    (35) Instrucao -> . id [ Exp ] + +
+    (36) Instrucao -> . id [ Exp ] - -
+    (37) Instrucao -> . id [ Exp ] [ Exp ] = Exp
+    (38) Instrucao -> . read id
+    (39) Instrucao -> . read id [ Exp ]
+    (40) Instrucao -> . read id [ Exp ] [ Exp ]
+    (41) Instrucao -> . if Condicao Then Else
+    (42) Instrucao -> . if Condicao Then
+    (63) Instrucao -> . repeat CorpoCiclo until Condicao
+    (66) Instrucao -> . while Condicao CorpoCiclo
 
     {               shift and go to state 53
     id              shift and go to state 22
@@ -1050,17 +1078,17 @@ state 55
 
 state 56
 
-    (13) Corpo -> Funcoes BEGIN Instrucoes END .
+    (14) Corpo -> Funcoes BEGIN Instrucoes END .
 
-    $end            reduce using rule 13 (Corpo -> Funcoes BEGIN Instrucoes END .)
+    $end            reduce using rule 14 (Corpo -> Funcoes BEGIN Instrucoes END .)
 
 
 state 57
 
-    (18) FuncaoCorpo -> BEGIN Instrucoes END .
+    (19) FuncaoCorpo -> BEGIN Instrucoes END .
 
-    BEGIN           reduce using rule 18 (FuncaoCorpo -> BEGIN Instrucoes END .)
-    FUNCTION        reduce using rule 18 (FuncaoCorpo -> BEGIN Instrucoes END .)
+    BEGIN           reduce using rule 19 (FuncaoCorpo -> BEGIN Instrucoes END .)
+    FUNCTION        reduce using rule 19 (FuncaoCorpo -> BEGIN Instrucoes END .)
 
 
 state 58
@@ -1069,6 +1097,7 @@ state 58
     (9) DeclInt -> . id
     (10) DeclInt -> . id = num
     (11) DeclInt -> . id [ num ]
+    (12) DeclInt -> . id [ num ] [ num ]
 
     id              shift and go to state 32
 
@@ -1084,60 +1113,62 @@ state 59
 state 60
 
     (11) DeclInt -> id [ . num ]
+    (12) DeclInt -> id [ . num ] [ num ]
 
     num             shift and go to state 90
 
 
 state 61
 
-    (19) Instrucao -> id ( ) .
+    (22) Instrucao -> id ( ) .
 
-    END             reduce using rule 19 (Instrucao -> id ( ) .)
-    id              reduce using rule 19 (Instrucao -> id ( ) .)
-    print           reduce using rule 19 (Instrucao -> id ( ) .)
-    read            reduce using rule 19 (Instrucao -> id ( ) .)
-    if              reduce using rule 19 (Instrucao -> id ( ) .)
-    repeat          reduce using rule 19 (Instrucao -> id ( ) .)
-    while           reduce using rule 19 (Instrucao -> id ( ) .)
-    until           reduce using rule 19 (Instrucao -> id ( ) .)
-    else            reduce using rule 19 (Instrucao -> id ( ) .)
-    }               reduce using rule 19 (Instrucao -> id ( ) .)
+    END             reduce using rule 22 (Instrucao -> id ( ) .)
+    id              reduce using rule 22 (Instrucao -> id ( ) .)
+    print           reduce using rule 22 (Instrucao -> id ( ) .)
+    read            reduce using rule 22 (Instrucao -> id ( ) .)
+    if              reduce using rule 22 (Instrucao -> id ( ) .)
+    repeat          reduce using rule 22 (Instrucao -> id ( ) .)
+    while           reduce using rule 22 (Instrucao -> id ( ) .)
+    until           reduce using rule 22 (Instrucao -> id ( ) .)
+    else            reduce using rule 22 (Instrucao -> id ( ) .)
+    }               reduce using rule 22 (Instrucao -> id ( ) .)
 
 
 state 62
 
-    (24) Instrucao -> id = Exp .
-    (64) Exp -> Exp . + Termo
-    (65) Exp -> Exp . - Termo
+    (25) Instrucao -> id = Exp .
+    (67) Exp -> Exp . + Termo
+    (68) Exp -> Exp . - Termo
 
-    END             reduce using rule 24 (Instrucao -> id = Exp .)
-    id              reduce using rule 24 (Instrucao -> id = Exp .)
-    print           reduce using rule 24 (Instrucao -> id = Exp .)
-    read            reduce using rule 24 (Instrucao -> id = Exp .)
-    if              reduce using rule 24 (Instrucao -> id = Exp .)
-    repeat          reduce using rule 24 (Instrucao -> id = Exp .)
-    while           reduce using rule 24 (Instrucao -> id = Exp .)
-    until           reduce using rule 24 (Instrucao -> id = Exp .)
-    else            reduce using rule 24 (Instrucao -> id = Exp .)
-    }               reduce using rule 24 (Instrucao -> id = Exp .)
+    END             reduce using rule 25 (Instrucao -> id = Exp .)
+    id              reduce using rule 25 (Instrucao -> id = Exp .)
+    print           reduce using rule 25 (Instrucao -> id = Exp .)
+    read            reduce using rule 25 (Instrucao -> id = Exp .)
+    if              reduce using rule 25 (Instrucao -> id = Exp .)
+    repeat          reduce using rule 25 (Instrucao -> id = Exp .)
+    while           reduce using rule 25 (Instrucao -> id = Exp .)
+    until           reduce using rule 25 (Instrucao -> id = Exp .)
+    else            reduce using rule 25 (Instrucao -> id = Exp .)
+    }               reduce using rule 25 (Instrucao -> id = Exp .)
     +               shift and go to state 67
     -               shift and go to state 68
 
 
 state 63
 
-    (25) Instrucao -> id Op = . Exp
-    (64) Exp -> . Exp + Termo
-    (65) Exp -> . Exp - Termo
-    (66) Exp -> . Termo
-    (67) Termo -> . Termo * Fator
-    (68) Termo -> . Termo / Fator
-    (69) Termo -> . Termo % Fator
-    (70) Termo -> . Fator
-    (71) Fator -> . ( Exp )
-    (72) Fator -> . num
-    (73) Fator -> . id
-    (74) Fator -> . id [ Exp ]
+    (26) Instrucao -> id Op = . Exp
+    (67) Exp -> . Exp + Termo
+    (68) Exp -> . Exp - Termo
+    (69) Exp -> . Termo
+    (70) Termo -> . Termo * Fator
+    (71) Termo -> . Termo / Fator
+    (72) Termo -> . Termo % Fator
+    (73) Termo -> . Fator
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
 
     (               shift and go to state 46
     num             shift and go to state 47
@@ -1149,43 +1180,44 @@ state 63
 
 state 64
 
-    (26) Instrucao -> id - - .
+    (32) Instrucao -> id - - .
 
-    END             reduce using rule 26 (Instrucao -> id - - .)
-    id              reduce using rule 26 (Instrucao -> id - - .)
-    print           reduce using rule 26 (Instrucao -> id - - .)
-    read            reduce using rule 26 (Instrucao -> id - - .)
-    if              reduce using rule 26 (Instrucao -> id - - .)
-    repeat          reduce using rule 26 (Instrucao -> id - - .)
-    while           reduce using rule 26 (Instrucao -> id - - .)
-    until           reduce using rule 26 (Instrucao -> id - - .)
-    else            reduce using rule 26 (Instrucao -> id - - .)
-    }               reduce using rule 26 (Instrucao -> id - - .)
+    END             reduce using rule 32 (Instrucao -> id - - .)
+    id              reduce using rule 32 (Instrucao -> id - - .)
+    print           reduce using rule 32 (Instrucao -> id - - .)
+    read            reduce using rule 32 (Instrucao -> id - - .)
+    if              reduce using rule 32 (Instrucao -> id - - .)
+    repeat          reduce using rule 32 (Instrucao -> id - - .)
+    while           reduce using rule 32 (Instrucao -> id - - .)
+    until           reduce using rule 32 (Instrucao -> id - - .)
+    else            reduce using rule 32 (Instrucao -> id - - .)
+    }               reduce using rule 32 (Instrucao -> id - - .)
 
 
 state 65
 
-    (27) Instrucao -> id + + .
+    (33) Instrucao -> id + + .
 
-    END             reduce using rule 27 (Instrucao -> id + + .)
-    id              reduce using rule 27 (Instrucao -> id + + .)
-    print           reduce using rule 27 (Instrucao -> id + + .)
-    read            reduce using rule 27 (Instrucao -> id + + .)
-    if              reduce using rule 27 (Instrucao -> id + + .)
-    repeat          reduce using rule 27 (Instrucao -> id + + .)
-    while           reduce using rule 27 (Instrucao -> id + + .)
-    until           reduce using rule 27 (Instrucao -> id + + .)
-    else            reduce using rule 27 (Instrucao -> id + + .)
-    }               reduce using rule 27 (Instrucao -> id + + .)
+    END             reduce using rule 33 (Instrucao -> id + + .)
+    id              reduce using rule 33 (Instrucao -> id + + .)
+    print           reduce using rule 33 (Instrucao -> id + + .)
+    read            reduce using rule 33 (Instrucao -> id + + .)
+    if              reduce using rule 33 (Instrucao -> id + + .)
+    repeat          reduce using rule 33 (Instrucao -> id + + .)
+    while           reduce using rule 33 (Instrucao -> id + + .)
+    until           reduce using rule 33 (Instrucao -> id + + .)
+    else            reduce using rule 33 (Instrucao -> id + + .)
+    }               reduce using rule 33 (Instrucao -> id + + .)
 
 
 state 66
 
-    (33) Instrucao -> id [ Exp . ] = Exp
-    (34) Instrucao -> id [ Exp . ] + +
-    (35) Instrucao -> id [ Exp . ] - -
-    (64) Exp -> Exp . + Termo
-    (65) Exp -> Exp . - Termo
+    (34) Instrucao -> id [ Exp . ] = Exp
+    (35) Instrucao -> id [ Exp . ] + +
+    (36) Instrucao -> id [ Exp . ] - -
+    (37) Instrucao -> id [ Exp . ] [ Exp ] = Exp
+    (67) Exp -> Exp . + Termo
+    (68) Exp -> Exp . - Termo
 
     ]               shift and go to state 92
     +               shift and go to state 67
@@ -1194,15 +1226,16 @@ state 66
 
 state 67
 
-    (64) Exp -> Exp + . Termo
-    (67) Termo -> . Termo * Fator
-    (68) Termo -> . Termo / Fator
-    (69) Termo -> . Termo % Fator
-    (70) Termo -> . Fator
-    (71) Fator -> . ( Exp )
-    (72) Fator -> . num
-    (73) Fator -> . id
-    (74) Fator -> . id [ Exp ]
+    (67) Exp -> Exp + . Termo
+    (70) Termo -> . Termo * Fator
+    (71) Termo -> . Termo / Fator
+    (72) Termo -> . Termo % Fator
+    (73) Termo -> . Fator
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
 
     (               shift and go to state 46
     num             shift and go to state 47
@@ -1213,15 +1246,16 @@ state 67
 
 state 68
 
-    (65) Exp -> Exp - . Termo
-    (67) Termo -> . Termo * Fator
-    (68) Termo -> . Termo / Fator
-    (69) Termo -> . Termo % Fator
-    (70) Termo -> . Fator
-    (71) Fator -> . ( Exp )
-    (72) Fator -> . num
-    (73) Fator -> . id
-    (74) Fator -> . id [ Exp ]
+    (68) Exp -> Exp - . Termo
+    (70) Termo -> . Termo * Fator
+    (71) Termo -> . Termo / Fator
+    (72) Termo -> . Termo % Fator
+    (73) Termo -> . Fator
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
 
     (               shift and go to state 46
     num             shift and go to state 47
@@ -1232,11 +1266,12 @@ state 68
 
 state 69
 
-    (67) Termo -> Termo * . Fator
-    (71) Fator -> . ( Exp )
-    (72) Fator -> . num
-    (73) Fator -> . id
-    (74) Fator -> . id [ Exp ]
+    (70) Termo -> Termo * . Fator
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
 
     (               shift and go to state 46
     num             shift and go to state 47
@@ -1246,11 +1281,12 @@ state 69
 
 state 70
 
-    (68) Termo -> Termo / . Fator
-    (71) Fator -> . ( Exp )
-    (72) Fator -> . num
-    (73) Fator -> . id
-    (74) Fator -> . id [ Exp ]
+    (71) Termo -> Termo / . Fator
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
 
     (               shift and go to state 46
     num             shift and go to state 47
@@ -1260,11 +1296,12 @@ state 70
 
 state 71
 
-    (69) Termo -> Termo % . Fator
-    (71) Fator -> . ( Exp )
-    (72) Fator -> . num
-    (73) Fator -> . id
-    (74) Fator -> . id [ Exp ]
+    (72) Termo -> Termo % . Fator
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
 
     (               shift and go to state 46
     num             shift and go to state 47
@@ -1274,9 +1311,9 @@ state 71
 
 state 72
 
-    (71) Fator -> ( Exp . )
-    (64) Exp -> Exp . + Termo
-    (65) Exp -> Exp . - Termo
+    (74) Fator -> ( Exp . )
+    (67) Exp -> Exp . + Termo
+    (68) Exp -> Exp . - Termo
 
     )               shift and go to state 98
     +               shift and go to state 67
@@ -1285,18 +1322,20 @@ state 72
 
 state 73
 
-    (74) Fator -> id [ . Exp ]
-    (64) Exp -> . Exp + Termo
-    (65) Exp -> . Exp - Termo
-    (66) Exp -> . Termo
-    (67) Termo -> . Termo * Fator
-    (68) Termo -> . Termo / Fator
-    (69) Termo -> . Termo % Fator
-    (70) Termo -> . Fator
-    (71) Fator -> . ( Exp )
-    (72) Fator -> . num
-    (73) Fator -> . id
-    (74) Fator -> . id [ Exp ]
+    (77) Fator -> id [ . Exp ]
+    (78) Fator -> id [ . Exp ] [ Exp ]
+    (67) Exp -> . Exp + Termo
+    (68) Exp -> . Exp - Termo
+    (69) Exp -> . Termo
+    (70) Termo -> . Termo * Fator
+    (71) Termo -> . Termo / Fator
+    (72) Termo -> . Termo % Fator
+    (73) Termo -> . Fator
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
 
     (               shift and go to state 46
     num             shift and go to state 47
@@ -1308,18 +1347,20 @@ state 73
 
 state 74
 
-    (37) Instrucao -> read id [ . Exp ]
-    (64) Exp -> . Exp + Termo
-    (65) Exp -> . Exp - Termo
-    (66) Exp -> . Termo
-    (67) Termo -> . Termo * Fator
-    (68) Termo -> . Termo / Fator
-    (69) Termo -> . Termo % Fator
-    (70) Termo -> . Fator
-    (71) Fator -> . ( Exp )
-    (72) Fator -> . num
-    (73) Fator -> . id
-    (74) Fator -> . id [ Exp ]
+    (39) Instrucao -> read id [ . Exp ]
+    (40) Instrucao -> read id [ . Exp ] [ Exp ]
+    (67) Exp -> . Exp + Termo
+    (68) Exp -> . Exp - Termo
+    (69) Exp -> . Termo
+    (70) Termo -> . Termo * Fator
+    (71) Termo -> . Termo / Fator
+    (72) Termo -> . Termo % Fator
+    (73) Termo -> . Fator
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
 
     (               shift and go to state 46
     num             shift and go to state 47
@@ -1331,30 +1372,30 @@ state 74
 
 state 75
 
-    (38) Instrucao -> if Condicao Then . Else
-    (39) Instrucao -> if Condicao Then .
-    (42) Else -> . else { Instrucoes }
-    (43) Else -> . else Instrucao
+    (41) Instrucao -> if Condicao Then . Else
+    (42) Instrucao -> if Condicao Then .
+    (45) Else -> . else { Instrucoes }
+    (46) Else -> . else Instrucao
 
   ! shift/reduce conflict for else resolved as shift
-    END             reduce using rule 39 (Instrucao -> if Condicao Then .)
-    id              reduce using rule 39 (Instrucao -> if Condicao Then .)
-    print           reduce using rule 39 (Instrucao -> if Condicao Then .)
-    read            reduce using rule 39 (Instrucao -> if Condicao Then .)
-    if              reduce using rule 39 (Instrucao -> if Condicao Then .)
-    repeat          reduce using rule 39 (Instrucao -> if Condicao Then .)
-    while           reduce using rule 39 (Instrucao -> if Condicao Then .)
-    until           reduce using rule 39 (Instrucao -> if Condicao Then .)
-    }               reduce using rule 39 (Instrucao -> if Condicao Then .)
+    END             reduce using rule 42 (Instrucao -> if Condicao Then .)
+    id              reduce using rule 42 (Instrucao -> if Condicao Then .)
+    print           reduce using rule 42 (Instrucao -> if Condicao Then .)
+    read            reduce using rule 42 (Instrucao -> if Condicao Then .)
+    if              reduce using rule 42 (Instrucao -> if Condicao Then .)
+    repeat          reduce using rule 42 (Instrucao -> if Condicao Then .)
+    while           reduce using rule 42 (Instrucao -> if Condicao Then .)
+    until           reduce using rule 42 (Instrucao -> if Condicao Then .)
+    }               reduce using rule 42 (Instrucao -> if Condicao Then .)
     else            shift and go to state 102
 
-  ! else            [ reduce using rule 39 (Instrucao -> if Condicao Then .) ]
+  ! else            [ reduce using rule 42 (Instrucao -> if Condicao Then .) ]
 
     Else                           shift and go to state 101
 
 state 76
 
-    (40) Then -> { . Instrucoes }
+    (43) Then -> { . Instrucoes }
     (20) Instrucoes -> . Instrucoes Instrucao
     (21) Instrucoes -> .
 
@@ -1370,44 +1411,45 @@ state 76
 
 state 77
 
-    (41) Then -> Instrucao .
+    (44) Then -> Instrucao .
 
-    else            reduce using rule 41 (Then -> Instrucao .)
-    END             reduce using rule 41 (Then -> Instrucao .)
-    id              reduce using rule 41 (Then -> Instrucao .)
-    print           reduce using rule 41 (Then -> Instrucao .)
-    read            reduce using rule 41 (Then -> Instrucao .)
-    if              reduce using rule 41 (Then -> Instrucao .)
-    repeat          reduce using rule 41 (Then -> Instrucao .)
-    while           reduce using rule 41 (Then -> Instrucao .)
-    until           reduce using rule 41 (Then -> Instrucao .)
-    }               reduce using rule 41 (Then -> Instrucao .)
+    else            reduce using rule 44 (Then -> Instrucao .)
+    END             reduce using rule 44 (Then -> Instrucao .)
+    id              reduce using rule 44 (Then -> Instrucao .)
+    print           reduce using rule 44 (Then -> Instrucao .)
+    read            reduce using rule 44 (Then -> Instrucao .)
+    if              reduce using rule 44 (Then -> Instrucao .)
+    repeat          reduce using rule 44 (Then -> Instrucao .)
+    while           reduce using rule 44 (Then -> Instrucao .)
+    until           reduce using rule 44 (Then -> Instrucao .)
+    }               reduce using rule 44 (Then -> Instrucao .)
 
 
 state 78
 
-    (50) Cond3 -> ( . Cond )
-    (71) Fator -> ( . Exp )
-    (45) Cond -> . Cond | | Cond2
-    (46) Cond -> . Cond2
-    (64) Exp -> . Exp + Termo
-    (65) Exp -> . Exp - Termo
-    (66) Exp -> . Termo
-    (47) Cond2 -> . Cond2 & & Cond3
-    (48) Cond2 -> . Cond3
-    (67) Termo -> . Termo * Fator
-    (68) Termo -> . Termo / Fator
-    (69) Termo -> . Termo % Fator
-    (70) Termo -> . Fator
-    (49) Cond3 -> . ! Cond
-    (50) Cond3 -> . ( Cond )
-    (51) Cond3 -> . ExpRel
-    (71) Fator -> . ( Exp )
-    (72) Fator -> . num
-    (73) Fator -> . id
-    (74) Fator -> . id [ Exp ]
-    (52) ExpRel -> . Exp Oper Exp
-    (53) ExpRel -> . Exp
+    (53) Cond3 -> ( . Cond )
+    (74) Fator -> ( . Exp )
+    (48) Cond -> . Cond | | Cond2
+    (49) Cond -> . Cond2
+    (67) Exp -> . Exp + Termo
+    (68) Exp -> . Exp - Termo
+    (69) Exp -> . Termo
+    (50) Cond2 -> . Cond2 & & Cond3
+    (51) Cond2 -> . Cond3
+    (70) Termo -> . Termo * Fator
+    (71) Termo -> . Termo / Fator
+    (72) Termo -> . Termo % Fator
+    (73) Termo -> . Fator
+    (52) Cond3 -> . ! Cond
+    (53) Cond3 -> . ( Cond )
+    (54) Cond3 -> . ExpRel
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
+    (55) ExpRel -> . Exp Oper Exp
+    (56) ExpRel -> . Exp
 
     !               shift and go to state 82
     (               shift and go to state 78
@@ -1424,8 +1466,8 @@ state 78
 
 state 79
 
-    (44) Condicao -> ( Cond . )
-    (45) Cond -> Cond . | | Cond2
+    (47) Condicao -> ( Cond . )
+    (48) Cond -> Cond . | | Cond2
 
     )               shift and go to state 106
     |               shift and go to state 107
@@ -1433,49 +1475,50 @@ state 79
 
 state 80
 
-    (46) Cond -> Cond2 .
-    (47) Cond2 -> Cond2 . & & Cond3
+    (49) Cond -> Cond2 .
+    (50) Cond2 -> Cond2 . & & Cond3
 
   ! shift/reduce conflict for & resolved as shift
-    )               reduce using rule 46 (Cond -> Cond2 .)
-    |               reduce using rule 46 (Cond -> Cond2 .)
+    )               reduce using rule 49 (Cond -> Cond2 .)
+    |               reduce using rule 49 (Cond -> Cond2 .)
     &               shift and go to state 108
 
-  ! &               [ reduce using rule 46 (Cond -> Cond2 .) ]
+  ! &               [ reduce using rule 49 (Cond -> Cond2 .) ]
 
 
 state 81
 
-    (48) Cond2 -> Cond3 .
+    (51) Cond2 -> Cond3 .
 
-    &               reduce using rule 48 (Cond2 -> Cond3 .)
-    )               reduce using rule 48 (Cond2 -> Cond3 .)
-    |               reduce using rule 48 (Cond2 -> Cond3 .)
+    &               reduce using rule 51 (Cond2 -> Cond3 .)
+    )               reduce using rule 51 (Cond2 -> Cond3 .)
+    |               reduce using rule 51 (Cond2 -> Cond3 .)
 
 
 state 82
 
-    (49) Cond3 -> ! . Cond
-    (45) Cond -> . Cond | | Cond2
-    (46) Cond -> . Cond2
-    (47) Cond2 -> . Cond2 & & Cond3
-    (48) Cond2 -> . Cond3
-    (49) Cond3 -> . ! Cond
-    (50) Cond3 -> . ( Cond )
-    (51) Cond3 -> . ExpRel
-    (52) ExpRel -> . Exp Oper Exp
-    (53) ExpRel -> . Exp
-    (64) Exp -> . Exp + Termo
-    (65) Exp -> . Exp - Termo
-    (66) Exp -> . Termo
-    (67) Termo -> . Termo * Fator
-    (68) Termo -> . Termo / Fator
-    (69) Termo -> . Termo % Fator
-    (70) Termo -> . Fator
-    (71) Fator -> . ( Exp )
-    (72) Fator -> . num
-    (73) Fator -> . id
-    (74) Fator -> . id [ Exp ]
+    (52) Cond3 -> ! . Cond
+    (48) Cond -> . Cond | | Cond2
+    (49) Cond -> . Cond2
+    (50) Cond2 -> . Cond2 & & Cond3
+    (51) Cond2 -> . Cond3
+    (52) Cond3 -> . ! Cond
+    (53) Cond3 -> . ( Cond )
+    (54) Cond3 -> . ExpRel
+    (55) ExpRel -> . Exp Oper Exp
+    (56) ExpRel -> . Exp
+    (67) Exp -> . Exp + Termo
+    (68) Exp -> . Exp - Termo
+    (69) Exp -> . Termo
+    (70) Termo -> . Termo * Fator
+    (71) Termo -> . Termo / Fator
+    (72) Termo -> . Termo % Fator
+    (73) Termo -> . Fator
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
 
     !               shift and go to state 82
     (               shift and go to state 78
@@ -1492,29 +1535,29 @@ state 82
 
 state 83
 
-    (51) Cond3 -> ExpRel .
+    (54) Cond3 -> ExpRel .
 
-    &               reduce using rule 51 (Cond3 -> ExpRel .)
-    )               reduce using rule 51 (Cond3 -> ExpRel .)
-    |               reduce using rule 51 (Cond3 -> ExpRel .)
+    &               reduce using rule 54 (Cond3 -> ExpRel .)
+    )               reduce using rule 54 (Cond3 -> ExpRel .)
+    |               reduce using rule 54 (Cond3 -> ExpRel .)
 
 
 state 84
 
-    (52) ExpRel -> Exp . Oper Exp
-    (53) ExpRel -> Exp .
-    (64) Exp -> Exp . + Termo
-    (65) Exp -> Exp . - Termo
-    (54) Oper -> . = =
-    (55) Oper -> . < >
-    (56) Oper -> . >
-    (57) Oper -> . <
-    (58) Oper -> . > =
-    (59) Oper -> . < =
+    (55) ExpRel -> Exp . Oper Exp
+    (56) ExpRel -> Exp .
+    (67) Exp -> Exp . + Termo
+    (68) Exp -> Exp . - Termo
+    (57) Oper -> . = =
+    (58) Oper -> . < >
+    (59) Oper -> . >
+    (60) Oper -> . <
+    (61) Oper -> . > =
+    (62) Oper -> . < =
 
-    &               reduce using rule 53 (ExpRel -> Exp .)
-    )               reduce using rule 53 (ExpRel -> Exp .)
-    |               reduce using rule 53 (ExpRel -> Exp .)
+    &               reduce using rule 56 (ExpRel -> Exp .)
+    )               reduce using rule 56 (ExpRel -> Exp .)
+    |               reduce using rule 56 (ExpRel -> Exp .)
     +               shift and go to state 67
     -               shift and go to state 68
     =               shift and go to state 111
@@ -1525,8 +1568,8 @@ state 84
 
 state 85
 
-    (60) Instrucao -> repeat CorpoCiclo until . Condicao
-    (44) Condicao -> . ( Cond )
+    (63) Instrucao -> repeat CorpoCiclo until . Condicao
+    (47) Condicao -> . ( Cond )
 
     (               shift and go to state 51
 
@@ -1534,24 +1577,26 @@ state 85
 
 state 86
 
-    (61) CorpoCiclo -> { Instrucoes . }
+    (64) CorpoCiclo -> { Instrucoes . }
     (20) Instrucoes -> Instrucoes . Instrucao
-    (19) Instrucao -> . id ( )
-    (22) Instrucao -> . print str
-    (23) Instrucao -> . print Exp
-    (24) Instrucao -> . id = Exp
-    (25) Instrucao -> . id Op = Exp
-    (26) Instrucao -> . id - -
-    (27) Instrucao -> . id + +
-    (33) Instrucao -> . id [ Exp ] = Exp
-    (34) Instrucao -> . id [ Exp ] + +
-    (35) Instrucao -> . id [ Exp ] - -
-    (36) Instrucao -> . read id
-    (37) Instrucao -> . read id [ Exp ]
-    (38) Instrucao -> . if Condicao Then Else
-    (39) Instrucao -> . if Condicao Then
-    (60) Instrucao -> . repeat CorpoCiclo until Condicao
-    (63) Instrucao -> . while Condicao CorpoCiclo
+    (22) Instrucao -> . id ( )
+    (23) Instrucao -> . print str
+    (24) Instrucao -> . print Exp
+    (25) Instrucao -> . id = Exp
+    (26) Instrucao -> . id Op = Exp
+    (32) Instrucao -> . id - -
+    (33) Instrucao -> . id + +
+    (34) Instrucao -> . id [ Exp ] = Exp
+    (35) Instrucao -> . id [ Exp ] + +
+    (36) Instrucao -> . id [ Exp ] - -
+    (37) Instrucao -> . id [ Exp ] [ Exp ] = Exp
+    (38) Instrucao -> . read id
+    (39) Instrucao -> . read id [ Exp ]
+    (40) Instrucao -> . read id [ Exp ] [ Exp ]
+    (41) Instrucao -> . if Condicao Then Else
+    (42) Instrucao -> . if Condicao Then
+    (63) Instrucao -> . repeat CorpoCiclo until Condicao
+    (66) Instrucao -> . while Condicao CorpoCiclo
 
     }               shift and go to state 115
     id              shift and go to state 22
@@ -1565,18 +1610,18 @@ state 86
 
 state 87
 
-    (63) Instrucao -> while Condicao CorpoCiclo .
+    (66) Instrucao -> while Condicao CorpoCiclo .
 
-    END             reduce using rule 63 (Instrucao -> while Condicao CorpoCiclo .)
-    id              reduce using rule 63 (Instrucao -> while Condicao CorpoCiclo .)
-    print           reduce using rule 63 (Instrucao -> while Condicao CorpoCiclo .)
-    read            reduce using rule 63 (Instrucao -> while Condicao CorpoCiclo .)
-    if              reduce using rule 63 (Instrucao -> while Condicao CorpoCiclo .)
-    repeat          reduce using rule 63 (Instrucao -> while Condicao CorpoCiclo .)
-    while           reduce using rule 63 (Instrucao -> while Condicao CorpoCiclo .)
-    until           reduce using rule 63 (Instrucao -> while Condicao CorpoCiclo .)
-    else            reduce using rule 63 (Instrucao -> while Condicao CorpoCiclo .)
-    }               reduce using rule 63 (Instrucao -> while Condicao CorpoCiclo .)
+    END             reduce using rule 66 (Instrucao -> while Condicao CorpoCiclo .)
+    id              reduce using rule 66 (Instrucao -> while Condicao CorpoCiclo .)
+    print           reduce using rule 66 (Instrucao -> while Condicao CorpoCiclo .)
+    read            reduce using rule 66 (Instrucao -> while Condicao CorpoCiclo .)
+    if              reduce using rule 66 (Instrucao -> while Condicao CorpoCiclo .)
+    repeat          reduce using rule 66 (Instrucao -> while Condicao CorpoCiclo .)
+    while           reduce using rule 66 (Instrucao -> while Condicao CorpoCiclo .)
+    until           reduce using rule 66 (Instrucao -> while Condicao CorpoCiclo .)
+    else            reduce using rule 66 (Instrucao -> while Condicao CorpoCiclo .)
+    }               reduce using rule 66 (Instrucao -> while Condicao CorpoCiclo .)
 
 
 state 88
@@ -1600,67 +1645,70 @@ state 89
 state 90
 
     (11) DeclInt -> id [ num . ]
+    (12) DeclInt -> id [ num . ] [ num ]
 
     ]               shift and go to state 116
 
 
 state 91
 
-    (25) Instrucao -> id Op = Exp .
-    (64) Exp -> Exp . + Termo
-    (65) Exp -> Exp . - Termo
+    (26) Instrucao -> id Op = Exp .
+    (67) Exp -> Exp . + Termo
+    (68) Exp -> Exp . - Termo
 
-    END             reduce using rule 25 (Instrucao -> id Op = Exp .)
-    id              reduce using rule 25 (Instrucao -> id Op = Exp .)
-    print           reduce using rule 25 (Instrucao -> id Op = Exp .)
-    read            reduce using rule 25 (Instrucao -> id Op = Exp .)
-    if              reduce using rule 25 (Instrucao -> id Op = Exp .)
-    repeat          reduce using rule 25 (Instrucao -> id Op = Exp .)
-    while           reduce using rule 25 (Instrucao -> id Op = Exp .)
-    until           reduce using rule 25 (Instrucao -> id Op = Exp .)
-    else            reduce using rule 25 (Instrucao -> id Op = Exp .)
-    }               reduce using rule 25 (Instrucao -> id Op = Exp .)
+    END             reduce using rule 26 (Instrucao -> id Op = Exp .)
+    id              reduce using rule 26 (Instrucao -> id Op = Exp .)
+    print           reduce using rule 26 (Instrucao -> id Op = Exp .)
+    read            reduce using rule 26 (Instrucao -> id Op = Exp .)
+    if              reduce using rule 26 (Instrucao -> id Op = Exp .)
+    repeat          reduce using rule 26 (Instrucao -> id Op = Exp .)
+    while           reduce using rule 26 (Instrucao -> id Op = Exp .)
+    until           reduce using rule 26 (Instrucao -> id Op = Exp .)
+    else            reduce using rule 26 (Instrucao -> id Op = Exp .)
+    }               reduce using rule 26 (Instrucao -> id Op = Exp .)
     +               shift and go to state 67
     -               shift and go to state 68
 
 
 state 92
 
-    (33) Instrucao -> id [ Exp ] . = Exp
-    (34) Instrucao -> id [ Exp ] . + +
-    (35) Instrucao -> id [ Exp ] . - -
+    (34) Instrucao -> id [ Exp ] . = Exp
+    (35) Instrucao -> id [ Exp ] . + +
+    (36) Instrucao -> id [ Exp ] . - -
+    (37) Instrucao -> id [ Exp ] . [ Exp ] = Exp
 
-    =               shift and go to state 117
-    +               shift and go to state 118
-    -               shift and go to state 119
+    =               shift and go to state 118
+    +               shift and go to state 119
+    -               shift and go to state 120
+    [               shift and go to state 117
 
 
 state 93
 
-    (64) Exp -> Exp + Termo .
-    (67) Termo -> Termo . * Fator
-    (68) Termo -> Termo . / Fator
-    (69) Termo -> Termo . % Fator
+    (67) Exp -> Exp + Termo .
+    (70) Termo -> Termo . * Fator
+    (71) Termo -> Termo . / Fator
+    (72) Termo -> Termo . % Fator
 
-    +               reduce using rule 64 (Exp -> Exp + Termo .)
-    -               reduce using rule 64 (Exp -> Exp + Termo .)
-    END             reduce using rule 64 (Exp -> Exp + Termo .)
-    id              reduce using rule 64 (Exp -> Exp + Termo .)
-    print           reduce using rule 64 (Exp -> Exp + Termo .)
-    read            reduce using rule 64 (Exp -> Exp + Termo .)
-    if              reduce using rule 64 (Exp -> Exp + Termo .)
-    repeat          reduce using rule 64 (Exp -> Exp + Termo .)
-    while           reduce using rule 64 (Exp -> Exp + Termo .)
-    until           reduce using rule 64 (Exp -> Exp + Termo .)
-    else            reduce using rule 64 (Exp -> Exp + Termo .)
-    }               reduce using rule 64 (Exp -> Exp + Termo .)
-    ]               reduce using rule 64 (Exp -> Exp + Termo .)
-    )               reduce using rule 64 (Exp -> Exp + Termo .)
-    =               reduce using rule 64 (Exp -> Exp + Termo .)
-    <               reduce using rule 64 (Exp -> Exp + Termo .)
-    >               reduce using rule 64 (Exp -> Exp + Termo .)
-    &               reduce using rule 64 (Exp -> Exp + Termo .)
-    |               reduce using rule 64 (Exp -> Exp + Termo .)
+    +               reduce using rule 67 (Exp -> Exp + Termo .)
+    -               reduce using rule 67 (Exp -> Exp + Termo .)
+    END             reduce using rule 67 (Exp -> Exp + Termo .)
+    id              reduce using rule 67 (Exp -> Exp + Termo .)
+    print           reduce using rule 67 (Exp -> Exp + Termo .)
+    read            reduce using rule 67 (Exp -> Exp + Termo .)
+    if              reduce using rule 67 (Exp -> Exp + Termo .)
+    repeat          reduce using rule 67 (Exp -> Exp + Termo .)
+    while           reduce using rule 67 (Exp -> Exp + Termo .)
+    until           reduce using rule 67 (Exp -> Exp + Termo .)
+    else            reduce using rule 67 (Exp -> Exp + Termo .)
+    }               reduce using rule 67 (Exp -> Exp + Termo .)
+    ]               reduce using rule 67 (Exp -> Exp + Termo .)
+    )               reduce using rule 67 (Exp -> Exp + Termo .)
+    =               reduce using rule 67 (Exp -> Exp + Termo .)
+    <               reduce using rule 67 (Exp -> Exp + Termo .)
+    >               reduce using rule 67 (Exp -> Exp + Termo .)
+    &               reduce using rule 67 (Exp -> Exp + Termo .)
+    |               reduce using rule 67 (Exp -> Exp + Termo .)
     *               shift and go to state 69
     /               shift and go to state 70
     %               shift and go to state 71
@@ -1668,30 +1716,30 @@ state 93
 
 state 94
 
-    (65) Exp -> Exp - Termo .
-    (67) Termo -> Termo . * Fator
-    (68) Termo -> Termo . / Fator
-    (69) Termo -> Termo . % Fator
+    (68) Exp -> Exp - Termo .
+    (70) Termo -> Termo . * Fator
+    (71) Termo -> Termo . / Fator
+    (72) Termo -> Termo . % Fator
 
-    +               reduce using rule 65 (Exp -> Exp - Termo .)
-    -               reduce using rule 65 (Exp -> Exp - Termo .)
-    END             reduce using rule 65 (Exp -> Exp - Termo .)
-    id              reduce using rule 65 (Exp -> Exp - Termo .)
-    print           reduce using rule 65 (Exp -> Exp - Termo .)
-    read            reduce using rule 65 (Exp -> Exp - Termo .)
-    if              reduce using rule 65 (Exp -> Exp - Termo .)
-    repeat          reduce using rule 65 (Exp -> Exp - Termo .)
-    while           reduce using rule 65 (Exp -> Exp - Termo .)
-    until           reduce using rule 65 (Exp -> Exp - Termo .)
-    else            reduce using rule 65 (Exp -> Exp - Termo .)
-    }               reduce using rule 65 (Exp -> Exp - Termo .)
-    ]               reduce using rule 65 (Exp -> Exp - Termo .)
-    )               reduce using rule 65 (Exp -> Exp - Termo .)
-    =               reduce using rule 65 (Exp -> Exp - Termo .)
-    <               reduce using rule 65 (Exp -> Exp - Termo .)
-    >               reduce using rule 65 (Exp -> Exp - Termo .)
-    &               reduce using rule 65 (Exp -> Exp - Termo .)
-    |               reduce using rule 65 (Exp -> Exp - Termo .)
+    +               reduce using rule 68 (Exp -> Exp - Termo .)
+    -               reduce using rule 68 (Exp -> Exp - Termo .)
+    END             reduce using rule 68 (Exp -> Exp - Termo .)
+    id              reduce using rule 68 (Exp -> Exp - Termo .)
+    print           reduce using rule 68 (Exp -> Exp - Termo .)
+    read            reduce using rule 68 (Exp -> Exp - Termo .)
+    if              reduce using rule 68 (Exp -> Exp - Termo .)
+    repeat          reduce using rule 68 (Exp -> Exp - Termo .)
+    while           reduce using rule 68 (Exp -> Exp - Termo .)
+    until           reduce using rule 68 (Exp -> Exp - Termo .)
+    else            reduce using rule 68 (Exp -> Exp - Termo .)
+    }               reduce using rule 68 (Exp -> Exp - Termo .)
+    ]               reduce using rule 68 (Exp -> Exp - Termo .)
+    )               reduce using rule 68 (Exp -> Exp - Termo .)
+    =               reduce using rule 68 (Exp -> Exp - Termo .)
+    <               reduce using rule 68 (Exp -> Exp - Termo .)
+    >               reduce using rule 68 (Exp -> Exp - Termo .)
+    &               reduce using rule 68 (Exp -> Exp - Termo .)
+    |               reduce using rule 68 (Exp -> Exp - Termo .)
     *               shift and go to state 69
     /               shift and go to state 70
     %               shift and go to state 71
@@ -1699,176 +1747,180 @@ state 94
 
 state 95
 
-    (67) Termo -> Termo * Fator .
+    (70) Termo -> Termo * Fator .
 
-    *               reduce using rule 67 (Termo -> Termo * Fator .)
-    /               reduce using rule 67 (Termo -> Termo * Fator .)
-    %               reduce using rule 67 (Termo -> Termo * Fator .)
-    +               reduce using rule 67 (Termo -> Termo * Fator .)
-    -               reduce using rule 67 (Termo -> Termo * Fator .)
-    END             reduce using rule 67 (Termo -> Termo * Fator .)
-    id              reduce using rule 67 (Termo -> Termo * Fator .)
-    print           reduce using rule 67 (Termo -> Termo * Fator .)
-    read            reduce using rule 67 (Termo -> Termo * Fator .)
-    if              reduce using rule 67 (Termo -> Termo * Fator .)
-    repeat          reduce using rule 67 (Termo -> Termo * Fator .)
-    while           reduce using rule 67 (Termo -> Termo * Fator .)
-    until           reduce using rule 67 (Termo -> Termo * Fator .)
-    else            reduce using rule 67 (Termo -> Termo * Fator .)
-    }               reduce using rule 67 (Termo -> Termo * Fator .)
-    ]               reduce using rule 67 (Termo -> Termo * Fator .)
-    )               reduce using rule 67 (Termo -> Termo * Fator .)
-    =               reduce using rule 67 (Termo -> Termo * Fator .)
-    <               reduce using rule 67 (Termo -> Termo * Fator .)
-    >               reduce using rule 67 (Termo -> Termo * Fator .)
-    &               reduce using rule 67 (Termo -> Termo * Fator .)
-    |               reduce using rule 67 (Termo -> Termo * Fator .)
+    *               reduce using rule 70 (Termo -> Termo * Fator .)
+    /               reduce using rule 70 (Termo -> Termo * Fator .)
+    %               reduce using rule 70 (Termo -> Termo * Fator .)
+    +               reduce using rule 70 (Termo -> Termo * Fator .)
+    -               reduce using rule 70 (Termo -> Termo * Fator .)
+    END             reduce using rule 70 (Termo -> Termo * Fator .)
+    id              reduce using rule 70 (Termo -> Termo * Fator .)
+    print           reduce using rule 70 (Termo -> Termo * Fator .)
+    read            reduce using rule 70 (Termo -> Termo * Fator .)
+    if              reduce using rule 70 (Termo -> Termo * Fator .)
+    repeat          reduce using rule 70 (Termo -> Termo * Fator .)
+    while           reduce using rule 70 (Termo -> Termo * Fator .)
+    until           reduce using rule 70 (Termo -> Termo * Fator .)
+    else            reduce using rule 70 (Termo -> Termo * Fator .)
+    }               reduce using rule 70 (Termo -> Termo * Fator .)
+    ]               reduce using rule 70 (Termo -> Termo * Fator .)
+    )               reduce using rule 70 (Termo -> Termo * Fator .)
+    =               reduce using rule 70 (Termo -> Termo * Fator .)
+    <               reduce using rule 70 (Termo -> Termo * Fator .)
+    >               reduce using rule 70 (Termo -> Termo * Fator .)
+    &               reduce using rule 70 (Termo -> Termo * Fator .)
+    |               reduce using rule 70 (Termo -> Termo * Fator .)
 
 
 state 96
 
-    (68) Termo -> Termo / Fator .
+    (71) Termo -> Termo / Fator .
 
-    *               reduce using rule 68 (Termo -> Termo / Fator .)
-    /               reduce using rule 68 (Termo -> Termo / Fator .)
-    %               reduce using rule 68 (Termo -> Termo / Fator .)
-    +               reduce using rule 68 (Termo -> Termo / Fator .)
-    -               reduce using rule 68 (Termo -> Termo / Fator .)
-    END             reduce using rule 68 (Termo -> Termo / Fator .)
-    id              reduce using rule 68 (Termo -> Termo / Fator .)
-    print           reduce using rule 68 (Termo -> Termo / Fator .)
-    read            reduce using rule 68 (Termo -> Termo / Fator .)
-    if              reduce using rule 68 (Termo -> Termo / Fator .)
-    repeat          reduce using rule 68 (Termo -> Termo / Fator .)
-    while           reduce using rule 68 (Termo -> Termo / Fator .)
-    until           reduce using rule 68 (Termo -> Termo / Fator .)
-    else            reduce using rule 68 (Termo -> Termo / Fator .)
-    }               reduce using rule 68 (Termo -> Termo / Fator .)
-    ]               reduce using rule 68 (Termo -> Termo / Fator .)
-    )               reduce using rule 68 (Termo -> Termo / Fator .)
-    =               reduce using rule 68 (Termo -> Termo / Fator .)
-    <               reduce using rule 68 (Termo -> Termo / Fator .)
-    >               reduce using rule 68 (Termo -> Termo / Fator .)
-    &               reduce using rule 68 (Termo -> Termo / Fator .)
-    |               reduce using rule 68 (Termo -> Termo / Fator .)
+    *               reduce using rule 71 (Termo -> Termo / Fator .)
+    /               reduce using rule 71 (Termo -> Termo / Fator .)
+    %               reduce using rule 71 (Termo -> Termo / Fator .)
+    +               reduce using rule 71 (Termo -> Termo / Fator .)
+    -               reduce using rule 71 (Termo -> Termo / Fator .)
+    END             reduce using rule 71 (Termo -> Termo / Fator .)
+    id              reduce using rule 71 (Termo -> Termo / Fator .)
+    print           reduce using rule 71 (Termo -> Termo / Fator .)
+    read            reduce using rule 71 (Termo -> Termo / Fator .)
+    if              reduce using rule 71 (Termo -> Termo / Fator .)
+    repeat          reduce using rule 71 (Termo -> Termo / Fator .)
+    while           reduce using rule 71 (Termo -> Termo / Fator .)
+    until           reduce using rule 71 (Termo -> Termo / Fator .)
+    else            reduce using rule 71 (Termo -> Termo / Fator .)
+    }               reduce using rule 71 (Termo -> Termo / Fator .)
+    ]               reduce using rule 71 (Termo -> Termo / Fator .)
+    )               reduce using rule 71 (Termo -> Termo / Fator .)
+    =               reduce using rule 71 (Termo -> Termo / Fator .)
+    <               reduce using rule 71 (Termo -> Termo / Fator .)
+    >               reduce using rule 71 (Termo -> Termo / Fator .)
+    &               reduce using rule 71 (Termo -> Termo / Fator .)
+    |               reduce using rule 71 (Termo -> Termo / Fator .)
 
 
 state 97
 
-    (69) Termo -> Termo % Fator .
+    (72) Termo -> Termo % Fator .
 
-    *               reduce using rule 69 (Termo -> Termo % Fator .)
-    /               reduce using rule 69 (Termo -> Termo % Fator .)
-    %               reduce using rule 69 (Termo -> Termo % Fator .)
-    +               reduce using rule 69 (Termo -> Termo % Fator .)
-    -               reduce using rule 69 (Termo -> Termo % Fator .)
-    END             reduce using rule 69 (Termo -> Termo % Fator .)
-    id              reduce using rule 69 (Termo -> Termo % Fator .)
-    print           reduce using rule 69 (Termo -> Termo % Fator .)
-    read            reduce using rule 69 (Termo -> Termo % Fator .)
-    if              reduce using rule 69 (Termo -> Termo % Fator .)
-    repeat          reduce using rule 69 (Termo -> Termo % Fator .)
-    while           reduce using rule 69 (Termo -> Termo % Fator .)
-    until           reduce using rule 69 (Termo -> Termo % Fator .)
-    else            reduce using rule 69 (Termo -> Termo % Fator .)
-    }               reduce using rule 69 (Termo -> Termo % Fator .)
-    ]               reduce using rule 69 (Termo -> Termo % Fator .)
-    )               reduce using rule 69 (Termo -> Termo % Fator .)
-    =               reduce using rule 69 (Termo -> Termo % Fator .)
-    <               reduce using rule 69 (Termo -> Termo % Fator .)
-    >               reduce using rule 69 (Termo -> Termo % Fator .)
-    &               reduce using rule 69 (Termo -> Termo % Fator .)
-    |               reduce using rule 69 (Termo -> Termo % Fator .)
+    *               reduce using rule 72 (Termo -> Termo % Fator .)
+    /               reduce using rule 72 (Termo -> Termo % Fator .)
+    %               reduce using rule 72 (Termo -> Termo % Fator .)
+    +               reduce using rule 72 (Termo -> Termo % Fator .)
+    -               reduce using rule 72 (Termo -> Termo % Fator .)
+    END             reduce using rule 72 (Termo -> Termo % Fator .)
+    id              reduce using rule 72 (Termo -> Termo % Fator .)
+    print           reduce using rule 72 (Termo -> Termo % Fator .)
+    read            reduce using rule 72 (Termo -> Termo % Fator .)
+    if              reduce using rule 72 (Termo -> Termo % Fator .)
+    repeat          reduce using rule 72 (Termo -> Termo % Fator .)
+    while           reduce using rule 72 (Termo -> Termo % Fator .)
+    until           reduce using rule 72 (Termo -> Termo % Fator .)
+    else            reduce using rule 72 (Termo -> Termo % Fator .)
+    }               reduce using rule 72 (Termo -> Termo % Fator .)
+    ]               reduce using rule 72 (Termo -> Termo % Fator .)
+    )               reduce using rule 72 (Termo -> Termo % Fator .)
+    =               reduce using rule 72 (Termo -> Termo % Fator .)
+    <               reduce using rule 72 (Termo -> Termo % Fator .)
+    >               reduce using rule 72 (Termo -> Termo % Fator .)
+    &               reduce using rule 72 (Termo -> Termo % Fator .)
+    |               reduce using rule 72 (Termo -> Termo % Fator .)
 
 
 state 98
 
-    (71) Fator -> ( Exp ) .
+    (74) Fator -> ( Exp ) .
 
-    *               reduce using rule 71 (Fator -> ( Exp ) .)
-    /               reduce using rule 71 (Fator -> ( Exp ) .)
-    %               reduce using rule 71 (Fator -> ( Exp ) .)
-    +               reduce using rule 71 (Fator -> ( Exp ) .)
-    -               reduce using rule 71 (Fator -> ( Exp ) .)
-    END             reduce using rule 71 (Fator -> ( Exp ) .)
-    id              reduce using rule 71 (Fator -> ( Exp ) .)
-    print           reduce using rule 71 (Fator -> ( Exp ) .)
-    read            reduce using rule 71 (Fator -> ( Exp ) .)
-    if              reduce using rule 71 (Fator -> ( Exp ) .)
-    repeat          reduce using rule 71 (Fator -> ( Exp ) .)
-    while           reduce using rule 71 (Fator -> ( Exp ) .)
-    until           reduce using rule 71 (Fator -> ( Exp ) .)
-    else            reduce using rule 71 (Fator -> ( Exp ) .)
-    }               reduce using rule 71 (Fator -> ( Exp ) .)
-    ]               reduce using rule 71 (Fator -> ( Exp ) .)
-    )               reduce using rule 71 (Fator -> ( Exp ) .)
-    =               reduce using rule 71 (Fator -> ( Exp ) .)
-    <               reduce using rule 71 (Fator -> ( Exp ) .)
-    >               reduce using rule 71 (Fator -> ( Exp ) .)
-    &               reduce using rule 71 (Fator -> ( Exp ) .)
-    |               reduce using rule 71 (Fator -> ( Exp ) .)
+    *               reduce using rule 74 (Fator -> ( Exp ) .)
+    /               reduce using rule 74 (Fator -> ( Exp ) .)
+    %               reduce using rule 74 (Fator -> ( Exp ) .)
+    +               reduce using rule 74 (Fator -> ( Exp ) .)
+    -               reduce using rule 74 (Fator -> ( Exp ) .)
+    END             reduce using rule 74 (Fator -> ( Exp ) .)
+    id              reduce using rule 74 (Fator -> ( Exp ) .)
+    print           reduce using rule 74 (Fator -> ( Exp ) .)
+    read            reduce using rule 74 (Fator -> ( Exp ) .)
+    if              reduce using rule 74 (Fator -> ( Exp ) .)
+    repeat          reduce using rule 74 (Fator -> ( Exp ) .)
+    while           reduce using rule 74 (Fator -> ( Exp ) .)
+    until           reduce using rule 74 (Fator -> ( Exp ) .)
+    else            reduce using rule 74 (Fator -> ( Exp ) .)
+    }               reduce using rule 74 (Fator -> ( Exp ) .)
+    ]               reduce using rule 74 (Fator -> ( Exp ) .)
+    )               reduce using rule 74 (Fator -> ( Exp ) .)
+    =               reduce using rule 74 (Fator -> ( Exp ) .)
+    <               reduce using rule 74 (Fator -> ( Exp ) .)
+    >               reduce using rule 74 (Fator -> ( Exp ) .)
+    &               reduce using rule 74 (Fator -> ( Exp ) .)
+    |               reduce using rule 74 (Fator -> ( Exp ) .)
 
 
 state 99
 
-    (74) Fator -> id [ Exp . ]
-    (64) Exp -> Exp . + Termo
-    (65) Exp -> Exp . - Termo
-
-    ]               shift and go to state 120
-    +               shift and go to state 67
-    -               shift and go to state 68
-
-
-state 100
-
-    (37) Instrucao -> read id [ Exp . ]
-    (64) Exp -> Exp . + Termo
-    (65) Exp -> Exp . - Termo
+    (77) Fator -> id [ Exp . ]
+    (78) Fator -> id [ Exp . ] [ Exp ]
+    (67) Exp -> Exp . + Termo
+    (68) Exp -> Exp . - Termo
 
     ]               shift and go to state 121
     +               shift and go to state 67
     -               shift and go to state 68
 
 
+state 100
+
+    (39) Instrucao -> read id [ Exp . ]
+    (40) Instrucao -> read id [ Exp . ] [ Exp ]
+    (67) Exp -> Exp . + Termo
+    (68) Exp -> Exp . - Termo
+
+    ]               shift and go to state 122
+    +               shift and go to state 67
+    -               shift and go to state 68
+
+
 state 101
 
-    (38) Instrucao -> if Condicao Then Else .
+    (41) Instrucao -> if Condicao Then Else .
 
-    END             reduce using rule 38 (Instrucao -> if Condicao Then Else .)
-    id              reduce using rule 38 (Instrucao -> if Condicao Then Else .)
-    print           reduce using rule 38 (Instrucao -> if Condicao Then Else .)
-    read            reduce using rule 38 (Instrucao -> if Condicao Then Else .)
-    if              reduce using rule 38 (Instrucao -> if Condicao Then Else .)
-    repeat          reduce using rule 38 (Instrucao -> if Condicao Then Else .)
-    while           reduce using rule 38 (Instrucao -> if Condicao Then Else .)
-    until           reduce using rule 38 (Instrucao -> if Condicao Then Else .)
-    else            reduce using rule 38 (Instrucao -> if Condicao Then Else .)
-    }               reduce using rule 38 (Instrucao -> if Condicao Then Else .)
+    END             reduce using rule 41 (Instrucao -> if Condicao Then Else .)
+    id              reduce using rule 41 (Instrucao -> if Condicao Then Else .)
+    print           reduce using rule 41 (Instrucao -> if Condicao Then Else .)
+    read            reduce using rule 41 (Instrucao -> if Condicao Then Else .)
+    if              reduce using rule 41 (Instrucao -> if Condicao Then Else .)
+    repeat          reduce using rule 41 (Instrucao -> if Condicao Then Else .)
+    while           reduce using rule 41 (Instrucao -> if Condicao Then Else .)
+    until           reduce using rule 41 (Instrucao -> if Condicao Then Else .)
+    else            reduce using rule 41 (Instrucao -> if Condicao Then Else .)
+    }               reduce using rule 41 (Instrucao -> if Condicao Then Else .)
 
 
 state 102
 
-    (42) Else -> else . { Instrucoes }
-    (43) Else -> else . Instrucao
-    (19) Instrucao -> . id ( )
-    (22) Instrucao -> . print str
-    (23) Instrucao -> . print Exp
-    (24) Instrucao -> . id = Exp
-    (25) Instrucao -> . id Op = Exp
-    (26) Instrucao -> . id - -
-    (27) Instrucao -> . id + +
-    (33) Instrucao -> . id [ Exp ] = Exp
-    (34) Instrucao -> . id [ Exp ] + +
-    (35) Instrucao -> . id [ Exp ] - -
-    (36) Instrucao -> . read id
-    (37) Instrucao -> . read id [ Exp ]
-    (38) Instrucao -> . if Condicao Then Else
-    (39) Instrucao -> . if Condicao Then
-    (60) Instrucao -> . repeat CorpoCiclo until Condicao
-    (63) Instrucao -> . while Condicao CorpoCiclo
+    (45) Else -> else . { Instrucoes }
+    (46) Else -> else . Instrucao
+    (22) Instrucao -> . id ( )
+    (23) Instrucao -> . print str
+    (24) Instrucao -> . print Exp
+    (25) Instrucao -> . id = Exp
+    (26) Instrucao -> . id Op = Exp
+    (32) Instrucao -> . id - -
+    (33) Instrucao -> . id + +
+    (34) Instrucao -> . id [ Exp ] = Exp
+    (35) Instrucao -> . id [ Exp ] + +
+    (36) Instrucao -> . id [ Exp ] - -
+    (37) Instrucao -> . id [ Exp ] [ Exp ] = Exp
+    (38) Instrucao -> . read id
+    (39) Instrucao -> . read id [ Exp ]
+    (40) Instrucao -> . read id [ Exp ] [ Exp ]
+    (41) Instrucao -> . if Condicao Then Else
+    (42) Instrucao -> . if Condicao Then
+    (63) Instrucao -> . repeat CorpoCiclo until Condicao
+    (66) Instrucao -> . while Condicao CorpoCiclo
 
-    {               shift and go to state 122
+    {               shift and go to state 123
     id              shift and go to state 22
     print           shift and go to state 23
     read            shift and go to state 24
@@ -1876,30 +1928,32 @@ state 102
     repeat          shift and go to state 26
     while           shift and go to state 27
 
-    Instrucao                      shift and go to state 123
+    Instrucao                      shift and go to state 124
 
 state 103
 
-    (40) Then -> { Instrucoes . }
+    (43) Then -> { Instrucoes . }
     (20) Instrucoes -> Instrucoes . Instrucao
-    (19) Instrucao -> . id ( )
-    (22) Instrucao -> . print str
-    (23) Instrucao -> . print Exp
-    (24) Instrucao -> . id = Exp
-    (25) Instrucao -> . id Op = Exp
-    (26) Instrucao -> . id - -
-    (27) Instrucao -> . id + +
-    (33) Instrucao -> . id [ Exp ] = Exp
-    (34) Instrucao -> . id [ Exp ] + +
-    (35) Instrucao -> . id [ Exp ] - -
-    (36) Instrucao -> . read id
-    (37) Instrucao -> . read id [ Exp ]
-    (38) Instrucao -> . if Condicao Then Else
-    (39) Instrucao -> . if Condicao Then
-    (60) Instrucao -> . repeat CorpoCiclo until Condicao
-    (63) Instrucao -> . while Condicao CorpoCiclo
+    (22) Instrucao -> . id ( )
+    (23) Instrucao -> . print str
+    (24) Instrucao -> . print Exp
+    (25) Instrucao -> . id = Exp
+    (26) Instrucao -> . id Op = Exp
+    (32) Instrucao -> . id - -
+    (33) Instrucao -> . id + +
+    (34) Instrucao -> . id [ Exp ] = Exp
+    (35) Instrucao -> . id [ Exp ] + +
+    (36) Instrucao -> . id [ Exp ] - -
+    (37) Instrucao -> . id [ Exp ] [ Exp ] = Exp
+    (38) Instrucao -> . read id
+    (39) Instrucao -> . read id [ Exp ]
+    (40) Instrucao -> . read id [ Exp ] [ Exp ]
+    (41) Instrucao -> . if Condicao Then Else
+    (42) Instrucao -> . if Condicao Then
+    (63) Instrucao -> . repeat CorpoCiclo until Condicao
+    (66) Instrucao -> . while Condicao CorpoCiclo
 
-    }               shift and go to state 124
+    }               shift and go to state 125
     id              shift and go to state 22
     print           shift and go to state 23
     read            shift and go to state 24
@@ -1911,264 +1965,296 @@ state 103
 
 state 104
 
-    (50) Cond3 -> ( Cond . )
-    (45) Cond -> Cond . | | Cond2
+    (53) Cond3 -> ( Cond . )
+    (48) Cond -> Cond . | | Cond2
 
-    )               shift and go to state 125
+    )               shift and go to state 126
     |               shift and go to state 107
 
 
 state 105
 
-    (71) Fator -> ( Exp . )
-    (64) Exp -> Exp . + Termo
-    (65) Exp -> Exp . - Termo
-    (52) ExpRel -> Exp . Oper Exp
-    (53) ExpRel -> Exp .
-    (54) Oper -> . = =
-    (55) Oper -> . < >
-    (56) Oper -> . >
-    (57) Oper -> . <
-    (58) Oper -> . > =
-    (59) Oper -> . < =
+    (74) Fator -> ( Exp . )
+    (67) Exp -> Exp . + Termo
+    (68) Exp -> Exp . - Termo
+    (55) ExpRel -> Exp . Oper Exp
+    (56) ExpRel -> Exp .
+    (57) Oper -> . = =
+    (58) Oper -> . < >
+    (59) Oper -> . >
+    (60) Oper -> . <
+    (61) Oper -> . > =
+    (62) Oper -> . < =
 
   ! shift/reduce conflict for ) resolved as shift
     )               shift and go to state 98
     +               shift and go to state 67
     -               shift and go to state 68
-    &               reduce using rule 53 (ExpRel -> Exp .)
-    |               reduce using rule 53 (ExpRel -> Exp .)
+    &               reduce using rule 56 (ExpRel -> Exp .)
+    |               reduce using rule 56 (ExpRel -> Exp .)
     =               shift and go to state 111
     <               shift and go to state 112
     >               shift and go to state 113
 
-  ! )               [ reduce using rule 53 (ExpRel -> Exp .) ]
+  ! )               [ reduce using rule 56 (ExpRel -> Exp .) ]
 
     Oper                           shift and go to state 110
 
 state 106
 
-    (44) Condicao -> ( Cond ) .
+    (47) Condicao -> ( Cond ) .
 
-    {               reduce using rule 44 (Condicao -> ( Cond ) .)
-    id              reduce using rule 44 (Condicao -> ( Cond ) .)
-    print           reduce using rule 44 (Condicao -> ( Cond ) .)
-    read            reduce using rule 44 (Condicao -> ( Cond ) .)
-    if              reduce using rule 44 (Condicao -> ( Cond ) .)
-    repeat          reduce using rule 44 (Condicao -> ( Cond ) .)
-    while           reduce using rule 44 (Condicao -> ( Cond ) .)
-    END             reduce using rule 44 (Condicao -> ( Cond ) .)
-    until           reduce using rule 44 (Condicao -> ( Cond ) .)
-    else            reduce using rule 44 (Condicao -> ( Cond ) .)
-    }               reduce using rule 44 (Condicao -> ( Cond ) .)
+    {               reduce using rule 47 (Condicao -> ( Cond ) .)
+    id              reduce using rule 47 (Condicao -> ( Cond ) .)
+    print           reduce using rule 47 (Condicao -> ( Cond ) .)
+    read            reduce using rule 47 (Condicao -> ( Cond ) .)
+    if              reduce using rule 47 (Condicao -> ( Cond ) .)
+    repeat          reduce using rule 47 (Condicao -> ( Cond ) .)
+    while           reduce using rule 47 (Condicao -> ( Cond ) .)
+    END             reduce using rule 47 (Condicao -> ( Cond ) .)
+    until           reduce using rule 47 (Condicao -> ( Cond ) .)
+    else            reduce using rule 47 (Condicao -> ( Cond ) .)
+    }               reduce using rule 47 (Condicao -> ( Cond ) .)
 
 
 state 107
 
-    (45) Cond -> Cond | . | Cond2
+    (48) Cond -> Cond | . | Cond2
 
-    |               shift and go to state 126
+    |               shift and go to state 127
 
 
 state 108
 
-    (47) Cond2 -> Cond2 & . & Cond3
+    (50) Cond2 -> Cond2 & . & Cond3
 
-    &               shift and go to state 127
+    &               shift and go to state 128
 
 
 state 109
 
-    (49) Cond3 -> ! Cond .
-    (45) Cond -> Cond . | | Cond2
+    (52) Cond3 -> ! Cond .
+    (48) Cond -> Cond . | | Cond2
 
   ! shift/reduce conflict for | resolved as shift
-    &               reduce using rule 49 (Cond3 -> ! Cond .)
-    )               reduce using rule 49 (Cond3 -> ! Cond .)
+    &               reduce using rule 52 (Cond3 -> ! Cond .)
+    )               reduce using rule 52 (Cond3 -> ! Cond .)
     |               shift and go to state 107
 
-  ! |               [ reduce using rule 49 (Cond3 -> ! Cond .) ]
+  ! |               [ reduce using rule 52 (Cond3 -> ! Cond .) ]
 
 
 state 110
 
-    (52) ExpRel -> Exp Oper . Exp
-    (64) Exp -> . Exp + Termo
-    (65) Exp -> . Exp - Termo
-    (66) Exp -> . Termo
-    (67) Termo -> . Termo * Fator
-    (68) Termo -> . Termo / Fator
-    (69) Termo -> . Termo % Fator
-    (70) Termo -> . Fator
-    (71) Fator -> . ( Exp )
-    (72) Fator -> . num
-    (73) Fator -> . id
-    (74) Fator -> . id [ Exp ]
+    (55) ExpRel -> Exp Oper . Exp
+    (67) Exp -> . Exp + Termo
+    (68) Exp -> . Exp - Termo
+    (69) Exp -> . Termo
+    (70) Termo -> . Termo * Fator
+    (71) Termo -> . Termo / Fator
+    (72) Termo -> . Termo % Fator
+    (73) Termo -> . Fator
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
 
     (               shift and go to state 46
     num             shift and go to state 47
     id              shift and go to state 48
 
-    Exp                            shift and go to state 128
+    Exp                            shift and go to state 129
     Termo                          shift and go to state 44
     Fator                          shift and go to state 45
 
 state 111
 
-    (54) Oper -> = . =
+    (57) Oper -> = . =
 
-    =               shift and go to state 129
+    =               shift and go to state 130
 
 
 state 112
 
-    (55) Oper -> < . >
-    (57) Oper -> < .
-    (59) Oper -> < . =
+    (58) Oper -> < . >
+    (60) Oper -> < .
+    (62) Oper -> < . =
 
-    >               shift and go to state 130
-    (               reduce using rule 57 (Oper -> < .)
-    num             reduce using rule 57 (Oper -> < .)
-    id              reduce using rule 57 (Oper -> < .)
-    =               shift and go to state 131
+    >               shift and go to state 131
+    (               reduce using rule 60 (Oper -> < .)
+    num             reduce using rule 60 (Oper -> < .)
+    id              reduce using rule 60 (Oper -> < .)
+    =               shift and go to state 132
 
 
 state 113
 
-    (56) Oper -> > .
-    (58) Oper -> > . =
+    (59) Oper -> > .
+    (61) Oper -> > . =
 
-    (               reduce using rule 56 (Oper -> > .)
-    num             reduce using rule 56 (Oper -> > .)
-    id              reduce using rule 56 (Oper -> > .)
-    =               shift and go to state 132
+    (               reduce using rule 59 (Oper -> > .)
+    num             reduce using rule 59 (Oper -> > .)
+    id              reduce using rule 59 (Oper -> > .)
+    =               shift and go to state 133
 
 
 state 114
 
-    (60) Instrucao -> repeat CorpoCiclo until Condicao .
+    (63) Instrucao -> repeat CorpoCiclo until Condicao .
 
-    END             reduce using rule 60 (Instrucao -> repeat CorpoCiclo until Condicao .)
-    id              reduce using rule 60 (Instrucao -> repeat CorpoCiclo until Condicao .)
-    print           reduce using rule 60 (Instrucao -> repeat CorpoCiclo until Condicao .)
-    read            reduce using rule 60 (Instrucao -> repeat CorpoCiclo until Condicao .)
-    if              reduce using rule 60 (Instrucao -> repeat CorpoCiclo until Condicao .)
-    repeat          reduce using rule 60 (Instrucao -> repeat CorpoCiclo until Condicao .)
-    while           reduce using rule 60 (Instrucao -> repeat CorpoCiclo until Condicao .)
-    until           reduce using rule 60 (Instrucao -> repeat CorpoCiclo until Condicao .)
-    else            reduce using rule 60 (Instrucao -> repeat CorpoCiclo until Condicao .)
-    }               reduce using rule 60 (Instrucao -> repeat CorpoCiclo until Condicao .)
+    END             reduce using rule 63 (Instrucao -> repeat CorpoCiclo until Condicao .)
+    id              reduce using rule 63 (Instrucao -> repeat CorpoCiclo until Condicao .)
+    print           reduce using rule 63 (Instrucao -> repeat CorpoCiclo until Condicao .)
+    read            reduce using rule 63 (Instrucao -> repeat CorpoCiclo until Condicao .)
+    if              reduce using rule 63 (Instrucao -> repeat CorpoCiclo until Condicao .)
+    repeat          reduce using rule 63 (Instrucao -> repeat CorpoCiclo until Condicao .)
+    while           reduce using rule 63 (Instrucao -> repeat CorpoCiclo until Condicao .)
+    until           reduce using rule 63 (Instrucao -> repeat CorpoCiclo until Condicao .)
+    else            reduce using rule 63 (Instrucao -> repeat CorpoCiclo until Condicao .)
+    }               reduce using rule 63 (Instrucao -> repeat CorpoCiclo until Condicao .)
 
 
 state 115
 
-    (61) CorpoCiclo -> { Instrucoes } .
+    (64) CorpoCiclo -> { Instrucoes } .
 
-    until           reduce using rule 61 (CorpoCiclo -> { Instrucoes } .)
-    else            reduce using rule 61 (CorpoCiclo -> { Instrucoes } .)
-    END             reduce using rule 61 (CorpoCiclo -> { Instrucoes } .)
-    id              reduce using rule 61 (CorpoCiclo -> { Instrucoes } .)
-    print           reduce using rule 61 (CorpoCiclo -> { Instrucoes } .)
-    read            reduce using rule 61 (CorpoCiclo -> { Instrucoes } .)
-    if              reduce using rule 61 (CorpoCiclo -> { Instrucoes } .)
-    repeat          reduce using rule 61 (CorpoCiclo -> { Instrucoes } .)
-    while           reduce using rule 61 (CorpoCiclo -> { Instrucoes } .)
-    }               reduce using rule 61 (CorpoCiclo -> { Instrucoes } .)
+    until           reduce using rule 64 (CorpoCiclo -> { Instrucoes } .)
+    else            reduce using rule 64 (CorpoCiclo -> { Instrucoes } .)
+    END             reduce using rule 64 (CorpoCiclo -> { Instrucoes } .)
+    id              reduce using rule 64 (CorpoCiclo -> { Instrucoes } .)
+    print           reduce using rule 64 (CorpoCiclo -> { Instrucoes } .)
+    read            reduce using rule 64 (CorpoCiclo -> { Instrucoes } .)
+    if              reduce using rule 64 (CorpoCiclo -> { Instrucoes } .)
+    repeat          reduce using rule 64 (CorpoCiclo -> { Instrucoes } .)
+    while           reduce using rule 64 (CorpoCiclo -> { Instrucoes } .)
+    }               reduce using rule 64 (CorpoCiclo -> { Instrucoes } .)
 
 
 state 116
 
     (11) DeclInt -> id [ num ] .
+    (12) DeclInt -> id [ num ] . [ num ]
 
     ,               reduce using rule 11 (DeclInt -> id [ num ] .)
     ENDVARS         reduce using rule 11 (DeclInt -> id [ num ] .)
     int             reduce using rule 11 (DeclInt -> id [ num ] .)
+    [               shift and go to state 134
 
 
 state 117
 
-    (33) Instrucao -> id [ Exp ] = . Exp
-    (64) Exp -> . Exp + Termo
-    (65) Exp -> . Exp - Termo
-    (66) Exp -> . Termo
-    (67) Termo -> . Termo * Fator
-    (68) Termo -> . Termo / Fator
-    (69) Termo -> . Termo % Fator
-    (70) Termo -> . Fator
-    (71) Fator -> . ( Exp )
-    (72) Fator -> . num
-    (73) Fator -> . id
-    (74) Fator -> . id [ Exp ]
+    (37) Instrucao -> id [ Exp ] [ . Exp ] = Exp
+    (67) Exp -> . Exp + Termo
+    (68) Exp -> . Exp - Termo
+    (69) Exp -> . Termo
+    (70) Termo -> . Termo * Fator
+    (71) Termo -> . Termo / Fator
+    (72) Termo -> . Termo % Fator
+    (73) Termo -> . Fator
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
 
     (               shift and go to state 46
     num             shift and go to state 47
     id              shift and go to state 48
 
-    Exp                            shift and go to state 133
+    Exp                            shift and go to state 135
     Termo                          shift and go to state 44
     Fator                          shift and go to state 45
 
 state 118
 
-    (34) Instrucao -> id [ Exp ] + . +
+    (34) Instrucao -> id [ Exp ] = . Exp
+    (67) Exp -> . Exp + Termo
+    (68) Exp -> . Exp - Termo
+    (69) Exp -> . Termo
+    (70) Termo -> . Termo * Fator
+    (71) Termo -> . Termo / Fator
+    (72) Termo -> . Termo % Fator
+    (73) Termo -> . Fator
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
 
-    +               shift and go to state 134
+    (               shift and go to state 46
+    num             shift and go to state 47
+    id              shift and go to state 48
 
+    Exp                            shift and go to state 136
+    Termo                          shift and go to state 44
+    Fator                          shift and go to state 45
 
 state 119
 
-    (35) Instrucao -> id [ Exp ] - . -
+    (35) Instrucao -> id [ Exp ] + . +
 
-    -               shift and go to state 135
+    +               shift and go to state 137
 
 
 state 120
 
-    (74) Fator -> id [ Exp ] .
+    (36) Instrucao -> id [ Exp ] - . -
 
-    *               reduce using rule 74 (Fator -> id [ Exp ] .)
-    /               reduce using rule 74 (Fator -> id [ Exp ] .)
-    %               reduce using rule 74 (Fator -> id [ Exp ] .)
-    +               reduce using rule 74 (Fator -> id [ Exp ] .)
-    -               reduce using rule 74 (Fator -> id [ Exp ] .)
-    END             reduce using rule 74 (Fator -> id [ Exp ] .)
-    id              reduce using rule 74 (Fator -> id [ Exp ] .)
-    print           reduce using rule 74 (Fator -> id [ Exp ] .)
-    read            reduce using rule 74 (Fator -> id [ Exp ] .)
-    if              reduce using rule 74 (Fator -> id [ Exp ] .)
-    repeat          reduce using rule 74 (Fator -> id [ Exp ] .)
-    while           reduce using rule 74 (Fator -> id [ Exp ] .)
-    until           reduce using rule 74 (Fator -> id [ Exp ] .)
-    else            reduce using rule 74 (Fator -> id [ Exp ] .)
-    }               reduce using rule 74 (Fator -> id [ Exp ] .)
-    ]               reduce using rule 74 (Fator -> id [ Exp ] .)
-    )               reduce using rule 74 (Fator -> id [ Exp ] .)
-    =               reduce using rule 74 (Fator -> id [ Exp ] .)
-    <               reduce using rule 74 (Fator -> id [ Exp ] .)
-    >               reduce using rule 74 (Fator -> id [ Exp ] .)
-    &               reduce using rule 74 (Fator -> id [ Exp ] .)
-    |               reduce using rule 74 (Fator -> id [ Exp ] .)
+    -               shift and go to state 138
 
 
 state 121
 
-    (37) Instrucao -> read id [ Exp ] .
+    (77) Fator -> id [ Exp ] .
+    (78) Fator -> id [ Exp ] . [ Exp ]
 
-    END             reduce using rule 37 (Instrucao -> read id [ Exp ] .)
-    id              reduce using rule 37 (Instrucao -> read id [ Exp ] .)
-    print           reduce using rule 37 (Instrucao -> read id [ Exp ] .)
-    read            reduce using rule 37 (Instrucao -> read id [ Exp ] .)
-    if              reduce using rule 37 (Instrucao -> read id [ Exp ] .)
-    repeat          reduce using rule 37 (Instrucao -> read id [ Exp ] .)
-    while           reduce using rule 37 (Instrucao -> read id [ Exp ] .)
-    until           reduce using rule 37 (Instrucao -> read id [ Exp ] .)
-    else            reduce using rule 37 (Instrucao -> read id [ Exp ] .)
-    }               reduce using rule 37 (Instrucao -> read id [ Exp ] .)
+    *               reduce using rule 77 (Fator -> id [ Exp ] .)
+    /               reduce using rule 77 (Fator -> id [ Exp ] .)
+    %               reduce using rule 77 (Fator -> id [ Exp ] .)
+    +               reduce using rule 77 (Fator -> id [ Exp ] .)
+    -               reduce using rule 77 (Fator -> id [ Exp ] .)
+    END             reduce using rule 77 (Fator -> id [ Exp ] .)
+    id              reduce using rule 77 (Fator -> id [ Exp ] .)
+    print           reduce using rule 77 (Fator -> id [ Exp ] .)
+    read            reduce using rule 77 (Fator -> id [ Exp ] .)
+    if              reduce using rule 77 (Fator -> id [ Exp ] .)
+    repeat          reduce using rule 77 (Fator -> id [ Exp ] .)
+    while           reduce using rule 77 (Fator -> id [ Exp ] .)
+    until           reduce using rule 77 (Fator -> id [ Exp ] .)
+    else            reduce using rule 77 (Fator -> id [ Exp ] .)
+    }               reduce using rule 77 (Fator -> id [ Exp ] .)
+    ]               reduce using rule 77 (Fator -> id [ Exp ] .)
+    )               reduce using rule 77 (Fator -> id [ Exp ] .)
+    =               reduce using rule 77 (Fator -> id [ Exp ] .)
+    <               reduce using rule 77 (Fator -> id [ Exp ] .)
+    >               reduce using rule 77 (Fator -> id [ Exp ] .)
+    &               reduce using rule 77 (Fator -> id [ Exp ] .)
+    |               reduce using rule 77 (Fator -> id [ Exp ] .)
+    [               shift and go to state 139
 
 
 state 122
 
-    (42) Else -> else { . Instrucoes }
+    (39) Instrucao -> read id [ Exp ] .
+    (40) Instrucao -> read id [ Exp ] . [ Exp ]
+
+    END             reduce using rule 39 (Instrucao -> read id [ Exp ] .)
+    id              reduce using rule 39 (Instrucao -> read id [ Exp ] .)
+    print           reduce using rule 39 (Instrucao -> read id [ Exp ] .)
+    read            reduce using rule 39 (Instrucao -> read id [ Exp ] .)
+    if              reduce using rule 39 (Instrucao -> read id [ Exp ] .)
+    repeat          reduce using rule 39 (Instrucao -> read id [ Exp ] .)
+    while           reduce using rule 39 (Instrucao -> read id [ Exp ] .)
+    until           reduce using rule 39 (Instrucao -> read id [ Exp ] .)
+    else            reduce using rule 39 (Instrucao -> read id [ Exp ] .)
+    }               reduce using rule 39 (Instrucao -> read id [ Exp ] .)
+    [               shift and go to state 140
+
+
+state 123
+
+    (45) Else -> else { . Instrucoes }
     (20) Instrucoes -> . Instrucoes Instrucao
     (21) Instrucoes -> .
 
@@ -2180,109 +2266,79 @@ state 122
     repeat          reduce using rule 21 (Instrucoes -> .)
     while           reduce using rule 21 (Instrucoes -> .)
 
-    Instrucoes                     shift and go to state 136
-
-state 123
-
-    (43) Else -> else Instrucao .
-
-    else            reduce using rule 43 (Else -> else Instrucao .)
-    END             reduce using rule 43 (Else -> else Instrucao .)
-    id              reduce using rule 43 (Else -> else Instrucao .)
-    print           reduce using rule 43 (Else -> else Instrucao .)
-    read            reduce using rule 43 (Else -> else Instrucao .)
-    if              reduce using rule 43 (Else -> else Instrucao .)
-    repeat          reduce using rule 43 (Else -> else Instrucao .)
-    while           reduce using rule 43 (Else -> else Instrucao .)
-    until           reduce using rule 43 (Else -> else Instrucao .)
-    }               reduce using rule 43 (Else -> else Instrucao .)
-
+    Instrucoes                     shift and go to state 141
 
 state 124
 
-    (40) Then -> { Instrucoes } .
+    (46) Else -> else Instrucao .
 
-    else            reduce using rule 40 (Then -> { Instrucoes } .)
-    END             reduce using rule 40 (Then -> { Instrucoes } .)
-    id              reduce using rule 40 (Then -> { Instrucoes } .)
-    print           reduce using rule 40 (Then -> { Instrucoes } .)
-    read            reduce using rule 40 (Then -> { Instrucoes } .)
-    if              reduce using rule 40 (Then -> { Instrucoes } .)
-    repeat          reduce using rule 40 (Then -> { Instrucoes } .)
-    while           reduce using rule 40 (Then -> { Instrucoes } .)
-    until           reduce using rule 40 (Then -> { Instrucoes } .)
-    }               reduce using rule 40 (Then -> { Instrucoes } .)
+    else            reduce using rule 46 (Else -> else Instrucao .)
+    END             reduce using rule 46 (Else -> else Instrucao .)
+    id              reduce using rule 46 (Else -> else Instrucao .)
+    print           reduce using rule 46 (Else -> else Instrucao .)
+    read            reduce using rule 46 (Else -> else Instrucao .)
+    if              reduce using rule 46 (Else -> else Instrucao .)
+    repeat          reduce using rule 46 (Else -> else Instrucao .)
+    while           reduce using rule 46 (Else -> else Instrucao .)
+    until           reduce using rule 46 (Else -> else Instrucao .)
+    }               reduce using rule 46 (Else -> else Instrucao .)
 
 
 state 125
 
-    (50) Cond3 -> ( Cond ) .
+    (43) Then -> { Instrucoes } .
 
-    &               reduce using rule 50 (Cond3 -> ( Cond ) .)
-    )               reduce using rule 50 (Cond3 -> ( Cond ) .)
-    |               reduce using rule 50 (Cond3 -> ( Cond ) .)
+    else            reduce using rule 43 (Then -> { Instrucoes } .)
+    END             reduce using rule 43 (Then -> { Instrucoes } .)
+    id              reduce using rule 43 (Then -> { Instrucoes } .)
+    print           reduce using rule 43 (Then -> { Instrucoes } .)
+    read            reduce using rule 43 (Then -> { Instrucoes } .)
+    if              reduce using rule 43 (Then -> { Instrucoes } .)
+    repeat          reduce using rule 43 (Then -> { Instrucoes } .)
+    while           reduce using rule 43 (Then -> { Instrucoes } .)
+    until           reduce using rule 43 (Then -> { Instrucoes } .)
+    }               reduce using rule 43 (Then -> { Instrucoes } .)
 
 
 state 126
 
-    (45) Cond -> Cond | | . Cond2
-    (47) Cond2 -> . Cond2 & & Cond3
-    (48) Cond2 -> . Cond3
-    (49) Cond3 -> . ! Cond
-    (50) Cond3 -> . ( Cond )
-    (51) Cond3 -> . ExpRel
-    (52) ExpRel -> . Exp Oper Exp
-    (53) ExpRel -> . Exp
-    (64) Exp -> . Exp + Termo
-    (65) Exp -> . Exp - Termo
-    (66) Exp -> . Termo
-    (67) Termo -> . Termo * Fator
-    (68) Termo -> . Termo / Fator
-    (69) Termo -> . Termo % Fator
-    (70) Termo -> . Fator
-    (71) Fator -> . ( Exp )
-    (72) Fator -> . num
-    (73) Fator -> . id
-    (74) Fator -> . id [ Exp ]
+    (53) Cond3 -> ( Cond ) .
 
-    !               shift and go to state 82
-    (               shift and go to state 78
-    num             shift and go to state 47
-    id              shift and go to state 48
+    &               reduce using rule 53 (Cond3 -> ( Cond ) .)
+    )               reduce using rule 53 (Cond3 -> ( Cond ) .)
+    |               reduce using rule 53 (Cond3 -> ( Cond ) .)
 
-    Cond2                          shift and go to state 137
-    Cond3                          shift and go to state 81
-    ExpRel                         shift and go to state 83
-    Exp                            shift and go to state 84
-    Termo                          shift and go to state 44
-    Fator                          shift and go to state 45
 
 state 127
 
-    (47) Cond2 -> Cond2 & & . Cond3
-    (49) Cond3 -> . ! Cond
-    (50) Cond3 -> . ( Cond )
-    (51) Cond3 -> . ExpRel
-    (52) ExpRel -> . Exp Oper Exp
-    (53) ExpRel -> . Exp
-    (64) Exp -> . Exp + Termo
-    (65) Exp -> . Exp - Termo
-    (66) Exp -> . Termo
-    (67) Termo -> . Termo * Fator
-    (68) Termo -> . Termo / Fator
-    (69) Termo -> . Termo % Fator
-    (70) Termo -> . Fator
-    (71) Fator -> . ( Exp )
-    (72) Fator -> . num
-    (73) Fator -> . id
-    (74) Fator -> . id [ Exp ]
+    (48) Cond -> Cond | | . Cond2
+    (50) Cond2 -> . Cond2 & & Cond3
+    (51) Cond2 -> . Cond3
+    (52) Cond3 -> . ! Cond
+    (53) Cond3 -> . ( Cond )
+    (54) Cond3 -> . ExpRel
+    (55) ExpRel -> . Exp Oper Exp
+    (56) ExpRel -> . Exp
+    (67) Exp -> . Exp + Termo
+    (68) Exp -> . Exp - Termo
+    (69) Exp -> . Termo
+    (70) Termo -> . Termo * Fator
+    (71) Termo -> . Termo / Fator
+    (72) Termo -> . Termo % Fator
+    (73) Termo -> . Fator
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
 
     !               shift and go to state 82
     (               shift and go to state 78
     num             shift and go to state 47
     id              shift and go to state 48
 
-    Cond3                          shift and go to state 138
+    Cond2                          shift and go to state 142
+    Cond3                          shift and go to state 81
     ExpRel                         shift and go to state 83
     Exp                            shift and go to state 84
     Termo                          shift and go to state 44
@@ -2290,127 +2346,227 @@ state 127
 
 state 128
 
-    (52) ExpRel -> Exp Oper Exp .
-    (64) Exp -> Exp . + Termo
-    (65) Exp -> Exp . - Termo
+    (50) Cond2 -> Cond2 & & . Cond3
+    (52) Cond3 -> . ! Cond
+    (53) Cond3 -> . ( Cond )
+    (54) Cond3 -> . ExpRel
+    (55) ExpRel -> . Exp Oper Exp
+    (56) ExpRel -> . Exp
+    (67) Exp -> . Exp + Termo
+    (68) Exp -> . Exp - Termo
+    (69) Exp -> . Termo
+    (70) Termo -> . Termo * Fator
+    (71) Termo -> . Termo / Fator
+    (72) Termo -> . Termo % Fator
+    (73) Termo -> . Fator
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
 
-    &               reduce using rule 52 (ExpRel -> Exp Oper Exp .)
-    )               reduce using rule 52 (ExpRel -> Exp Oper Exp .)
-    |               reduce using rule 52 (ExpRel -> Exp Oper Exp .)
-    +               shift and go to state 67
-    -               shift and go to state 68
+    !               shift and go to state 82
+    (               shift and go to state 78
+    num             shift and go to state 47
+    id              shift and go to state 48
 
+    Cond3                          shift and go to state 143
+    ExpRel                         shift and go to state 83
+    Exp                            shift and go to state 84
+    Termo                          shift and go to state 44
+    Fator                          shift and go to state 45
 
 state 129
 
-    (54) Oper -> = = .
+    (55) ExpRel -> Exp Oper Exp .
+    (67) Exp -> Exp . + Termo
+    (68) Exp -> Exp . - Termo
 
-    (               reduce using rule 54 (Oper -> = = .)
-    num             reduce using rule 54 (Oper -> = = .)
-    id              reduce using rule 54 (Oper -> = = .)
+    &               reduce using rule 55 (ExpRel -> Exp Oper Exp .)
+    )               reduce using rule 55 (ExpRel -> Exp Oper Exp .)
+    |               reduce using rule 55 (ExpRel -> Exp Oper Exp .)
+    +               shift and go to state 67
+    -               shift and go to state 68
 
 
 state 130
 
-    (55) Oper -> < > .
+    (57) Oper -> = = .
 
-    (               reduce using rule 55 (Oper -> < > .)
-    num             reduce using rule 55 (Oper -> < > .)
-    id              reduce using rule 55 (Oper -> < > .)
+    (               reduce using rule 57 (Oper -> = = .)
+    num             reduce using rule 57 (Oper -> = = .)
+    id              reduce using rule 57 (Oper -> = = .)
 
 
 state 131
 
-    (59) Oper -> < = .
+    (58) Oper -> < > .
 
-    (               reduce using rule 59 (Oper -> < = .)
-    num             reduce using rule 59 (Oper -> < = .)
-    id              reduce using rule 59 (Oper -> < = .)
+    (               reduce using rule 58 (Oper -> < > .)
+    num             reduce using rule 58 (Oper -> < > .)
+    id              reduce using rule 58 (Oper -> < > .)
 
 
 state 132
 
-    (58) Oper -> > = .
+    (62) Oper -> < = .
 
-    (               reduce using rule 58 (Oper -> > = .)
-    num             reduce using rule 58 (Oper -> > = .)
-    id              reduce using rule 58 (Oper -> > = .)
+    (               reduce using rule 62 (Oper -> < = .)
+    num             reduce using rule 62 (Oper -> < = .)
+    id              reduce using rule 62 (Oper -> < = .)
 
 
 state 133
 
-    (33) Instrucao -> id [ Exp ] = Exp .
-    (64) Exp -> Exp . + Termo
-    (65) Exp -> Exp . - Termo
+    (61) Oper -> > = .
 
-    END             reduce using rule 33 (Instrucao -> id [ Exp ] = Exp .)
-    id              reduce using rule 33 (Instrucao -> id [ Exp ] = Exp .)
-    print           reduce using rule 33 (Instrucao -> id [ Exp ] = Exp .)
-    read            reduce using rule 33 (Instrucao -> id [ Exp ] = Exp .)
-    if              reduce using rule 33 (Instrucao -> id [ Exp ] = Exp .)
-    repeat          reduce using rule 33 (Instrucao -> id [ Exp ] = Exp .)
-    while           reduce using rule 33 (Instrucao -> id [ Exp ] = Exp .)
-    until           reduce using rule 33 (Instrucao -> id [ Exp ] = Exp .)
-    else            reduce using rule 33 (Instrucao -> id [ Exp ] = Exp .)
-    }               reduce using rule 33 (Instrucao -> id [ Exp ] = Exp .)
-    +               shift and go to state 67
-    -               shift and go to state 68
+    (               reduce using rule 61 (Oper -> > = .)
+    num             reduce using rule 61 (Oper -> > = .)
+    id              reduce using rule 61 (Oper -> > = .)
 
 
 state 134
 
-    (34) Instrucao -> id [ Exp ] + + .
+    (12) DeclInt -> id [ num ] [ . num ]
 
-    END             reduce using rule 34 (Instrucao -> id [ Exp ] + + .)
-    id              reduce using rule 34 (Instrucao -> id [ Exp ] + + .)
-    print           reduce using rule 34 (Instrucao -> id [ Exp ] + + .)
-    read            reduce using rule 34 (Instrucao -> id [ Exp ] + + .)
-    if              reduce using rule 34 (Instrucao -> id [ Exp ] + + .)
-    repeat          reduce using rule 34 (Instrucao -> id [ Exp ] + + .)
-    while           reduce using rule 34 (Instrucao -> id [ Exp ] + + .)
-    until           reduce using rule 34 (Instrucao -> id [ Exp ] + + .)
-    else            reduce using rule 34 (Instrucao -> id [ Exp ] + + .)
-    }               reduce using rule 34 (Instrucao -> id [ Exp ] + + .)
+    num             shift and go to state 144
 
 
 state 135
 
-    (35) Instrucao -> id [ Exp ] - - .
+    (37) Instrucao -> id [ Exp ] [ Exp . ] = Exp
+    (67) Exp -> Exp . + Termo
+    (68) Exp -> Exp . - Termo
 
-    END             reduce using rule 35 (Instrucao -> id [ Exp ] - - .)
-    id              reduce using rule 35 (Instrucao -> id [ Exp ] - - .)
-    print           reduce using rule 35 (Instrucao -> id [ Exp ] - - .)
-    read            reduce using rule 35 (Instrucao -> id [ Exp ] - - .)
-    if              reduce using rule 35 (Instrucao -> id [ Exp ] - - .)
-    repeat          reduce using rule 35 (Instrucao -> id [ Exp ] - - .)
-    while           reduce using rule 35 (Instrucao -> id [ Exp ] - - .)
-    until           reduce using rule 35 (Instrucao -> id [ Exp ] - - .)
-    else            reduce using rule 35 (Instrucao -> id [ Exp ] - - .)
-    }               reduce using rule 35 (Instrucao -> id [ Exp ] - - .)
+    ]               shift and go to state 145
+    +               shift and go to state 67
+    -               shift and go to state 68
 
 
 state 136
 
-    (42) Else -> else { Instrucoes . }
-    (20) Instrucoes -> Instrucoes . Instrucao
-    (19) Instrucao -> . id ( )
-    (22) Instrucao -> . print str
-    (23) Instrucao -> . print Exp
-    (24) Instrucao -> . id = Exp
-    (25) Instrucao -> . id Op = Exp
-    (26) Instrucao -> . id - -
-    (27) Instrucao -> . id + +
-    (33) Instrucao -> . id [ Exp ] = Exp
-    (34) Instrucao -> . id [ Exp ] + +
-    (35) Instrucao -> . id [ Exp ] - -
-    (36) Instrucao -> . read id
-    (37) Instrucao -> . read id [ Exp ]
-    (38) Instrucao -> . if Condicao Then Else
-    (39) Instrucao -> . if Condicao Then
-    (60) Instrucao -> . repeat CorpoCiclo until Condicao
-    (63) Instrucao -> . while Condicao CorpoCiclo
+    (34) Instrucao -> id [ Exp ] = Exp .
+    (67) Exp -> Exp . + Termo
+    (68) Exp -> Exp . - Termo
 
-    }               shift and go to state 139
+    END             reduce using rule 34 (Instrucao -> id [ Exp ] = Exp .)
+    id              reduce using rule 34 (Instrucao -> id [ Exp ] = Exp .)
+    print           reduce using rule 34 (Instrucao -> id [ Exp ] = Exp .)
+    read            reduce using rule 34 (Instrucao -> id [ Exp ] = Exp .)
+    if              reduce using rule 34 (Instrucao -> id [ Exp ] = Exp .)
+    repeat          reduce using rule 34 (Instrucao -> id [ Exp ] = Exp .)
+    while           reduce using rule 34 (Instrucao -> id [ Exp ] = Exp .)
+    until           reduce using rule 34 (Instrucao -> id [ Exp ] = Exp .)
+    else            reduce using rule 34 (Instrucao -> id [ Exp ] = Exp .)
+    }               reduce using rule 34 (Instrucao -> id [ Exp ] = Exp .)
+    +               shift and go to state 67
+    -               shift and go to state 68
+
+
+state 137
+
+    (35) Instrucao -> id [ Exp ] + + .
+
+    END             reduce using rule 35 (Instrucao -> id [ Exp ] + + .)
+    id              reduce using rule 35 (Instrucao -> id [ Exp ] + + .)
+    print           reduce using rule 35 (Instrucao -> id [ Exp ] + + .)
+    read            reduce using rule 35 (Instrucao -> id [ Exp ] + + .)
+    if              reduce using rule 35 (Instrucao -> id [ Exp ] + + .)
+    repeat          reduce using rule 35 (Instrucao -> id [ Exp ] + + .)
+    while           reduce using rule 35 (Instrucao -> id [ Exp ] + + .)
+    until           reduce using rule 35 (Instrucao -> id [ Exp ] + + .)
+    else            reduce using rule 35 (Instrucao -> id [ Exp ] + + .)
+    }               reduce using rule 35 (Instrucao -> id [ Exp ] + + .)
+
+
+state 138
+
+    (36) Instrucao -> id [ Exp ] - - .
+
+    END             reduce using rule 36 (Instrucao -> id [ Exp ] - - .)
+    id              reduce using rule 36 (Instrucao -> id [ Exp ] - - .)
+    print           reduce using rule 36 (Instrucao -> id [ Exp ] - - .)
+    read            reduce using rule 36 (Instrucao -> id [ Exp ] - - .)
+    if              reduce using rule 36 (Instrucao -> id [ Exp ] - - .)
+    repeat          reduce using rule 36 (Instrucao -> id [ Exp ] - - .)
+    while           reduce using rule 36 (Instrucao -> id [ Exp ] - - .)
+    until           reduce using rule 36 (Instrucao -> id [ Exp ] - - .)
+    else            reduce using rule 36 (Instrucao -> id [ Exp ] - - .)
+    }               reduce using rule 36 (Instrucao -> id [ Exp ] - - .)
+
+
+state 139
+
+    (78) Fator -> id [ Exp ] [ . Exp ]
+    (67) Exp -> . Exp + Termo
+    (68) Exp -> . Exp - Termo
+    (69) Exp -> . Termo
+    (70) Termo -> . Termo * Fator
+    (71) Termo -> . Termo / Fator
+    (72) Termo -> . Termo % Fator
+    (73) Termo -> . Fator
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
+
+    (               shift and go to state 46
+    num             shift and go to state 47
+    id              shift and go to state 48
+
+    Exp                            shift and go to state 146
+    Termo                          shift and go to state 44
+    Fator                          shift and go to state 45
+
+state 140
+
+    (40) Instrucao -> read id [ Exp ] [ . Exp ]
+    (67) Exp -> . Exp + Termo
+    (68) Exp -> . Exp - Termo
+    (69) Exp -> . Termo
+    (70) Termo -> . Termo * Fator
+    (71) Termo -> . Termo / Fator
+    (72) Termo -> . Termo % Fator
+    (73) Termo -> . Fator
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
+
+    (               shift and go to state 46
+    num             shift and go to state 47
+    id              shift and go to state 48
+
+    Exp                            shift and go to state 147
+    Termo                          shift and go to state 44
+    Fator                          shift and go to state 45
+
+state 141
+
+    (45) Else -> else { Instrucoes . }
+    (20) Instrucoes -> Instrucoes . Instrucao
+    (22) Instrucao -> . id ( )
+    (23) Instrucao -> . print str
+    (24) Instrucao -> . print Exp
+    (25) Instrucao -> . id = Exp
+    (26) Instrucao -> . id Op = Exp
+    (32) Instrucao -> . id - -
+    (33) Instrucao -> . id + +
+    (34) Instrucao -> . id [ Exp ] = Exp
+    (35) Instrucao -> . id [ Exp ] + +
+    (36) Instrucao -> . id [ Exp ] - -
+    (37) Instrucao -> . id [ Exp ] [ Exp ] = Exp
+    (38) Instrucao -> . read id
+    (39) Instrucao -> . read id [ Exp ]
+    (40) Instrucao -> . read id [ Exp ] [ Exp ]
+    (41) Instrucao -> . if Condicao Then Else
+    (42) Instrucao -> . if Condicao Then
+    (63) Instrucao -> . repeat CorpoCiclo until Condicao
+    (66) Instrucao -> . while Condicao CorpoCiclo
+
+    }               shift and go to state 148
     id              shift and go to state 22
     print           shift and go to state 23
     read            shift and go to state 24
@@ -2420,42 +2576,175 @@ state 136
 
     Instrucao                      shift and go to state 21
 
-state 137
+state 142
 
-    (45) Cond -> Cond | | Cond2 .
-    (47) Cond2 -> Cond2 . & & Cond3
+    (48) Cond -> Cond | | Cond2 .
+    (50) Cond2 -> Cond2 . & & Cond3
 
   ! shift/reduce conflict for & resolved as shift
-    )               reduce using rule 45 (Cond -> Cond | | Cond2 .)
-    |               reduce using rule 45 (Cond -> Cond | | Cond2 .)
+    )               reduce using rule 48 (Cond -> Cond | | Cond2 .)
+    |               reduce using rule 48 (Cond -> Cond | | Cond2 .)
     &               shift and go to state 108
 
-  ! &               [ reduce using rule 45 (Cond -> Cond | | Cond2 .) ]
+  ! &               [ reduce using rule 48 (Cond -> Cond | | Cond2 .) ]
 
 
-state 138
+state 143
 
-    (47) Cond2 -> Cond2 & & Cond3 .
+    (50) Cond2 -> Cond2 & & Cond3 .
 
-    &               reduce using rule 47 (Cond2 -> Cond2 & & Cond3 .)
-    )               reduce using rule 47 (Cond2 -> Cond2 & & Cond3 .)
-    |               reduce using rule 47 (Cond2 -> Cond2 & & Cond3 .)
+    &               reduce using rule 50 (Cond2 -> Cond2 & & Cond3 .)
+    )               reduce using rule 50 (Cond2 -> Cond2 & & Cond3 .)
+    |               reduce using rule 50 (Cond2 -> Cond2 & & Cond3 .)
 
 
-state 139
+state 144
 
-    (42) Else -> else { Instrucoes } .
+    (12) DeclInt -> id [ num ] [ num . ]
 
-    else            reduce using rule 42 (Else -> else { Instrucoes } .)
-    END             reduce using rule 42 (Else -> else { Instrucoes } .)
-    id              reduce using rule 42 (Else -> else { Instrucoes } .)
-    print           reduce using rule 42 (Else -> else { Instrucoes } .)
-    read            reduce using rule 42 (Else -> else { Instrucoes } .)
-    if              reduce using rule 42 (Else -> else { Instrucoes } .)
-    repeat          reduce using rule 42 (Else -> else { Instrucoes } .)
-    while           reduce using rule 42 (Else -> else { Instrucoes } .)
-    until           reduce using rule 42 (Else -> else { Instrucoes } .)
-    }               reduce using rule 42 (Else -> else { Instrucoes } .)
+    ]               shift and go to state 149
+
+
+state 145
+
+    (37) Instrucao -> id [ Exp ] [ Exp ] . = Exp
+
+    =               shift and go to state 150
+
+
+state 146
+
+    (78) Fator -> id [ Exp ] [ Exp . ]
+    (67) Exp -> Exp . + Termo
+    (68) Exp -> Exp . - Termo
+
+    ]               shift and go to state 151
+    +               shift and go to state 67
+    -               shift and go to state 68
+
+
+state 147
+
+    (40) Instrucao -> read id [ Exp ] [ Exp . ]
+    (67) Exp -> Exp . + Termo
+    (68) Exp -> Exp . - Termo
+
+    ]               shift and go to state 152
+    +               shift and go to state 67
+    -               shift and go to state 68
+
+
+state 148
+
+    (45) Else -> else { Instrucoes } .
+
+    else            reduce using rule 45 (Else -> else { Instrucoes } .)
+    END             reduce using rule 45 (Else -> else { Instrucoes } .)
+    id              reduce using rule 45 (Else -> else { Instrucoes } .)
+    print           reduce using rule 45 (Else -> else { Instrucoes } .)
+    read            reduce using rule 45 (Else -> else { Instrucoes } .)
+    if              reduce using rule 45 (Else -> else { Instrucoes } .)
+    repeat          reduce using rule 45 (Else -> else { Instrucoes } .)
+    while           reduce using rule 45 (Else -> else { Instrucoes } .)
+    until           reduce using rule 45 (Else -> else { Instrucoes } .)
+    }               reduce using rule 45 (Else -> else { Instrucoes } .)
+
+
+state 149
+
+    (12) DeclInt -> id [ num ] [ num ] .
+
+    ,               reduce using rule 12 (DeclInt -> id [ num ] [ num ] .)
+    ENDVARS         reduce using rule 12 (DeclInt -> id [ num ] [ num ] .)
+    int             reduce using rule 12 (DeclInt -> id [ num ] [ num ] .)
+
+
+state 150
+
+    (37) Instrucao -> id [ Exp ] [ Exp ] = . Exp
+    (67) Exp -> . Exp + Termo
+    (68) Exp -> . Exp - Termo
+    (69) Exp -> . Termo
+    (70) Termo -> . Termo * Fator
+    (71) Termo -> . Termo / Fator
+    (72) Termo -> . Termo % Fator
+    (73) Termo -> . Fator
+    (74) Fator -> . ( Exp )
+    (75) Fator -> . num
+    (76) Fator -> . id
+    (77) Fator -> . id [ Exp ]
+    (78) Fator -> . id [ Exp ] [ Exp ]
+
+    (               shift and go to state 46
+    num             shift and go to state 47
+    id              shift and go to state 48
+
+    Exp                            shift and go to state 153
+    Termo                          shift and go to state 44
+    Fator                          shift and go to state 45
+
+state 151
+
+    (78) Fator -> id [ Exp ] [ Exp ] .
+
+    *               reduce using rule 78 (Fator -> id [ Exp ] [ Exp ] .)
+    /               reduce using rule 78 (Fator -> id [ Exp ] [ Exp ] .)
+    %               reduce using rule 78 (Fator -> id [ Exp ] [ Exp ] .)
+    +               reduce using rule 78 (Fator -> id [ Exp ] [ Exp ] .)
+    -               reduce using rule 78 (Fator -> id [ Exp ] [ Exp ] .)
+    END             reduce using rule 78 (Fator -> id [ Exp ] [ Exp ] .)
+    id              reduce using rule 78 (Fator -> id [ Exp ] [ Exp ] .)
+    print           reduce using rule 78 (Fator -> id [ Exp ] [ Exp ] .)
+    read            reduce using rule 78 (Fator -> id [ Exp ] [ Exp ] .)
+    if              reduce using rule 78 (Fator -> id [ Exp ] [ Exp ] .)
+    repeat          reduce using rule 78 (Fator -> id [ Exp ] [ Exp ] .)
+    while           reduce using rule 78 (Fator -> id [ Exp ] [ Exp ] .)
+    until           reduce using rule 78 (Fator -> id [ Exp ] [ Exp ] .)
+    else            reduce using rule 78 (Fator -> id [ Exp ] [ Exp ] .)
+    }               reduce using rule 78 (Fator -> id [ Exp ] [ Exp ] .)
+    ]               reduce using rule 78 (Fator -> id [ Exp ] [ Exp ] .)
+    )               reduce using rule 78 (Fator -> id [ Exp ] [ Exp ] .)
+    =               reduce using rule 78 (Fator -> id [ Exp ] [ Exp ] .)
+    <               reduce using rule 78 (Fator -> id [ Exp ] [ Exp ] .)
+    >               reduce using rule 78 (Fator -> id [ Exp ] [ Exp ] .)
+    &               reduce using rule 78 (Fator -> id [ Exp ] [ Exp ] .)
+    |               reduce using rule 78 (Fator -> id [ Exp ] [ Exp ] .)
+
+
+state 152
+
+    (40) Instrucao -> read id [ Exp ] [ Exp ] .
+
+    END             reduce using rule 40 (Instrucao -> read id [ Exp ] [ Exp ] .)
+    id              reduce using rule 40 (Instrucao -> read id [ Exp ] [ Exp ] .)
+    print           reduce using rule 40 (Instrucao -> read id [ Exp ] [ Exp ] .)
+    read            reduce using rule 40 (Instrucao -> read id [ Exp ] [ Exp ] .)
+    if              reduce using rule 40 (Instrucao -> read id [ Exp ] [ Exp ] .)
+    repeat          reduce using rule 40 (Instrucao -> read id [ Exp ] [ Exp ] .)
+    while           reduce using rule 40 (Instrucao -> read id [ Exp ] [ Exp ] .)
+    until           reduce using rule 40 (Instrucao -> read id [ Exp ] [ Exp ] .)
+    else            reduce using rule 40 (Instrucao -> read id [ Exp ] [ Exp ] .)
+    }               reduce using rule 40 (Instrucao -> read id [ Exp ] [ Exp ] .)
+
+
+state 153
+
+    (37) Instrucao -> id [ Exp ] [ Exp ] = Exp .
+    (67) Exp -> Exp . + Termo
+    (68) Exp -> Exp . - Termo
+
+    END             reduce using rule 37 (Instrucao -> id [ Exp ] [ Exp ] = Exp .)
+    id              reduce using rule 37 (Instrucao -> id [ Exp ] [ Exp ] = Exp .)
+    print           reduce using rule 37 (Instrucao -> id [ Exp ] [ Exp ] = Exp .)
+    read            reduce using rule 37 (Instrucao -> id [ Exp ] [ Exp ] = Exp .)
+    if              reduce using rule 37 (Instrucao -> id [ Exp ] [ Exp ] = Exp .)
+    repeat          reduce using rule 37 (Instrucao -> id [ Exp ] [ Exp ] = Exp .)
+    while           reduce using rule 37 (Instrucao -> id [ Exp ] [ Exp ] = Exp .)
+    until           reduce using rule 37 (Instrucao -> id [ Exp ] [ Exp ] = Exp .)
+    else            reduce using rule 37 (Instrucao -> id [ Exp ] [ Exp ] = Exp .)
+    }               reduce using rule 37 (Instrucao -> id [ Exp ] [ Exp ] = Exp .)
+    +               shift and go to state 67
+    -               shift and go to state 68
 
 WARNING: 
 WARNING: Conflicts:
@@ -2464,4 +2753,4 @@ WARNING: shift/reduce conflict for else in state 75 resolved as shift
 WARNING: shift/reduce conflict for & in state 80 resolved as shift
 WARNING: shift/reduce conflict for ) in state 105 resolved as shift
 WARNING: shift/reduce conflict for | in state 109 resolved as shift
-WARNING: shift/reduce conflict for & in state 137 resolved as shift
+WARNING: shift/reduce conflict for & in state 142 resolved as shift

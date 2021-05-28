@@ -107,6 +107,22 @@ def p_DeclInt_arrayInt(p):
         parser.erros+=1
 
 
+def p_DeclInt_array2Int(p):
+    "DeclInt : id '[' num ']' '[' num ']'"
+    v=p.parser.registers.get(p[1])
+    if v==None:
+        s=int(p[3]) * int(p[6])
+        p[0] = "pushn " + str(s) + "\n"
+        offset=p.parser.varsoffset
+        p.parser.registers.update({p[1]: ('array2Int',str(offset),int(p[3]), int(p[6]))})
+        p.parser.varsoffset+=s
+    else:
+        print("A variavel "+ p[1] +" foi declarada mais que uma vez")
+        p[0]=""
+        parser.success = False
+        parser.erros+=1
+
+
 #----------------------------------------------------
 #---------------------- Corpo -----------------------
 def p_Corpo(p):
@@ -177,15 +193,15 @@ def p_Instrucoes_vazio(p):
 
 #----------------------------------------------------
 #------------------Coments---------------------------
-#def p_Instrucao_comment(p):
-#    "Instrucao : IComment comment FComment"             
-#    p[0] = "//" + p[2] + "\n"
-#def p_IComment(p):
-#    "IComment : '/' '*'"             
-#    p[0] = ""
-#def p_FComment(p):
-#    "FComment : '*' '/'"             
-#    p[0] = ""
+	#def p_Instrucao_comment(p):
+	#    "Instrucao : IComment comment FComment"             
+	#    p[0] = "//" + p[2] + "\n"
+	#def p_IComment(p):
+	#    "IComment : '/' '*'"             
+	#    p[0] = ""
+	#def p_FComment(p):
+	#    "FComment : '*' '/'"             
+	#    p[0] = ""
 
 
 #-------------chamada da funcao------------
@@ -202,17 +218,17 @@ def p_Instrucao_call(p):
         p[0] = "pusha " + p[1] + "\n" + "call\n"
 
 #def p_Instrucao_call_retorno(p):
-#    "Instrucao : id '=' id '(' ')'"  
-#    (t,off,size)=p.parser.registers.get(p[1])
-#    p[0] = "pusha " + p[3] + "\n" + "call\n"
-#    p[0]+= "storeg " + off + "\n"           
+	#    "Instrucao : id '=' id '(' ')'"  
+	#    (t,off,size)=p.parser.registers.get(p[1])
+	#    p[0] = "pusha " + p[3] + "\n" + "call\n"
+	#    p[0]+= "storeg " + off + "\n"           
 
 #def p_Instrucao_call_retornoarray(p):
-#    "Instrucao : id '[' num ']' '=' id '(' ')'"  
-#    (t,off,size)=p.parser.registers.get(p[1])
-#    p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3] 
-#    p[0]+= "pusha " + p[6] + "\n" + "call\n"
-#    p[0]+= "storen\n"
+	#    "Instrucao : id '[' num ']' '=' id '(' ')'"  
+	#    (t,off,size)=p.parser.registers.get(p[1])
+	#    p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3] 
+	#    p[0]+= "pusha " + p[6] + "\n" + "call\n"
+	#    p[0]+= "storen\n"
 
 
 #----------------------- Prints --------------------------
@@ -236,20 +252,39 @@ def p_Instrucao_attr_int_exp(p):
         parser.success = False
         parser.erros+=1
     else:
-        (t,off,size)=v
-        if t=='arrayInt':
-            print("A variavel "+ p[1] +" é um inteiro, não um array")
+        if v[0]!='int':
+            print("A variavel "+ p[1] +" é do tipo "+v[0]+", não pode ser atribuida como inteira")
             p[0]=""
             parser.success = False
             parser.erros+=1
-        else: p[0] = p[3] +"storeg " + off + "\n"
+        else: 
+            (t,off,size)=v
+            p[0] = p[3] +"storeg " + off + "\n"
 
 
 def p_Instrucao_attr_int_exp_com_oper_antes_do_igual(p):
     "Instrucao : id Op '=' Exp"             
-    (t,off,size)=p.parser.registers.get(p[1])
-    p[0] = "pushg " + off +"\n"
-    p[0]+= p[4] + p[2] +"storeg " + off + "\n"
+    #(t,off,size)=p.parser.registers.get(p[1])
+    #p[0] = "pushg " + off +"\n"
+    #p[0]+= p[4] + p[2] +"storeg " + off + "\n"
+    
+    v=p.parser.registers.get(p[1])
+    if v==None:
+        print("A variavel "+ p[1] +" não está definida")
+        p[0]=""
+        parser.success = False
+        parser.erros+=1
+    else:
+        if v[0]!='int':
+            print("A variavel "+ p[1] +" é do tipo "+v[0]+", não pode ser atribuida como inteira")
+            p[0]=""
+            parser.success = False
+            parser.erros+=1
+        else:
+            (t,off,size)=v
+            p[0] = "pushg " + off +"\n"
+            p[0]+= p[4] + p[2] +"storeg " + off + "\n"
+
 
 def p_Op_add(p):
     "Op : '+'"
@@ -269,23 +304,76 @@ def p_Op_mod(p):
 
 def p_Instrucao_attr_int_sub_sub(p):
     "Instrucao : id '-' '-'"             
-    (t,off,size)=p.parser.registers.get(p[1])
-    p[0] = "pushg " + off +"\n"
-    p[0]+= "pushi 1\n" + "sub\n" +"storeg " + off + "\n"
+    #(t,off,size)=p.parser.registers.get(p[1])
+    #p[0] = "pushg " + off +"\n"
+    #p[0]+= "pushi 1\n" + "sub\n" +"storeg " + off + "\n"
+
+    v=p.parser.registers.get(p[1])
+    if v==None:
+        print("A variavel "+ p[1] +" não está definida")
+        p[0]=""
+        parser.success = False
+        parser.erros+=1
+    else:
+        if v[0]!='int':
+            print("A variavel "+ p[1] +" é do tipo "+v[0]+", não pode ser atribuida como int")
+            p[0]=""
+            parser.success = False
+            parser.erros+=1
+        else:
+            (t,off,size)=v
+            p[0] = "pushg " + off +"\n"
+            p[0]+= "pushi 1\n" + "sub\n" +"storeg " + off + "\n"
+
+
 
 def p_Instrucao_attr_int_add_add(p):
     "Instrucao : id '+' '+'"             
-    (t,off,size)=p.parser.registers.get(p[1])
-    p[0] = "pushg " + off +"\n"
-    p[0]+= "pushi 1\n" + "add\n" +"storeg " + off + "\n"
+    #(t,off,size)=p.parser.registers.get(p[1])
+    #p[0] = "pushg " + off +"\n"
+    #p[0]+= "pushi 1\n" + "add\n" +"storeg " + off + "\n"
+
+    v=p.parser.registers.get(p[1])
+    if v==None:
+        print("A variavel "+ p[1] +" não está definida")
+        p[0]=""
+        parser.success = False
+        parser.erros+=1
+    else:
+        if v[0]!='int':
+            print("A variavel "+ p[1] +" é do tipo "+v[0]+", não pode ser atribuida como int")
+            p[0]=""
+            parser.success = False
+            parser.erros+=1
+        else:
+            (t,off,size)=v
+            p[0] = "pushg " + off +"\n"
+            p[0]+= "pushi 1\n" + "add\n" +"storeg " + off + "\n"
 
 
 
 
 def p_Instrucao_attr_arrayint_exp(p):
     "Instrucao : id '[' Exp ']' '=' Exp"             #set exp lo array
-    (t,off,size)=p.parser.registers.get(p[1])
-    p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3] + p[6] + "storen\n"
+    #(t,off,size)=p.parser.registers.get(p[1])
+    #p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3] + p[6] + "storen\n"
+
+    v=p.parser.registers.get(p[1])
+    if v==None:
+        print("A variavel "+ p[1] +" não está definida")
+        p[0]=""
+        parser.success = False
+        parser.erros+=1
+    else:
+        if v[0]!='arrayInt':
+            print("A variavel "+ p[1] +" é do tipo "+v[0]+", não pode ser atribuida como arrayInt")
+            p[0]=""
+            parser.success = False
+            parser.erros+=1
+        else:
+            (t,off,size)=v
+            p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3] 
+            p[0]+= p[6] + "storen\n"
 
 
 def p_Instrucao_attr_arrayint_exp_add_add(p):
@@ -295,37 +383,129 @@ def p_Instrucao_attr_arrayint_exp_add_add(p):
         print("A variavel "+ p[1] +" não está definida, em "+p)
         p[0]=""
     else:
-        (t,off,size)=v
-        p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3]                 #1ªparte do store
-        p[0]+= "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3] + "loadn\n"     #load do valor
-        p[0]+= "pushi 1\n"+ "add\n"                                             #adicao de 1
-        p[0]+= p[6] + "storen\n"                                                #fim do store
+        if v[0]!='arrayInt':
+            print("A variavel "+ p[1] +" é do tipo "+v[0]+", não pode ser atribuida como arrayInt")
+            p[0]=""
+            parser.success = False
+            parser.erros+=1
+        else:
+            (t,off,size)=v
+            p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3]                 #1ªparte do store
+            p[0]+= "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3] + "loadn\n"     #load do valor
+            p[0]+= "pushi 1\n"+ "add\n"                                             #adicao de 1
+            p[0]+= p[6] + "storen\n"                                                #fim do store
 
 
 def p_Instrucao_attr_arrayint_exp_sub_sub(p):
     "Instrucao : id '[' Exp ']' '-' '-'"           
-    (t,off,size)=p.parser.registers.get(p[1])
-    p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3]                 #1ªparte do store
-    p[0]+= "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3] + "loadn\n"     #load do valor
-    p[0]+= "pushi 1\n"+ "sub\n"                                             #adicao de 1
-    p[0]+= p[6] + "storen\n"                                                #fim do store
+    v=p.parser.registers.get(p[1])
+    if v==None:
+        print("A variavel "+ p[1] +" não está definida, em "+p)
+        p[0]=""
+    else:
+        if v[0]!='arrayInt':
+            print("A variavel "+ p[1] +" é do tipo "+v[0]+", não pode ser atribuida como arrayInt")
+            p[0]=""
+            parser.success = False
+            parser.erros+=1
+        else:
+            (t,off,size)=v
+            p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3]                 #1ªparte do store
+            p[0]+= "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3] + "loadn\n"     #load do valor
+            p[0]+= "pushi 1\n"+ "sub\n"                                             #subtracao de 1
+            p[0]+= p[6] + "storen\n"                                                #fim do store
 
 
 
+def p_Instrucao_attr_array2int_exp(p):
+    "Instrucao : id '[' Exp ']' '[' Exp ']' '=' Exp"             #set exp lo array
+    #(t,off,size)=p.parser.registers.get(p[1])
+    #p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3] + p[6] + "storen\n"
+
+    v=p.parser.registers.get(p[1])
+    if v==None:
+        print("A variavel "+ p[1] +" não está definida")
+        p[0]=""
+        parser.success = False
+        parser.erros+=1
+    else:
+        if v[0]!='array2Int':
+            print("A variavel "+ p[1] +" é do tipo "+v[0]+", não pode ser atribuida como arrayInt")
+            p[0]=""
+            parser.success = False
+            parser.erros+=1
+        else:
+            (t,off,size1,size2)=v
+            p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" 
+            p[0]+= p[3] + "pushi "+str(size2)+"\n" + "mul\n"+ p[6] + "add\n"
+            p[0]+= p[9] + "storen\n"
 
 #---------------------- Reads ----------------------
 
 def p_Instrucao_read_int(p):
     "Instrucao : read id"             
-    (t,off,size)=p.parser.registers.get(p[2])
-    p[0] = "read\n" + "atoi\n" + "storeg " + off +"\n"
+    #(t,off,size)=p.parser.registers.get(p[2])
+    #p[0] = "read\n" + "atoi\n" + "storeg " + off +"\n"
+    v=p.parser.registers.get(p[2])
+    if v==None:
+        print("A variavel "+ p[2] +" não está definida")
+        p[0]=""
+        parser.success = False
+        parser.erros+=1
+    else:
+        if v[0]!='int':
+            print("A variavel "+ p[2] +" é do tipo "+v[0]+", não pode ser lida como um int")
+            p[0]=""
+            parser.success = False
+            parser.erros+=1
+        else:
+            (t,off,size)=v
+            p[0] = "read\n" + "atoi\n" + "storeg " + off +"\n"
+
+
 
 def p_Instrucao_read_arrayInt(p):
     "Instrucao : read id '[' Exp ']'"             
-    (t,off,size)=p.parser.registers.get(p[2])    
-    p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[4] + "read\n" + "atoi\n" + "storen\n"
+    #(t,off,size)=p.parser.registers.get(p[2])    
+    #p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[4] + "read\n" + "atoi\n" + "storen\n"
+
+    v=p.parser.registers.get(p[2])
+    if v==None:
+        print("A variavel "+ p[2] +" não está definida")
+        p[0]=""
+        parser.success = False
+        parser.erros+=1
+    else:
+        if v[0]!='arrayInt':
+            print("A variavel "+ p[2] +" é do tipo "+v[0]+", não pode ser lida como um arrayInt")
+            p[0]=""
+            parser.success = False
+            parser.erros+=1
+        else:
+            (t,off,size)=v
+            p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[4] 
+            p[0]+= "read\n" + "atoi\n" + "storen\n"
 
 
+def p_Instrucao_read_array2int(p):
+    "Instrucao : read id '[' Exp ']' '[' Exp ']'"         
+    v=p.parser.registers.get(p[2])
+    if v==None:
+        print("A variavel "+ p[2] +" não está definida")
+        p[0]=""
+        parser.success = False
+        parser.erros+=1
+    else:
+        if v[0]!='array2Int':
+            print("A variavel "+ p[2] +" é do tipo "+v[0]+", não pode ser atribuida como arrayInt")
+            p[0]=""
+            parser.success = False
+            parser.erros+=1
+        else:
+            (t,off,size1,size2)=v
+            p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" 
+            p[0]+= p[4] + "pushi "+str(size2)+"\n" + "mul\n"+ p[7] + "add\n"
+            p[0]+= "read\n" + "atoi\n" + "storen\n"
 
 #---------------------- Ifs ----------------------
 def p_Instrucao_if(p):
@@ -424,24 +604,23 @@ def p_Oper_infeq(p):
 
 
 #---------------------- Repeat ----------------------
+	#def p_Instrucao_repeat_num(p):
+	#    "Instrucao : repeat '(' num ')' CorpoRepeat"
+	#    lid=p.parser.labelid
+	#    p.parser.labelid+=1
 
-#def p_Instrucao_repeat_num(p):
-#    "Instrucao : repeat '(' num ')' CorpoRepeat"
-#    lid=p.parser.labelid
-#    p.parser.labelid+=1
+	#def p_Instrucao_repeat_id(p):
+	#    "Instrucao : repeat '(' id ')' CorpoRepeat"
+	#    lid=p.parser.labelid
+	#    p.parser.labelid+=1
 
-#def p_Instrucao_repeat_id(p):
-#    "Instrucao : repeat '(' id ')' CorpoRepeat"
-#    lid=p.parser.labelid
-#    p.parser.labelid+=1
+	#def p_CorpoRepeat(p):
+	#    "CorpoRepeat : '{' Instrucoes '}' "
+	#    p[0]=p[2]
 
-#def p_CorpoRepeat(p):
-#    "CorpoRepeat : '{' Instrucoes '}' "
-#    p[0]=p[2]
-
-#def p_CorpoRepeat_single(p):
-#    "CorpoRepeat : Instrucao"
-#    p[0]=p[1]
+	#def p_CorpoRepeat_single(p):
+	#    "CorpoRepeat : Instrucao"
+	#    p[0]=p[1]
 
 
 #----------------------Repeat-until------------------------
@@ -479,8 +658,8 @@ def p_Instrucao_while(p):
 
 
 #----------------------for-do------------------------
-#def p_Instrucao_for(p):
-#    "Instrucao : for Condicao CorpoCiclo"
+	#def p_Instrucao_for(p):
+	#    "Instrucao : for Condicao CorpoCiclo"
 
 
 
@@ -529,13 +708,68 @@ def p_Fator_num(p):
 
 def p_Fator_id(p):
     "Fator : id"
-    (t,off,size)=p.parser.registers.get(p[1])
-    p[0] = "pushg " + off +"\n"
+    #(t,off,size)=p.parser.registers.get(p[1])
+    #p[0] = "pushg " + off +"\n"
+    
+    v=p.parser.registers.get(p[1])
+    if v==None:
+        print("A variavel "+ p[1] +" não está definida")
+        p[0]=""
+        parser.success = False
+        parser.erros+=1
+    else:
+        if v[0]!='int':
+            print("A variavel "+ p[1] +" é do tipo "+v[0]+", não pode ser usada como um int")
+            p[0]=""
+            parser.success = False
+            parser.erros+=1
+        else:
+            (t,off,size)=v
+            p[0] = "pushg " + off +"\n"
+
+
 
 def p_Fator_id_arr(p):
     "Fator : id '[' Exp ']'"
-    (t,off,size)=p.parser.registers.get(p[1])
-    p[0] = "pushgp\n" +"pushi "+off+"\n" +"padd\n" + p[3] + "loadn\n"
+    #(t,off,size)=p.parser.registers.get(p[1])
+    #p[0] = "pushgp\n" +"pushi "+off+"\n" +"padd\n" + p[3] + "loadn\n"
+    
+    v=p.parser.registers.get(p[1])
+    if v==None:
+        print("A variavel "+ p[1] +" não está definida")
+        p[0]=""
+        parser.success = False
+        parser.erros+=1
+    else:
+        t=v[0]
+        if t!='arrayInt':
+            print("A variavel "+ p[1] +" é do tipo "+v[0]+", não pode ser usada como um arrayInt")
+            p[0]=""
+            parser.success = False
+            parser.erros+=1
+        else:
+            (t,off,size)=v
+            p[0] = "pushgp\n" +"pushi "+off+"\n" +"padd\n" + p[3] + "loadn\n"
+ 
+def p_Fator_id_arr2(p):
+    "Fator : id '[' Exp ']' '[' Exp ']'"         
+    v=p.parser.registers.get(p[1])
+    if v==None:
+        print("A variavel "+ p[1] +" não está definida")
+        p[0]=""
+        parser.success = False
+        parser.erros+=1
+    else:
+        if v[0]!='array2Int':
+            print("A variavel "+ p[1] +" é do tipo "+v[0]+", não pode ser atribuida como arrayInt")
+            p[0]=""
+            parser.success = False
+            parser.erros+=1
+        else:
+            (t,off,size1,size2)=v
+            p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" 
+            p[0]+= p[3] + "pushi "+str(size2)+"\n" + "mul\n"+ p[6] + "add\n"
+            p[0]+= "loadn\n"
 
 
 

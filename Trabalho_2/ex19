@@ -1,0 +1,7 @@
+VARS 
+	int l[3][2]
+ENDVARS
+BEGIN
+	read l[1][1]
+	l[2][1] = l[1][1] * 2 + 4
+END

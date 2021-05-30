@@ -1,0 +1,7 @@
+VARS 
+	int l=-2
+ENDVARS
+BEGIN
+	l=-1
+	l=1
+END

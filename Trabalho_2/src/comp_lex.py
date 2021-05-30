@@ -76,7 +76,7 @@ def t_FUNCTION(t):
 #    return t
 
 def t_num(t):                   #t <- (t_type (neste caso é NUM), t_VALUE, t_lineo, t_column)
-    r'\d+'
+    r'-?\d+'
     return t  
 
 

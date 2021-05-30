@@ -1,0 +1,7 @@
+pushi -2
+start 
+pushi -1
+storeg 0
+pushi 1
+storeg 0
+stop

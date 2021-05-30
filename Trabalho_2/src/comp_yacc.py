@@ -355,9 +355,6 @@ def p_Instrucao_attr_int_add_add(p):
 
 def p_Instrucao_attr_arrayint_exp(p):
     "Instrucao : id '[' Exp ']' '=' Exp"             #set exp lo array
-    #(t,off,size)=p.parser.registers.get(p[1])
-    #p[0] = "pushgp\n" + "pushi "+off+"\n" + "padd\n" + p[3] + p[6] + "storen\n"
-
     v=p.parser.registers.get(p[1])
     if v==None:
         print("A variavel "+ p[1] +" não está definida")

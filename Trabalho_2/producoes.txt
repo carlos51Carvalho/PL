@@ -1,120 +1,144 @@
+T = {VARS, ENDVARS, BEGIN, END,
+     num, id, str, 
+     int, print, read,
+     if, else, repeat, while, until,
+     FUNCTION, 
+     '(', ')', '[', ']', '{', '}', ',',
+     '+', '-', '*', '/', '\%', 
+     '>', '<', '=', '|', '&', '!'
+}
+
+N = {Progama, Declaracoes, Corpo,
+     Decls, Decl, DecIntList, DeclInt,
+     Instrucoes, Funcoes, Funcao, FuncaoHeader, FuncaoCorpo,
+     Exp, Op, Condicao, Then, Else,
+     Cond, Cond2, Cond3, ExpRel, Oper,
+     Termo, Fator
+}
+
+S = Progama
 
 P = {
 p0: Progama => Declaracoes Corpo
 
 p1: Declaracoes => VARS Decls ENDVARS
-p2:	     		 |
+p2:              |
 
 p3: Decls => Decls Decl
-	       |
+p4:        |
 
-p4: Decl => int DecIntList
+p5: Decl => int DecIntList
 
-p5: DecIntList => DecIntList ',' DeclInt
-p6: 			| DeclInt
+p6: DecIntList => DecIntList ',' DeclInt
+p7:             | DeclInt
 
-p7: DeclInt => id
-p8: 		 | id '=' num
-p9:			 |id '[' num ']'
+p8: DeclInt => id
+p9:          | id '=' num
+p10:         | id '[' num ']'
+p11:         | id '[' num ']' '[' num ']'"
 
-p10: Corpo => BEGIN Instrucoes END
-p11: 		| Funcoes BEGIN Instrucoes END
+p12: Corpo => BEGIN Instrucoes END
+p13:        | Funcoes BEGIN Instrucoes END
 
-p12: Funcoes => Funcoes Funcao
-p13: 		  | Funcao
+p14: Funcoes => Funcoes Funcao
+p15:          | Funcao
 
-p14: Funcao => FuncaoHeader FuncaoCorpo	
+p16: Funcao => FuncaoHeader FuncaoCorpo    
 
-p15: FuncaoHeader => FUNCTION id
+p17: FuncaoHeader => FUNCTION id
 
-p16: FuncaoCorpo => BEGIN Instrucoes END
+p18: FuncaoCorpo => BEGIN Instrucoes END
 
-p17: Instrucoes => Instrucoes Instrucao
-p18:			 |
-
-
-p19: Instrucao => id '(' ')'
+p19: Instrucoes => Instrucoes Instrucao
+p20:             |
 
 
-p20: Instrucao => print str
-p21: Instrucao => print Exp
+p21: Instrucao => id '(' ')'
 
 
-p22: Instrucao => id '=' Exp
-
-p23: Instrucao => id Op '=' Exp
-p24: Op => '+'
-p25: Op => '-'
-p26: Op => '*'
-p27: Op => '/'
-p28: Op => '%'
-
-p29: Instrucao => id '-' '-'
-p30: 			| id '+' '+'
-
-p31: Instrucao => id '[' Exp ']' '=' Exp
-p32: 			| id '[' Exp ']' '+' '+'
-p33: 			| id '[' Exp ']' '-' '-'
+p22: Instrucao => print str
+p23: Instrucao => print Exp
 
 
-p34: Instrucao => read id
-p35: 			| read id '[' Exp ']'
+p24: Instrucao => id '=' Exp
+p25:            | id Op '=' Exp
+
+p26: Op => '+'
+p27: Op => '-'
+p28: Op => '*'
+p29: Op => '/'
+p30: Op => '%'
+
+p31: Instrucao => id '-' '-'
+p32:            | id '+' '+'
+
+p33: Instrucao => id '[' Exp ']' '=' Exp
+p34:            | id '[' Exp ']' '+' '+'
+p35:            | id '[' Exp ']' '-' '-'
+
+p36: Instrucao => id '[' Exp ']' '[' Exp ']' '=' Exp
+p37:            | id '[' Exp ']' '[' Exp ']' '-' '-'
+p38:            | id '[' Exp ']' '[' Exp ']' '+' '+'
 
 
-p36: Instrucao => if Condicao Then Else
-p37: 			| if Condicao Then
-
-p38: Then => '{' Instrucoes '}'
-p39: 	   | Instrucao
-
-p40: Else => else '{' Instrucoes '}'
-p41: 	   | else Instrucao
-
-p42: Condicao => '(' Cond ')'
-
-p43: Cond => Cond '|' '|' Cond2
-p44: 	   | Cond2
-
-p45: Cond2 => Cond2 '&' '&' Cond3
-p46: 		| Cond3
-
-p47: Cond3 => '!' Cond
-p48:  		| '(' Cond ')'
-p49: 		| ExpRel
-
-p50: ExpRel => Exp Oper Exp
-p51: 		 | Exp
-
-p52: Oper => '=' '='
-p53:	   | '<' '>'
-p54: 	   | '>'
-p55: 	   | '<'
-p56: 	   | '>' '='
-p57: 	   | '<' '='
+p39: Instrucao => read id
+p40:            | read id '[' Exp ']'
+p41:            | read id '[' Exp ']' '[' Exp ']'
 
 
-p58: Instrucao => repeat CorpoCiclo until Condicao
+p42: Instrucao => if Condicao Then Else
+p43:            | if Condicao Then
 
-p59: CorpoCiclo => '{' Instrucoes '}'
-p60: 			 | Instrucao
+p44: Then => '{' Instrucoes '}'
+p45:       | Instrucao
+
+p46: Else => else '{' Instrucoes '}'
+p47:       | else Instrucao
+
+p48: Condicao => '(' Cond ')'
+
+p49: Cond => Cond '|' '|' Cond2
+p50:       | Cond2
+
+p51: Cond2 => Cond2 '&' '&' Cond3
+p52:        | Cond3
+
+p53: Cond3 => '!' Cond
+p54:        | '(' Cond ')'
+p55:        | ExpRel
+
+p56: ExpRel => Exp Oper Exp
+p57:         | Exp
+
+p58: Oper => '=' '='
+p59:       | '<' '>'
+p60:       | '>'
+p61:       | '<'
+p62:       | '>' '='
+p63:       | '<' '='
 
 
-p61: Instrucao => while Condicao CorpoCiclo
+p64: Instrucao => repeat CorpoCiclo until Condicao
+
+p65: CorpoCiclo => '{' Instrucoes '}'
+p66:             | Instrucao
 
 
-p62: Exp => Exp '+' Termo
-p63: 	  | Exp '-' Termo
-p64:	  | Termo
-
-p65: Termo => Termo '*' Fator
-p66:		| Termo '/' Fator
-p67:		| Termo '%' Fator
-p68:		| Fator
-
-p69: Fator => '(' Exp ')'
-p70: 		| num
-p71:		| id
-p72:		|id '[' Exp ']'
+p67: Instrucao => while Condicao CorpoCiclo
 
 
+p68: Exp => Exp '+' Termo
+p69:      | Exp '-' Termo
+p70:      | Termo
+
+p71: Termo => Termo '*' Fator
+p72:        | Termo '/' Fator
+p73:        | Termo '%' Fator
+p74:        | Fator
+
+p75: Fator => '(' Exp ')'
+p76:        | num
+p77:        | id
+p78:        | id '[' Exp ']'
+p79:        | id '[' Exp ']' '[' Exp ']'
 }
